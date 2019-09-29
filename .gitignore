@@ -1,0 +1,7 @@
+plottertest/*.pdf
+**/build
+**/debug
+**/tags
+**Session.vim
+.cache/
+data-eth3d/**

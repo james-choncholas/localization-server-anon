@@ -1,0 +1,28 @@
+party: 1 port: 8080
+connected
+
+Benchmarking EMP float
+SeNtInAl,grouped_bar,main,EMP_ADD,32 bit float,1.05498
+number of and gates: 16154624
+garbling speed : 15.3127 million gate per second
+deleted
+
+Benchmarking EMP Integer (32 bit)
+SeNtInAl,grouped_bar,main,EMP_ADD,32 bit int,0.031919
+number of and gates: 507904
+garbling speed : 15.9123 million gate per second
+
+Benchmarking EMP Integer (64 bit)
+SeNtInAl,grouped_bar,main,EMP_ADD,64 bit int,0.064701
+number of and gates: 1032192
+garbling speed : 15.9533 million gate per second
+
+Benchmarking EMP fixed point (32 bits)
+SeNtInAl,grouped_bar,main,EMP_ADD,32 bit fixed,0.062306
+number of and gates: 1032192
+garbling speed : 16.5665 million gate per second
+
+Benchmarking EMP fixed point (64 bits)
+SeNtInAl,grouped_bar,main,EMP_ADD,64 bit fixed,0.12811
+number of and gates: 2080768
+garbling speed : 16.242 million gate per second

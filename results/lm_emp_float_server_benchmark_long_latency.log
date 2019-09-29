@@ -1,0 +1,804 @@
+party: 1 port: 8080
+connected
+Ground Truth Pose [rotation; translation]: 
+0.52512461 0.46144232 -0.71506292 5.64051008 7.38378000 14.21080017 
+
+Trial 0 with 6 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+CALC_J 0.000001
+CALC_J 0.000000
+CALC_J 0.000000
+[34mmain[0m - [32mTimer opencv: 0.000288 s[0m
+opencv result:
+[0.97698057;
+ 0.85712409;
+ -1.324466]
+[5.6561942;
+ 7.3491058;
+ 14.208172]
+
+testing lm
+......::::::||||||5555/4/3/22/1/0/
+......::::::||||||5555/44/3/22/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||555/44/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/22/11/0/
+......::::::||||||55555/44/3/22/11/0/
+......::::::||||||555/444/3/22/11/0/
+[34mtest_lm_circuit[0m - [32mTimer LM: 12.3664 s[0m
+number of and gates: 168782812
+garbling speed : 6.76522 million gate per second
+SeNtInAl,xy,main,emp_float_lm_time_vs_points,6,27.0455
+SeNtInAl,xy,main,emp_float_lm_time_vs_points_normalized_latency,6,3.0051
+SeNtInAl,grouped_bar,main,lm_additions,6,26521
+SeNtInAl,grouped_bar,main,lm_subtractions,6,3558
+SeNtInAl,grouped_bar,main,lm_multiplications,6,33781
+SeNtInAl,grouped_bar,main,lm_divisions,6,3603
+SeNtInAl,xy,main,lm_bytes_tx,6,5401059399
+SeNtInAl,xy,main,lm_bytes_rx,6,266924
+[rotation; translation]
+0.95498461 0.83715904 -1.34188199 5.68604422 7.16932487 13.96457386 
+
+
+
+Trial 1 with 6 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+CALC_J 0.000001
+[34mmain[0m - [32mTimer opencv: 0.000614 s[0m
+opencv result:
+[0.97590059;
+ 0.86125225;
+ -1.3281224]
+[5.6413407;
+ 7.3541603;
+ 14.227972]
+
+testing lm
+......::::::||||||55555/4/3/22/1/0/
+......::::::||||||5555/4/3/22/11/0/
+......::::::||||||5555/4/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/22/11/0/
+......::::::||||||55555/4/3/22/11/0/
+......::::::||||||5555/44/3/22/11/0/
+......::::::||||||55555/4/3/22/11/0/
+......::::::||||||5555/44/3/22/11/0/
+......::::::||||||55555/4/3/22/11/0/
+......::::::||||||5555/44/3/22/11/0/
+[34mtest_lm_circuit[0m - [32mTimer LM: 15.2402 s[0m
+number of and gates: 208965536
+garbling speed : 6.75666 million gate per second
+SeNtInAl,xy,main,emp_float_lm_time_vs_points,6,33.0329
+SeNtInAl,xy,main,emp_float_lm_time_vs_points_normalized_latency,6,3.003
+SeNtInAl,grouped_bar,main,lm_additions,6,32571
+SeNtInAl,grouped_bar,main,lm_subtractions,6,4478
+SeNtInAl,grouped_bar,main,lm_multiplications,6,41901
+SeNtInAl,grouped_bar,main,lm_divisions,6,4424
+SeNtInAl,xy,main,lm_bytes_tx,6,6686906678
+SeNtInAl,xy,main,lm_bytes_rx,6,267035
+[rotation; translation]
+0.96711320 0.85541177 -1.32827330 5.60508966 7.30069113 14.13404083 
+
+
+
+Trial 2 with 6 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+************************************************************************************
+	itr	nfJ		SUM(r^2)		x		dx		l		lc
+************************************************************************************
+          1          4      1.7746e-07       5.3344e-02        7.7860e-07       0.0000e+00        7.5000e-01
+          2          6      1.6303e-07       5.3338e-02        5.6532e-06       0.0000e+00        7.5000e-01
+*         3          8      1.6303e-07       5.3338e-02       -1.8170e-09       0.0000e+00        7.5000e-01
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+[34mmain[0m - [32mTimer opencv: 0.00084 s[0m
+opencv result:
+[0.97494411;
+ 0.85660815;
+ -1.3257216]
+[5.6536269;
+ 7.3436818;
+ 14.201769]
+
+testing lm
+......::::::||||||5555/44/3/222/1/0/
+......::::::||||||55555/44/3/22/11/0/
+......::::::||||||55555/44/3/22/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||555/44/3/222/11/0/
+......::::::||||||5555/44/3/22/11/0/
+......::::::||||||555/44/3/22/11/0/
+......::::::||||||5555/44/3/22/11/0/
+......::::::||||||555/44/3/22/11/0/
+......::::::||||||5555/44/3/22/11/0/
+......::::::||||||55555/4/3/22/11/0/
+[34mtest_lm_circuit[0m - [32mTimer LM: 15.5023 s[0m
+number of and gates: 210745888
+garbling speed : 6.71865 million gate per second
+SeNtInAl,xy,main,emp_float_lm_time_vs_points,6,33.4381
+SeNtInAl,xy,main,emp_float_lm_time_vs_points_normalized_latency,6,3.0398
+SeNtInAl,grouped_bar,main,lm_additions,6,32695
+SeNtInAl,grouped_bar,main,lm_subtractions,6,4570
+SeNtInAl,grouped_bar,main,lm_multiplications,6,42285
+SeNtInAl,grouped_bar,main,lm_divisions,6,4448
+SeNtInAl,xy,main,lm_bytes_tx,6,6743878020
+SeNtInAl,xy,main,lm_bytes_rx,6,267049
+[rotation; translation]
+0.96582365 0.84472418 -1.33122993 5.64674854 7.27995682 14.13327789 
+
+
+
+Trial 0 with 56 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+[34mmain[0m - [32mTimer opencv: 0.000751 s[0m
+opencv result:
+[0.97494918;
+ 0.85670555;
+ -1.3261435]
+[5.6517391;
+ 7.344172;
+ 14.199775]
+
+testing lm
+......::::::||||||55555/4/3/22/1/0/
+......::::::||||||55555/4/3/22/1/0/
+......::::::||||||55555/4/3/222/1/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||55555/4/3/222/11/0/
+......::::::||||||5555/44/3/22/11/0/
+......::::::||||||55555/4/3/22/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/22/11/0/
+[34mtest_lm_circuit[0m - [32mTimer LM: 64.2007 s[0m
+number of and gates: 958614188
+garbling speed : 7.98499 million gate per second
+SeNtInAl,xy,main,emp_float_lm_time_vs_points,56,122.124
+SeNtInAl,xy,main,emp_float_lm_time_vs_points_normalized_latency,56,10.177
+SeNtInAl,grouped_bar,main,lm_additions,56,179990
+SeNtInAl,grouped_bar,main,lm_subtractions,56,13630
+SeNtInAl,grouped_bar,main,lm_multiplications,56,191178
+SeNtInAl,grouped_bar,main,lm_divisions,56,20511
+SeNtInAl,xy,main,lm_bytes_tx,56,30675663642
+SeNtInAl,xy,main,lm_bytes_rx,56,267135
+[rotation; translation]
+0.97222221 0.85412288 -1.32705200 5.64055300 7.32535744 14.15490913 
+
+
+
+Trial 1 with 56 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+[34mmain[0m - [32mTimer opencv: 0.000798 s[0m
+opencv result:
+[0.97477919;
+ 0.85641855;
+ -1.3264323]
+[5.6526208;
+ 7.3414974;
+ 14.200609]
+
+testing lm
+......::::::||||||55555/44/3/2/11/0/
+......::::::||||||5555/44/3/22/11/0/
+......::::::||||||5555/44/3/22/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||555/44/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||555/444/3/22/11/0/
+......::::::||||||55555/4/3/222/11/0/
+......::::::||||||555/44/3/22/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/22/11/0/
+[34mtest_lm_circuit[0m - [32mTimer LM: 68.7308 s[0m
+number of and gates: 1035251488
+garbling speed : 8.01115 million gate per second
+Not printing timing - not converged. Pose error norm: 1803427680
+[rotation; translation]
+0.86007303 0.81125009 -1.40034318 5.24212837 6.62547779 12.92424011 
+
+
+
+Trial 2 with 56 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+[34mmain[0m - [32mTimer opencv: 0.000764 s[0m
+opencv result:
+[0.97491181;
+ 0.85714203;
+ -1.3264385]
+[5.6492462;
+ 7.3441515;
+ 14.199964]
+
+testing lm
+......::::::||||||5555/44/3/22/11/0/
+......::::::||||||55555/4/3/22/1/0/
+......::::::||||||55555/4/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||55555/4/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||555/44/3/222/11/0/
+......::::::||||||5555/44/3/22/11/0/
+......::::::||||||5555/44/3/22/11/0/
+......::::::||||||5555/4/3/22/11/0/
+......::::::||||||5555/44/3/22/11/0/
+......::::::||||||5555/4/3/22/11/0/
+[34mtest_lm_circuit[0m - [32mTimer LM: 63.4842 s[0m
+number of and gates: 955943656
+garbling speed : 8.00545 million gate per second
+SeNtInAl,xy,main,emp_float_lm_time_vs_points,56,121.484
+SeNtInAl,xy,main,emp_float_lm_time_vs_points_normalized_latency,56,10.1237
+SeNtInAl,grouped_bar,main,lm_additions,56,179804
+SeNtInAl,grouped_bar,main,lm_subtractions,56,13492
+SeNtInAl,grouped_bar,main,lm_multiplications,56,190602
+SeNtInAl,grouped_bar,main,lm_divisions,56,20475
+SeNtInAl,xy,main,lm_bytes_tx,56,30590206629
+SeNtInAl,xy,main,lm_bytes_rx,56,267114
+[rotation; translation]
+0.96999621 0.85244942 -1.32861197 5.65373707 7.30272913 14.13053799 
+
+
+
+Trial 0 with 106 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+[34mmain[0m - [32mTimer opencv: 0.000961 s[0m
+opencv result:
+[0.97480577;
+ 0.85682315;
+ -1.3265007]
+[5.6503325;
+ 7.3424573;
+ 14.199045]
+
+testing lm
+......::::::||||||55555/4/33/22/1/0/
+......::::::||||||55555/4/3/22/1/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||55555/44/3/222/11/0/
+......::::::||||||555/44/3/22/11/0/
+......::::::||||||5555/4/3/22/11/0/
+......::::::||||||555/44/3/22/11/0/
+[34mtest_lm_circuit[0m - [32mTimer LM: 73.2598 s[0m
+number of and gates: 1118750876
+garbling speed : 8.24279 million gate per second
+SeNtInAl,xy,main,emp_float_lm_time_vs_points,106,137.796
+SeNtInAl,xy,main,emp_float_lm_time_vs_points_normalized_latency,106,17.2245
+SeNtInAl,grouped_bar,main,lm_additions,106,215792
+SeNtInAl,grouped_bar,main,lm_subtractions,106,14536
+SeNtInAl,grouped_bar,main,lm_multiplications,106,222816
+SeNtInAl,grouped_bar,main,lm_divisions,106,24036
+SeNtInAl,xy,main,lm_bytes_tx,106,35800037520
+SeNtInAl,xy,main,lm_bytes_rx,106,266901
+[rotation; translation]
+0.97131956 0.85286486 -1.32830679 5.65540123 7.30273724 14.15354061 
+
+
+
+Trial 1 with 106 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+[34mmain[0m - [32mTimer opencv: 0.000994 s[0m
+opencv result:
+[0.97524667;
+ 0.85718203;
+ -1.3261323]
+[5.6510158;
+ 7.3454819;
+ 14.202371]
+
+testing lm
+......::::::||||||5555/4/333/2/1/0/
+......::::::||||||55555/4/33/22/1/0/
+......::::::||||||55555/4/3/22/11/0/
+......::::::||||||55555/44/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||55555/44/3/222/11/0/
+......::::::||||||55555/44/3/222/11/0/
+......::::::||||||555/44/3/222/11/0/
+......::::::||||||555/44/3/22/11/0/
+......::::::||||||5555/44/3/22/11/0/
+......::::::||||||5555/44/3/22/11/0/
+[34mtest_lm_circuit[0m - [32mTimer LM: 101.258 s[0m
+number of and gates: 1541755716
+garbling speed : 8.23336 million gate per second
+SeNtInAl,xy,main,emp_float_lm_time_vs_points,106,189.33
+SeNtInAl,xy,main,emp_float_lm_time_vs_points_normalized_latency,106,17.2118
+SeNtInAl,grouped_bar,main,lm_additions,106,296961
+SeNtInAl,grouped_bar,main,lm_subtractions,106,20168
+SeNtInAl,grouped_bar,main,lm_multiplications,106,307115
+SeNtInAl,grouped_bar,main,lm_divisions,106,33099
+SeNtInAl,xy,main,lm_bytes_tx,106,49336192578
+SeNtInAl,xy,main,lm_bytes_rx,106,267079
+[rotation; translation]
+0.97249889 0.85300457 -1.32606697 5.65600109 7.31631613 14.14751911 
+
+
+
+Trial 2 with 106 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+[34mmain[0m - [32mTimer opencv: 0.000965 s[0m
+opencv result:
+[0.97490478;
+ 0.85677385;
+ -1.3262185]
+[5.6506324;
+ 7.3439293;
+ 14.200817]
+
+testing lm
+......::::::||||||5555/4/33/22/1/0/
+......::::::||||||55555/4/33/22/1/0/
+......::::::||||||5555/44/3/22/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||55555/44/3/22/11/0/
+......::::::||||||555/444/3/22/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/22/11/0/
+......::::::||||||5555/44/3/22/11/0/
+......::::::||||||5555/44/3/22/11/0/
+[34mtest_lm_circuit[0m - [32mTimer LM: 109.959 s[0m
+number of and gates: 1681407704
+garbling speed : 8.23167 million gate per second
+SeNtInAl,xy,main,emp_float_lm_time_vs_points,106,206.335
+SeNtInAl,xy,main,emp_float_lm_time_vs_points_normalized_latency,106,17.1946
+SeNtInAl,grouped_bar,main,lm_additions,106,323918
+SeNtInAl,grouped_bar,main,lm_subtractions,106,21974
+SeNtInAl,grouped_bar,main,lm_multiplications,106,334930
+SeNtInAl,grouped_bar,main,lm_divisions,106,36099
+SeNtInAl,xy,main,lm_bytes_tx,106,53805056146
+SeNtInAl,xy,main,lm_bytes_rx,106,267127
+[rotation; translation]
+0.97066373 0.85339433 -1.32753909 5.63660860 7.31896257 14.14344025 
+
+
+
+Trial 0 with 156 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+[34mmain[0m - [32mTimer opencv: 0.001214 s[0m
+opencv result:
+[0.97507709;
+ 0.8567577;
+ -1.3260103]
+[5.6513696;
+ 7.3440104;
+ 14.200843]
+
+testing lm
+......::::::||||||5555/4/33/2/11/0/
+......::::::||||||5555/44/33/2/11/0/
+......::::::||||||555/444/3/22/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||55555/4/3/22/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/22/11/0/
+......::::::||||||5555/44/3/22/11/0/
+[34mtest_lm_circuit[0m - [32mTimer LM: 130.604 s[0m
+number of and gates: 2001295596
+garbling speed : 8.33443 million gate per second
+SeNtInAl,xy,main,emp_float_lm_time_vs_points,156,242.197
+SeNtInAl,xy,main,emp_float_lm_time_vs_points_normalized_latency,156,24.2197
+SeNtInAl,grouped_bar,main,lm_additions,156,389728
+SeNtInAl,grouped_bar,main,lm_subtractions,156,25154
+SeNtInAl,grouped_bar,main,lm_multiplications,156,398414
+SeNtInAl,grouped_bar,main,lm_divisions,156,43048
+SeNtInAl,xy,main,lm_bytes_tx,156,64041468627
+SeNtInAl,xy,main,lm_bytes_rx,156,267000
+[rotation; translation]
+0.97210115 0.85444975 -1.32734895 5.65139484 7.30119610 14.15759468 
+
+
+
+Trial 1 with 156 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+[34mmain[0m - [32mTimer opencv: 0.001159 s[0m
+opencv result:
+[0.97521698;
+ 0.85774696;
+ -1.3264891]
+[5.6493192;
+ 7.3470106;
+ 14.204823]
+
+testing lm
+......::::::||||||5555/4/333/2/1/0/
+......::::::||||||5555/44/3/22/1/0/
+......::::::||||||55555/44/3/22/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/4/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/22/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||555/44/3/22/11/0/
+......::::::||||||555/44/3/22/11/0/
+......::::::||||||55555/4/33/22/11/0/
+......::::::||||||5555/44/3/22/11/0/
+......::::::||||||5555/44/3/22/11/0/
+......::::::||||||55/444/3/22/11/0/
+......::::::||||||5555/44/3/22/11/0/
+[34mtest_lm_circuit[0m - [32mTimer LM: 221.331 s[0m
+number of and gates: 3406202532
+garbling speed : 8.32977 million gate per second
+SeNtInAl,xy,main,emp_float_lm_time_vs_points,156,410.991
+SeNtInAl,xy,main,emp_float_lm_time_vs_points_normalized_latency,156,24.1759
+SeNtInAl,grouped_bar,main,lm_additions,156,662781
+SeNtInAl,grouped_bar,main,lm_subtractions,156,42958
+SeNtInAl,grouped_bar,main,lm_multiplications,156,678209
+SeNtInAl,grouped_bar,main,lm_divisions,156,73217
+SeNtInAl,xy,main,lm_bytes_tx,156,108998490955
+SeNtInAl,xy,main,lm_bytes_rx,156,267376
+[rotation; translation]
+0.96157378 0.84746104 -1.33246660 5.59312296 7.23393631 13.96143818 
+
+
+
+Trial 2 with 156 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+[34mmain[0m - [32mTimer opencv: 0.001181 s[0m
+opencv result:
+[0.97487962;
+ 0.85702968;
+ -1.3264594]
+[5.6495814;
+ 7.3444848;
+ 14.201779]
+
+testing lm
+......::::::||||||55555/4/33/2/1/0/
+......::::::||||||55555/4/33/22/1/0/
+......::::::||||||55555/4/3/22/11/0/
+......::::::||||||555/44/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||55555/4/3/222/11/0/
+......::::::||||||5555/44/3/22/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||55555/44/3/222/11/0/
+......::::::||||||555/444/3/222/11/0/
+......::::::||||||5555/44/3/22/11/0/
+......::::::||||||555/444/3/22/11/0/
+......::::::||||||555/44/3/22/11/0/
+[34mtest_lm_circuit[0m - [32mTimer LM: 168.591 s[0m
+number of and gates: 2605348600
+garbling speed : 8.33959 million gate per second
+Not printing timing - not converged. Pose error norm: -222168096
+[rotation; translation]
+0.91961426 0.82818067 -1.36252046 5.44346619 6.95927572 13.55505276 
+
+
+
+Trial 0 with 206 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+[34mmain[0m - [32mTimer opencv: 0.001421 s[0m
+opencv result:
+[0.97523516;
+ 0.85795671;
+ -1.326563]
+[5.6465936;
+ 7.3489223;
+ 14.208308]
+
+testing lm
+......::::::||||||5555/4/33/22/1/0/
+......::::::||||||5555/4/33/22/1/0/
+......::::::||||||555/44/3/22/11/0/
+......::::::||||||555/44/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||55555/44/3/22/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||555/444/3/222/11/0/
+[34mtest_lm_circuit[0m - [32mTimer LM: 152.6 s[0m
+number of and gates: 2342749780
+garbling speed : 8.38396 million gate per second
+SeNtInAl,xy,main,emp_float_lm_time_vs_points,206,281.506
+SeNtInAl,xy,main,emp_float_lm_time_vs_points_normalized_latency,206,31.2784
+SeNtInAl,grouped_bar,main,lm_additions,206,458665
+SeNtInAl,grouped_bar,main,lm_subtractions,206,28870
+SeNtInAl,grouped_bar,main,lm_multiplications,206,466277
+SeNtInAl,grouped_bar,main,lm_divisions,206,50427
+SeNtInAl,xy,main,lm_bytes_tx,206,74968002391
+SeNtInAl,xy,main,lm_bytes_rx,206,266940
+[rotation; translation]
+0.97581547 0.85813624 -1.32609653 5.66246986 7.33357716 14.22648716 
+
+
+
+Trial 1 with 206 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+[34mmain[0m - [32mTimer opencv: 0.001379 s[0m
+opencv result:
+[0.975088;
+ 0.85705018;
+ -1.3261968]
+[5.6510501;
+ 7.344893;
+ 14.202996]
+
+testing lm
+......::::::||||||5555/4/33/2/1/0/
+......::::::||||||55555/4/3/22/1/0/
+......::::::||||||55555/44/3/22/1/0/
+......::::::||||||5555/44/3/222/1/0/
+......::::::||||||55555/44/3/222/1/0/
+......::::::||||||5555/44/3/22/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||555/44/3/222/11/0/
+......::::::||||||555/44/3/222/11/0/
+......::::::||||||555/444/3/222/11/0/
+......::::::||||||555/44/33/22/11/0/
+......::::::||||||55555/44/3/222/11/0/
+......::::::||||||555/44/33/22/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/22/11/0/
+[34mtest_lm_circuit[0m - [32mTimer LM: 255.02 s[0m
+number of and gates: 3907172556
+garbling speed : 8.3749 million gate per second
+Not printing timing - not converged. Pose error norm: -222168096
+[rotation; translation]
+0.92097008 0.82316649 -1.35467196 5.46445608 6.97037458 13.56557846 
+
+
+
+Trial 2 with 206 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+[34mmain[0m - [32mTimer opencv: 0.001405 s[0m
+opencv result:
+[0.97510368;
+ 0.85677409;
+ -1.3260937]
+[5.6522632;
+ 7.3437653;
+ 14.200401]
+
+testing lm
+......::::::||||||5555/4/333/2/1/0/
+......::::::||||||55555/4/33/22/1/0/
+......::::::||||||555/44/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||55/444/3/22/11/0/
+......::::::||||||555/44/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+[34mtest_lm_circuit[0m - [32mTimer LM: 187.777 s[0m
+number of and gates: 2865521452
+garbling speed : 8.36195 million gate per second
+SeNtInAl,xy,main,emp_float_lm_time_vs_points,206,344.758
+SeNtInAl,xy,main,emp_float_lm_time_vs_points_normalized_latency,206,31.3416
+SeNtInAl,grouped_bar,main,lm_additions,206,560737
+SeNtInAl,grouped_bar,main,lm_subtractions,206,35396
+SeNtInAl,grouped_bar,main,lm_multiplications,206,570365
+SeNtInAl,grouped_bar,main,lm_divisions,206,61660
+SeNtInAl,xy,main,lm_bytes_tx,206,91696696041
+SeNtInAl,xy,main,lm_bytes_rx,206,267054
+[rotation; translation]
+0.97263187 0.85486609 -1.32735825 5.64514780 7.32703400 14.16846848 
+
+
+
+Trial 0 with 256 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+[34mmain[0m - [32mTimer opencv: 0.001587 s[0m
+opencv result:
+[0.9751544;
+ 0.85699421;
+ -1.3261068]
+[5.6508703;
+ 7.3448715;
+ 14.201057]
+
+testing lm
+......::::::||||||5555/4/33/22/1/0/
+......::::::||||||5555/4/333/22/1/0/
+......::::::||||||555/44/33/22/1/0/
+......::::::||||||5555/44/3/22/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/22/11/0/
+......::::::||||||55555/44/3/22/11/0/
+......::::::||||||5555/44/3/22/11/0/
+[34mtest_lm_circuit[0m - [32mTimer LM: 187.301 s[0m
+number of and gates: 2888144552
+garbling speed : 8.40869 million gate per second
+SeNtInAl,xy,main,emp_float_lm_time_vs_points,256,345.547
+SeNtInAl,xy,main,emp_float_lm_time_vs_points_normalized_latency,256,38.3941
+SeNtInAl,grouped_bar,main,lm_additions,256,566819
+SeNtInAl,grouped_bar,main,lm_subtractions,256,35292
+SeNtInAl,grouped_bar,main,lm_multiplications,256,574829
+SeNtInAl,grouped_bar,main,lm_divisions,256,62151
+SeNtInAl,xy,main,lm_bytes_tx,256,92420635208
+SeNtInAl,xy,main,lm_bytes_rx,256,266957
+[rotation; translation]
+0.97236371 0.85478157 -1.32719493 5.64777565 7.32639837 14.16086197 
+
+
+
+Trial 1 with 256 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+[34mmain[0m - [32mTimer opencv: 0.001604 s[0m
+opencv result:
+[0.97495186;
+ 0.8565892;
+ -1.3261876]
+[5.6523328;
+ 7.3428164;
+ 14.200147]
+
+testing lm
+......::::::||||||55555/4/33/2/1/0/
+......::::::||||||55555/4/3/22/1/0/
+......::::::||||||555/44/3/22/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||55555/44/3/22/11/0/
+......::::::||||||555/444/3/22/11/0/
+......::::::||||||55555/4/3/22/11/0/
+[34mtest_lm_circuit[0m - [32mTimer LM: 166.575 s[0m
+number of and gates: 2566013836
+garbling speed : 8.40944 million gate per second
+SeNtInAl,xy,main,emp_float_lm_time_vs_points,256,307.208
+SeNtInAl,xy,main,emp_float_lm_time_vs_points_normalized_latency,256,38.401
+SeNtInAl,grouped_bar,main,lm_additions,256,503756
+SeNtInAl,grouped_bar,main,lm_subtractions,256,31308
+SeNtInAl,grouped_bar,main,lm_multiplications,256,510692
+SeNtInAl,grouped_bar,main,lm_divisions,256,55230
+SeNtInAl,xy,main,lm_bytes_tx,256,82112452172
+SeNtInAl,xy,main,lm_bytes_rx,256,266897
+[rotation; translation]
+0.97231948 0.85466272 -1.32679069 5.66076946 7.33889055 14.15481091 
+
+
+
+Trial 2 with 256 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+[34mmain[0m - [32mTimer opencv: 0.001648 s[0m
+opencv result:
+[0.97512096;
+ 0.85692191;
+ -1.3261399]
+[5.6514311;
+ 7.3442836;
+ 14.200529]
+
+testing lm
+......::::::||||||55555/4/3/2/1/0/
+......::::::||||||55555/4/3/22/1/0/
+......::::::||||||555/44/3/22/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/22/11/0/
+......::::::||||||5555/44/3/22/11/0/
+[34mtest_lm_circuit[0m - [32mTimer LM: 145.926 s[0m
+number of and gates: 2244668868
+garbling speed : 8.41593 million gate per second
+SeNtInAl,xy,main,emp_float_lm_time_vs_points,256,268.792
+SeNtInAl,xy,main,emp_float_lm_time_vs_points_normalized_latency,256,38.3989
+SeNtInAl,grouped_bar,main,lm_additions,256,440739
+SeNtInAl,grouped_bar,main,lm_subtractions,256,27362
+SeNtInAl,grouped_bar,main,lm_multiplications,256,446735
+SeNtInAl,grouped_bar,main,lm_divisions,256,48315
+SeNtInAl,xy,main,lm_bytes_tx,256,71829413109
+SeNtInAl,xy,main,lm_bytes_rx,256,266842
+[rotation; translation]
+0.96651149 0.85099149 -1.32991600 5.61998081 7.31995583 14.09861279 
+
+
+

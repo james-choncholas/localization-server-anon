@@ -1,0 +1,783 @@
+party: 1 port: 8080
+connected
+Ground Truth Pose [rotation; translation]: 
+0.52512461 0.46144232 -0.71506292 5.64051008 7.38378000 14.21080017 
+
+Trial 0 with 6 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+CALC_J 0.000001
+CALC_J 0.000000
+CALC_J 0.000000
+[34mmain[0m - [32mTimer opencv: 0.000334 s[0m
+opencv result:
+[0.97698057;
+ 0.85712409;
+ -1.324466]
+[5.6561942;
+ 7.3491058;
+ 14.208172]
+
+testing gn
+......::::::||||||5555/44/3/22/1/0/
+......::::::||||||555/444/3/22/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||55555/44/3/222/11/0/
+......::::::||||||5555/444/3/22/11/0/
+......::::::||||||55555/44/3/22/11/0/
+......::::::||||||5555/44/33/22/11/0/
+Did 6 GN iterations
+[34mtest_gaussnewton_circuit[0m - [32mTimer GNGD: 11.4718 s[0m
+SeNtInAl,xy,main,emp_float_gn_time_vs_points,6,11.6542
+SeNtInAl,xy,main,emp_float_gn_time_vs_points_normalized,6,1.9424
+SeNtInAl,grouped_bar,main,gn_additions,6,22031
+SeNtInAl,grouped_bar,main,gn_subtractions,6,4466
+SeNtInAl,grouped_bar,main,gn_multiplications,6,33026
+SeNtInAl,grouped_bar,main,gn_divisions,6,3456
+SeNtInAl,xy,main,gn_bytes_tx,6,5193408974
+SeNtInAl,xy,main,gn_bytes_tx_normalized,6,865568162
+SeNtInAl,xy,main,gn_bytes_rx,6,266931
+[rotation; translation]
+1.00019276 0.88007933 -1.30704868 5.61511803 7.53091478 14.47746372 
+
+
+
+Trial 1 with 6 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+CALC_J 0.000001
+[34mmain[0m - [32mTimer opencv: 0.000258 s[0m
+opencv result:
+[0.97590059;
+ 0.86125225;
+ -1.3281224]
+[5.6413407;
+ 7.3541603;
+ 14.227972]
+
+testing gn
+......::::::||||||5555/44/33/22/11/0/
+......::::::||||||5555/44/33/22/11/0/
+......::::::||||||555/44/33/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||55555/44/3/222/11/0/
+......::::::||||||5555/44/33/22/11/0/
+......::::::||||||55/444/33/22/11/0/
+......::::::||||||5555/44/33/22/11/0/
+......::::::||||||555/44/33/22/11/0/
+......::::::||||||555/44/33/22/11/0/
+......::::::||||||555/44/33/22/11/0/
+Did 10 GN iterations
+[34mtest_gaussnewton_circuit[0m - [32mTimer GNGD: 18.0129 s[0m
+SeNtInAl,xy,main,emp_float_gn_time_vs_points,6,18.2787
+SeNtInAl,xy,main,emp_float_gn_time_vs_points_normalized,6,1.8279
+SeNtInAl,grouped_bar,main,gn_additions,6,34347
+SeNtInAl,grouped_bar,main,gn_subtractions,6,6790
+SeNtInAl,grouped_bar,main,gn_multiplications,6,50916
+SeNtInAl,grouped_bar,main,gn_divisions,6,5397
+SeNtInAl,xy,main,gn_bytes_tx,6,8023482733
+SeNtInAl,xy,main,gn_bytes_tx_normalized,6,802348273
+SeNtInAl,xy,main,gn_bytes_rx,6,267154
+[rotation; translation]
+0.95062697 0.84709662 -1.33028579 5.47194242 7.20154619 13.94458771 
+
+
+
+Trial 2 with 6 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+************************************************************************************
+	itr	nfJ		SUM(r^2)		x		dx		l		lc
+************************************************************************************
+          1          4      1.7746e-07       5.3344e-02        7.7860e-07       0.0000e+00        7.5000e-01
+          2          6      1.6303e-07       5.3338e-02        5.6532e-06       0.0000e+00        7.5000e-01
+*         3          8      1.6303e-07       5.3338e-02       -1.8170e-09       0.0000e+00        7.5000e-01
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+[34mmain[0m - [32mTimer opencv: 0.000198 s[0m
+opencv result:
+[0.97494411;
+ 0.85660815;
+ -1.3257216]
+[5.6536269;
+ 7.3436818;
+ 14.201769]
+
+testing gn
+......::::::||||||555/444/3/22/11/0/
+......::::::||||||5555/44/33/22/11/0/
+......::::::||||||5555/444/3/222/11/0/
+......::::::||||||555/444/3/222/11/0/
+......::::::||||||555/444/33/22/11/0/
+......::::::||||||5555/44/33/22/11/0/
+......::::::||||||5555/444/33/22/11/0/
+......::::::||||||5/4444/33/22/11/0/
+......::::::||||||5555/44/33/22/11/0/
+Did 8 GN iterations
+[34mtest_gaussnewton_circuit[0m - [32mTimer GNGD: 15.5413 s[0m
+SeNtInAl,xy,main,emp_float_gn_time_vs_points,6,15.7778
+SeNtInAl,xy,main,emp_float_gn_time_vs_points_normalized,6,1.97223
+SeNtInAl,grouped_bar,main,gn_additions,6,28353
+SeNtInAl,grouped_bar,main,gn_subtractions,6,5758
+SeNtInAl,grouped_bar,main,gn_multiplications,6,42502
+SeNtInAl,grouped_bar,main,gn_divisions,6,4452
+SeNtInAl,xy,main,gn_bytes_tx,6,6684979532
+SeNtInAl,xy,main,gn_bytes_tx_normalized,6,835622441
+SeNtInAl,xy,main,gn_bytes_rx,6,267057
+[rotation; translation]
+0.98193020 0.86702901 -1.32159221 5.64476919 7.40859461 14.25694847 
+
+
+
+Trial 0 with 56 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+[34mmain[0m - [32mTimer opencv: 0.00018 s[0m
+opencv result:
+[0.97494918;
+ 0.85670555;
+ -1.3261435]
+[5.6517391;
+ 7.344172;
+ 14.199775]
+
+testing gn
+......::::::||||||5555/44/33/22/1/0/
+......::::::||||||5555/44/33/22/11/0/
+......::::::||||||555/44/33/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||555/444/33/22/11/0/
+......::::::||||||555/44/33/222/11/0/
+......::::::||||||5555/44/33/22/11/0/
+......::::::||||||555/44/33/222/11/0/
+......::::::||||||555/444/33/22/11/0/
+......::::::||||||5555/44/33/22/11/0/
+Did 9 GN iterations
+[34mtest_gaussnewton_circuit[0m - [32mTimer GNGD: 116.948 s[0m
+SeNtInAl,xy,main,emp_float_gn_time_vs_points,56,117.228
+SeNtInAl,xy,main,emp_float_gn_time_vs_points_normalized,56,13.0253
+SeNtInAl,grouped_bar,main,gn_additions,56,241150
+SeNtInAl,grouped_bar,main,gn_subtractions,56,37056
+SeNtInAl,grouped_bar,main,gn_multiplications,56,327856
+SeNtInAl,grouped_bar,main,gn_divisions,56,29938
+SeNtInAl,xy,main,gn_bytes_tx,56,50587246661
+SeNtInAl,xy,main,gn_bytes_tx_normalized,56,5620805184
+SeNtInAl,xy,main,gn_bytes_rx,56,267114
+[rotation; translation]
+0.97002047 0.85201764 -1.32838726 5.62812853 7.30645704 14.12960720 
+
+
+
+Trial 1 with 56 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+[34mmain[0m - [32mTimer opencv: 0.000188 s[0m
+opencv result:
+[0.97477919;
+ 0.85641855;
+ -1.3264323]
+[5.6526208;
+ 7.3414974;
+ 14.200609]
+
+testing gn
+......::::::||||||5555/444/3/22/11/0/
+......::::::||||||5555/44/33/22/11/0/
+......::::::||||||555/44/33/22/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||555/44/33/222/11/0/
+......::::::||||||555/44/33/222/11/0/
+......::::::||||||5555/44/33/22/11/0/
+......::::::||||||5555/44/33/22/11/0/
+......::::::||||||5555/44/3/222/11/0/
+Did 8 GN iterations
+[34mtest_gaussnewton_circuit[0m - [32mTimer GNGD: 103.521 s[0m
+SeNtInAl,xy,main,emp_float_gn_time_vs_points,56,103.782
+SeNtInAl,xy,main,emp_float_gn_time_vs_points_normalized,56,12.9728
+SeNtInAl,grouped_bar,main,gn_additions,56,216997
+SeNtInAl,grouped_bar,main,gn_subtractions,56,33314
+SeNtInAl,grouped_bar,main,gn_multiplications,56,294924
+SeNtInAl,grouped_bar,main,gn_divisions,56,26943
+SeNtInAl,xy,main,gn_bytes_tx,56,45509132231
+SeNtInAl,xy,main,gn_bytes_tx_normalized,56,5688641528
+SeNtInAl,xy,main,gn_bytes_rx,56,267052
+[rotation; translation]
+0.97069424 0.85361868 -1.32865441 5.64431858 7.33695412 14.13719845 
+
+
+
+Trial 2 with 56 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+[34mmain[0m - [32mTimer opencv: 0.00019 s[0m
+opencv result:
+[0.97491181;
+ 0.85714203;
+ -1.3264385]
+[5.6492462;
+ 7.3441515;
+ 14.199964]
+
+testing gn
+......::::::||||||555/444/33/22/11/0/
+......::::::||||||5555/44/33/222/11/0/
+......::::::||||||555/44/33/222/11/0/
+......::::::||||||55555/44/3/222/11/0/
+......::::::||||||555/44/33/222/11/0/
+......::::::||||||5555/44/33/222/11/0/
+......::::::||||||555/444/33/22/11/0/
+......::::::||||||5555/44/33/22/11/0/
+......::::::||||||555/444/33/22/11/0/
+Did 8 GN iterations
+[34mtest_gaussnewton_circuit[0m - [32mTimer GNGD: 106.853 s[0m
+SeNtInAl,xy,main,emp_float_gn_time_vs_points,56,107.1
+SeNtInAl,xy,main,emp_float_gn_time_vs_points_normalized,56,13.3875
+SeNtInAl,grouped_bar,main,gn_additions,56,218021
+SeNtInAl,grouped_bar,main,gn_subtractions,56,34290
+SeNtInAl,grouped_bar,main,gn_multiplications,56,298836
+SeNtInAl,grouped_bar,main,gn_divisions,56,26979
+SeNtInAl,xy,main,gn_bytes_tx,56,46028444635
+SeNtInAl,xy,main,gn_bytes_tx_normalized,56,5753555579
+SeNtInAl,xy,main,gn_bytes_rx,56,267072
+[rotation; translation]
+0.97270328 0.85537267 -1.32759869 5.63660479 7.32832861 14.16706371 
+
+
+
+Trial 0 with 106 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+[34mmain[0m - [32mTimer opencv: 0.000224 s[0m
+opencv result:
+[0.97480577;
+ 0.85682315;
+ -1.3265007]
+[5.6503325;
+ 7.3424573;
+ 14.199045]
+
+testing gn
+......::::::||||||5555/44/33/22/1/0/
+......::::::||||||5555/44/33/22/11/0/
+......::::::||||||555/444/3/22/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/33/222/11/0/
+......::::::||||||5555/44/33/22/11/0/
+......::::::||||||555/444/33/22/11/0/
+Did 6 GN iterations
+[34mtest_gaussnewton_circuit[0m - [32mTimer GNGD: 156.24 s[0m
+SeNtInAl,xy,main,emp_float_gn_time_vs_points,106,156.449
+SeNtInAl,xy,main,emp_float_gn_time_vs_points_normalized,106,26.0748
+SeNtInAl,grouped_bar,main,gn_additions,106,315615
+SeNtInAl,grouped_bar,main,gn_subtractions,106,47450
+SeNtInAl,grouped_bar,main,gn_multiplications,106,426146
+SeNtInAl,grouped_bar,main,gn_divisions,106,38456
+SeNtInAl,xy,main,gn_bytes_tx,106,65650943597
+SeNtInAl,xy,main,gn_bytes_tx_normalized,106,10941823932
+SeNtInAl,xy,main,gn_bytes_rx,106,266930
+[rotation; translation]
+0.97446418 0.85706055 -1.32694471 5.64926529 7.34166527 14.19938087 
+
+
+
+Trial 1 with 106 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+[34mmain[0m - [32mTimer opencv: 0.000229 s[0m
+opencv result:
+[0.97524667;
+ 0.85718203;
+ -1.3261323]
+[5.6510158;
+ 7.3454819;
+ 14.202371]
+
+testing gn
+......::::::||||||555/44/33/22/1/0/
+......::::::||||||5555/44/33/22/1/0/
+......::::::||||||5555/44/33/22/11/0/
+......::::::||||||5555/444/3/222/11/0/
+......::::::||||||555/44/33/222/11/0/
+......::::::||||||555/444/33/22/11/0/
+......::::::||||||5555/44/33/22/11/0/
+......::::::||||||5555/44/33/22/11/0/
+Did 7 GN iterations
+[34mtest_gaussnewton_circuit[0m - [32mTimer GNGD: 172.052 s[0m
+SeNtInAl,xy,main,emp_float_gn_time_vs_points,106,172.262
+SeNtInAl,xy,main,emp_float_gn_time_vs_points_normalized,106,24.6089
+SeNtInAl,grouped_bar,main,gn_additions,106,360312
+SeNtInAl,grouped_bar,main,gn_subtractions,106,53848
+SeNtInAl,grouped_bar,main,gn_multiplications,106,485500
+SeNtInAl,grouped_bar,main,gn_divisions,106,43942
+SeNtInAl,xy,main,gn_bytes_tx,106,74829191526
+SeNtInAl,xy,main,gn_bytes_tx_normalized,106,10689884503
+SeNtInAl,xy,main,gn_bytes_rx,106,266987
+[rotation; translation]
+0.97220004 0.85323167 -1.32567203 5.66298771 7.32213736 14.15087414 
+
+
+
+Trial 2 with 106 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+[34mmain[0m - [32mTimer opencv: 0.000364 s[0m
+opencv result:
+[0.97490478;
+ 0.85677385;
+ -1.3262185]
+[5.6506324;
+ 7.3439293;
+ 14.200817]
+
+testing gn
+......::::::||||||5555/44/333/22/1/0/
+......::::::||||||5555/44/333/22/1/0/
+......::::::||||||5555/44/33/22/11/0/
+......::::::||||||5555/444/3/222/11/0/
+......::::::||||||555/44/33/222/11/0/
+......::::::||||||5555/44/33/222/11/0/
+......::::::||||||5555/44/33/22/11/0/
+......::::::||||||5555/44/33/222/11/0/
+Did 7 GN iterations
+[34mtest_gaussnewton_circuit[0m - [32mTimer GNGD: 171.173 s[0m
+SeNtInAl,xy,main,emp_float_gn_time_vs_points,106,171.391
+SeNtInAl,xy,main,emp_float_gn_time_vs_points_normalized,106,24.484
+SeNtInAl,grouped_bar,main,gn_additions,106,363264
+SeNtInAl,grouped_bar,main,gn_subtractions,106,56728
+SeNtInAl,grouped_bar,main,gn_multiplications,106,497048
+SeNtInAl,grouped_bar,main,gn_divisions,106,43996
+SeNtInAl,xy,main,gn_bytes_tx,106,76346817509
+SeNtInAl,xy,main,gn_bytes_tx_normalized,106,10906688215
+SeNtInAl,xy,main,gn_bytes_rx,106,267018
+[rotation; translation]
+0.96979725 0.85171622 -1.32748401 5.65752649 7.32107878 14.12135029 
+
+
+
+Trial 0 with 156 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+[34mmain[0m - [32mTimer opencv: 0.000308 s[0m
+opencv result:
+[0.97507709;
+ 0.8567577;
+ -1.3260103]
+[5.6513696;
+ 7.3440104;
+ 14.200843]
+
+testing gn
+......::::::||||||55555/4/33/2/11/0/
+......::::::||||||5555/44/33/22/11/0/
+......::::::||||||555/444/33/22/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||555/44/33/222/11/0/
+......::::::||||||5555/44/33/222/11/0/
+......::::::||||||5555/44/33/222/11/0/
+Did 8 GN iterations
+[34mtest_gaussnewton_circuit[0m - [32mTimer GNGD: 279.868 s[0m
+SeNtInAl,xy,main,emp_float_gn_time_vs_points,156,280.118
+SeNtInAl,xy,main,emp_float_gn_time_vs_points_normalized,156,26.0148
+SeNtInAl,grouped_bar,main,gn_additions,156,595385
+SeNtInAl,grouped_bar,main,gn_subtractions,156,89482
+SeNtInAl,grouped_bar,main,gn_multiplications,156,803994
+SeNtInAl,grouped_bar,main,gn_divisions,156,71958
+SeNtInAl,xy,main,gn_bytes_tx,156,123716709807
+SeNtInAl,xy,main,gn_bytes_tx_normalized,156,15464588725
+SeNtInAl,xy,main,gn_bytes_rx,156,267060
+[rotation; translation]
+0.97271127 0.85483372 -1.32692122 5.64061832 7.32481194 14.15876961 
+
+
+
+Trial 1 with 156 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+[34mmain[0m - [32mTimer opencv: 0.000241 s[0m
+opencv result:
+[0.97521698;
+ 0.85774696;
+ -1.3264891]
+[5.6493192;
+ 7.3470106;
+ 14.204823]
+
+testing gn
+......::::::||||||555/44/333/22/1/0/
+......::::::||||||5555/44/33/22/11/0/
+......::::::||||||5555/44/33/22/11/0/
+......::::::||||||5555/444/3/22/11/0/
+......::::::||||||555/444/3/222/11/0/
+......::::::||||||5555/44/33/222/11/0/
+......::::::||||||5555/44/33/22/11/0/
+......::::::||||||5555/444/3/22/11/0/
+......::::::||||||5555/444/3/222/11/0/
+Did 8 GN iterations
+[34mtest_gaussnewton_circuit[0m - [32mTimer GNGD: 284.008 s[0m
+SeNtInAl,xy,main,emp_float_gn_time_vs_points,156,284.249
+SeNtInAl,xy,main,emp_float_gn_time_vs_points_normalized,156,35.5311
+SeNtInAl,grouped_bar,main,gn_additions,156,597977
+SeNtInAl,grouped_bar,main,gn_subtractions,156,92042
+SeNtInAl,grouped_bar,main,gn_multiplications,156,814282
+SeNtInAl,grouped_bar,main,gn_divisions,156,71982
+SeNtInAl,xy,main,gn_bytes_tx,156,125061646015
+SeNtInAl,xy,main,gn_bytes_tx_normalized,156,15632705751
+SeNtInAl,xy,main,gn_bytes_rx,156,267076
+[rotation; translation]
+0.97414750 0.85623872 -1.32696784 5.64937735 7.33334255 14.17510128 
+
+
+
+Trial 2 with 156 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+[34mmain[0m - [32mTimer opencv: 0.000248 s[0m
+opencv result:
+[0.97487962;
+ 0.85702968;
+ -1.3264594]
+[5.6495814;
+ 7.3444848;
+ 14.201779]
+
+testing gn
+......::::::||||||5555/44/33/22/1/0/
+......::::::||||||555/44/33/22/1/0/
+......::::::||||||5555/44/33/22/11/0/
+......::::::||||||5555/44/33/22/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||555/44/33/222/11/0/
+......::::::||||||5555/44/33/222/11/0/
+......::::::||||||5555/44/33/222/11/0/
+......::::::||||||5555/44/33/222/11/0/
+Did 8 GN iterations
+[34mtest_gaussnewton_circuit[0m - [32mTimer GNGD: 286.003 s[0m
+SeNtInAl,xy,main,emp_float_gn_time_vs_points,156,286.275
+SeNtInAl,xy,main,emp_float_gn_time_vs_points_normalized,156,35.7843
+SeNtInAl,grouped_bar,main,gn_additions,156,596025
+SeNtInAl,grouped_bar,main,gn_subtractions,156,90118
+SeNtInAl,grouped_bar,main,gn_multiplications,156,806560
+SeNtInAl,grouped_bar,main,gn_divisions,156,71961
+SeNtInAl,xy,main,gn_bytes_tx,156,124051273010
+SeNtInAl,xy,main,gn_bytes_tx_normalized,156,15506409126
+SeNtInAl,xy,main,gn_bytes_rx,156,267063
+[rotation; translation]
+0.97461921 0.85640132 -1.32641494 5.65276432 7.33465147 14.19366837 
+
+
+
+Trial 0 with 206 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+[34mmain[0m - [32mTimer opencv: 0.000295 s[0m
+opencv result:
+[0.97523516;
+ 0.85795671;
+ -1.326563]
+[5.6465936;
+ 7.3489223;
+ 14.208308]
+
+testing gn
+......::::::||||||555/44/33/22/1/0/
+......::::::||||||555/44/33/22/11/0/
+......::::::||||||555/44/33/22/11/0/
+......::::::||||||555/444/3/222/11/0/
+......::::::||||||555/444/3/222/11/0/
+......::::::||||||555/444/33/222/11/0/
+......::::::||||||5555/444/3/222/11/0/
+......::::::||||||55555/44/3/222/11/0/
+......::::::||||||55555/44/3/222/11/0/
+Did 8 GN iterations
+[34mtest_gaussnewton_circuit[0m - [32mTimer GNGD: 371.357 s[0m
+SeNtInAl,xy,main,emp_float_gn_time_vs_points,206,371.635
+SeNtInAl,xy,main,emp_float_gn_time_vs_points_normalized,206,46.454
+SeNtInAl,grouped_bar,main,gn_additions,206,783105
+SeNtInAl,grouped_bar,main,gn_subtractions,206,116118
+SeNtInAl,grouped_bar,main,gn_multiplications,206,1052730
+SeNtInAl,grouped_bar,main,gn_divisions,206,94446
+SeNtInAl,xy,main,gn_bytes_tx,206,162060630280
+SeNtInAl,xy,main,gn_bytes_tx_normalized,206,20257578785
+SeNtInAl,xy,main,gn_bytes_rx,206,267053
+[rotation; translation]
+0.97625071 0.85819000 -1.32555974 5.66100359 7.35751343 14.24383259 
+
+
+
+Trial 1 with 206 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+[34mmain[0m - [32mTimer opencv: 0.000295 s[0m
+opencv result:
+[0.975088;
+ 0.85705018;
+ -1.3261968]
+[5.6510501;
+ 7.344893;
+ 14.202996]
+
+testing gn
+......::::::||||||5555/4/333/2/1/0/
+......::::::||||||5555/44/33/22/1/0/
+......::::::||||||5555/44/3/222/1/0/
+......::::::||||||555/444/3/222/1/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/444/3/222/11/0/
+......::::::||||||5555/444/3/222/11/0/
+......::::::||||||555/44/33/222/11/0/
+Did 8 GN iterations
+[34mtest_gaussnewton_circuit[0m - [32mTimer GNGD: 362.924 s[0m
+SeNtInAl,xy,main,emp_float_gn_time_vs_points,206,363.227
+SeNtInAl,xy,main,emp_float_gn_time_vs_points_normalized,206,45.4034
+SeNtInAl,grouped_bar,main,gn_additions,206,776721
+SeNtInAl,grouped_bar,main,gn_subtractions,206,109806
+SeNtInAl,grouped_bar,main,gn_multiplications,206,1027422
+SeNtInAl,grouped_bar,main,gn_divisions,206,94392
+SeNtInAl,xy,main,gn_bytes_tx,206,158753574343
+SeNtInAl,xy,main,gn_bytes_tx_normalized,206,19844196792
+SeNtInAl,xy,main,gn_bytes_rx,206,267020
+[rotation; translation]
+0.97564310 0.85764152 -1.32594502 5.65730190 7.34886599 14.21224785 
+
+
+
+Trial 2 with 206 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+[34mmain[0m - [32mTimer opencv: 0.000293 s[0m
+opencv result:
+[0.97510368;
+ 0.85677409;
+ -1.3260937]
+[5.6522632;
+ 7.3437653;
+ 14.200401]
+
+testing gn
+......::::::||||||555/44/333/22/1/0/
+......::::::||||||555/44/33/22/11/0/
+......::::::||||||555/444/33/222/11/0/
+......::::::||||||555/444/3/22/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||5555/44/33/22/11/0/
+......::::::||||||5555/444/3/222/11/0/
+......::::::||||||5555/44/33/22/11/0/
+Did 7 GN iterations
+[34mtest_gaussnewton_circuit[0m - [32mTimer GNGD: 329.99 s[0m
+SeNtInAl,xy,main,emp_float_gn_time_vs_points,206,330.271
+SeNtInAl,xy,main,emp_float_gn_time_vs_points_normalized,206,47.1816
+SeNtInAl,grouped_bar,main,gn_additions,206,696792
+SeNtInAl,grouped_bar,main,gn_subtractions,206,103912
+SeNtInAl,grouped_bar,main,gn_multiplications,206,938564
+SeNtInAl,grouped_bar,main,gn_divisions,206,83954
+SeNtInAl,xy,main,gn_bytes_tx,206,144419117453
+SeNtInAl,xy,main,gn_bytes_tx_normalized,206,20631302493
+SeNtInAl,xy,main,gn_bytes_rx,206,266994
+[rotation; translation]
+0.97442436 0.85673714 -1.32650959 5.64745617 7.34182549 14.19470406 
+
+
+
+Trial 0 with 256 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+[34mmain[0m - [32mTimer opencv: 0.000348 s[0m
+opencv result:
+[0.9751544;
+ 0.85699421;
+ -1.3261068]
+[5.6508703;
+ 7.3448715;
+ 14.201057]
+
+testing gn
+......::::::||||||555/44/33/22/11/0/
+......::::::||||||555/44/33/22/11/0/
+......::::::||||||555/44/33/22/11/0/
+......::::::||||||5555/44/33/222/11/0/
+......::::::||||||555/44/33/222/11/0/
+......::::::||||||5555/44/33/222/11/0/
+......::::::||||||555/44/33/222/11/0/
+......::::::||||||5555/44/33/22/11/0/
+......::::::||||||5555/44/33/222/11/0/
+Did 8 GN iterations
+[34mtest_gaussnewton_circuit[0m - [32mTimer GNGD: 463.913 s[0m
+SeNtInAl,xy,main,emp_float_gn_time_vs_points,256,464.21
+SeNtInAl,xy,main,emp_float_gn_time_vs_points_normalized,256,58.0263
+SeNtInAl,grouped_bar,main,gn_additions,256,970233
+SeNtInAl,grouped_bar,main,gn_subtractions,256,142158
+SeNtInAl,grouped_bar,main,gn_multiplications,256,1299072
+SeNtInAl,grouped_bar,main,gn_divisions,256,116937
+SeNtInAl,xy,main,gn_bytes_tx,256,200094106402
+SeNtInAl,xy,main,gn_bytes_tx_normalized,256,25011763300
+SeNtInAl,xy,main,gn_bytes_rx,256,267047
+[rotation; translation]
+0.97128552 0.85461271 -1.32819295 5.63352108 7.30032635 14.14997768 
+
+
+
+Trial 1 with 256 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+[34mmain[0m - [32mTimer opencv: 0.000328 s[0m
+opencv result:
+[0.97495186;
+ 0.8565892;
+ -1.3261876]
+[5.6523328;
+ 7.3428164;
+ 14.200147]
+
+testing gn
+......::::::||||||555/44/33/22/11/0/
+......::::::||||||5555/44/33/22/1/0/
+......::::::||||||555/44/33/22/11/0/
+......::::::||||||5555/444/3/222/11/0/
+......::::::||||||5555/44/3/222/11/0/
+......::::::||||||555/444/3/222/11/0/
+......::::::||||||5555/44/33/22/11/0/
+......::::::||||||555/444/33/22/11/0/
+Did 7 GN iterations
+[34mtest_gaussnewton_circuit[0m - [32mTimer GNGD: 413.474 s[0m
+SeNtInAl,xy,main,emp_float_gn_time_vs_points,256,413.711
+SeNtInAl,xy,main,emp_float_gn_time_vs_points_normalized,256,59.1016
+SeNtInAl,grouped_bar,main,gn_additions,256,861540
+SeNtInAl,grouped_bar,main,gn_subtractions,256,125488
+SeNtInAl,grouped_bar,main,gn_multiplications,256,1151242
+SeNtInAl,grouped_bar,main,gn_divisions,256,103933
+SeNtInAl,xy,main,gn_bytes_tx,256,177404494848
+SeNtInAl,xy,main,gn_bytes_tx_normalized,256,25343499264
+SeNtInAl,xy,main,gn_bytes_rx,256,266981
+[rotation; translation]
+0.97031319 0.85405195 -1.32847869 5.63170385 7.31214237 14.12660599 
+
+
+
+Trial 2 with 256 randomly selected points on frame 0 from location 0
+
+testing opencv
+solvePnPGeneric
+INITIALIZING
+CALC_J 0.001000
+CALC_J 0.000100
+CALC_J 0.000010
+[34mmain[0m - [32mTimer opencv: 0.000376 s[0m
+opencv result:
+[0.97512096;
+ 0.85692191;
+ -1.3261399]
+[5.6514311;
+ 7.3442836;
+ 14.200529]
+
+testing gn
+......::::::||||||5555/44/33/22/1/0/
+......::::::||||||5555/44/33/22/1/0/
+......::::::||||||555/444/3/22/11/0/
+......::::::||||||555/44/33/222/11/0/
+......::::::||||||555/444/3/222/11/0/
+......::::::||||||5555/44/33/222/11/0/
+......::::::||||||5555/444/3/22/11/0/
+......::::::||||||555/44/33/222/11/0/
+Did 7 GN iterations
+[34mtest_gaussnewton_circuit[0m - [32mTimer GNGD: 419.122 s[0m
+SeNtInAl,xy,main,emp_float_gn_time_vs_points,256,419.373
+SeNtInAl,xy,main,emp_float_gn_time_vs_points_normalized,256,59.9104
+SeNtInAl,grouped_bar,main,gn_additions,256,861540
+SeNtInAl,grouped_bar,main,gn_subtractions,256,125488
+SeNtInAl,grouped_bar,main,gn_multiplications,256,1151242
+SeNtInAl,grouped_bar,main,gn_divisions,256,103933
+SeNtInAl,xy,main,gn_bytes_tx,256,177404494848
+SeNtInAl,xy,main,gn_bytes_tx_normalized,256,25343499264
+SeNtInAl,xy,main,gn_bytes_rx,256,266981
+[rotation; translation]
+0.97318131 0.85467076 -1.32656002 5.64406013 7.32688951 14.17325020 
+
+
+

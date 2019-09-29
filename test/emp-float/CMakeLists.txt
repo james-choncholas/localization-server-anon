@@ -1,0 +1,40 @@
+cmake_minimum_required(VERSION 3.12)
+set(common_test_dir "${CMAKE_CURRENT_SOURCE_DIR}/../common-test/")
+file(GLOB_RECURSE common_test CONFIGURE_DEPENDS "${common_test_dir}/*.cpp" "${common_test_dir}/*.hpp")
+list(FILTER common_test EXCLUDE REGEX ".*eth3d_tester\\.cpp$")
+list(FILTER common_test EXCLUDE REGEX ".*kitti_tester\\.cpp$")
+
+# required for emp
+set(CMAKE_C_FLAGS "-pthread -Wall -march=native -O3 -maes -mrdseed")
+set(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} -std=c++17")
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -ggdb -fno-omit-frame-pointer")
+set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE}")
+
+
+add_executable(gn_emp_float_server_tester "${CMAKE_CURRENT_SOURCE_DIR}/test.cpp" ${common_test})
+target_include_directories(gn_emp_float_server_tester PUBLIC ${common_test_dir})
+target_compile_options(gn_emp_float_server_tester PRIVATE "-Wall" "-Wextra" "-DPPL_GN")
+target_link_libraries(gn_emp_float_server_tester ${EMP-SH2PC_LIBRARIES} ${OpenCV_LIBS} EmpFloatLocalization)
+
+add_executable(lm_emp_float_server_tester "${CMAKE_CURRENT_SOURCE_DIR}/test.cpp" ${common_test})
+target_include_directories(lm_emp_float_server_tester PUBLIC ${common_test_dir})
+target_compile_options(lm_emp_float_server_tester PRIVATE "-Wall" "-Wextra" "-DPPL_LM")
+target_link_libraries(lm_emp_float_server_tester ${EMP-SH2PC_LIBRARIES} ${OpenCV_LIBS} EmpFloatLocalization)
+
+add_executable(gn_emp_float_server_benchmark "${CMAKE_CURRENT_SOURCE_DIR}/benchmark.cpp" ${common_test})
+target_include_directories(gn_emp_float_server_benchmark PUBLIC ${common_test_dir})
+target_compile_options(gn_emp_float_server_benchmark PRIVATE "-Wall" "-Wextra" "-DPPL_GN")
+target_link_libraries(gn_emp_float_server_benchmark ${EMP-SH2PC_LIBRARIES} ${OpenCV_LIBS} EmpFloatLocalization)
+
+add_executable(lm_emp_float_server_benchmark "${CMAKE_CURRENT_SOURCE_DIR}/benchmark.cpp" ${common_test})
+target_include_directories(lm_emp_float_server_benchmark PUBLIC ${common_test_dir})
+target_compile_options(lm_emp_float_server_benchmark PRIVATE "-Wall" "-Wextra" "-DPPL_LM")
+target_link_libraries(lm_emp_float_server_benchmark ${EMP-SH2PC_LIBRARIES} ${OpenCV_LIBS} EmpFloatLocalization)
+
+
+
+
+add_executable(emp_float_client "${CMAKE_CURRENT_SOURCE_DIR}/client.cpp" ${common_test})
+target_include_directories(emp_float_client PUBLIC ${common_test_dir})
+target_compile_options(emp_float_client PRIVATE "-Wall" "-Wextra")
+target_link_libraries(emp_float_client ${EMP-SH2PC_LIBRARIES} ${OpenCV_LIBS} EmpFloatLocalization)
