@@ -13,6 +13,3 @@ using namespace std;
 //      [ u1, u2, ...;  v1, v2, ...;  1, 1, ... ]
 void BuildProjectPointsCircuit(Float _P[], Float _x[], Float _K[], Float _res[],
         int numPoints, bool skipOneGate);
-
-uint32_t test_projectpoints_circuit(int party, NetIO *io,
-        float* _P, float* _x, float* _K, float* _res, int numPoints);

@@ -263,6 +263,10 @@ bool lm( vector<cv::Point3_<T>> threeDPts,
                 JtJ_i_Jt_linear[(p*n*2)+pp] = JtJ_i_Jt[p][pp];
             }
         }
+        for(int p=0; p<6; p++)
+          delete[] JtJ_i_Jt[p];
+        delete[] JtJ_i_Jt;
+
         T dx[6];
         matmult(JtJ_i_Jt_linear, 6, 2*n,
                 dy, 2*n, 1, // column vector

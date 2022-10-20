@@ -7,5 +7,3 @@ using namespace std;
 // r=3x1, R=3x4 (only 3x3 is used here)
 // values are secret, sizes are public
 void BuildRodriguesCircuit(Float r[], Float R[]);
-
-uint32_t test_rodrigues_circuit(int party, NetIO *io);

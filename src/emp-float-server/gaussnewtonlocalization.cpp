@@ -127,6 +127,8 @@ std::pair<bool, int> BuildGaussNewton(Float threeDPts[], Float y0[], int numPts,
                 jacob[p][j] = (ytemp[p] - y[p]) / Float(jacob_epsilon, PUBLIC);
             }
 
+            delete[] ytemp;
+
             // un-perturb x
             x[j] = temp;
         }
@@ -140,6 +142,7 @@ std::pair<bool, int> BuildGaussNewton(Float threeDPts[], Float y0[], int numPts,
         }
         //cout << "dy:\n";
         //printFloatVector(dy, 2*numPts);
+        delete[] y;
 
         // compute pseudo inverse to solve:
         // dy = J dx   ->   dx = Jdagger dy
@@ -169,6 +172,7 @@ std::pair<bool, int> BuildGaussNewton(Float threeDPts[], Float y0[], int numPts,
                             dx);
         //cout << "dx\n";
         //printFloatVector(dx, 6);
+        delete[] dy;
 
         // cleanup jacobian
         for(int p=0; p<numPts*2; p++) {
@@ -183,6 +187,7 @@ std::pair<bool, int> BuildGaussNewton(Float threeDPts[], Float y0[], int numPts,
         for(int p=0; p<6; p++) {
             delete[] jacobI[p];
         }
+        delete[] jacobI;
         delete[] jacobILinear;
 
         Bit er_flag = absnorm.less_than(min_er);
@@ -195,6 +200,7 @@ std::pair<bool, int> BuildGaussNewton(Float threeDPts[], Float y0[], int numPts,
 #endif
             x[p] = x[p] + dx[p];
         }
+        delete[] dx;
 
 #if PPL_FLOW!=PPL_FLOW_DO
         // okay to reveal how many iterations it took
@@ -209,55 +215,4 @@ std::pair<bool, int> BuildGaussNewton(Float threeDPts[], Float y0[], int numPts,
     if (_verbosity & DBG_FLOW)
         cout << "Did " << i << " GN iterations\n";
     return {i < LM_MAX_ITR, i+1};
-}
-
-std::pair<bool, int> test_gaussnewton_circuit(int party, NetIO *io,
-        vector<cv::Point3f> threeDPts, vector<cv::Point2f> twoDPts,
-        float f, float cx, float cy, float* x /* initial guess for { r1, r2, r3, t1, t2, t3 } */ ) {
-
-    setup_semi_honest(io, party);
-
-    int numPts = threeDPts.size();
-
-    Float *s_threeDPts = static_cast<Float*>(operator new[](4*numPts * sizeof(Float)));
-    Float *s_twoDPts = static_cast<Float*>(operator new[](3*numPts * sizeof(Float)));
-    for(int i=0; i<numPts; i++) {
-        // [x1, x2... ; y1, y2... ; z1, z2...]
-        s_threeDPts[i] = Float(threeDPts[i].x, ALICE);
-        s_threeDPts[numPts + i] = Float(threeDPts[i].y, ALICE);
-        s_threeDPts[2*numPts + i] = Float(threeDPts[i].z, ALICE);
-        //s_threeDPts[3*numPts + i] = Float(1.0, PUBLIC);
-
-        // [x1, y1; x2, y2; ...]
-        s_twoDPts[2*i] = Float(twoDPts[i].x, ALICE);
-        s_twoDPts[2*i + 1] = Float(twoDPts[i].y, ALICE);
-        //s_twoDPts[2*numPts + i] = Float(1.0, PUBLIC);
-    }
-
-    Float s_f  = Float(f, ALICE);
-    Float s_cx = Float(cx, ALICE);
-    Float s_cy = Float(cy, ALICE);
-
-    Float *s_x = static_cast<Float*>(operator new[](6 * sizeof(Float)));
-    for(int i=0; i<6; i++) {
-        s_x[i] = Float(x[i], ALICE);
-    }
-
-    CLOCK(GNGD);
-    TIC(GNGD);
-    auto res = BuildGaussNewton(s_threeDPts, s_twoDPts, numPts,
-                            s_f, s_cx, s_cy, s_x);
-    TOC(GNGD);
-
-    for(int i=0; i<6; i++) {
-        x[i] = s_x[i].reveal<double>();
-        s_x[i].~Float();
-    }
-    delete[] s_x;
-    delete[] s_threeDPts;
-    delete[] s_twoDPts;
-
-    finalize_semi_honest();
-
-    return res;
 }

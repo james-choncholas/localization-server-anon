@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.12)
-set(common_test_dir "${CMAKE_CURRENT_SOURCE_DIR}/../common-test/")
+set(common_test_dir "${CMAKE_CURRENT_SOURCE_DIR}/")
 file(GLOB_RECURSE common_test CONFIGURE_DEPENDS "${common_test_dir}/*.cpp" "${common_test_dir}/*.h")
 list(FILTER common_test EXCLUDE REGEX ".*eth3d_tester\\.cpp$")
 list(FILTER common_test EXCLUDE REGEX ".*kitti_tester\\.cpp$")

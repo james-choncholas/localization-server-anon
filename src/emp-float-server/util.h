@@ -6,6 +6,8 @@
 
 using namespace emp;
 
+void print_float32_bits(Float a);
+
 void printFloatMatrix(Float **a, int rows, int cols);
 
 void printFloatVector(Float *v, int size);

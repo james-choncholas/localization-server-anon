@@ -70,37 +70,3 @@ void BuildRodriguesCircuit(Float r[], Float R[]) {
     R[9] = (c1 * yz) + sx;
     R[10] = (c1 * zz) + co;
 }
-
-uint32_t test_rodrigues_circuit(int party, NetIO *io) {
-
-    setup_semi_honest(io, party);
-
-    void *raw_memoryr = operator new[](3 * sizeof(Float));
-    Float *r = static_cast<Float *>(raw_memoryr);
-
-    new(&r[0]) Float(.2, ALICE);
-    new(&r[1]) Float(.4, ALICE);
-    new(&r[2]) Float(.2, ALICE);
-
-    void *raw_memoryR = operator new[](12 * sizeof(Float));
-    Float *R = static_cast<Float *>(raw_memoryR);
-
-
-    CLOCK(BuildCircuit);
-    TIC(BuildCircuit);
-    BuildRodriguesCircuit(r, R);
-    TOC(BuildCircuit);
-
-    cout << "rodrigues result:" << endl;
-    for (int i=0; i<12; ++i) {
-        if (i==3 || i==7 || i==11) {
-            cout << endl;
-            continue;
-        }
-        cout << R[i].reveal<double>() << ", ";
-    }
-
-    finalize_semi_honest();
-
-    return 0;
-}

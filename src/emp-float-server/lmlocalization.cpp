@@ -153,6 +153,8 @@ std::pair<bool, int> BuildLM(Float threeDPts[], Float y0[], int numPts,
                 jacob[p][j] = (ytemp[p] - y[p]) / jacob_epsilon_gate;
             }
 
+            delete[] ytemp;
+
             // un-perturb x
             x[j] = temp;
         }
@@ -169,6 +171,7 @@ std::pair<bool, int> BuildLM(Float threeDPts[], Float y0[], int numPts,
         if (_verbosity & DBG_ER) {
             cout << "dy\n"; printFloatVector(dy, 2*numPts);
         }
+        delete[] y;
 
 
 
@@ -234,6 +237,10 @@ std::pair<bool, int> BuildLM(Float threeDPts[], Float y0[], int numPts,
             cout << "dx\n"; printFloatVector(dx, 6);
         }
 
+        delete[] dy;
+        for(int p=0; p<6; p++)
+            delete[] JtJ_i_Jt[p];
+        delete[] JtJ_i_Jt;
         delete[] JtJ_i_Jt_linear;
 
         //  abs(norm(dy, cv::NORM_L2SQR)) < MIN_ER
@@ -269,6 +276,7 @@ std::pair<bool, int> BuildLM(Float threeDPts[], Float y0[], int numPts,
 #endif
             x[p] = x[p] + dx[p];
         }
+        delete[] dx;
 
 #if PPL_FLOW!=PPL_FLOW_DO
         // okay to reveal how many iterations it took
@@ -344,8 +352,6 @@ std::pair<bool, int> test_lm_circuit(int party, NetIO *io,
     return res;
 }
 
-//#define SANITY_CHECK
-
 std::pair<bool, int> lm_server(int party, NetIO *io, NetIO *ttpio) {
     uint32_t numPts;
     ttpio->recv_data(&numPts, sizeof(numPts));
@@ -363,40 +369,19 @@ std::pair<bool, int> lm_server(int party, NetIO *io, NetIO *ttpio) {
         s_threeDPts[2*numPts + i] = Float(0, TTP);
         //s_threeDPts[3*numPts + i] = Float(0, PUBLIC);
 
-#ifdef SANITY_CHECK
-std::cout << s_threeDPts[i].reveal<double>()
-    << ", " << s_threeDPts[numPts+i].reveal<double>()
-    << ", " << s_threeDPts[2*numPts+i].reveal<double>()
-    << std::endl;
-#endif
-
         // [x1, y1; x2, y2; ...]
         s_twoDPts[2*i] = Float(0, TTP);
         s_twoDPts[2*i + 1] = Float(0, TTP);
         //s_twoDPts[2*numPts + i] = Float(1.0, PUBLIC);
-
-#ifdef SANITY_CHECK
-std::cout << s_twoDPts[2*i].reveal<double>()
-    << ", " << s_twoDPts[2*i].reveal<double>()
-    << std::endl;
-#endif
     }
 
     Float s_f  = Float(0, TTP);
     Float s_cx = Float(0, TTP);
     Float s_cy = Float(0, TTP);
-#ifdef SANITY_CHECK
-std::cout << s_f.reveal<double>() << std::endl;
-std::cout << s_cx.reveal<double>() << std::endl;
-std::cout << s_cy.reveal<double>() << std::endl;
-#endif
 
     Float *s_x = static_cast<Float*>(operator new[](6 * sizeof(Float)));
     for(int i=0; i<6; i++) {
         s_x[i] = Float(0, TTP);
-#ifdef SANITY_CHECK
-std::cout << s_x[i].reveal<double>() << std::endl;
-#endif
     }
 
     CLOCK(LM);
@@ -408,9 +393,6 @@ std::cout << s_x[i].reveal<double>() << std::endl;
     TOC(LM);
 
     for(int i=0; i<6; i++) {
-#ifdef SANITY_CHECK
-std::cout << s_x[i].reveal<double>() << std::endl;
-#endif
         s_x[i].reveal<double>(TTP); // ignore output, it goes to ttp
         s_x[i].~Float();
     }

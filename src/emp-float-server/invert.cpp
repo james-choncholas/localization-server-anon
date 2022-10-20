@@ -76,47 +76,10 @@ void BuildInvertCircuit(Float *in[], int m, int n, Float *res[]) {
             }
         }
     }
-}
 
-uint32_t test_invert_circuit(int party, NetIO *io,
-        float **a_in, int nRows, int nCols, float **res_in) {
-
-    setup_semi_honest(io, party);
-
-    // share arrays
-    Float** a = new Float*[nRows];
-    for(int i=0; i<nRows; i++) {
-        a[i] = static_cast<Float*>(operator new[](nCols * sizeof(Float)));
-        for(int j=0; j<nCols; j++) {
-            new(&a[i][j]) Float(a_in[i][j], ALICE);
-        }
+    delete[] w;
+    for(int i=0; i<n; i++) {
+      delete[] v[i];
     }
-
-
-    // res is nxm not mxn
-    Float** res = new Float*[nCols];
-    for(int i=0; i<nCols; i++) {
-        res[i] = static_cast<Float*>(operator new[](nRows * sizeof(Float)));
-        //for(int j=0; j<nRows; j++) {
-        //    res[i][j] = Float(0.0, PUBLIC);
-        //}
-    }
-
-    CLOCK(BuildInvert);
-    TIC(BuildInvert);
-    BuildInvertCircuit(a, nRows, nCols, res);
-    TOC(BuildInvert);
-
-    for(int i=0; i<nCols; i++) {
-        for (int j=0; j<nRows; j++) {
-            res_in[i][j] = res[i][j].reveal<double>(PUBLIC);
-            res[i][j].~Float();
-        }
-        delete[] res[i];
-    }
-    delete[] res;
-
-    finalize_semi_honest();
-
-    return 0;
+    delete[] v;
 }

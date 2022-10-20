@@ -14,6 +14,12 @@ using namespace std;
 #define BUILD_TIMING 0
 #define EXEC_TIMING 0
 
+void print_float32_bits(Float a) {
+    for(int i = 31; i >= 0; i--)
+        printf("%d", a[i].reveal<bool>());
+    cout << endl;
+}
+
 // prints an arbitrary size vector to the standard output
 void printFloatVector(Float *v, int size) {
     int i;

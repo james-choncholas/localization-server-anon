@@ -27,22 +27,3 @@ Float BuildTwoNormSqCircuit(Float vect[], int sz) {
     }
     return sum;
 }
-
-float test_twonormsq_circuit(int party, NetIO *io, float *vect_in, int sz) {
-    setup_semi_honest(io, party);
-
-    Float* vect = static_cast<Float*>(operator new[](sz * sizeof(Float)));
-    for(int i=0; i<sz; i++) {
-        vect[i] = Float(vect_in[i], PUBLIC);
-    }
-
-    Float res = BuildTwoNormSqCircuit(vect, sz);
-
-    cout << "res " << res.reveal<double>() << endl;
-
-    delete[] vect;
-
-    finalize_semi_honest();
-
-    return 0;
-}

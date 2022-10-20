@@ -4,11 +4,8 @@
 
 using namespace emp;
 
+void BuildSignCircuit(Float *a, Float *b);
+
+Float BuildPythagCircuit(Float *a, Float *b);
+
 int BuildSvdCircuit(Float **a, int nRows, int nCols, Float *w, Float **v);
-
-uint32_t test_sign_circuit(int party, NetIO *io, float a_in, float b_in);
-
-uint32_t test_pythag_circuit(int party, NetIO *io, float a_in, float b_in);
-
-uint32_t test_svd_circuit(int party, NetIO *io,
-        float **a_in, int nRows, int nCols, float *w_in, float **v_in);

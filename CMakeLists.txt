@@ -56,7 +56,7 @@ execute_process(COMMAND mkdir build
     WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/extern/opencv/")
 execute_process(COMMAND cmake ..
     WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/extern/opencv/build")
-execute_process(COMMAND make
+execute_process(COMMAND make -j16
     WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/extern/opencv/build")
 execute_process(COMMAND sudo make install
     WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/extern/opencv/build")
@@ -74,7 +74,7 @@ foreach(empdir tool ot sh2pc)
     #    WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/extern/emp-${empdir}")
     execute_process(COMMAND cmake -DENABLE_FLOAT=On -DTHREADING=On .
         WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/extern/emp-${empdir}")
-    execute_process(COMMAND make -j8
+    execute_process(COMMAND make -j16
         WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/extern/emp-${empdir}")
     execute_process(COMMAND sudo make install
         WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/extern/emp-${empdir}")
@@ -93,6 +93,9 @@ include(${CMAKE_CURRENT_SOURCE_DIR}/extern/emp-sh2pc/cmake/emp-sh2pc-config.cmak
 ADD_DEFINITIONS(-DTHREADING)
 
 
+add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/extern/Catch2")
+include(CTest)
+include(Catch)
 
 #find_package(RELIC::relic REQUIRED)
 #add_subdirectory(extern/relic)

@@ -13,5 +13,3 @@ using namespace std;
 // values are secret, sizes are public
 Float BuildSinCircuit(Float a);
 Float BuildCosCircuit(Float a);
-
-void test_trig_circuit(float val, int party, NetIO *io, bool trueForSin);
