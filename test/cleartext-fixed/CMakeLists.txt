@@ -24,15 +24,11 @@ target_include_directories(lm_fixed_server_tester PUBLIC ${common_test_dir})
 target_compile_options(lm_fixed_server_tester PRIVATE "-Wall" "-Wextra" "-DPPL_LM")
 target_link_libraries(lm_fixed_server_tester ${OpenCV_LIBS} EmpFloatLocalization ${Boost_LIBRARIES})
 
-add_executable(gn_fixed_server_benchmark "${CMAKE_CURRENT_SOURCE_DIR}/benchmark.cpp" ${common_test})
-target_include_directories(gn_fixed_server_benchmark PUBLIC ${common_test_dir})
-target_compile_options(gn_fixed_server_benchmark PRIVATE "-Wall" "-Wextra" "-DPPL_GN")
-target_link_libraries(gn_fixed_server_benchmark ${OpenCV_LIBS} EmpFloatLocalization ${Boost_LIBRARIES})
 
-add_executable(lm_fixed_server_benchmark "${CMAKE_CURRENT_SOURCE_DIR}/benchmark.cpp" ${common_test})
-target_include_directories(lm_fixed_server_benchmark PUBLIC ${common_test_dir})
-target_compile_options(lm_fixed_server_benchmark PRIVATE "-Wall" "-Wextra" "-DPPL_LM")
-target_link_libraries(lm_fixed_server_benchmark ${OpenCV_LIBS} EmpFloatLocalization ${Boost_LIBRARIES})
+add_executable(fixed_server_benchmark "${CMAKE_CURRENT_SOURCE_DIR}/benchmark.cpp" ${common_test})
+target_include_directories(fixed_server_benchmark PUBLIC ${common_test_dir})
+target_compile_options(fixed_server_benchmark PRIVATE "-Wall" "-Wextra" "-DPPL_GN")
+target_link_libraries(fixed_server_benchmark ${OpenCV_LIBS} EmpFloatLocalization ${Boost_LIBRARIES})
 
 
 add_executable(emp_float_vs_fixed_benchmark_add "${CMAKE_CURRENT_SOURCE_DIR}/float_vs_fixed_speed.cpp" ${common_test})

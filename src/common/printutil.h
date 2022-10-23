@@ -11,17 +11,18 @@ void printVector(std::string s, T *v, int size) {
         if (printints)
             printf("%d", *(int*)&v[i]);
         else {
-            if (typeid(T) == typeid(float) || typeid(T) == typeid(double)) {
-                printf("%.8lf ", v[i]);
-            } else if (typeid(T) == typeid(fixed_point<int64_t,32>)) {
-                //std::cout.precision(8);
-                std::cout << v[i] << " ";
-            } else if (typeid(T) == typeid(fixed_point<int32_t,16>)) {
-                //std::cout.precision(8);
-                std::cout << v[i] << " ";
-            } else {
-                printf("%jd ", v[i]);
-            }
+            //if (typeid(T) == typeid(float) || typeid(T) == typeid(double)) {
+            //    printf("%.8lf ", v[i]);
+            //} else if (typeid(T) == typeid(fixed_point<int64_t,32>)) {
+            //    //std::cout.precision(8);
+            //    std::cout << v[i] << " ";
+            //} else if (typeid(T) == typeid(fixed_point<int32_t,16>)) {
+            //    //std::cout.precision(8);
+            //    std::cout << v[i] << " ";
+            //} else {
+            //    std::cout << v[i] << " ";
+            //}
+            std::cout << v[i] << " ";
         }
     }
     printf("\n\n");
@@ -35,17 +36,18 @@ void printMatrix(std::string s, T **a, int rows, int cols) {
             if (printints)
                 printf("%d", *(int*)&a[i][j]);
             else {
-                if (typeid(T) == typeid(float) || typeid(T) == typeid(double)) {
-                    printf("%.8lf ", a[i][j]);
-                } else if (typeid(T) == typeid(fixed_point<int64_t,32>)) {
-                    //std::cout.precision(8);
-                    std::cout << a[i][j] << " ";
-                } else if (typeid(T) == typeid(fixed_point<int32_t,16>)) {
-                    //std::cout.precision(8);
-                    std::cout << a[i][j] << " ";
-                } else {
-                    printf("%jd ", a[i][j]);
-                }
+                //if (typeid(T) == typeid(float) || typeid(T) == typeid(double)) {
+                //    printf("%.8lf ", a[i][j]);
+                //} else if (typeid(T) == typeid(fixed_point<int64_t,32>)) {
+                //    //std::cout.precision(8);
+                //    std::cout << a[i][j] << " ";
+                //} else if (typeid(T) == typeid(fixed_point<int32_t,16>)) {
+                //    //std::cout.precision(8);
+                //    std::cout << a[i][j] << " ";
+                //} else {
+                //    std::cout << a[i][j] << " ";
+                //}
+                std::cout << a[i][j] << " ";
             }
         }
         printf("\n");

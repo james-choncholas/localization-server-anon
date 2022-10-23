@@ -269,7 +269,8 @@ public:
         auto m = images[id]->image_T_global; // not global_T_image, right?
         auto r = m.getRotation().toRotVec();
         auto t = m.getTranslation();
-        std::vector<T> pose = {r[0], r[1], r[2], t[0], t[1], t[2]};
+        std::vector<T> pose = {static_cast<T>(r[0]), static_cast<T>(r[1]), static_cast<T>(r[2]),
+                               static_cast<T>(t[0]), static_cast<T>(t[1]), static_cast<T>(t[2])};
         return pose;
     }
 

@@ -30,6 +30,8 @@ using std::cout;
 using std::vector;
 using Catch::Matchers::WithinAbs;
 
+constexpr const int port = 8080;
+
 TEST_CASE("Trig functions are computed", "[trig]") {
   float angle = .2;
 
@@ -134,20 +136,58 @@ TEST_CASE("SVD pythag function is computed", "[svd]") {
   delete io;
 }
 
-TEST_CASE("SVD function is computed", "[svd]") {
-  int m=5,n=4;
+//TEST_CASE("Small SVD function is computed", "[svd]") {
+//  int m=5,n=4;
+//  float** in = new float*[m];
+//  for(int i=0; i<m; i++) {
+//    in[i] = new float[n]();
+//    for (int j=0; j<n; j++) {
+//      in[i][j]=i+j;
+//    }
+//  }
+//  in[0][0] = 0;
+//  in[1][0] = 0;
+//  in[2][0] = 0;
+//  in[3][0] = 0;
+//  in[4][0] = 0;
+//
+//  std::thread bob([in, m, n]() {
+//    NetIO *io = new NetIO("127.0.0.1", port);
+//    emp_svd(io, BOB, in, m, n);
+//    delete io;
+//  });
+//
+//  NetIO *io = new NetIO(nullptr, port);
+//  emp_svd(io, ALICE, in, m, n);
+//  bob.join();
+//  for (int i=0; i<m; i++) {
+//    delete[] in[i];
+//  }
+//  delete[] in;
+//  delete io;
+//}
+
+TEST_CASE("Large SVD function is computed", "[svd]") {
+  int m=12,n=6;
+  float one_d_M[] = {-9.1552734, 149.53613, -59.509277, 18.310547, 0, 3.0517578,
+                     -164.79492, -64.086914, -47.302246, 0, 19.836426, 1.5258789,
+                     27.46582, 77.819824, 50.354004, 22.888184, 0, 1.5258789,
+                     -56.45752, -42.724609, -53.405762, 0, 22.888184, 3.0517578,
+                     45.776367, 79.345703, 79.345703, 21.362305, 0, 0,
+                     -32.806396, -13.73291, -20.599365, 0, 24.414062, 4.5776367,
+                     -21.362305, 108.3374, -93.078613, 16.784668, 0, 3.0517578,
+                     -152.58789, -45.776367, -10.681152, 0, 19.836426, 3.0517578,
+                     6.1035156, 39.672852, 3.0517578, 21.362305, 0, 0,
+                     -39.672852, -21.362305, -16.784668, 0, 22.888184, 1.5258789,
+                     24.414062, 48.828125, 27.46582, 24.414062, 0, 0,
+                     -13.73291, 6.1035156, 12.207031, 0, 22.888184, 1.5258789};
   float** in = new float*[m];
   for(int i=0; i<m; i++) {
     in[i] = new float[n]();
     for (int j=0; j<n; j++) {
-      in[i][j]=i+j;
+      in[i][j] = one_d_M[i*n+j];
     }
   }
-  in[0][0] = 0;
-  in[1][0] = 0;
-  in[2][0] = 0;
-  in[3][0] = 0;
-  in[4][0] = 0;
 
   std::thread bob([in, m, n]() {
     NetIO *io = new NetIO("127.0.0.1", port);

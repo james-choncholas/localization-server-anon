@@ -16,7 +16,7 @@ using namespace std;
 
 // The matrix version
 template<typename T>
-void myinvert(cv::Mat M, cv::Mat result) {
+int myinvert(cv::Mat M, cv::Mat result) {
     int m=M.rows;
     int n=M.cols;
     assert(m>=n);
@@ -51,7 +51,9 @@ void myinvert(cv::Mat M, cv::Mat result) {
     //compute_svd(in, m, n, w, v);// in overwritten with u
     //svd_backsubstitute(in, w, v, m, n, NULL, out[0]); // why is out is 1D? - because of b :(
 
-    svdcmp(in, m, n, w, v);
+    if (svdcmp(in, m, n, w, v)) {
+      return -1;
+    }
     T** u = in;
 
     //cout << "w\n";
@@ -112,10 +114,11 @@ void myinvert(cv::Mat M, cv::Mat result) {
     for(int i=0; i<n; i++)
         delete[] v[i];
     delete[] v;
+    return 0;
 }
 
 template<typename T>
-void myinvert(T** M, int m, int n, T** res) {
+int myinvert(T** M, int m, int n, T** res) {
     assert(m>=n);
 
     // need to copy M because svd overwrites with u matrix
@@ -133,7 +136,16 @@ void myinvert(T** M, int m, int n, T** res) {
     for(int i=0; i<n; i++)
         v[i] = new T[n];
 
-    svdcmp<T>(in, m, n, w, v);
+    if (svdcmp<T>(in, m, n, w, v)) {
+      for(int i=0; i<m; i++)
+          delete[] in[i];
+      delete[] in;
+      delete[] w;
+      for(int i=0; i<n; i++)
+          delete[] v[i];
+      delete[] v;
+      return -1;
+    }
     T** u = in;
 
     //printVector("w", w, m);
@@ -179,4 +191,5 @@ void myinvert(T** M, int m, int n, T** res) {
     for(int i=0; i<n; i++)
         delete[] v[i];
     delete[] v;
+    return 0;
 }

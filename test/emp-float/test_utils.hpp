@@ -1,5 +1,3 @@
-#include <test_utils.h>
-
 //#include <opencv2/opencv.hpp>
 #include <opencv2/core/core.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
@@ -46,14 +44,13 @@ using namespace emp;
 using std::cout;
 using std::vector;
 using Catch::Matchers::WithinAbs;
-
-constexpr const int port = 8080;
+using Catch::Matchers::WithinRel;
 
 constexpr const float float_test_epsilon = 1e-5;
 // reprojection error can be more than epsilon
 const constexpr float reprojection_tol = 5.f;
-const constexpr float svd_tol = 2.f;
-const constexpr float localization_tol = 0.011f;
+const constexpr float svd_tol = 0.01f;
+const constexpr float localization_tol_rel = 0.05f;
 
 
 
@@ -228,7 +225,22 @@ void emp_svd_pythag(NetIO* io, int party, float a, float b) {
 }
 
 void emp_svd(NetIO* io, int party, float **in, int m, int n) {
-  setup_semi_honest(io, party);
+  //linearize for cv
+  float *cvin = new float[m*n];
+  for(int i=0; i<m; i++) {
+    for (int j=0; j<n; j++) {
+      cvin[i*n+j] = in[i][j];
+    }
+  }
+  cv::Mat cvinM = cv::Mat(m, n, cv::DataType<float>::type, in);
+  cv::SVD cvsvd(cvinM, cv::SVD::FULL_UV); // constructor
+  if (party == ALICE) {
+    cout << "opencv result\n"
+         << cvsvd.u << '\n'
+         << cvsvd.w << '\n'
+         << cvsvd.vt << '\n';
+  }
+  delete[] cvin;
 
   // svd overwrites with u matrix, so copy
   float** a = new float*[m];
@@ -243,6 +255,7 @@ void emp_svd(NetIO* io, int party, float **in, int m, int n) {
   for(int i=0; i<n; i++)
       v[i] = new float[n]();
 
+  setup_semi_honest(io, party);
   Float** sa = new Float*[m];
   for(int i=0; i<m; i++) {
     sa[i] = static_cast<Float*>(operator new[](n * sizeof(Float)));
@@ -263,21 +276,24 @@ void emp_svd(NetIO* io, int party, float **in, int m, int n) {
   }
 
   svdcmp(a, m, n, w, v);
+  if (party == ALICE) {
+    cout << "cleartext" << '\n';
+    printMatrix("a", a, m, n);
+    printVector("w", w, n);
+    printMatrix("v", v, n, n);
+  }
 
   BuildSvdCircuit(sa, m, n, sw, sv);
-
-  //cout << "cleartext" << '\n';
-  //printMatrix("a", a, m, n);
-  //printVector("w", w, n);
-  //printMatrix("v", v, n, n);
-
-  //cout << "secure" << '\n';
-  //printFloatMatrix(sa, m, n);
-  //printFloatVector(sw, n);
-  //printFloatMatrix(sv, n, n);
+  // both parties must print if uncommented
+  cout << "secure" << '\n';
+  printFloatMatrix(sa, m, n, party==BOB);
+  printFloatVector(sw, n, party==BOB);
+  printFloatMatrix(sv, n, n, party==BOB);
 
   for(int i=0; i<m; i++) {
     for (int j=0; j<n; j++) {
+      //svd is not unique, do not compare with opencv
+      //REQUIRE_THAT(a[i][j], WithinAbs(cvsvd.u.at<float>(i,j), svd_tol));
       REQUIRE_THAT(sa[i][j].reveal<double>(), WithinAbs(a[i][j], svd_tol));
     }
     delete[] a[i];
@@ -287,13 +303,17 @@ void emp_svd(NetIO* io, int party, float **in, int m, int n) {
   delete[] sa;
 
   for(int i=0; i<n; i++) {
-     REQUIRE_THAT(sw[i].reveal<double>(), WithinAbs(w[i], svd_tol));
+    //svd is not unique, do not compare with opencv
+    //REQUIRE_THAT(w[i], WithinAbs(cvsvd.w.at<float>(i), svd_tol));
+    REQUIRE_THAT(sw[i].reveal<double>(), WithinAbs(w[i], svd_tol));
   }
   delete[] w;
   delete[] sw;
 
   for(int i=0; i<n; i++) {
     for (int j=0; j<n; j++) {
+      //svd is not unique, do not compare with opencv
+      //REQUIRE_THAT(v[i][j], WithinAbs(cvsvd.vt.at<float>(i,j), svd_tol));
       REQUIRE_THAT(sv[i][j].reveal<double>(), WithinAbs(v[i][j], svd_tol));
     }
     delete[] v[i];
@@ -402,7 +422,10 @@ void emp_localize(NetIO* io, int party,
 
   cv::Mat cvrvec = rvec.clone();
   cv::Mat cvtvec = tvec.clone();
-  cv::solvePnP(objectPoints, imagePoints, cameraMatrix, distCoeffs, rvec, tvec, false, cv::SOLVEPNP_ITERATIVE);
+  cv::solvePnP(objectPoints, imagePoints, cameraMatrix, distCoeffs, cvrvec, cvtvec, false, cv::SOLVEPNP_ITERATIVE);
+  if (party == ALICE) {
+    cout << "opencv\n" << cvrvec.t() << cvtvec.t() << '\n';
+  }
 
   float rt[6] = {rvec.at<float>(0), rvec.at<float>(1), rvec.at<float>(2),
                  tvec.at<float>(0), tvec.at<float>(1), tvec.at<float>(2) };
@@ -410,6 +433,10 @@ void emp_localize(NetIO* io, int party,
   float cx = cameraMatrix.at<float>(0,2);
   float cy = cameraMatrix.at<float>(1,2);
   cleartext_localize_func( objectPoints, imagePoints, f, cx, cy, rt, "");
+  if (party == ALICE) {
+    cout << "cleartext\n";
+    printVector("rt", rt, 6);
+  }
 
   int numPts = objectPoints.size();
   Float *sobjectPoints = static_cast<Float*>(operator new[](4*numPts * sizeof(Float)));
@@ -439,20 +466,18 @@ void emp_localize(NetIO* io, int party,
 
   auto sres = secure_localize_func(sobjectPoints, simagePoints, numPts,
                               sf, scx, scy, sx);
-  //auto sres = BuildGaussNewton(sobjectPoints, simagePoints, numPts,
-  //                            sf, scx, scy, sx);
+  cout << "secure\n";
+  printFloatVector(sx, 6, party==BOB);
 
   REQUIRE(sres.first);
-
-  //printVector("[rotation; translation]", rt, 6);
-
+  // check cleartext vs opencv
   for (int i=0; i<3; i++) {
-    REQUIRE_THAT(rvec.at<float>(i), WithinAbs(rt[i], localization_tol));
-    REQUIRE_THAT(tvec.at<float>(i), WithinAbs(rt[i+3], localization_tol));
+    REQUIRE_THAT(cvrvec.at<float>(i), WithinRel(rt[i], localization_tol_rel));
+    REQUIRE_THAT(cvtvec.at<float>(i), WithinRel(rt[i+3], localization_tol_rel));
   }
-
+  // check opencv vs secure
   for (int i=0; i<6; i++) {
-    REQUIRE_THAT(sx[i].reveal<double>(), WithinAbs(rt[i], localization_tol));
+    REQUIRE_THAT(sx[i].reveal<double>(), WithinRel(rt[i], localization_tol_rel));
   }
 
   delete[] sx;

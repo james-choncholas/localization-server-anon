@@ -14,31 +14,50 @@ using namespace std;
 #define BUILD_TIMING 0
 #define EXEC_TIMING 0
 
-void print_float32_bits(Float a) {
-    for(int i = 31; i >= 0; i--)
-        printf("%d", a[i].reveal<bool>());
-    cout << endl;
+void print_float32_bits(Float a, bool mute) {
+    for(int i = 31; i >= 0; i--) {
+        if (mute) {
+           a[i].reveal<bool>();
+        } else {
+          printf("%d", a[i].reveal<bool>());
+        }
+    }
+    if (!mute) {
+      printf("\n\n");
+    }
 }
 
 // prints an arbitrary size vector to the standard output
-void printFloatVector(Float *v, int size) {
+void printFloatVector(Float *v, int size, bool mute) {
     int i;
 
     for (i = 0; i < size; i++) {
-        printf("%.8lf ", v[i].reveal<double>(PUBLIC));
+        if (mute) {
+          v[i].reveal<double>();
+        } else {
+          printf("%.8lf ", v[i].reveal<double>(PUBLIC));
+        }
     }
-    printf("\n\n");
+    if (!mute) {
+      printf("\n\n");
+    }
 }
 
 // prints an arbitrary size matrix to the standard output
-void printFloatMatrix(Float **a, int rows, int cols) {
+void printFloatMatrix(Float **a, int rows, int cols, bool mute) {
     int i, j;
 
     for (i = 0; i < rows; i++) {
         for (j = 0; j < cols; j++) {
-            printf("%.8lf ", a[i][j].reveal<double>(PUBLIC));
+            if (mute) {
+              a[i][j].reveal<double>();
+            } else {
+              printf("%.8lf ", a[i][j].reveal<double>(PUBLIC));
+            }
         }
-        printf("\n");
+        if (!mute) {
+          printf("\n");
+        }
     }
     printf("\n");
 }

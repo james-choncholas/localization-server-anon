@@ -9,19 +9,10 @@
 #include "emp-tool/emp-tool.h"
 
 #include <util.h>
-
 #include <math.h>
-
-#define SIGN(a,b) ((b) > 0.0 ? fabs(a) : - fabs(a))
-
-static float maxarg1, maxarg2;
-#define FMAX(a,b) (maxarg1 = (a),maxarg2 = (b),(maxarg1) > (maxarg2) ? (maxarg1) : (maxarg2))
 
 static int iminarg1, iminarg2;
 #define IMIN(a,b) (iminarg1 = (a),iminarg2 = (b),(iminarg1 < (iminarg2) ? (iminarg1) : iminarg2))
-
-static float sqrarg;
-#define SQR(a) ((sqrarg = (a)) == 0.0 ? 0.0 : sqrarg * sqrarg)
 
 using namespace emp;
 using namespace std;
@@ -255,7 +246,7 @@ int BuildSvdCircuit(Float **a, int nRows, int nCols, Float *w, Float **v) {
             Integer priv_l = Integer(32, 0, PUBLIC);
 
             for (l = k; l >= 0; l--) { // test for splitting
-                nm = l - 1;            // note rv1(1) is always zero
+                nm = l - 1;            // note rv1[0] is always zero
 
                 Integer this_l = Integer(32, l, PUBLIC);
 
@@ -265,7 +256,7 @@ int BuildSvdCircuit(Float **a, int nRows, int nCols, Float *w, Float **v) {
                 l_found = l_found | temp;
 
                 if (nm >= 0) {
-                    temp = (w[nm].abs() + anorm).equal(anorm);
+                    temp = (w[nm].abs() + anorm).equal(anorm); // TODO need abs here?
                     priv_l = priv_l.If(temp & (!l_found), this_l);
                     l_found = l_found | temp;
                 }
@@ -412,6 +403,7 @@ int BuildSvdCircuit(Float **a, int nRows, int nCols, Float *w, Float **v) {
                     flag = 0;
                     break;
                 }
+                assert(nm>=0); // sanity check, should never happen since rv1[0] = 0
                 temp = (w[nm].abs() + anorm).equal(anorm);
                 if (temp.reveal<bool>(PUBLIC)) {
                     break;

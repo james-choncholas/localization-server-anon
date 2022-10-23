@@ -72,7 +72,6 @@ std::pair<bool, int> BuildLM(Float threeDPts[], Float y0[], int numPts,
 
 
     float jacob_epsilon = JACOB_EPSILON; // this is needed, can't &JACOB_EPSILON directly
-
     Float jacob_epsilon_gate = Float(jacob_epsilon, PUBLIC);
 
     Float lambda = Float(LM_LAMBDA_INIT, PUBLIC);
@@ -172,9 +171,6 @@ std::pair<bool, int> BuildLM(Float threeDPts[], Float y0[], int numPts,
             cout << "dy\n"; printFloatVector(dy, 2*numPts);
         }
         delete[] y;
-
-
-
 
         // LM with fletcher improvement
         // inv(Jt*J + lambda*diag(Jt*J)) * Jt * dy

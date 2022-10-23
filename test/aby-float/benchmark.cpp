@@ -173,7 +173,7 @@ int main(int argc, char** argv) {
                             PrintSumTimings(objectPoints.size());
                         }
                         else
-                            MSG("Not printing timing - not converged. Pose error norm: %d\n", norm);
+                            MSG("Not printing timing - not converged. Pose error norm: %f\n", norm);
 
                         printVector("[rotation; translation]", &initialGuessCopy[0], 6);
                         ClearSumTimings();
@@ -196,7 +196,7 @@ int main(int argc, char** argv) {
                             PrintSumTimings(objectPoints.size());
                         }
                         else
-                            MSG("Not printing timing - not converged. Pose error norm: %d\n", norm);
+                            MSG("Not printing timing - not converged. Pose error norm: %f\n", norm);
                         printVector("[rotation; translation]", &initialGuessCopy[0], 6);
                         ClearSumTimings();
                     }
@@ -227,7 +227,7 @@ int main(int argc, char** argv) {
                         if (norm < GT_MIN_ER)
                             WALL_TOC_CSV_XY(aby_bool_float_lm, i);
                         else
-                            MSG("Not printing timing - not converged. Pose error norm: %d\n", norm);
+                            MSG("Not printing timing - not converged. Pose error norm: %f\n", norm);
                         printVector("[rotation; translation]", &initialGuessCopy[0], 6);
                     }
                     {
@@ -245,7 +245,7 @@ int main(int argc, char** argv) {
                         if (norm < GT_MIN_ER)
                             WALL_TOC_CSV_XY(aby_yao_float_lm, i);
                         else
-                            MSG("Not printing timing - not converged. Pose error norm: %d\n", norm);
+                            MSG("Not printing timing - not converged. Pose error norm: %f\n", norm);
                         printVector("[rotation; translation]", &initialGuessCopy[0], 6);
                     }
 #endif

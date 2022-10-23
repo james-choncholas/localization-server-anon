@@ -55,6 +55,21 @@ T mypythag(T a, T b) {
     return (absa * sqrt(one + mysqr(absb/absa)));
 }
 
+template<typename T>
+bool checkeq(T a, T b) {
+  if (typeid(T) == typeid(float) || typeid(T) == typeid(double)) {
+    return (a + b) == b;
+  } else if (typeid(T) == typeid(fixed_point<int64_t,32>) ||
+             typeid(T) == typeid(fixed_point<int32_t,16>)) {
+    T epsilon = 1e-5;
+    T margin = b*epsilon;
+    return (a > b-margin) && (a < b+margin);
+  } else {
+    assert(true); // type not supported
+  }
+  return false;
+}
+
 /*
  Modified from Numerical Recipes in C
  Given a matrix a[nRows][nCols], svdcmp() computes its singular value
@@ -64,7 +79,7 @@ T mypythag(T a, T b) {
  */
 template<typename T>
 int svdcmp(T **a, int nRows, int nCols, T *w, T **v) {
-    int flag, i, its, j, jj, k, l, nm;
+    int flag=0, i=0, its=0, j=0, jj=0, k=0, l=0, nm=0;
     T anorm, c, f, g, h, s, scale, x, y, z, *rv1;
 
     T zero = 0;
@@ -89,7 +104,7 @@ int svdcmp(T **a, int nRows, int nCols, T *w, T **v) {
             for (k = i; k < nRows; k++)
                 scale += fabs(a[k][i]);
             //if (scale) { // not fixed point friendly
-            if (scale > epsilon) {
+            if (!checkeq(scale, zero)) {
                 for (k = i; k < nRows; k++) {
                     a[k][i] /= scale;
                     s += a[k][i] * a[k][i];
@@ -117,7 +132,7 @@ int svdcmp(T **a, int nRows, int nCols, T *w, T **v) {
             for (k = l; k < nCols; k++)
                 scale += fabs(a[i][k]);
             //if (scale) { // not fixed point friendly
-            if (scale > epsilon) {
+            if (!checkeq(scale, zero)) {
                 for (k = l; k < nCols; k++) {
                     a[i][k] /= scale;
                     s += a[i][k] * a[i][k];
@@ -148,7 +163,7 @@ int svdcmp(T **a, int nRows, int nCols, T *w, T **v) {
     for (i = nCols - 1; i >= 0; i--) {
         if (i < nCols - 1) {
             //if (g) { // not fixed point friendly
-            if (fabs(g) > epsilon) {
+            if (!checkeq(g, zero)) {
                 for (j = l; j < nCols; j++) {
                     v[j][i] = (a[i][j] / a[i][l]) / g;
                 }
@@ -176,7 +191,7 @@ int svdcmp(T **a, int nRows, int nCols, T *w, T **v) {
         for (j = l; j < nCols; j++)
             a[i][j] = zero;
         //if (g) { // not fixed point friendly
-        if (fabs(g) > epsilon) {
+        if (!checkeq(g, zero)) {
             g = one / g;
             for (j = l; j < nCols; j++) {
                 for (s = zero, k = l; k < nRows; k++)
@@ -215,15 +230,14 @@ int svdcmp(T **a, int nRows, int nCols, T *w, T **v) {
             for (l = k; l >= 0; l--) { // test for splitting
                 nm = l - 1;            // note rv1[0] is always zero
                 //if ((fabs(rv1[l]) + anorm) == anorm) { // not friendly to fixed point
-                //cout << "fabs(rv1[l]) " << rv1[l] << " anorm " << anorm << endl;
-                if (fabs(rv1[l]) < anorm*epsilon) {
+                if (checkeq(rv1[l], anorm)) {
                     flag = 0;
                     break;
                 }
-                assert(nm>=0); // will never happen since rv1[0] = 0
+
+                assert(nm>=0); // sanity check, should never happen since rv1[0] = 0
                 //if ((fabs(w[nm]) + anorm) == anorm) { // not friendly to fixed point
-                //cout << "fabs(w[nm]) " << w[nm] << " anorm " << anorm << endl;
-                if (fabs(w[nm]) < anorm*epsilon) {
+                if (checkeq(w[nm], anorm)) {
                     break;
                 }
             }
@@ -234,8 +248,7 @@ int svdcmp(T **a, int nRows, int nCols, T *w, T **v) {
                     f = s * rv1[i];
                     rv1[i] = c * rv1[i];
                     //if ((fabs(f) + anorm) == anorm) { // not friendly to fixed point
-                    //cout << "fabs(f) " << f << " anorm " << anorm << endl;
-                    if (fabs(f) < anorm*epsilon) {
+                    if (checkeq(f, anorm)) {
                         break;
                     }
                     g = w[i];
@@ -261,8 +274,11 @@ int svdcmp(T **a, int nRows, int nCols, T *w, T **v) {
                 }
                 break;
             }
-            if (its == 29)
+            if (its == 29) {
                 printf("no convergence in 30 svdcmp iterations\n");
+                delete[] rv1;
+                return -1;
+            }
             // shift from bottom 2-by-2 minor
             x = w[l];
             nm = k - 1;

@@ -175,11 +175,8 @@ bool lm( vector<cv::Point3_<T>> threeDPts,
         if (_verbosity & DBG_ER)
             printVector("dy", dy, 2*n);
 
-
-
         // LM with fletcher improvement
         // inv(Jt*J + lambda*diag(Jt*J)) * Jt * dy
-
         T **JtJ = new T*[6]; // 6x6
         for(int p=0; p<6; p++)
             JtJ[p] = new T[6];
@@ -208,28 +205,64 @@ bool lm( vector<cv::Point3_<T>> threeDPts,
         //cv::Mat JtJ_i = cv::Mat(6, 6, cv::DataType<T>::type);
         //invert(JtJ, JtJ_i);
 
-        // Compute SVD with type T
-        myinvert<T>(JtJ, 6, 6, JtJ_i);
 
-        //// Compute SVD with floats
-        //// Convert to floats
-        //float **f_JtJ = new float*[6]; // 6x6
-        //for(int p=0; p<6; p++) {
-        //    f_JtJ[p] = new float[6];
-        //    for(int pp=0; pp<6; pp++) {
-        //        f_JtJ[p][pp] = JtJ[p][pp];
-        //    }
+        // Compute SVD with type T
+        //if (myinvert<T>(JtJ, 6, 6, JtJ_i)) {
+        //  for (int p=0; p<2*n; p++)
+        //      delete[] jacob[p];
+        //  delete[] jacob;
+        //  for (int p=0; p<6; p++) {
+        //      delete[] JtJ[p];
+        //  }
+        //  delete[] JtJ;
+        //  for (int p=0; p<6; p++)
+        //      delete[] JtJ_i[p];
+        //  delete[] JtJ_i;
+        //  return -1;
         //}
-        //float **f_JtJ_i = new float*[6]; // 6x6
-        //for(int p=0; p<6; p++)
-        //    f_JtJ_i[p] = new float[6];
-        //myinvert<float>(f_JtJ, 6, 6, f_JtJ_i);
-        //// Convert back to T template type
-        //for(int p=0; p<6; p++) {
-        //    for(int pp=0; pp<6; pp++) {
-        //        JtJ_i[p][pp] = f_JtJ_i[p][pp];
-        //    }
-        //}
+
+
+        // Compute SVD with floats
+        // Convert to floats
+        float **f_JtJ = new float*[6]; // 6x6
+        for(int p=0; p<6; p++) {
+            f_JtJ[p] = new float[6];
+            for(int pp=0; pp<6; pp++) {
+                f_JtJ[p][pp] = JtJ[p][pp];
+            }
+        }
+        float **f_JtJ_i = new float*[6]; // 6x6
+        for(int p=0; p<6; p++)
+            f_JtJ_i[p] = new float[6];
+        if (myinvert<float>(f_JtJ, 6, 6, f_JtJ_i)) {
+          for (int p=0; p<2*n; p++) {
+              delete[] jacob[p];
+          }
+          delete[] jacob;
+          for (int p=0; p<6; p++) {
+              delete[] JtJ[p];
+              delete[] f_JtJ[p];
+              delete[] JtJ_i[p];
+              delete[] f_JtJ_i[p];
+          }
+          delete[] JtJ;
+          delete[] f_JtJ;
+          delete[] JtJ_i;
+          delete[] f_JtJ_i;
+          return -1;
+        }
+        // Convert back to T template type
+        for(int p=0; p<6; p++) {
+            for(int pp=0; pp<6; pp++) {
+                JtJ_i[p][pp] = f_JtJ_i[p][pp];
+            }
+        }
+        for(int p=0; p<6; p++) {
+          delete[] f_JtJ[p];
+          delete[] f_JtJ_i[p];
+        }
+        delete[] f_JtJ;
+        delete[] f_JtJ_i;
 
 
         for (int p=0; p<6; p++) {
@@ -244,8 +277,8 @@ bool lm( vector<cv::Point3_<T>> threeDPts,
         for(int p=0; p<6; p++)
             JtJ_i_Jt[p] = new T[2*n];
         matmult2DwTranspose<T>(JtJ_i, 6, 6, false,
-                            jacob, n*2, 6, true,
-                            JtJ_i_Jt);
+                               jacob, n*2, 6, true,
+                               JtJ_i_Jt);
         for (int p=0; p<2*n; p++)
             delete[] jacob[p];
         delete[] jacob;
