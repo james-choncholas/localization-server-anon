@@ -3,8 +3,8 @@ scriptpath="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 logdir=$scriptpath/../results/
 plotdir=$scriptpath/../plots/
 
-SHOW="--show"
-#SHOW=""
+#SHOW="--show"
+SHOW=""
 
 python3 $scriptpath/../scripts/plotter.py \
     --csvlog \

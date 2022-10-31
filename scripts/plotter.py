@@ -282,10 +282,17 @@ def plot(csvFilePaths, options, tags):
                         color=(dracula.COLORS[tagIndex+options.color_offset] if options.color_theme == "dracula" else None),
                         edgecolor='black', linewidth=1, hatch=options.hatching)
                 else:
-                    rects = plt.bar(np.arange(len(whys)) - offset + (width*tagIndex/len(tags)), whys, width/len(tags),
-                        label=(options.custom_legend_labels[tagIndex] if options.custom_legend_labels != None else t.name),
-                        color=(dracula.COLORS[tagIndex+options.color_offset] if options.color_theme == "dracula" else None),
-                        edgecolor='black', linewidth=1, hatch=options.hatching)
+                    # special case for snail paper
+                    if t.name == "EMP_MUL":
+                        rects = plt.bar(np.arange(len(whys)) - offset + (width*tagIndex/len(tags)), whys, width/len(tags),
+                            label=(options.custom_legend_labels[tagIndex] if options.custom_legend_labels != None else t.name),
+                            color="#2ca02c",
+                            edgecolor='black', linewidth=1, hatch=options.hatching)
+                    else:
+                        rects = plt.bar(np.arange(len(whys)) - offset + (width*tagIndex/len(tags)), whys, width/len(tags),
+                            label=(options.custom_legend_labels[tagIndex] if options.custom_legend_labels != None else t.name),
+                            color=(dracula.COLORS[tagIndex+options.color_offset] if options.color_theme == "dracula" else None),
+                            edgecolor='black', linewidth=1, hatch=options.hatching)
                 if len(tags) > 1 and not skipLegend:
                     plt.legend() # bar always gets legend, must be after plotting
                 lastPlotBottom = list( map(add, lastPlotBottom, whys) )# for stacking using average
@@ -526,7 +533,11 @@ def plot(csvFilePaths, options, tags):
         plt.legend(legendArtistProxyShapes,
                 options.custom_legend_labels if options.custom_legend_labels != None else tagLabels)
     elif options.custom_legend_labels != None and len(options.custom_legend_labels) > 1 and not skipLegend:
-        plt.legend()
+        if options.horizontal:
+            handles, labels = plt.gca().get_legend_handles_labels()
+            plt.legend(reversed(handles), reversed(labels))
+        else:
+            plt.legend()
 
     if options.horizontal:
         plt.ylabel(options.xlabel)

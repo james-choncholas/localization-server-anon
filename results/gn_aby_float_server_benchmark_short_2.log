@@ -1,0 +1,1213 @@
+Starting ABY...
+Ground Truth pose: rotation 0.525125, 0.461442, -0.715063, translation 5.640510, 7.383780, 14.210800
+Testing with 6 randomly selected points
+testing gauss newton - bool
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.233065 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.85636 s␛[0m
+......::::::||||||55555/44/3/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 103.913 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.73978 s␛[0m
+......::::::||||||5555/444/3/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 91.9409 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 8.06458 s␛[0m
+......::::::||||||55555/44/3/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 87.8171 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.95328 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 104.896 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.95593 s␛[0m
+......::::::||||||5555/444/3/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 105.351 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 8.01772 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 104.536 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.88544 s␛[0m
+......::::::||||||5555/44/33/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 112.267 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.73378 s␛[0m
+......::::::||||||555/444/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 95.142 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.94459 s␛[0m
+......::::::||||||55555/44/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 103.554 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.97155 s␛[0m
+......::::::||||||5555/44/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 106.886 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 8.17916 s␛[0m
+......::::::||||||5555/44/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 108.195 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.86766 s␛[0m
+......::::::||||||5555/44/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 104.686 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1831.47 s␛[0m
+SeNtInAl,grouped_bar,main,aby_bool_float_gn,6,1722.58
+[rotation; translation]
+0.97403795 0.85373920 -1.32570934 5.66418886 7.33258104 14.18742466 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,392707
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,78.735
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,234.395
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,977.4
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,156433
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,112685
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,112165
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,1.127
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,280019
+testing gauss newton - yao
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.254169 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 4.70406 s␛[0m
+......::::::||||||55555/44/3/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 86.3009 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 4.83567 s␛[0m
+......::::::||||||5555/444/3/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 75.9427 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 4.83976 s␛[0m
+......::::::||||||55555/44/3/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 72.7605 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 4.77895 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 85.8208 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.02757 s␛[0m
+......::::::||||||5555/444/3/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 88.1854 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 4.79847 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 86.0449 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 4.71425 s␛[0m
+......::::::||||||5555/44/33/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 91.3636 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 4.74818 s␛[0m
+......::::::||||||555/444/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 77.5462 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 4.7959 s␛[0m
+......::::::||||||55555/44/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 83.4749 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 4.79383 s␛[0m
+......::::::||||||5555/44/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 84.0982 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 4.80304 s␛[0m
+......::::::||||||5555/44/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 84.4132 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 4.75749 s␛[0m
+......::::::||||||5555/44/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 85.6744 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1522.88 s␛[0m
+SeNtInAl,grouped_bar,main,aby_yao_float_gn,6,1648.17
+[rotation; translation]
+0.97403795 0.85373920 -1.32570934 5.66418886 7.33258104 14.18742466 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,378219
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,26.245
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,3565.7
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,9888.93
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,186660
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,233593
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,39952.2
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,193534
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,144622
+Testing with 6 randomly selected points
+testing gauss newton - bool
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.259241 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.64964 s␛[0m
+......::::::||||||555/444/3/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 92.3239 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.711 s␛[0m
+......::::::||||||5555/44/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 96.7808 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.8221 s␛[0m
+......::::::||||||55555/44/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 107.919 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.80086 s␛[0m
+......::::::||||||555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 93.7747 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.95769 s␛[0m
+......::::::||||||555/444/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 104.002 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.91667 s␛[0m
+......::::::||||||55555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 117.634 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.74744 s␛[0m
+......::::::||||||55555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 118.865 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.78659 s␛[0m
+......::::::||||||55555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 118.029 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.68508 s␛[0m
+......::::::||||||55555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 118.005 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1417.48 s␛[0m
+SeNtInAl,grouped_bar,main,aby_bool_float_gn,6,1360.32
+[rotation; translation]
+0.97468913 0.85645711 -1.32640803 5.65250921 7.34484005 14.20721245 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,329307
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,18.2
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,950.768
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,2400.22
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,141910
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,107633
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,107228
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,0.97
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,221672
+testing gauss newton - yao
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.242243 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 4.70723 s␛[0m
+......::::::||||||555/444/3/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 78.0591 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 4.77166 s␛[0m
+......::::::||||||5555/44/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 80.344 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 4.74978 s␛[0m
+......::::::||||||55555/44/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 89.8461 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 4.62949 s␛[0m
+......::::::||||||555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 75.8104 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 4.71119 s␛[0m
+......::::::||||||555/444/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 84.4733 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 4.62617 s␛[0m
+......::::::||||||55555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 94.6077 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 4.68318 s␛[0m
+......::::::||||||55555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 94.8194 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 4.76605 s␛[0m
+......::::::||||||55555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 97.3425 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 4.74167 s␛[0m
+......::::::||||||55555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 96.2036 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1184.41 s␛[0m
+SeNtInAl,grouped_bar,main,aby_yao_float_gn,6,1303.15
+[rotation; translation]
+0.97468913 0.85645711 -1.32640803 5.65250921 7.34484005 14.20721245 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,312831
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,17.472
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,3608.7
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,8428.78
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,127428
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,199706
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,51806.9
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,147812
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,113121
+Testing with 6 randomly selected points
+testing gauss newton - bool
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.259208 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.87225 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 103.307 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.61878 s␛[0m
+......::::::||||||55555/44/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 106.626 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.62433 s␛[0m
+......::::::||||||55555/44/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 107.649 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.7089 s␛[0m
+......::::::||||||555/444/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 100.475 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.68476 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 106.288 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.74668 s␛[0m
+......::::::||||||555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 93.7372 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.96164 s␛[0m
+......::::::||||||555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 94.8412 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1058.24 s␛[0m
+SeNtInAl,grouped_bar,main,aby_bool_float_gn,6,1029.59
+[rotation; translation]
+0.97555363 0.85750139 -1.32624149 5.65150595 7.34680033 14.20219231 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,258984
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,32.04
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,959.064
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,831.972
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,104823
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,92250.9
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,91944.4
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,0.736
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,166732
+testing gauss newton - yao
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.263071 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 4.6462 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 86.9523 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 4.62966 s␛[0m
+......::::::||||||55555/44/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 88.3263 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 4.71828 s␛[0m
+......::::::||||||55555/44/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 87.46 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 4.72143 s␛[0m
+......::::::||||||555/444/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 81.8769 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 4.67867 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 84.9556 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 4.69759 s␛[0m
+......::::::||||||555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 76.5223 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 4.62431 s␛[0m
+......::::::||||||555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 75.7034 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 883.314 s␛[0m
+SeNtInAl,grouped_bar,main,aby_yao_float_gn,6,980.438
+[rotation; translation]
+0.97555363 0.85750139 -1.32624149 5.65150595 7.34680033 14.20219231 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,241812
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,14.952
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,1721.08
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,1168.39
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,108152
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,156184
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,46259.6
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,109859
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,85625.9
+Testing with 7 randomly selected points
+testing gauss newton - bool
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.283898 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 8.54956 s␛[0m
+......::::::||||||5555/44/33/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 112.659 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 8.51308 s␛[0m
+......::::::||||||55555/44/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 113.653 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 8.64754 s␛[0m
+......::::::||||||5555/44/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 107.241 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 8.73539 s␛[0m
+......::::::||||||555/444/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 111.81 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 8.53076 s␛[0m
+......::::::||||||55555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 129.929 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 8.53145 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 116.916 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 8.47088 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 117.251 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1201.94 s␛[0m
+SeNtInAl,grouped_bar,main,aby_bool_float_gn,7,1173.44
+[rotation; translation]
+0.97546494 0.85603249 -1.32507241 5.65455055 7.34505653 14.20330048 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,294496
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,14.796
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,1211.08
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,1767.3
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,109718
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,105872
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,105545
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,0.741
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,188623
+testing gauss newton - yao
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.24185 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.17049 s␛[0m
+......::::::||||||5555/44/33/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 96.1683 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.26603 s␛[0m
+......::::::||||||55555/44/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 94.5723 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.25521 s␛[0m
+......::::::||||||5555/44/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 87.8219 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.25132 s␛[0m
+......::::::||||||555/444/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 91.582 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.24687 s␛[0m
+......::::::||||||55555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 106.364 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.24611 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 95.7159 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.25145 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 97.2191 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1014.53 s␛[0m
+SeNtInAl,grouped_bar,main,aby_yao_float_gn,7,1124.42
+[rotation; translation]
+0.97546494 0.85603249 -1.32507241 5.65455055 7.34505653 14.20330048 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,278825
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,14.796
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,2375.58
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,486.076
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,99673
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,181802
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,52287.9
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,129437
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,97020.9
+Testing with 7 randomly selected points
+testing gauss newton - bool
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.239874 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 8.51341 s␛[0m
+......::::::||||||555/44/33/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 99.9679 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 8.5197 s␛[0m
+......::::::||||||55555/44/3/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 106.225 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 8.50572 s␛[0m
+......::::::||||||55555/44/33/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 124.866 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 8.50612 s␛[0m
+......::::::||||||5555/444/33/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 124.599 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 8.6783 s␛[0m
+......::::::||||||5555/444/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 129.765 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 8.56416 s␛[0m
+......::::::||||||5555/444/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 111.451 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 8.73 s␛[0m
+......::::::||||||5555/44/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 109.592 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 8.68385 s␛[0m
+......::::::||||||5555/44/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 115.289 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 8.60059 s␛[0m
+......::::::||||||555/44/33/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 111.144 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 8.62782 s␛[0m
+......::::::||||||555/44/33/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 110.251 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 8.55981 s␛[0m
+......::::::||||||555/44/33/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 109.997 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1866.83 s␛[0m
+SeNtInAl,grouped_bar,main,aby_bool_float_gn,7,1819.46
+[rotation; translation]
+0.97390199 0.85670161 -1.32653749 5.64263248 7.34099674 14.19343567 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,452590
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,17.514
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,1990.76
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,2657.12
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,153070
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,160733
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,160208
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,1.16
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,291854
+testing gauss newton - yao
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.254537 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.16159 s␛[0m
+......::::::||||||555/44/33/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 83.1237 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.13017 s␛[0m
+......::::::||||||55555/44/3/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 87.0968 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.23899 s␛[0m
+......::::::||||||55555/44/33/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 100.628 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.05685 s␛[0m
+......::::::||||||5555/444/33/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 98.8647 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.12466 s␛[0m
+......::::::||||||5555/444/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 102.778 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.18628 s␛[0m
+......::::::||||||5555/444/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 88.0501 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.24413 s␛[0m
+......::::::||||||5555/44/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 86.1071 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.53403 s␛[0m
+......::::::||||||5555/44/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 95.4576 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.26068 s␛[0m
+......::::::||||||555/44/33/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 91.2206 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.26068 s␛[0m
+......::::::||||||555/44/33/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 90.5761 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.05698 s␛[0m
+......::::::||||||555/44/33/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 88.9094 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1550.58 s␛[0m
+SeNtInAl,grouped_bar,main,aby_yao_float_gn,7,1722.47
+[rotation; translation]
+0.97390199 0.85670161 -1.32653749 5.64263248 7.34099674 14.19343567 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,426495
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,22.518
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,5191.65
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,2187.58
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,160043
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,278218
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,84227.4
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,193880
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,148274
+Testing with 7 randomly selected points
+testing gauss newton - bool
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.270914 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 8.49273 s␛[0m
+......::::::||||||5555/44/3/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 98.8955 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 8.37756 s␛[0m
+......::::::||||||55/444/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 100.514 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 8.67629 s␛[0m
+......::::::||||||5555/44/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 112.243 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 8.81167 s␛[0m
+......::::::||||||5555/44/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 109.377 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 8.57041 s␛[0m
+......::::::||||||5555/44/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 109.174 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 8.5429 s␛[0m
+......::::::||||||5555/44/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 109.675 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 9.04406 s␛[0m
+......::::::||||||5555/44/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 111.002 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1141.53 s␛[0m
+SeNtInAl,grouped_bar,main,aby_bool_float_gn,7,1118.69
+[rotation; translation]
+0.97457051 0.85559976 -1.32617354 5.65919828 7.33650208 14.18688488 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,283145
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,12.25
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,1164.24
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,1690.5
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,93220.5
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,102858
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,102554
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,0.662
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,180286
+testing gauss newton - yao
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.240936 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.14858 s␛[0m
+......::::::||||||5555/44/3/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 83.2593 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.11893 s␛[0m
+......::::::||||||55/444/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 84.6601 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.22263 s␛[0m
+......::::::||||||5555/44/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 96.2079 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.22155 s␛[0m
+......::::::||||||5555/44/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 89.6079 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.35464 s␛[0m
+......::::::||||||5555/44/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 90.259 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.43174 s␛[0m
+......::::::||||||5555/44/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 92.228 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.24697 s␛[0m
+......::::::||||||5555/44/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 89.5501 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 975.335 s␛[0m
+SeNtInAl,grouped_bar,main,aby_yao_float_gn,7,1084.7
+[rotation; translation]
+0.97457051 0.85559976 -1.32617354 5.65919828 7.33650208 14.18688488 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,267840
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,13.72
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,2121.21
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,1030.96
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,86477.2
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,174176
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,53849.5
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,120257
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,93662.5
+Testing with 8 randomly selected points
+testing gauss newton - bool
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.256257 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 9.24661 s␛[0m
+......::::::||||||555/444/3/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 111.281 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 9.25204 s␛[0m
+......::::::||||||5555/444/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 130.837 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 9.36267 s␛[0m
+......::::::||||||5555/44/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 125.603 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 9.1559 s␛[0m
+......::::::||||||555/444/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 123.266 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 9.46081 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 130.114 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 9.29999 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 128.011 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 9.31822 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 128.737 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 9.13113 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 128.622 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1499.5 s␛[0m
+SeNtInAl,grouped_bar,main,aby_bool_float_gn,8,1471.47
+[rotation; translation]
+0.97571105 0.85610986 -1.32473731 5.65779877 7.34787846 14.20555496 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,368965
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,14.145
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,1346.85
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,1132.21
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,119642
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,132866
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,132463
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,0.818
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,236097
+testing gauss newton - yao
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.263329 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.58019 s␛[0m
+......::::::||||||555/444/3/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 92.6675 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.60747 s␛[0m
+......::::::||||||5555/444/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 106.698 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.71659 s␛[0m
+......::::::||||||5555/44/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 102.097 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.70318 s␛[0m
+......::::::||||||555/444/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 99.8205 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.67345 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 104.7 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.69225 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 106.939 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.72081 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 105.962 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.5261 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 104.008 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1254.32 s␛[0m
+SeNtInAl,grouped_bar,main,aby_yao_float_gn,8,1396.66
+[rotation; translation]
+0.97571105 0.85610986 -1.32473731 5.65779877 7.34787846 14.20555496 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,348267
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,11.685
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,2906.49
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,952.02
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,121248
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,227540
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,70676.3
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,156775
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,120724
+Testing with 8 randomly selected points
+testing gauss newton - bool
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.230736 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 9.08821 s␛[0m
+......::::::||||||5555/444/3/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 111.076 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 9.08076 s␛[0m
+......::::::||||||5555/444/3/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 125.485 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 9.42763 s␛[0m
+......::::::||||||555/444/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 114.296 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 9.39209 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 128.511 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 9.38786 s␛[0m
+......::::::||||||555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 113.883 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 9.44671 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 128.417 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 9.23208 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 125.602 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 9.32584 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 129.736 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1470.14 s␛[0m
+SeNtInAl,grouped_bar,main,aby_bool_float_gn,8,1444.76
+[rotation; translation]
+0.97419363 0.85514098 -1.32608867 5.65537786 7.33415556 14.18672752 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,366140
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,14.925
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,951.618
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,2264.42
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,101995
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,132510
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,132119
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,0.876
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,233628
+testing gauss newton - yao
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.238695 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.70949 s␛[0m
+......::::::||||||5555/444/3/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 97.0999 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.80845 s␛[0m
+......::::::||||||5555/444/3/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 105.124 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.77736 s␛[0m
+......::::::||||||555/444/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 96.0445 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.58247 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 105.732 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.72076 s␛[0m
+......::::::||||||555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 93.2221 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.66209 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 104.352 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.58902 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 101.695 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.59897 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 101.836 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1237.88 s␛[0m
+SeNtInAl,grouped_bar,main,aby_yao_float_gn,8,1376.19
+[rotation; translation]
+0.97419363 0.85514098 -1.32608867 5.65537786 7.33415556 14.18672752 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,340896
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,17.313
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,2915.15
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,2074.57
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,106744
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,222196
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,67768.1
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,154338
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,118698
+Testing with 8 randomly selected points
+testing gauss newton - bool
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.241051 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 9.31128 s␛[0m
+......::::::||||||555/444/33/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 118.163 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 9.32621 s␛[0m
+......::::::||||||555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 110.996 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 9.1996 s␛[0m
+......::::::||||||555/444/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 112.198 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 9.29607 s␛[0m
+......::::::||||||555/444/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 121.687 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 9.26753 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 126.452 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 9.346 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 128.697 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 9.48701 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 126.276 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1280.05 s␛[0m
+SeNtInAl,grouped_bar,main,aby_bool_float_gn,8,1259.29
+[rotation; translation]
+0.97558433 0.85725147 -1.32596278 5.64987183 7.34606695 14.19549179 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,319934
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,14.04
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,1424.8
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,1768.52
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,92293.2
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,116440
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,116087
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,0.724
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,203492
+testing gauss newton - yao
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.234093 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.6842 s␛[0m
+......::::::||||||555/444/33/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 102.764 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.63806 s␛[0m
+......::::::||||||555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 95.49 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.63213 s␛[0m
+......::::::||||||555/444/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 95.7938 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.62844 s␛[0m
+......::::::||||||555/444/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 100.801 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.55634 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 106.815 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.53955 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 105.656 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 5.57378 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 105.354 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1098.27 s␛[0m
+SeNtInAl,grouped_bar,main,aby_yao_float_gn,8,1219.73
+[rotation; translation]
+0.97558433 0.85725147 -1.32596278 5.64987183 7.34606695 14.19549179 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,297618
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,11.96
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,2394.6
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,980.72
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,90388.5
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,192895
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,59660.2
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,133157
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,104721
+Testing with 9 randomly selected points
+testing gauss newton - bool
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.266246 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.0206 s␛[0m
+......::::::||||||55555/44/3/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 132.172 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.1104 s␛[0m
+......::::::||||||5555/44/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 127.771 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.1296 s␛[0m
+......::::::||||||5555/44/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 134.787 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.0602 s␛[0m
+......::::::||||||555/444/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 137.563 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.1705 s␛[0m
+......::::::||||||555/444/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 134.909 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.2788 s␛[0m
+......::::::||||||555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 124.252 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.2114 s␛[0m
+......::::::||||||555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 123.608 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1392.53 s␛[0m
+SeNtInAl,grouped_bar,main,aby_bool_float_gn,9,1373.14
+[rotation; translation]
+0.97532427 0.85601062 -1.32570863 5.65784407 7.33999681 14.19512177 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,348171
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,14.28
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,997.56
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,1899.75
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,105858
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,126159
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,125789
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,0.703
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,222010
+testing gauss newton - yao
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.235324 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.33322 s␛[0m
+......::::::||||||55555/44/3/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 112.898 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.07282 s␛[0m
+......::::::||||||5555/44/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 106.672 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.23927 s␛[0m
+......::::::||||||5555/44/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 112.245 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.13395 s␛[0m
+......::::::||||||555/444/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 111.595 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.27295 s␛[0m
+......::::::||||||555/444/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 114.306 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.04997 s␛[0m
+......::::::||||||555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 100.056 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.05933 s␛[0m
+......::::::||||||555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 100.413 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1174.56 s␛[0m
+SeNtInAl,grouped_bar,main,aby_yao_float_gn,9,1303.87
+[rotation; translation]
+0.97532427 0.85601062 -1.32570863 5.65784407 7.33999681 14.19512177 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,322224
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,13.26
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,2608.65
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,2185.86
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,88892.5
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,211124
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,63350
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,147694
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,111098
+Testing with 9 randomly selected points
+testing gauss newton - bool
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.239989 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 9.88185 s␛[0m
+......::::::||||||5555/44/33/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 130.99 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.1879 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 139.991 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.3057 s␛[0m
+......::::::||||||555/444/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 132.644 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.3629 s␛[0m
+......::::::||||||5555/44/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 138.756 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.3118 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 142.305 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.2231 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 140.603 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.2263 s␛[0m
+......::::::||||||555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 123.772 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.3974 s␛[0m
+......::::::||||||555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 125.811 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1622.16 s␛[0m
+SeNtInAl,grouped_bar,main,aby_bool_float_gn,9,1599.44
+[rotation; translation]
+0.97521347 0.85491818 -1.32480597 5.65958738 7.34140635 14.19230938 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,404047
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,12.537
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,1214.9
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,1410.11
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,105869
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,145995
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,145562
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,0.873
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,258050
+testing gauss newton - yao
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.23676 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.38986 s␛[0m
+......::::::||||||5555/44/33/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 112.848 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.12711 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 114.231 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.2646 s␛[0m
+......::::::||||||555/444/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 109.51 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.26268 s␛[0m
+......::::::||||||5555/44/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 112.934 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.29788 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 117.681 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.01642 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 111.342 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.09977 s␛[0m
+......::::::||||||555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 101.69 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.21652 s␛[0m
+......::::::||||||555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 101.622 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1355.36 s␛[0m
+SeNtInAl,grouped_bar,main,aby_yao_float_gn,9,1509.13
+[rotation; translation]
+0.97521347 0.85491818 -1.32480597 5.65958738 7.34140635 14.19230938 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,379228
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,15.522
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,3202.9
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,1423.84
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,105257
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,248999
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,76479.8
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,172426
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,130226
+Testing with 9 randomly selected points
+testing gauss newton - bool
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.246319 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.1669 s␛[0m
+......::::::||||||555/44/33/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 116.289 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.0182 s␛[0m
+......::::::||||||555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 122.242 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.1224 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 137.041 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.2353 s␛[0m
+......::::::||||||555/444/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 129.297 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.0497 s␛[0m
+......::::::||||||555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 124.288 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.1938 s␛[0m
+......::::::||||||5555/444/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 150.497 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.1559 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 138.98 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.1564 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 139.21 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1604.83 s␛[0m
+SeNtInAl,grouped_bar,main,aby_bool_float_gn,9,1583.12
+[rotation; translation]
+0.97465867 0.85785210 -1.32727706 5.64602423 7.34625530 14.20505619 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,402735
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,32.984
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,1624.46
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,1303.46
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,109851
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,146184
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,145753
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,0.825
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,256549
+testing gauss newton - yao
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.242735 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.06923 s␛[0m
+......::::::||||||555/44/33/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 95.1194 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.24175 s␛[0m
+......::::::||||||555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 102.953 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.22294 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 116.784 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.22838 s␛[0m
+......::::::||||||555/444/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 107.347 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.00826 s␛[0m
+......::::::||||||555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 98.7585 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.02165 s␛[0m
+......::::::||||||5555/444/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 122.991 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.19291 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 115.179 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.18831 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 113.779 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1350.09 s␛[0m
+SeNtInAl,grouped_bar,main,aby_yao_float_gn,9,1501.46
+[rotation; translation]
+0.97465867 0.85785210 -1.32727706 5.64602423 7.34625530 14.20505619 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,373437
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,19.437
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,3193.56
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,2539.77
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,116795
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,245273
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,75660.7
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,169517
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,128161
+Testing with 10 randomly selected points
+testing gauss newton - bool
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.282122 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.9292 s␛[0m
+......::::::||||||5555/44/3/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 130.49 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 11.0564 s␛[0m
+......::::::||||||5555/444/3/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 146.542 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 15.2502 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 154.302 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.8386 s␛[0m
+......::::::||||||555/444/3/222/111/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 138.185 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.9787 s␛[0m
+......::::::||||||55/444/33/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 137.063 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.9732 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 152.68 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 11.0838 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 150.017 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.9656 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 151.993 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1774.99 s␛[0m
+SeNtInAl,grouped_bar,main,aby_bool_float_gn,10,1750.71
+[rotation; translation]
+0.97556245 0.85616738 -1.32544935 5.65833807 7.34218931 14.19680882 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,440903
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,13.777
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,1788.01
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,1348.95
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,116073
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,161724
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,161259
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,0.877
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,279177
+testing gauss newton - yao
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.245079 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.95893 s␛[0m
+......::::::||||||5555/44/3/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 114.404 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.76024 s␛[0m
+......::::::||||||5555/444/3/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 123.641 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.55593 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 122.89 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.68041 s␛[0m
+......::::::||||||555/444/3/222/111/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 113.934 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.62486 s␛[0m
+......::::::||||||55/444/33/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 115.779 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.75331 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 122.353 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.51836 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 122.861 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.68427 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 124.504 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1484.81 s␛[0m
+SeNtInAl,grouped_bar,main,aby_yao_float_gn,10,1649.12
+[rotation; translation]
+0.97556245 0.85616738 -1.32544935 5.65833807 7.34218931 14.19680882 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,407916
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,10.782
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,3914.46
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,3485.58
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,109961
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,266977
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,80902.6
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,185973
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,140937
+Testing with 10 randomly selected points
+testing gauss newton - bool
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.269622 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 11.2047 s␛[0m
+......::::::||||||5555/44/33/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 142.343 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.8074 s␛[0m
+......::::::||||||55555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 165.416 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.9032 s␛[0m
+......::::::||||||55555/44/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 156.121 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.936 s␛[0m
+......::::::||||||555/444/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 145.534 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.8476 s␛[0m
+......::::::||||||555/44/33/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 140.864 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.9319 s␛[0m
+......::::::||||||5555/44/33/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 157.132 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 11.0964 s␛[0m
+......::::::||||||5555/44/33/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 158.391 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 11.1257 s␛[0m
+......::::::||||||5555/44/33/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 157.956 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1822.29 s␛[0m
+SeNtInAl,grouped_bar,main,aby_bool_float_gn,10,1798.07
+[rotation; translation]
+0.97495061 0.85612512 -1.32566762 5.65489149 7.34309816 14.20035076 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,453762
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,20.768
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,1249.97
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,1405.08
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,135180
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,164687
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,164209
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,0.948
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,289074
+testing gauss newton - yao
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.245599 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.88985 s␛[0m
+......::::::||||||5555/44/33/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 122.23 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.6825 s␛[0m
+......::::::||||||55555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 136.957 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.52277 s␛[0m
+......::::::||||||55555/44/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 129.414 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.49095 s␛[0m
+......::::::||||||555/444/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 118.247 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.49285 s␛[0m
+......::::::||||||555/44/33/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 115.781 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.64667 s␛[0m
+......::::::||||||5555/44/33/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 128.628 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.57509 s␛[0m
+......::::::||||||5555/44/33/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 128.948 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.68479 s␛[0m
+......::::::||||||5555/44/33/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 129.871 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1530.74 s␛[0m
+SeNtInAl,grouped_bar,main,aby_yao_float_gn,10,1705.18
+[rotation; translation]
+0.97495061 0.85612512 -1.32566762 5.65489149 7.34309816 14.20035076 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,425917
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,16.874
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,3779.13
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,3200.87
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,119077
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,279517
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,87804.4
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,191611
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,146397
+Testing with 10 randomly selected points
+testing gauss newton - bool
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.254749 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.7504 s␛[0m
+......::::::||||||5555/44/33/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 134.579 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 11.0186 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 152.209 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.9786 s␛[0m
+......::::::||||||5555/444/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 142.964 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 11.0554 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 149.419 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 10.9804 s␛[0m
+......::::::||||||555/444/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 146.288 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 11.0494 s␛[0m
+......::::::||||||55/444/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 130.369 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 11.2336 s␛[0m
+......::::::||||||555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 134.59 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 11.133 s␛[0m
+......::::::||||||555/444/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 146.525 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1734.62 s␛[0m
+SeNtInAl,grouped_bar,main,aby_bool_float_gn,10,1715.06
+[rotation; translation]
+0.97455335 0.85840410 -1.32710719 5.64316797 7.34694910 14.20673752 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,436759
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,22.382
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,1197.44
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,1481.34
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,114668
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,160955
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,160497
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,0.846
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,275802
+testing gauss newton - yao
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.238421 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.60648 s␛[0m
+......::::::||||||5555/44/33/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 117.368 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.80065 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 125.998 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.74331 s␛[0m
+......::::::||||||5555/444/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 118.697 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.72563 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 123.564 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.7384 s␛[0m
+......::::::||||||555/444/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 121.202 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.57303 s␛[0m
+......::::::||||||55/444/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 106.401 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.75381 s␛[0m
+......::::::||||||555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 111.92 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.6312 s␛[0m
+......::::::||||||555/444/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 121.575 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1471.16 s␛[0m
+SeNtInAl,grouped_bar,main,aby_yao_float_gn,10,1639.98
+[rotation; translation]
+0.97455335 0.85840410 -1.32710719 5.64316797 7.34694910 14.20673752 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,410860
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,12.958
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,3976.93
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,1299.33
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,103734
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,270440
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,85412.5
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,184924
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,140417
+Testing with 11 randomly selected points
+testing gauss newton - bool
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.261259 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 11.6921 s␛[0m
+......::::::||||||555/44/333/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 142.412 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 11.8972 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 159.108 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 11.9943 s␛[0m
+......::::::||||||5555/444/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 154.392 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 12.012 s␛[0m
+......::::::||||||555/444/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 156.509 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 11.7261 s␛[0m
+......::::::||||||555/444/33/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 165.538 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 11.9068 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 160.877 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 11.8917 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 161.47 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 12.1112 s␛[0m
+......::::::||||||5555/44/33/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 169.667 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1914.57 s␛[0m
+SeNtInAl,grouped_bar,main,aby_bool_float_gn,11,1898.84
+[rotation; translation]
+0.97472751 0.85688460 -1.32628584 5.65017509 7.34411669 14.19654655 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,488283
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,38.626
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,1591.77
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,1675.25
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,125859
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,178608
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,178131
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,0.89
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,309673
+testing gauss newton - yao
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.274051 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.04236 s␛[0m
+......::::::||||||555/44/333/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 122.344 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.26412 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 134.999 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.09898 s␛[0m
+......::::::||||||5555/444/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 126.828 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.09972 s␛[0m
+......::::::||||||555/444/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 126.553 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.25252 s␛[0m
+......::::::||||||555/444/33/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 138.11 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.96912 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 131.783 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.22217 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 133.553 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.97063 s␛[0m
+......::::::||||||5555/44/33/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 136.526 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1611.96 s␛[0m
+SeNtInAl,grouped_bar,main,aby_yao_float_gn,11,1800.72
+[rotation; translation]
+0.97472751 0.85688460 -1.32628584 5.65017509 7.34411669 14.19654655 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,454749
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,19.936
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,4344.18
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,2425.34
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,124543
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,298923
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,95734.1
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,203080
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,155824
+Testing with 11 randomly selected points
+testing gauss newton - bool
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.232225 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 11.6383 s␛[0m
+......::::::||||||5555/44/3/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 131.976 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 11.6822 s␛[0m
+......::::::||||||555/444/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 148.628 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 11.8499 s␛[0m
+......::::::||||||555/444/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 137.343 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 11.8274 s␛[0m
+......::::::||||||555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 146.967 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 11.9196 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 163.62 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 11.9046 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 160.782 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 11.7627 s␛[0m
+......::::::||||||55555/44/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 167.914 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1626.68 s␛[0m
+SeNtInAl,grouped_bar,main,aby_bool_float_gn,11,1616.63
+[rotation; translation]
+0.97430646 0.85619766 -1.32674956 5.65192604 7.33830547 14.19068527 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,415012
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,32
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,805
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,1509
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,85233.5
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,151217
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,150819
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,0.732
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,263794
+testing gauss newton - yao
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.264571 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.30992 s␛[0m
+......::::::||||||5555/44/3/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 114.775 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.24424 s␛[0m
+......::::::||||||555/444/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 122.354 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 6.99747 s␛[0m
+......::::::||||||555/444/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 112.44 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.21009 s␛[0m
+......::::::||||||555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 119.248 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.19221 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 134.415 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.12157 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 135.558 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.19654 s␛[0m
+......::::::||||||55555/44/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 140.201 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1373.5 s␛[0m
+SeNtInAl,grouped_bar,main,aby_yao_float_gn,11,1531.73
+[rotation; translation]
+0.97430646 0.85619766 -1.32674956 5.65192604 7.33830547 14.19068527 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,384514
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,12
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,3052.5
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,2859
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,98871.5
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,252875
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,79803
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,172983
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,131637
+Testing with 11 randomly selected points
+testing gauss newton - bool
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.236965 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 11.7499 s␛[0m
+......::::::||||||555/44/33/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 139.307 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 11.9172 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 161.452 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 11.5781 s␛[0m
+......::::::||||||555/444/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 147.122 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 11.8692 s␛[0m
+......::::::||||||555/444/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 157.576 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 12.072 s␛[0m
+......::::::||||||5555/444/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 166.574 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 11.9914 s␛[0m
+......::::::||||||5555/44/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 159.106 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 11.6049 s␛[0m
+......::::::||||||5555/44/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 157.807 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1654.98 s␛[0m
+SeNtInAl,grouped_bar,main,aby_bool_float_gn,11,1643.19
+[rotation; translation]
+0.97535318 0.85648614 -1.32598257 5.65554523 7.34149981 14.19601440 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,421382
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,12.528
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,1721.56
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,1479.87
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,91101
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,153406
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,152975
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,0.784
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,267974
+testing gauss newton - yao
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer ShareInputs: 0.257643 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.0741 s␛[0m
+......::::::||||||555/44/33/22/1/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 120.333 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.19901 s␛[0m
+......::::::||||||5555/44/33/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 134.337 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.03242 s␛[0m
+......::::::||||||555/444/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 120.877 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.20213 s␛[0m
+......::::::||||||555/444/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 129.3 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.19702 s␛[0m
+......::::::||||||5555/444/3/22/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 138.801 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.1306 s␛[0m
+......::::::||||||5555/44/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 135.471 s␛[0m
+␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer ShareSvdInputs: 7.21538 s␛[0m
+......::::::||||||5555/44/3/222/11/0/␛[34mBuildAndRunSvdLoopLeak␛[0m - ␛[32mTimer SVD: 131.742 s␛[0m
+␛[34mBuildAndRunGaussNewtonLoopLeak␛[0m - ␛[32mTimer GaussNewtonGD: 1405.06 s␛[0m
+SeNtInAl,grouped_bar,main,aby_yao_float_gn,11,1565.45
+[rotation; translation]
+0.97535318 0.85648614 -1.32598257 5.65554523 7.34149981 14.19601440 
+
+Sum Total Timings: 
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_total,5000,390918
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_init,5000,18.27
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_circuit,5000,3211.87
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_network,5000,2937.29
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_baseot,5000,107142
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_setup,5000,257116
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_otext,5000,80783.9
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_garble,5000,176239
+SeNtInAl,grouped_bar,PrintSumTimings,gngd_online,5000,133799
+
