@@ -18,6 +18,3 @@
 // r=3x1, R=3x4 (only 3x3 is used here)
 // values are secret, sizes are public
 void BuildRodriguesCircuit(share *r[], share *R[], BooleanCircuit *c);
-
-uint32_t test_rodrigues_circuit(e_role role, const std::string& address, uint16_t port, seclvl seclvl,
-        uint32_t nthreads, e_mt_gen_alg mt_alg, e_sharing sharing);

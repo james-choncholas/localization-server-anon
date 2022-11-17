@@ -160,8 +160,8 @@ int main(int argc, char** argv) {
                         vector<float> initialGuessCopy = initialGuess;
                         WALL_CLOCK(aby_bool_float_gn);
                         WALL_TIC(aby_bool_float_gn);
-                        test_gaussnewton_circuit(role, address, port, seclvl, nthreads, mt_alg, S_BOOL,
-                            objectPointsSubset, imagePointsSubset, f, cx, cy, &initialGuessCopy[0]);
+                        //test_gaussnewton_circuit(role, address, port, seclvl, nthreads, mt_alg, S_BOOL,
+                        //    objectPointsSubset, imagePointsSubset, f, cx, cy, &initialGuessCopy[0]);
 
                         float error[6];
                         for (int e=0; e<6; e++) {
@@ -184,8 +184,8 @@ int main(int argc, char** argv) {
                         vector<float> initialGuessCopy = initialGuess;
                         WALL_CLOCK(aby_yao_float_gn);
                         WALL_TIC(aby_yao_float_gn);
-                        test_gaussnewton_circuit(role, address, port, seclvl, nthreads, mt_alg, S_YAO,
-                            objectPointsSubset, imagePointsSubset, f, cx, cy, &initialGuessCopy[0]);
+                        //test_gaussnewton_circuit(role, address, port, seclvl, nthreads, mt_alg, S_YAO,
+                        //    objectPointsSubset, imagePointsSubset, f, cx, cy, &initialGuessCopy[0]);
                         float error[6];
                         for (int e=0; e<6; e++) {
                             error[e] = initialGuessCopy[e] - gtpose[e];
@@ -217,8 +217,8 @@ int main(int argc, char** argv) {
                         vector<float> initialGuessCopy = initialGuess;
                         WALL_CLOCK(aby_bool_float_lm);
                         WALL_TIC(aby_bool_float_lm);
-                        test_lm_circuit(role, address, port, seclvl, nthreads, mt_alg, S_BOOL,
-                            objectPointsSubset, imagePointsSubset, f, cx, cy, &initialGuessCopy[0]);
+                        //test_lm_circuit(role, address, port, seclvl, nthreads, mt_alg, S_BOOL,
+                        //    objectPointsSubset, imagePointsSubset, f, cx, cy, &initialGuessCopy[0]);
                         float error[6];
                         for (int e=0; e<6; e++) {
                             error[e] = initialGuessCopy[e] - gtpose[e];
@@ -235,8 +235,8 @@ int main(int argc, char** argv) {
                         vector<float> initialGuessCopy = initialGuess;
                         WALL_CLOCK(aby_yao_float_lm);
                         WALL_TIC(aby_yao_float_lm);
-                        test_lm_circuit(role, address, port, seclvl, nthreads, mt_alg, S_YAO,
-                            objectPointsSubset, imagePointsSubset, f, cx, cy, &initialGuessCopy[0]);
+                        //test_lm_circuit(role, address, port, seclvl, nthreads, mt_alg, S_YAO,
+                        //    objectPointsSubset, imagePointsSubset, f, cx, cy, &initialGuessCopy[0]);
                         float error[6];
                         for (int e=0; e<6; e++) {
                             error[e] = initialGuessCopy[e] - gtpose[e];

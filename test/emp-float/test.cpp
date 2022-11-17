@@ -32,7 +32,7 @@ using Catch::Matchers::WithinAbs;
 
 constexpr const int port = 8080;
 
-TEST_CASE("Trig functions are computed", "[trig]") {
+TEST_CASE("EMP trig functions are computed", "[emp_trig]") {
   float angle = .2;
 
   std::thread bob([angle]() {
@@ -47,7 +47,7 @@ TEST_CASE("Trig functions are computed", "[trig]") {
   delete io;
 }
 
-TEST_CASE("Matrix multiply is computed", "[mat]") {
+TEST_CASE("EMP matrix multiply is computed", "[emp_mat]") {
   cv::Mat A = cv::Mat::ones(3, 5, cv::DataType<float>::type);
   cv::Mat B = cv::Mat::ones(5, 4, cv::DataType<float>::type)*2;
 
@@ -63,7 +63,7 @@ TEST_CASE("Matrix multiply is computed", "[mat]") {
   delete io;
 }
 
-TEST_CASE("Rodriguez transformation is computed", "[rod]") {
+TEST_CASE("EMP rodriguez transformation is computed", "[emp_rod]") {
   float r[3]={.2, .4, .2}; //3x1
 
   std::thread bob([&r]() {
@@ -78,7 +78,7 @@ TEST_CASE("Rodriguez transformation is computed", "[rod]") {
   delete io;
 }
 
-TEST_CASE("Point projection is computed", "[proj]") {
+TEST_CASE("EMP point projection is computed", "[emp_proj]") {
   float f=715;
   float cx=354;
   float cy=245;
@@ -106,7 +106,7 @@ TEST_CASE("Point projection is computed", "[proj]") {
   delete io;
 }
 
-TEST_CASE("SVD sign function is computed", "[svd]") {
+TEST_CASE("EMP SVD sign function is computed", "[emp_svd]") {
   float a=2.40, b=0;
 
   std::thread bob([a,b]() {
@@ -121,7 +121,7 @@ TEST_CASE("SVD sign function is computed", "[svd]") {
   delete io;
 }
 
-TEST_CASE("SVD pythag function is computed", "[svd]") {
+TEST_CASE("EMP SVD pythag function is computed", "[emp_svd]") {
   float a=-2.40, b=96.0;
 
   std::thread bob([a,b]() {
@@ -167,7 +167,7 @@ TEST_CASE("SVD pythag function is computed", "[svd]") {
 //  delete io;
 //}
 
-TEST_CASE("Large SVD function is computed", "[svd]") {
+TEST_CASE("EMP large SVD function is computed", "[emp_svd]") {
   int m=12,n=6;
   float one_d_M[] = {-9.1552734, 149.53613, -59.509277, 18.310547, 0, 3.0517578,
                      -164.79492, -64.086914, -47.302246, 0, 19.836426, 1.5258789,
@@ -205,7 +205,7 @@ TEST_CASE("Large SVD function is computed", "[svd]") {
   delete io;
 }
 
-TEST_CASE("Small invert function is computed", "[invert]") {
+TEST_CASE("EMP small invert function is computed", "[emp_small_invert]") {
   int m=7,n=3;
   float one_d_M[] = {3, 0, 1, // toy example
                      0, 0, 0,
@@ -227,7 +227,7 @@ TEST_CASE("Small invert function is computed", "[invert]") {
   delete io;
 }
 
-TEST_CASE("Large invert function is computed", "[invert]") {
+TEST_CASE("EMP large invert function is computed", "[emp_large_invert]") {
   int m=12,n=6;
   float one_d_M[] = {-9.1552734, 149.53613, -59.509277, 18.310547, 0, 3.0517578,
                      -164.79492, -64.086914, -47.302246, 0, 19.836426, 1.5258789,
@@ -254,7 +254,7 @@ TEST_CASE("Large invert function is computed", "[invert]") {
   delete io;
 }
 
-TEST_CASE("Two norm is computed", "[twonorm]") {
+TEST_CASE("EMP two norm is computed", "[emp_twonorm]") {
   int sz = 5;
   float vec[] = { 3.1, 5, 2, 4, 1 };
 
@@ -270,7 +270,7 @@ TEST_CASE("Two norm is computed", "[twonorm]") {
   delete io;
 }
 
-TEST_CASE("Gauss Newton pose estimation is computed", "[gn]") {
+TEST_CASE("EMP Gauss Newton pose estimation is computed", "[emp_gn]") {
   float f=715;
   float cx=354;
   float cy=245;
@@ -298,7 +298,7 @@ TEST_CASE("Gauss Newton pose estimation is computed", "[gn]") {
   delete io;
 }
 
-TEST_CASE("Levenburg Marquardt pose estimation is computed", "[lm]") {
+TEST_CASE("EMP Levenburg Marquardt pose estimation is computed", "[emp_lm]") {
   float f=715;
   float cx=354;
   float cy=245;

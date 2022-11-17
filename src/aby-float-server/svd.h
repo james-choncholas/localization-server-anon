@@ -11,6 +11,10 @@
 
 void BuildFabsCircuit(share *a, BooleanCircuit *c);
 
+void BuildSignCircuit(share *a, share *b, BooleanCircuit *c);
+
+share* BuildPythagCircuit(share *a, share *b, BooleanCircuit *c, uint32_t bitlen);
+
 // uint32_t arguments must be from PutSharedOUTGate()
 // then calling get_clear_value() and circuit->Reset();
 // This function builds/executes multiple circuits.
@@ -28,18 +32,9 @@ void BuildAndRunSvd(share ***s_a, int nRows, int nCols, share **s_w, share ***s_
 uint32_t test_fabs_circuit(e_role role, const std::string& address, uint16_t port, seclvl seclvl,
         uint32_t nthreads, e_mt_gen_alg mt_alg, e_sharing sharing, float a);
 
-uint32_t test_sign_circuit(e_role role, const std::string& address, uint16_t port, seclvl seclvl,
-        uint32_t nthreads, e_mt_gen_alg mt_alg, e_sharing sharing, float a, float b);
-
 uint32_t test_fmax_circuit(e_role role, const std::string& address, uint16_t port, seclvl seclvl,
         uint32_t nthreads, e_mt_gen_alg mt_alg, e_sharing sharing, float a, float b);
 
 uint32_t test_negative_circuit(e_role role, const std::string& address, uint16_t port, seclvl seclvl,
         uint32_t nthreads, e_mt_gen_alg mt_alg, e_sharing sharing, float a);
 
-uint32_t test_pythag_circuit(e_role role, const std::string& address, uint16_t port, seclvl seclvl,
-        uint32_t nthreads, e_mt_gen_alg mt_alg, e_sharing sharing, float a, float b);
-
-uint32_t test_svd_circuit(e_role role, const std::string& address, uint16_t port, seclvl seclvl,
-        uint32_t nthreads, e_mt_gen_alg mt_alg, e_sharing sharing,
-        float **a_in, int nRows, int nCols, float *w_in, float **v_in);

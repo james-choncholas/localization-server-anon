@@ -14,10 +14,9 @@
 
 using namespace std;
 
-void BuildGaussNewtonCircuit(share *threeDPts[], int numThreeD,
-                            share *twoDPts[], int numTwoD,
-                            share *f, share *cx, share *cy,
-                            share *x[], BooleanCircuit *c);
+void BuildAndRunLM(share *s_threeDPts[], share *s_twoDPts[], int numPts,
+                            share *s_f, share *s_cx, share *s_cy, share *s_x[],
+                            BooleanCircuit *c, ABYParty* party, e_role role);
 
 uint32_t test_lm_circuit(e_role role, const std::string& address, uint16_t port, seclvl seclvl,
         uint32_t nthreads, e_mt_gen_alg mt_alg, e_sharing sharing,

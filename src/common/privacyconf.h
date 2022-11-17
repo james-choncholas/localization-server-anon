@@ -2,7 +2,6 @@
 #include <stdint.h>
 
 // Algorithm control flow
-//#define PPL_FLOW_NATIVE     1
 #define PPL_FLOW_DO         2
 #define PPL_FLOW_LOOP_LEAK  3
 #define PPL_FLOW_PRIV_J     4

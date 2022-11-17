@@ -15,6 +15,7 @@
 #include <thread>
 
 #include <jlog.h>
+#include <test_params.h>
 
 #include <util.h>
 #include <printutil.h>
@@ -45,14 +46,6 @@ using std::cout;
 using std::vector;
 using Catch::Matchers::WithinAbs;
 using Catch::Matchers::WithinRel;
-
-constexpr const float float_test_epsilon = 1e-5;
-// reprojection error can be more than epsilon
-const constexpr float reprojection_tol = 5.f;
-const constexpr float svd_tol = 0.01f;
-const constexpr float localization_tol_rel = 0.05f;
-
-
 
 void emp_trig(NetIO* io, int party, float angle) {
   setup_semi_honest(io, party);
@@ -408,7 +401,7 @@ void emp_twonorm(NetIO* io, int party, float *vec, int sz) {
 
   Float sres = BuildTwoNormSqCircuit(svec, sz);
 
-  REQUIRE_THAT(sres.reveal<double>(), WithinAbs(twonormsq(vec, 5), float_test_epsilon));
+  REQUIRE_THAT(sres.reveal<double>(), WithinAbs(twonormsq(vec, sz), float_test_epsilon));
   delete[] svec;
   finalize_semi_honest();
 }

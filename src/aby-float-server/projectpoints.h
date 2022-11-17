@@ -15,8 +15,4 @@
 //      last row needed for intermediate calculation (homogeneous)
 //      [ u1, u2, ...;  v1, v2, ...;  1, 1, ... ]
 void BuildProjectPointsCircuit(share *_P[], share *_x[], share *_K[], share *_res[],
-        int numPoints, BooleanCircuit *c, bool skipOneGate);
-
-uint32_t test_projectpoints_circuit(e_role role, const std::string& address, uint16_t port, seclvl seclvl,
-        uint32_t nthreads, e_mt_gen_alg mt_alg, e_sharing sharing,
-        float* _P, float* _x, float* _K, float* _res, int numPoints);
+        int numPoints, BooleanCircuit *c, bool skipOneGate=false);
