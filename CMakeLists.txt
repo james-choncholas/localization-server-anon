@@ -70,8 +70,12 @@ message(STATUS "include_path: ${OpenCV_INCLUDE_DIRS}")
 
 
 foreach(empdir tool ot sh2pc)
-    #execute_process(COMMAND make clean
-    #    WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/extern/emp-${empdir}")
+#    execute_process(COMMAND rm -rf build/
+#        WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/extern/emp-${empdir}")
+#    execute_process(COMMAND rm -rf CMakeCache.txt
+#        WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/extern/emp-${empdir}")
+#    execute_process(COMMAND make clean
+#        WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/extern/emp-${empdir}")
     execute_process(COMMAND cmake -DENABLE_FLOAT=On -DTHREADING=On .
         WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/extern/emp-${empdir}")
     execute_process(COMMAND make -j16
