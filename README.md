@@ -1,5 +1,5 @@
 # Secure Localization Prototype
-Contains opencv, plain c, MPC (ABY/EMP), and VIP-Bench implementations.
+Contains opencv, plain c, and MPC (ABY/EMP).
 
 # Docker
 TODO
@@ -26,9 +26,12 @@ Extract to data-eth3d directory:
 ```
 sudo apt-get install p7zip-full
 mkdir ./data-eth3d
-7z x .7z -o./data-eth3d/
-7z x ~/Downloads/multi_view_training_dslr_scan_eval.7z -o./data-eth3d/
-7z x ~/Downloads/multi_view_training_dslr_undistorted.7z -o./data-eth3d/
+curl https://www.eth3d.net/data/multi_view_training_dslr_undistorted.7z -o im.7z
+7z x im.7z -o./data-eth3d/
+rm im.7z
+curl https://www.eth3d.net/data/multi_view_training_dslr_scan_eval.7z -o gt.7z
+7z x gt.7z -o./data-eth3d/
+rm gt.7z
 ```
 
 
