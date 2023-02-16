@@ -510,6 +510,92 @@ int BuildSvdCircuit(Float **a, int nRows, int nCols, Float *w, Float **v) {
         printf("/");
         fflush(stdout);
     }
+
+#elif PPL_FLOW==PPL_FLOW_SiSL
+    for (k = nCols - 1; k >= 0; k--) {
+        for (its = 0; its < 2; its++) {
+            cout << k;
+            l = 0;
+            nm = -1;
+            flag = 0;
+
+            z = w[k];
+            if (l == k) { // convergence
+                /*if (z < 0.0)*/ { // singular value is made nonnegative
+                    Bit ifzlt = z.less_than(zero_gate);
+                    Float nz = -z;
+                    w[k] = w[k].If(ifzlt, nz);
+                    for (j = 0; j < nCols; j++) {
+                        Float nv = -v[j][k];
+                        v[j][k] = v[j][k].If(ifzlt, nv);
+                    }
+                }
+                break;
+            }
+
+            if (k==0) break
+
+            // shift from bottom 2-by-2 minor
+            x = w[l];
+            nm = k - 1;
+            y = w[nm];
+            g = rv1[nm];
+            h = rv1[k];
+            f = ((y - z) * (y + z) + (g - h) * (g + h)) / (Float(2.0, PUBLIC) * h * y);
+            Float one_gate = Float(1.0, PUBLIC);
+            g = BuildPythagCircuit(&f, &one_gate);
+            BuildSignCircuit(&g, &f); // modifies g
+            f = ((x - z) * (x + z) + h * ((y / (f + g))- h)) / x;
+            // Next QR transformation
+            c = Float(1.0, PUBLIC);
+            s = Float(1.0, PUBLIC);
+            for (j = l; j <= nm; j++) {
+                i = j + 1;
+                g = rv1[i];
+                y = w[i];
+                h = s * g;
+                g = c * g;
+                z = BuildPythagCircuit(&f, &h);
+                rv1[j] = z;
+                c = f / z;
+                s = h / z;
+                f = x * c + g * s;
+                g = g * c - x * s;
+                h = y * s;
+                y = y * c;
+                for (jj = 0; jj < nCols; jj++) {
+                    x = v[jj][j];
+                    z = v[jj][i];
+                    v[jj][j] = x * c + z * s;
+                    v[jj][i] = z * c - x * s;
+                }
+                z = BuildPythagCircuit(&f, &h);
+                w[j] = z; // rotation can be artibitrary if z=0
+                /*if (z)*/ {
+                    Bit ifz = z.equal(zero_gate);
+                    Float temp = Float(1.0, PUBLIC) / z;
+                    z = temp.If(ifz, z);
+                    temp = f * z;
+                    c = temp.If(ifz, c);
+                    temp = h * z;
+                    s = temp.If(ifz, s);
+                }
+                f = c * g + s * y;
+                x = c * y - s * g;
+                for (jj = 0; jj < nRows; jj++) {
+                    y = a[jj][j];
+                    z = a[jj][i];
+                    a[jj][j] = y * c + z * s;
+                    a[jj][i] = z * c - y * s;
+                }
+            }
+            rv1[l] = Float(0.0, PUBLIC);
+            rv1[k] = f;
+            w[k] = x;
+        }
+        printf("/");
+        fflush(stdout);
+    }
 #endif
     printf("\n");
 

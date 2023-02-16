@@ -224,6 +224,14 @@ int svdcmp(T **a, int nRows, int nCols, T *w, T **v) {
     // Diagonalization of the bidiagonal form: loop over singular
     //  values and over allowed iterations
     for (k = nCols - 1; k >= 0; k--) {
+
+#if PPL_FLOW==PPL_FLOW_SiSL
+        for (its = 0; its < 2; its++) {
+            cout << k;
+            l = 0;
+            nm = -1;
+            flag = 0;
+#else
         for (its = 0; its < 30; its++) {
             cout << k;
             flag = 1;
@@ -241,6 +249,9 @@ int svdcmp(T **a, int nRows, int nCols, T *w, T **v) {
                     break;
                 }
             }
+
+#endif
+            // flag check needs to be data obl
             if (flag) { // cancellation of rv1(l), if l >= 1
                 c = zero;
                 s = one;
@@ -279,6 +290,11 @@ int svdcmp(T **a, int nRows, int nCols, T *w, T **v) {
                 delete[] rv1;
                 return -1;
             }
+
+#if PPL_FLOW==PPL_FLOW_SiSL
+            if (k == 0) break;
+#endif
+
             // shift from bottom 2-by-2 minor
             x = w[l];
             nm = k - 1;
