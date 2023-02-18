@@ -19,7 +19,7 @@ python3 $scriptpath/../scripts/plotter.py \
         "$logdir/gn_emp_float_server_benchmark_short_2.log" \
         "$logdir/lm_emp_float_server_benchmark_short_2.log" \
      --graphpath "$plotdir/emp_vs_aby.pdf" \
-     --title "ABY and EMP Loop Leak Runtime" \
+     --title "ABY and EMP Runtime" \
      --only-tags \
         "aby_yao_float_gn" \
         "aby_bool_float_gn" \

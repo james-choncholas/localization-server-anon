@@ -16,8 +16,7 @@ python3 $scriptpath/../scripts/plotter.py \
         "$logdir/gn_emp_float_server_benchmark_long.log" \
         "$logdir/lm_emp_float_server_benchmark_long.log" \
      --graphpath "$plotdir/netio.pdf" \
-     --title "Loop Leak Average Network IO
-per Iteration" \
+     --title "Network IO per Iteration" \
      --only-tags \
         "gn_bytes_tx_normalized" \
         `#"gn_bytes_rx"` \

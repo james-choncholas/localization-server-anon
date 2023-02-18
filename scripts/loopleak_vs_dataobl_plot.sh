@@ -17,7 +17,8 @@ python3 $scriptpath/../scripts/plotter.py \
         "$logdir/gn_emp_float_server_benchmark_dataobl_short.log" \
         "$logdir/lm_emp_float_server_benchmark_dataobl_short.log" \
      --graphpath "$plotdir/loopleak_vs_dataobl.pdf" \
-     --title "Data Oblivious vs Loop Leak Runtime" \
+     --title "Data Oblivious vs
+One Shot Localization Runtime" \
      --only-tags \
         "emp_float_gn_time_vs_points_dataobl" \
         "emp_float_lm_time_vs_points_dataobl" \

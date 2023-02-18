@@ -16,8 +16,7 @@ python3 $scriptpath/../scripts/plotter.py \
         "$logdir/gn_emp_float_server_benchmark_long_latency.log" \
         "$logdir/lm_emp_float_server_benchmark_long_latency.log" \
      --graphpath "$plotdir/emp_float_runtime_long.pdf" \
-     --title "Loop Leak Average Runtime
-per Iteration" \
+     --title "Runtime per Iteration" \
      --only-tags \
         "emp_float_gn_time_vs_points_normalized" \
         "emp_float_lm_time_vs_points_normalized" \
