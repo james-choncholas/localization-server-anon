@@ -9,7 +9,7 @@ SHOW=""
 # relies on:
 #   emp_float_benchmark_run.sh
 
-python3 $scriptpath/../scripts/plotter.py \
+python3 $scriptpath/../scripts/insetplotter.py \
      --csvlog \
         "$logdir/gn_emp_float_server_benchmark_long.log" \
         "$logdir/lm_emp_float_server_benchmark_long.log" \

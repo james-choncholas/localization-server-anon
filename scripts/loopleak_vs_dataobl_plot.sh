@@ -27,8 +27,8 @@ One Shot Localization Runtime" \
      --custom-legend-labels \
         "GN DO" \
         "LM DO" \
-        "GN LL" \
-        "LM LL" \
+        "GN OSL" \
+        "LM OSL" \
      --xlabel "Number of Points" \
      --ylabel "Runtime (s)" \
      --fig-w 4 \
