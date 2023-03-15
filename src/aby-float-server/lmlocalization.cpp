@@ -186,7 +186,7 @@ std::pair<share*, share*> BuildLMIteration(share *threeDPts[], share *y0[], int 
         JtJ_i[p] = new share*[6];
     }
 
-#if PPL_FLOW==PPL_FLOW_DO
+#if PPL_FLOW==PPL_FLOW_DO || PPL_FLOW == PPL_FLOW_SiSL
     BuildInvertCircuit(JtJ, 6, 6, JtJ_i, c, party, role, nullptr, nullptr);
 
 #elif PPL_FLOW==PPL_FLOW_LOOP_LEAK
@@ -855,7 +855,7 @@ void BuildAndRunLM(share *s_threeDPts[], share *s_twoDPts[], int numPts,
     BuildAndRunLMDO(s_threeDPts, s_twoDPts, numPts,
                             s_f, s_cx, s_cy, s_x,
                             c, party, role);
-#elif PPL_FLOW==PPL_FLOW_LOOP_LEAK
+#elif PPL_FLOW==PPL_FLOW_LOOP_LEAK || PPL_FLOW == PPL_FLOW_SiSL
     BuildAndRunLMLoopLeak(s_threeDPts, s_twoDPts, numPts,
                             s_f, s_cx, s_cy, s_x,
                             c, party, role);

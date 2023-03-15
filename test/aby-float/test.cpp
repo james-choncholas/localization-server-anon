@@ -1014,7 +1014,7 @@ void aby_localize(e_role role, e_sharing sharing,
   party->ExecCircuit();
 
   if (role == SERVER) {
-  cout << "secure result: ";
+    cout << "secure result: ";
   }
   float temp[6];
   for(int i=0; i<6; i++) {
@@ -1024,9 +1024,9 @@ void aby_localize(e_role role, e_sharing sharing,
 
     REQUIRE(out_bitlen == 32);
     REQUIRE(out_nvals == 1);
-  if (role == SERVER) {
-    cout << *(float*)output << " ";
-  }
+    if (role == SERVER) {
+      cout << *(float*)output << " ";
+    }
     temp[i] = *(float*)output;
     REQUIRE_THAT(*(float*)output, WithinRel(rt[i], localization_tol_rel));
   }
