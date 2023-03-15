@@ -1034,6 +1034,8 @@ void aby_localize(e_role role, e_sharing sharing,
   delete party;
 }
 
+// SiSL is lm only
+#if PPL_FLOW!=PPL_FLOW_SiSL
 TEST_CASE("ABY Gauss Newton pose estimation is computed", "[aby_gn]") {
   float f=715;
   float cx=354;
@@ -1063,6 +1065,7 @@ TEST_CASE("ABY Gauss Newton pose estimation is computed", "[aby_gn]") {
   }
   bob.join();
 }
+#endif
 
 TEST_CASE("ABY Levenburg Marquardt pose estimation is computed", "[aby_lm]") {
   float f=715;
@@ -1093,29 +1096,3 @@ TEST_CASE("ABY Levenburg Marquardt pose estimation is computed", "[aby_lm]") {
   }
   bob.join();
 }
-
-
-//    float a,b;
-//    MSG("\n\ntesting svd - fabs subfunc - cleartext\n");
-//    a=-2.40;
-//    cout << "fabs: " << fabs(a) << endl;
-//    for (auto ctype : ctypes) {
-//        cout << "test svd circuit - fabs subfunc - "<< cnames[ctype] <<"\n";
-//        test_fabs_circuit(role, address, port, seclvl, nthreads, mt_alg, ctype, a);
-//    }
-//
-//    MSG("testing svd - fmax subfunc - cleartext\n");
-//    a=-2.40,b=96.0;
-//    cout << "fmax: " << myfmax(a,b) << endl;
-//    for (auto ctype : ctypes) {
-//        cout << "test svd circuit - fmax subfunc - "<< cnames[ctype] <<"\n";
-//        test_fmax_circuit(role, address, port, seclvl, nthreads, mt_alg, ctype, a, b);
-//    }
-//
-//    MSG("testing svd - negative subfunc - cleartext\n");
-//    a=-2.40;
-//    cout << "result: " << -a << endl;
-//    for (auto ctype : ctypes) {
-//        cout << "test svd circuit - negative subfunc - "<< cnames[ctype] <<"\n";
-//        test_negative_circuit(role, address, port, seclvl, nthreads, mt_alg, ctype, a);
-//    }

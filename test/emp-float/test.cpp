@@ -270,6 +270,8 @@ TEST_CASE("EMP two norm is computed", "[emp_twonorm]") {
   delete io;
 }
 
+// SiSL is lm only
+#if PPL_FLOW!=PPL_FLOW_SiSL
 TEST_CASE("EMP Gauss Newton pose estimation is computed", "[emp_gn]") {
   float f=715;
   float cx=354;
@@ -297,6 +299,7 @@ TEST_CASE("EMP Gauss Newton pose estimation is computed", "[emp_gn]") {
   bob.join();
   delete io;
 }
+#endif
 
 TEST_CASE("EMP Levenburg Marquardt pose estimation is computed", "[emp_lm]") {
   float f=715;
