@@ -158,7 +158,7 @@ void BuildInvertCircuitDO(share **s_in[], int m, int n, share **s_res[],
 void BuildInvertCircuit(share **s_in[], int m, int n, share **s_res[],
         BooleanCircuit *c, ABYParty* party, e_role role,
         std::function<void()> toRawShares, std::function<void()> toShareObjects) {
-#if PPL_FLOW==PPL_FLOW_DO // set dx to zero if no error
+#if PPL_FLOW==PPL_FLOW_DO || PPL_FLOW == PPL_FLOW_SiSL // set dx to zero if no error
     (void)toRawShares;
     (void)toShareObjects;
     BuildInvertCircuitDO(s_in, m, n, s_res,

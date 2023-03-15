@@ -1827,6 +1827,339 @@ void BuildSvdDO(share ***a, int nRows, int nCols, share **w, share ***v,
     }
 }
 
+// Build SVD circuit. Since it does not need
+// intermediate values, it does not use subcircuits
+// thus only builds the circuit but does not execute.
+void BuildSvdOSL(share ***a, int nRows, int nCols, share **w, share ***v,
+        BooleanCircuit *c, ABYParty* party, e_role role) {
+
+    // Following values are shared between subcircuits
+    int /*flag,*/ i, its, j, jj, k, l, nm;
+    share *anorm=nullptr, *cc=nullptr, *f=nullptr, *g=nullptr, *h=nullptr, *s=nullptr, *scale=nullptr, *x=nullptr, *y=nullptr, *z=nullptr;
+    share **rv1 = new share*[nCols];
+
+    float zero = 0;
+    share* zero_gate = c->PutCONSGate((uint32_t*)&zero, bitlen);
+    int int_zero = 0;
+    share* int_zero_gate = c->PutCONSGate((uint32_t*)&int_zero, bitlen);
+    float one = 1;
+    share* one_gate = c->PutCONSGate((uint32_t*)&one, bitlen);
+    int int_one = 1;
+    share* int_one_gate = c->PutCONSGate((uint32_t*)&int_one, bitlen);
+    float two = 2;
+    share* two_gate = c->PutCONSGate((uint32_t*)&two, bitlen);
+    uint8_t true_val = 1;
+    share* true_gate = c->PutCONSGate((uint8_t*)&true_val, 1);
+    uint8_t false_val = 0;
+    share* false_gate = c->PutCONSGate((uint8_t*)&false_val, 1);
+    share* temp;
+
+    x = new boolshare(zero_gate->get_wires(), c); // x must be initialized
+
+    BuildSvdPart1Circuit(a, nRows, nCols, w, v, &anorm, rv1, c);
+
+    for (k = nCols - 1; k >= 0; k--) {
+        share* converged = new boolshare(false_gate->get_wires(), c);
+        for (its = 0; its < 2; its++) {
+            cout << k << flush;
+            share* priv_l = new boolshare(int_zero_gate->get_wires(), c);
+
+            z = w[k];
+            share* tempk = c->PutCONSGate((uint32_t*) &k, 32);
+            share* newconverged = c->PutEQGate(priv_l, tempk);
+            delete tempk;
+            { //if (l == k)
+                { // if (z < 0.0) singular value is made nonnegative
+                    share* isneg = c->PutFPGate(zero_gate, z, CMP);
+                    share* modify = c->PutANDGate(isneg, newconverged);
+                    share* nconverged = c->PutINVGate(converged);
+                    share* oldmodify = modify;
+                    modify = c->PutANDGate(modify, nconverged);
+                    delete oldmodify;
+
+                    share* temp = new boolshare(z->get_wires(), c);
+                    BuildNegativeCircuit(temp, c);
+                    w[k] = c->PutMUXGate(temp, w[k], modify);
+                    for (int j = 0; j < nCols; j++) {
+                        share* negv = new boolshare(v[j][k]->get_wires(), c);
+                        BuildNegativeCircuit(negv, c);
+                        share* oldvjk = v[j][k];
+                        v[j][k] = c->PutMUXGate(negv, v[j][k], modify);
+                        delete negv;
+                        delete oldvjk;
+                    }
+                }
+            }
+            share* oldconverged = converged;
+            converged = c->PutORGate(converged, newconverged);
+            delete oldconverged;
+            if (k==0) break; // if k == 0 we are done, code below segfaults from nm
+
+            // shift from bottom 2-by-2 minor
+            for (int l_finder=0; l_finder<k; l_finder++) {
+                share* pl_finder = c->PutCONSGate((uint32_t*) &l_finder, bitlen);
+                share* found_l = c->PutEQGate(priv_l, pl_finder);
+                delete pl_finder;
+                share* flanc = c->PutINVGate(converged);
+                share* oldflanc = flanc;
+                flanc = c->PutANDGate(found_l, flanc);
+                delete oldflanc;
+                delete found_l;
+                share* oldx = x;
+                x = c->PutMUXGate(w[l_finder], x, flanc);
+                delete oldx;
+                delete flanc;
+            }
+
+            nm = k-1;
+            y = new boolshare(w[nm]->get_wires(), c); // do not delete before assigning
+            if (g) delete g;
+            g = new boolshare(rv1[nm]->get_wires(), c);
+            if (h) delete h;
+            h = new boolshare(rv1[k]->get_wires(), c);
+            { //f = ((y - z) * (y + z) + (g - h) * (g + h)) / (2.0 * h * y);
+                share* ymz = c->PutFPGate(y, z, SUB, bitlen, 1, no_status);
+                share* ypz = c->PutFPGate(y, z, ADD, bitlen, 1, no_status);
+                share* temp1 = c->PutFPGate(ymz, ypz, MUL, bitlen, 1, no_status);
+                share* gmh = c->PutFPGate(g, h, SUB, bitlen, 1, no_status);
+                share* gph = c->PutFPGate(g, h, ADD, bitlen, 1, no_status);
+                share* temp2 = c->PutFPGate(gmh, gph, MUL, bitlen, 1, no_status);
+                share* num = c->PutFPGate(temp1, temp2, ADD, bitlen, 1, no_status);
+                share* den1 = c->PutFPGate(two_gate, h, MUL, bitlen, 1, no_status);
+                share* den2 = c->PutFPGate(den1, y, MUL, bitlen, 1, no_status);
+                f = c->PutFPGate(num, den2, DIV, bitlen, 1, no_status);
+                delete ymz;
+                delete ypz;
+                delete temp1;
+                delete gmh;
+                delete gph;
+                delete temp2;
+                delete num;
+                delete den1;
+                delete den2;
+            }
+            g = BuildPythagCircuit(f, one_gate, c, bitlen);
+            {//f = ((x - z) * (x + z) + h * ((y / (f + SIGN(g,f)))- h)) / x;
+                share* xmz = c->PutFPGate(x, z, SUB, bitlen, 1, no_status);
+                share* xpz = c->PutFPGate(x, z, ADD, bitlen, 1, no_status);
+                share* term1 = c->PutFPGate(xmz, xpz, MUL, bitlen, 1, no_status);
+                share* sgf = new boolshare(g->get_wires(), c);
+                BuildSignCircuit(sgf,f,c);
+                share* fpsgf = c->PutFPGate(f, sgf, ADD, bitlen, 1, no_status);
+                share* ydfpsgf = c->PutFPGate(y, fpsgf, DIV, bitlen, 1, no_status);
+                share* uggg = c->PutFPGate(ydfpsgf, h, SUB, bitlen, 1, no_status);
+                share* term2 = c->PutFPGate(h, uggg, MUL, bitlen, 1, no_status);
+                share* num2 = c->PutFPGate(term1, term2, ADD, bitlen, 1, no_status);
+                delete f;
+                f = c->PutFPGate(num2, x, DIV, bitlen, 1, no_status);
+                delete xmz;
+                delete xpz;
+                delete term1;
+                delete sgf;
+                delete fpsgf;
+                delete ydfpsgf;
+                delete uggg;
+                delete term2;
+                delete num2;
+            }
+            cc = new boolshare(one_gate->get_wires(), c);
+            s = new boolshare(one_gate->get_wires(), c);
+
+            for (int j = 0; j <= nm; j++) {
+                share* priv_j = c->PutCONSGate((uint32_t*) &j, bitlen);
+                share* jgtl = c->PutGTGate(priv_l, priv_j); // have to invert for >=
+                share* oldjgtl = jgtl;
+                jgtl = c->PutINVGate(jgtl);
+                delete oldjgtl;
+                share* nconverged = c->PutINVGate(converged);
+                share* modify = c->PutANDGate(jgtl, nconverged);
+                delete nconverged;
+                delete jgtl;
+                delete priv_j;
+
+
+                int i = j + 1;
+                delete g;
+                g = new boolshare(rv1[i]->get_wires(), c);
+                delete y;
+                y = new boolshare(w[i]->get_wires(), c);
+                delete h;
+                h = c->PutFPGate(s, g, MUL, bitlen, 1, no_status);
+                share* oldg = g;
+                g = c->PutFPGate(cc, g, MUL, bitlen, 1, no_status);
+                delete oldg;
+                delete z;
+                z = BuildPythagCircuit(f, h, c, bitlen);
+                share* oldr = rv1[j];
+                rv1[j] = c->PutMUXGate(z, rv1[j], modify);
+                delete oldr;
+                temp = c->PutFPGate(f, z, DIV, bitlen, 1, no_status);
+                share* oldcc = cc;
+                cc = c->PutMUXGate(temp, cc, modify);
+                delete oldcc;
+                delete temp;
+                share* olds = s;
+                temp = c->PutFPGate(h, z, DIV, bitlen, 1, no_status);
+                s = c->PutMUXGate(temp, s, modify);
+                delete olds;
+                delete temp;
+                { //f = x * c + g * s;
+                    share* term1 = c->PutFPGate(x, cc, MUL, bitlen, 1, no_status);
+                    share* term2 = c->PutFPGate(g, s, MUL, bitlen, 1, no_status);
+                    share* added = c->PutFPGate(term1, term2, ADD, bitlen, 1, no_status);
+                    share* oldf = f;
+                    f = c->PutMUXGate(added, f, modify);
+                    delete oldf;
+                    delete added;
+                    delete term1;
+                    delete term2;
+                }
+                { //g = g * c - x * s;
+                    share* term1 = c->PutFPGate(g, cc, MUL, bitlen, 1, no_status);
+                    share* term2 = c->PutFPGate(x, s, MUL, bitlen, 1, no_status);
+                    share* oldg = g;
+                    g = c->PutFPGate(term1, term2, SUB, bitlen, 1, no_status);
+                    delete oldg;
+                    delete term1;
+                    delete term2;
+                }
+                h = c->PutFPGate(y, s, MUL, bitlen, 1, no_status);
+                y = c->PutFPGate(y, cc, MUL, bitlen, 1, no_status);
+                for (jj = 0; jj < nCols; jj++) {
+                    share* oldx = x;
+                    x = c->PutMUXGate(v[jj][j], x, modify);
+                    delete oldx;
+                    z = new boolshare(v[jj][i]->get_wires(), c);
+                    { //v[jj][j] = x * c + z * s;
+                        share* term1 = c->PutFPGate(x, cc, MUL, bitlen, 1, no_status);
+                        share* term2 = c->PutFPGate(z, s, MUL, bitlen, 1, no_status);
+                        share* added = c->PutFPGate(term1, term2, ADD, bitlen, 1, no_status);
+                        share* oldv = v[jj][j];
+                        v[jj][j] = c->PutMUXGate(added, v[jj][j], modify);
+                        delete oldv;
+                        delete added;
+                        delete term1;
+                        delete term2;
+                    }
+                    { //v[jj][i] = z * c - x * s;
+                        share* term1 = c->PutFPGate(z, cc, MUL, bitlen, 1, no_status);
+                        share* term2 = c->PutFPGate(x, s, MUL, bitlen, 1, no_status);
+                        share* subbed = c->PutFPGate(term1, term2, SUB, bitlen, 1, no_status);
+                        share* oldv = v[jj][i];
+                        v[jj][i] = c->PutMUXGate(subbed, v[jj][i], modify);
+                        delete oldv;
+                        delete subbed;
+                        delete term1;
+                        delete term2;
+                    }
+                }
+                z = BuildPythagCircuit(f, h, c, bitlen);
+                share* oldw = w[j];
+                w[j] = c->PutMUXGate(z, w[j], modify);
+                delete oldw;
+                { //if (z) {
+                    share *temp;
+                    share *ifz = z->get_wire_ids_as_share(0);
+                    for (uint32_t tt=1; tt<bitlen-1;  tt++) { // -1 -> do not include sign bit
+                        share *tempbit = z->get_wire_ids_as_share(tt);
+                        temp = ifz;
+                        ifz = c->PutORGate(temp, tempbit);
+                        delete tempbit;
+                        delete temp;
+                    }
+                    share* ifzam = c->PutANDGate(ifz, modify);
+                    delete ifz;
+
+                    temp = c->PutFPGate(one_gate, z, DIV, bitlen, 1, no_status);
+                    z = c->PutMUXGate(temp, z, ifzam);
+                    delete temp;
+
+                    temp = c->PutFPGate(f, z, MUL, bitlen, 1, no_status);
+                    cc = c->PutMUXGate(temp, cc, ifzam);
+                    delete temp;
+
+                    temp = c->PutFPGate(h, z, MUL, bitlen, 1, no_status);
+                    s = c->PutMUXGate(temp, s, ifzam);
+                    delete temp;
+                }
+                { //f = c * g + s * y;
+                    share* term1 = c->PutFPGate(cc, g, MUL, bitlen, 1, no_status);
+                    share* term2 = c->PutFPGate(s, y, MUL, bitlen, 1, no_status);
+                    share* added = c->PutFPGate(term1, term2, ADD, bitlen, 1, no_status);
+                    share* oldf = f;
+                    f = c->PutMUXGate(added, f, modify);
+                    delete oldf;
+                    delete added;
+                    delete term1;
+                    delete term2;
+                }
+                { //x = c * y - s * g;
+                    share* term1 = c->PutFPGate(cc, y, MUL, bitlen, 1, no_status);
+                    share* term2 = c->PutFPGate(s, g, MUL, bitlen, 1, no_status);
+                    share* subbed = c->PutFPGate(term1, term2, SUB, bitlen, 1, no_status);
+                    share* oldx = x;
+                    x = c->PutMUXGate(subbed, x, modify);
+                    delete oldx;
+                    delete subbed;
+                    delete term1;
+                    delete term2;
+                }
+                for (jj = 0; jj < nRows; jj++) {
+                    y = new boolshare(a[jj][j]->get_wires(), c);
+                    z = new boolshare(a[jj][i]->get_wires(), c);
+                    { //a[jj][j] = y * c + z * s;
+                        share* term1 = c->PutFPGate(y, cc, MUL, bitlen, 1, no_status);
+                        share* term2 = c->PutFPGate(z, s, MUL, bitlen, 1, no_status);
+                        share* added = c->PutFPGate(term1, term2, ADD, bitlen, 1, no_status);
+                        share* olda = a[jj][j];
+                        a[jj][j] = c->PutMUXGate(added, a[jj][j], modify);
+                        delete olda;
+                        delete added;
+                        delete term1;
+                        delete term2;
+                    }
+                    { //a[jj][i] = z * c - y * s;
+                        share* term1 = c->PutFPGate(z, cc, MUL, bitlen, 1, no_status);
+                        share* term2 = c->PutFPGate(y, s, MUL, bitlen, 1, no_status);
+                        share* subbed = c->PutFPGate(term1, term2, SUB, bitlen, 1, no_status);
+                        share* olda = a[jj][i];
+                        a[jj][i] = c->PutMUXGate(subbed, a[jj][i], modify);
+                        delete olda;
+                        delete subbed;
+                        delete term1;
+                        delete term2;
+                    }
+                }
+            }
+            for (int l_finder=0; l_finder<k; l_finder++) {
+                share* pl_finder = c->PutCONSGate((uint32_t*) &l_finder, 32);
+                share* found_l = c->PutEQGate(priv_l, pl_finder);
+                delete pl_finder;
+                share* flanc = c->PutINVGate(converged);
+                share* oldflanc = flanc;
+                flanc = c->PutANDGate(found_l, flanc);
+                delete oldflanc;
+                delete found_l;
+                share* oldr = rv1[l_finder];
+                rv1[l_finder] = c->PutMUXGate(zero_gate, rv1[l_finder], flanc);
+                delete oldr;
+                delete flanc;
+            }
+            share* nconverged = c->PutINVGate(converged);
+            share* oldr = rv1[k];
+            rv1[k] = c->PutMUXGate(f, rv1[k], nconverged);
+            delete oldr;
+            share* oldw = w[k];
+            w[k] = c->PutMUXGate(x, w[k], nconverged);
+            delete oldw;
+            delete nconverged;
+        }
+        delete converged;
+        printf("/");
+        fflush(stdout);
+    }
+}
+
 void BuildAndRunSvd(share ***s_a, int nRows, int nCols, share **s_w, share ***s_v,
         BooleanCircuit *c, ABYParty* party, e_role role,
         std::function<void()> toRawShares, std::function<void()> toShareObjects) {
@@ -1836,6 +2169,8 @@ void BuildAndRunSvd(share ***s_a, int nRows, int nCols, share **s_w, share ***s_
     BuildSvdDO(s_a, nRows, nCols, s_w, s_v, c, party, role);
 #elif PPL_FLOW==PPL_FLOW_LOOP_LEAK
     BuildAndRunSvdLoopLeak(s_a, nRows, nCols, s_w, s_v, c, party, role, toRawShares, toShareObjects);
+#elif PPL_FLOW==PPL_FLOW_SiSL
+    BuildSvdOSL(s_a, nRows, nCols, s_w, s_v, c, party, role);
 #endif
 }
 

@@ -657,7 +657,6 @@ void aby_svd(e_role role, e_sharing sharing, float **in, int m, int n) {
     delete[] s_v[i];
   }
   delete[] s_v;
-
   delete[] w;
   delete[] v;
   delete party;

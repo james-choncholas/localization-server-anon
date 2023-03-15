@@ -533,7 +533,7 @@ int BuildSvdCircuit(Float **a, int nRows, int nCols, Float *w, Float **v) {
                 break;
             }
 
-            if (k==0) break
+            if (k==0) break;
 
             // shift from bottom 2-by-2 minor
             x = w[l];
