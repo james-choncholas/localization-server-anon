@@ -1034,7 +1034,6 @@ void aby_localize(e_role role, e_sharing sharing,
   delete party;
 }
 
-// SiSL is lm only
 #if PPL_FLOW!=PPL_FLOW_SiSL
 TEST_CASE("ABY Gauss Newton pose estimation is computed", "[aby_gn]") {
   float f=715;
@@ -1067,6 +1066,7 @@ TEST_CASE("ABY Gauss Newton pose estimation is computed", "[aby_gn]") {
 }
 #endif
 
+#if PPL_FLOW!=PPL_FLOW_SiSL
 TEST_CASE("ABY Levenburg Marquardt pose estimation is computed", "[aby_lm]") {
   float f=715;
   float cx=354;
@@ -1096,3 +1096,4 @@ TEST_CASE("ABY Levenburg Marquardt pose estimation is computed", "[aby_lm]") {
   }
   bob.join();
 }
+#endif
