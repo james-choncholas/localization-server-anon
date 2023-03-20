@@ -45,4 +45,3 @@ const float LM_LAMBDA_MIN=1e-5;
 #define DBG_LAMBDA 0x40
 const uint32_t _verbosity=0x00;
 const bool printints=false; // used for ABY, their debug prints all floats as ints
-

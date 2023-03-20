@@ -233,18 +233,11 @@ void LMIteration(Float threeDPts[], Float y0[], int numPts,
     for (int p=0; p<6; p++) {
 #if PPL_FLOW==PPL_FLOW_DO // set dx to zero if no error
         for (int bi=0; bi<dx[p].size(); bi++)
-            dx[p][i] = dx[p][i] & er_flag;
+            dx[p][bi] = dx[p][bi] & er_flag;
 #endif
         x[p] = x[p] + dx[p];
     }
     delete[] dx;
-
-#if PPL_FLOW==PPL_FLOW_LOOP_LEAK
-    // okay to reveal how many iterations it took
-    if ((_verbosity & DBG_ER) && er_flag.reveal<bool>()) {
-        cout << "errNorm is smaller than " << MIN_ER << endl;
-    }
-#endif
 }
 
 // Note: All 2D matrix inputs passed as single dimension array
@@ -291,6 +284,10 @@ std::pair<bool, int> BuildLM(Float threeDPts[], Float y0[], int numPts,
 
         LMIteration(threeDPts, y0, numPts, f, cx, cy, x, lambda, prevErrNorm);
 
+#if PPL_FLOW==PPL_FLOW_SiSL
+        cout << "WARNING: BuildLM() when compiling with SiSL is for testing only\n";
+        cout << "WARNING: Do not use in prod\n";
+#endif
 #if PPL_FLOW==PPL_FLOW_LOOP_LEAK || PPL_FLOW==PPL_FLOW_SiSL
         // okay to reveal how many iterations it took.
         // If loop leak, this is done server side.
@@ -401,8 +398,18 @@ std::pair<bool, int> lm_server(int party, NetIO *io, NetIO *ttpio) {
     CLOCK(LM);
     TIC(LM);
     auto start = clock_start();
-    auto res = BuildLM(s_threeDPts, s_twoDPts, numPts,
-                            s_f, s_cx, s_cy, s_x);
+#if PPL_FLOW==PPL_FLOW_LOOP_LEAK || PPL_FLOW == PPL_FLOW_DO
+    auto [converged, num_iterations] = BuildLM(s_threeDPts, s_twoDPts, numPts,
+                                               s_f, s_cx, s_cy, s_x);
+    if (converged)
+        cout << "converged in " << num_iterations << " iterations\n";
+    else
+        cout << "did not converge\n";
+#elif PPL_FLOW==PPL_FLOW_SiSL
+    Float s_lambda = Float(0, TTP);
+    Float s_prevErrNorm = Float(std::numeric_limits<float>::max(), TTP);
+    LMIteration(s_threeDPts, s_twoDPts, numPts, s_f, s_cx, s_cy, s_x, s_lambda, s_prevErrNorm);
+#endif
     double interval = time_from(start);
     TOC(LM);
 
@@ -410,6 +417,9 @@ std::pair<bool, int> lm_server(int party, NetIO *io, NetIO *ttpio) {
         s_x[i].reveal<double>(TTP); // ignore output, it goes to ttp
         s_x[i].~Float();
     }
+#if PPL_FLOW==PPL_FLOW_SiSL
+    s_prevErrNorm.reveal<double>(TTP);
+#endif
     delete[] s_x;
     delete[] s_threeDPts;
     delete[] s_twoDPts;
@@ -419,6 +429,4 @@ std::pair<bool, int> lm_server(int party, NetIO *io, NetIO *ttpio) {
     cout << "garbling speed : " << numand / interval << " million gate per second\n";
 
     finalize_semi_honest();
-
-    return res;
 }

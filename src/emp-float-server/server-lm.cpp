@@ -61,12 +61,8 @@ int main(int argc, char** argv) {
           break;
         }
 
-        cout << "starting pplm server\n";
-        auto [converged, num_iterations] = lm_server(party, io, ttpio);
-        if (converged)
-            cout << "converged in " << num_iterations << " iterations\n";
-        else
-            cout << "did not converge\n";
+        cout << "running pplm server\n";
+        lm_server(party, io, ttpio);
       }
     }
 

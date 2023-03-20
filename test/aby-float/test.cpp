@@ -933,7 +933,7 @@ void aby_localize(e_role role, e_sharing sharing,
   std::vector<Sharing*>& sharings = party->GetSharings();
   Circuit* circ = sharings[sharing]->GetCircuitBuildRoutine();
 
-#if PPL_FLOW == PPL_FLOW_LOOP_LEAK
+#if PPL_FLOW == PPL_FLOW_LOOP_LEAK || PPL_FLOW == PPL_FLOW_SiSL
   //  always use boolean shares (not yao) so BuildAndRunLM can get raw shares.
   //  this is because you cant use Y2B shares on Yao input gates.
   Circuit* bc = sharings[S_BOOL]->GetCircuitBuildRoutine();
@@ -1066,7 +1066,7 @@ TEST_CASE("ABY Gauss Newton pose estimation is computed", "[aby_gn]") {
 }
 #endif
 
-#if PPL_FLOW!=PPL_FLOW_SiSL
+// Note this test can take around an hour
 TEST_CASE("ABY Levenburg Marquardt pose estimation is computed", "[aby_lm]") {
   float f=715;
   float cx=354;
@@ -1096,4 +1096,3 @@ TEST_CASE("ABY Levenburg Marquardt pose estimation is computed", "[aby_lm]") {
   }
   bob.join();
 }
-#endif
