@@ -1028,7 +1028,7 @@ void aby_localize(e_role role, e_sharing sharing,
       cout << *(float*)output << " ";
     }
     temp[i] = *(float*)output;
-    REQUIRE_THAT(*(float*)output, WithinRel(rt[i], localization_tol_rel));
+    REQUIRE_THAT(*(float*)output, WithinRel(rt[i], aby_localization_tol_rel));
   }
 
   delete party;
