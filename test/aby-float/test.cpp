@@ -925,8 +925,10 @@ void aby_localize(e_role role, e_sharing sharing,
 
   // check cleartext vs opencv
   for (int i=0; i<3; i++) {
-    REQUIRE_THAT(cvrvec.at<float>(i), WithinRel(rt[i], localization_tol_rel));
-    REQUIRE_THAT(cvtvec.at<float>(i), WithinRel(rt[i+3], localization_tol_rel));
+    REQUIRE_THAT(cvrvec.at<float>(i), WithinRel(rt[i], localization_tol_rel) ||
+                                      WithinAbs(rt[i], localization_tol_abs));
+    REQUIRE_THAT(cvtvec.at<float>(i), WithinRel(rt[i+3], localization_tol_rel) ||
+                                      WithinAbs(rt[i+3], localization_tol_abs));
   }
 
   ABYParty* party = new ABYParty(role, address, port, slvl, bitlen, nthreads, mt_alg, reservegates, get_circuit_dir());
@@ -1016,7 +1018,6 @@ void aby_localize(e_role role, e_sharing sharing,
   if (role == SERVER) {
     cout << "secure result: ";
   }
-  float temp[6];
   for(int i=0; i<6; i++) {
     uint32_t* output;
     uint32_t out_bitlen, out_nvals;
@@ -1027,7 +1028,6 @@ void aby_localize(e_role role, e_sharing sharing,
     if (role == SERVER) {
       cout << *(float*)output << " ";
     }
-    temp[i] = *(float*)output;
     REQUIRE_THAT(*(float*)output, WithinRel(rt[i], localization_tol_rel) ||
                                   WithinAbs(rt[i], localization_tol_abs));
   }

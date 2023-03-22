@@ -16,7 +16,7 @@
 const float GT_MIN_ER=1; // (pose - ground truth) L2 norm less than this considered correct
 
 // Works for snail and hoffs test points for Loop Leak and SiSL
-const float JACOB_EPSILON=0x0.0000b0p0;
+const float JACOB_EPSILON=0x0.0000bfp0;
 const float MIN_ER=1e-2;
 
 //const float JACOB_EPSILON=0x0.000040p0 // ETH3D dataset
