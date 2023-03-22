@@ -309,7 +309,8 @@ bool lm( vector<cv::Point3_<T>> threeDPts,
             printVector("dx", dx, 6);
 
 
-        T errNorm = twonormsq(dy, 2*n);
+        //T errNorm = twonormsq(dy, 2*n);
+        T errNorm = twonormsq(dx, 6);
         if (_verbosity & DBG_ER) {
             if (printints) {
                 cout << "errNorm " << *(int*)&errNorm << endl;

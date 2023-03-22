@@ -2,7 +2,8 @@
 #include <stdint.h>
 
 // Algorithm control flow
-// DO means data oblivious where a fixed upper bound of iterations are run.
+// DO = data oblivious running a maximal, fixed upper bound of iterations
+// of gradient descent and svd.
 #define PPL_FLOW_DO         2
 // Loop Leak is where the number of iterations is revealed to offload servers.
 #define PPL_FLOW_LOOP_LEAK  3
@@ -10,24 +11,21 @@
 // It also uses a data oblivious SVD.
 #define PPL_FLOW_SiSL     4
 
-//#define PPL_FLOW PPL_FLOW_DO
-//#define PPL_FLOW PPL_FLOW_LOOP_LEAK
 #define PPL_FLOW PPL_FLOW_SiSL
+
+const float GT_MIN_ER=1; // (pose - ground truth) L2 norm less than this considered correct
+
+// Works for snail and hoffs test points for Loop Leak and SiSL
+const float JACOB_EPSILON=0x0.0000b0p0;
+const float MIN_ER=1e-2;
+
+//const float JACOB_EPSILON=0x0.000040p0 // ETH3D dataset
+//const float JACOB_EPSILON=0x0.000007p0; // charuco cnail
+//const float JACOB_EPSILON=1e-5; // Hoff's origional parameters
 
 // maximum number of iterations
 //calibration.cpp - cvFindExtrinsicCameraParams2() = 20
 const int GN_MAX_ITR=30;
-
-//const float JACOB_EPSILON=1e-5; //hoff's points
-//const float MIN_ER=1e-2; // pose L2 norm changed by less than this considered converged (charuco snail)
-
-const float JACOB_EPSILON=0x0.00005fp0; //or 0x0.000040p0 for ETH3D dataset
-const float MIN_ER=1e-3; // pose L2 norm changed by less than this considered converged (charuco snail)
-
-//const float JACOB_EPSILON=0x0.000007p0; // works with charuco snail
-//const float MIN_ER=1e-2; // pose L2 norm changed by less than this considered converged (charuco snail)
-
-const float GT_MIN_ER=1; // (pose - ground truth) L2 norm less than this considered correct
 
 const int LM_MAX_ITR=30;
 const float LM_LAMBDA_INIT=1e-3;

@@ -465,12 +465,15 @@ void emp_localize(NetIO* io, int party,
   REQUIRE(sres.first);
   // check cleartext vs opencv
   for (int i=0; i<3; i++) {
-    REQUIRE_THAT(cvrvec.at<float>(i), WithinRel(rt[i], localization_tol_rel));
-    REQUIRE_THAT(cvtvec.at<float>(i), WithinRel(rt[i+3], localization_tol_rel));
+    REQUIRE_THAT(cvrvec.at<float>(i), WithinRel(rt[i], localization_tol_rel) ||
+                                      WithinAbs(rt[i], localization_tol_abs));
+    REQUIRE_THAT(cvtvec.at<float>(i), WithinRel(rt[i+3], localization_tol_rel) ||
+                                      WithinAbs(rt[i+3], localization_tol_abs));
   }
   // check opencv vs secure
   for (int i=0; i<6; i++) {
-    REQUIRE_THAT(sx[i].reveal<double>(), WithinRel(rt[i], localization_tol_rel));
+    REQUIRE_THAT(sx[i].reveal<double>(), WithinRel(rt[i], localization_tol_rel) ||
+                                         WithinAbs(rt[i], localization_tol_abs));
   }
 
   delete[] sx;

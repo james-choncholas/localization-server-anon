@@ -14,6 +14,7 @@
 
 #include <jlog.h>
 #include <hoff_features.hpp>
+#include <april_snail_features.hpp>
 #include <test_utils.hpp>
 
 #include <gaussnewtonlocalization.h>
@@ -301,7 +302,7 @@ TEST_CASE("EMP Gauss Newton pose estimation is computed", "[emp_gn]") {
 }
 #endif
 
-TEST_CASE("EMP Levenburg Marquardt pose estimation is computed", "[emp_lm]") {
+TEST_CASE("EMP Levenburg Marquardt pose estimation is computed on Hoff points", "[emp_lm]") {
   float f=715;
   float cx=354;
   float cy=245;
@@ -316,6 +317,35 @@ TEST_CASE("EMP Levenburg Marquardt pose estimation is computed", "[emp_lm]") {
   vector<cv::Point3f> objectPoints;
   Hoffs2DPoints(imagePoints);
   Hoffs3DPoints(objectPoints);
+
+  std::thread bob([&]() {
+    NetIO *io = new NetIO("127.0.0.1", port);
+    emp_localize(io, BOB, rvec, tvec, cameraMatrix, distCoeffs, objectPoints, imagePoints, lm<float>, BuildLM);
+    delete io;
+  });
+
+  NetIO *io = new NetIO(nullptr, port);
+  emp_localize(io, ALICE, rvec, tvec, cameraMatrix, distCoeffs, objectPoints, imagePoints, lm<float>, BuildLM);
+  bob.join();
+  delete io;
+}
+
+TEST_CASE("EMP Levenburg Marquardt pose estimation is computed on April tag points", "[emp_lm_april]") {
+  float f=715;
+  float cx=354;
+  float cy=245;
+  float _cM[] = {f, 0, cx,
+                 0, f, cy,
+                 0, 0, 1};
+  cv::Mat cameraMatrix = cv::Mat(3, 3, cv::DataType<float>::type, _cM);
+  cv::Mat distCoeffs = cv::Mat::zeros(4,1,cv::DataType<float>::type);
+  cv::Mat rvec = cv::Mat::zeros(3,1,cv::DataType<float>::type);
+  cv::Mat tvec = cv::Mat::zeros(3,1,cv::DataType<float>::type);
+  tvec.at<float>(2) = 1.0f;
+  vector<cv::Point2f> imagePoints;
+  vector<cv::Point3f> objectPoints;
+  AprilSnail3DPoints(objectPoints);
+  AprilSnail2DPoints(imagePoints);
 
   std::thread bob([&]() {
     NetIO *io = new NetIO("127.0.0.1", port);
