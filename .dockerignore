@@ -1,5 +1,7 @@
 .git/
 build/
+**/build/
+**/CMakeCache.txt
 **/.git/
 plottertest/
 results/

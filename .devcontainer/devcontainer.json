@@ -26,15 +26,10 @@
 	},
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
-		"ms-vscode.cpptools",
-		"ms-vscode.cmake-tools",
-		"twxs.cmake",
-		"ms-vscode.cpptools-themes",
+		"ms-vscode.cpptools-extension-pack",
 		"cschlosser.doxdocgen",
-		"eamodio.gitlens",
 		"ms-python.python",
 		"ms-python.vscode-pylance",
-		"mutantdino.resourcemonitor"
 	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],

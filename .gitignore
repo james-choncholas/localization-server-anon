@@ -5,3 +5,5 @@ plottertest/*.pdf
 **Session.vim
 .cache/
 data-eth3d/**
+ln
+compile_commands.json
