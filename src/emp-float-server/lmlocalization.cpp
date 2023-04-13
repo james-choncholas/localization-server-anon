@@ -422,6 +422,9 @@ void lm_server(int party, NetIO* io, NetIO* ttpio) {
   Float s_lambda = Float(0, TTP);
   Float s_errNorm = LMIteration(s_threeDPts, s_twoDPts, numPts, s_f, s_cx, s_cy,
                                 s_lambda, s_x);
+#elif PPL_FLOW == PPL_FLOW_POWER_TESTING
+  Float s_lambda = Float(0, TTP);
+  Float s_errNorm = Float(MIN_ER, PUBLIC);
 #endif
   double interval = time_from(start);
 
@@ -430,7 +433,7 @@ void lm_server(int party, NetIO* io, NetIO* ttpio) {
     s_x[i].reveal<double>(TTP);  // ignore output, it goes to ttp
     s_x[i].~Float();
   }
-#if PPL_FLOW == PPL_FLOW_SiSL
+#if PPL_FLOW == PPL_FLOW_SiSL || PPL_FLOW == PPL_FLOW_POWER_TESTING
   cout << "revealing errnorm to ttp\n";
   s_errNorm.reveal<double>(TTP);
 #endif

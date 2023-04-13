@@ -10,8 +10,11 @@
 // Single shot localization (SiSL) runs a single optimization iteration.
 // It also uses a data oblivious SVD.
 #define PPL_FLOW_SiSL 4
+// Fakes localization at the same rate as plaintext for power testing
+// on the raspberry pi snail.
+#define PPL_FLOW_POWER_TESTING 5
 
-// #define PPL_FLOW PPL_FLOW_SiSL
+//#define PPL_FLOW PPL_FLOW_SiSL
 #define PPL_FLOW PPL_FLOW_SiSL
 
 const float GT_MIN_ER =
