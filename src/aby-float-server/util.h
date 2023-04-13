@@ -1,5 +1,5 @@
-#include <vector>
 #include <stdio.h>
+#include <vector>
 
 #include <abycore/aby/abyparty.h>
 //#include <../ENCRYPTO_utils/src/ENCRYPTO_utils/timer.h> // hack {:

@@ -4,8 +4,8 @@
 
 using namespace emp;
 
-void BuildSignCircuit(Float *a, Float *b);
+void BuildSignCircuit(Float* a, Float* b);
 
-Float BuildPythagCircuit(Float *a, Float *b);
+Float BuildPythagCircuit(Float* a, Float* b);
 
-int BuildSvdCircuit(Float **a, int nRows, int nCols, Float *w, Float **v);
+int BuildSvdCircuit(Float** a, int nRows, int nCols, Float* w, Float** v);

@@ -1,8 +1,8 @@
-#include "abycore/sharing/sharing.h"
-#include "abycore/circuit/booleancircuits.h"
-#include "abycore/circuit/arithmeticcircuits.h"
-#include "abycore/circuit/circuit.h"
 #include "abycore/aby/abyparty.h"
+#include "abycore/circuit/arithmeticcircuits.h"
+#include "abycore/circuit/booleancircuits.h"
+#include "abycore/circuit/circuit.h"
+#include "abycore/sharing/sharing.h"
 
 #include <matmult.h>
 #include <rodrigues.h>
@@ -14,5 +14,6 @@
 // result=3xnumPoints preallocated, only first two rows are x,y.
 //      last row needed for intermediate calculation (homogeneous)
 //      [ u1, u2, ...;  v1, v2, ...;  1, 1, ... ]
-void BuildProjectPointsCircuit(share *_P[], share *_x[], share *_K[], share *_res[],
-        int numPoints, BooleanCircuit *c, bool skipOneGate=false);
+void BuildProjectPointsCircuit(share* _P[], share* _x[], share* _K[],
+                               share* _res[], int numPoints, BooleanCircuit* c,
+                               bool skipOneGate = false);

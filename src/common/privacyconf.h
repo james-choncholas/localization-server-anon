@@ -14,7 +14,8 @@
 // #define PPL_FLOW PPL_FLOW_SiSL
 #define PPL_FLOW PPL_FLOW_SiSL
 
-const float GT_MIN_ER = 1; // (pose - ground truth) L2 norm less than this considered correct
+const float GT_MIN_ER =
+    1;  // (pose - ground truth) L2 norm less than this considered correct
 
 // Works for snail and hoffs test points for Loop Leak and SiSL
 const float JACOB_EPSILON = 0x0.0000bfp0;
@@ -31,7 +32,7 @@ const int GN_MAX_ITR = 30;
 const int LM_MAX_ITR = 30;
 const float LM_LAMBDA_INIT = 1e-3;
 // const float LM_LAMBDA_MAX=1e5; // opencv default, works with hoff and ETH3D
-const float LM_LAMBDA_MAX = 1e2; // snail with aruco markers
+const float LM_LAMBDA_MAX = 1e2;  // snail with aruco markers
 const float LM_LAMBDA_MIN = 1e-5;
 
 // Debugging tools
@@ -43,4 +44,5 @@ const float LM_LAMBDA_MIN = 1e-5;
 #define DBG_ARGS 0x20
 #define DBG_LAMBDA 0x40
 const uint32_t _verbosity = 0x00;
-const bool printints = false; // used for ABY, their debug prints all floats as ints
+const bool printints =
+    false;  // used for ABY, their debug prints all floats as ints

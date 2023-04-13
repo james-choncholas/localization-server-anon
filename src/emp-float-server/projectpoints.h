@@ -12,4 +12,4 @@ using namespace std;
 //      last row needed for intermediate calculation (homogeneous)
 //      [ u1, u2, ...;  v1, v2, ...;  1, 1, ... ]
 void BuildProjectPointsCircuit(Float _P[], Float _x[], Float _K[], Float _res[],
-        int numPoints, bool skipOneGate);
+                               int numPoints, bool skipOneGate);

@@ -4,4 +4,4 @@
 using namespace emp;
 using namespace std;
 
-void BuildInvertCircuit(Float *in[], int m, int n, Float *res[]);
+void BuildInvertCircuit(Float* in[], int m, int n, Float* res[]);
