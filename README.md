@@ -1,8 +1,15 @@
 # Secure Localization Prototype
 Contains opencv, plain c, and MPC (ABY/EMP).
 
-# Docker
-TODO
+# Run the snail (with containerized serverside)
+To run turbo the snail, first `docker/build.sh` the container.
+Then run `docker/alice.sh` and `docker/bob.sh` it two terminals.
+And on the snail, run `sudo ./build/bin/visp_snail --secure`.
+
+# Run the snail (with containerized serverside)
+To run turbo the snail, first `docker/build.sh` the container.
+Then run `docker/alice.sh` and `docker/bob.sh` it two terminals.
+And on the snail, run `sudo ./build/bin/visp_snail --secure`.
 
 # Build From Source
 ABY Dependencies:
@@ -20,9 +27,11 @@ make
 ctest
 ```
 
-For testing, download eth3d [dataset](https://www.eth3d.net/datasets#high-res-multi-view)
-Use the high-res multi-view undistorted jpg images and ground truth scan evaluation.
-Extract to data-eth3d directory:
+
+# Benchmarking
+Requires the [eth3d dataset](https://www.eth3d.net/datasets#high-res-multi-view)
+Use the high-res multi-view undistorted jpg images and ground truth scan evaluation
+and extract to data-eth3d directory with the following:
 ```
 sudo apt-get install p7zip-full
 mkdir ./data-eth3d

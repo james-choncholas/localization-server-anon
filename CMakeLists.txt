@@ -13,6 +13,9 @@ endif()
 
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -ggdb -fno-omit-frame-pointer")
 
+# Add sanitizer flags for C++ compiler for "Debug" configuration
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -fsanitize=address,undefined")
+
 # Set build type to `Release` if non was specified:
 # (cf. https://gitlab.kitware.com/cmake/community/wikis/FAQ#how-can-i-change-the-default-build-mode-and-see-it-reflected-in-the-gui)
 if(NOT CMAKE_BUILD_TYPE)

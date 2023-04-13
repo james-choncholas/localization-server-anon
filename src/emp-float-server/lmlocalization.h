@@ -13,10 +13,10 @@ using namespace emp;
 using namespace std;
 
 std::pair<bool, int> BuildLM(Float threeDPts[], Float y0[], int numPts,
-                            Float f, Float cx, Float cy, Float x[]);
+                             Float f, Float cx, Float cy, Float x[]);
 
-void LMIteration(Float threeDPts[], Float y0[], int numPts,
-                 Float f, Float cx, Float cy, Float x[],
-                 Float &lambda, Float &prevErrNorm);
+Float LMIteration(Float threeDPts[], Float y0[], int numPts,
+                  Float &f, Float &cx, Float &cy, Float &lambda,
+                  Float x[]);
 
-std::pair<bool, int> lm_server(int party, NetIO *io, NetIO *ttpio);
+void lm_server(int party, NetIO *io, NetIO *ttpio);
