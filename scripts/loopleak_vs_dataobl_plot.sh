@@ -17,8 +17,8 @@ python3 $scriptpath/../scripts/plotter.py \
         "$logdir/gn_emp_float_server_benchmark_dataobl_short.log" \
         "$logdir/lm_emp_float_server_benchmark_dataobl_short.log" \
      --graphpath "$plotdir/loopleak_vs_dataobl.pdf" \
-     --title "Data Oblivious vs
-One Shot Localization Runtime" \
+     --title "Runtime of Data Oblivious
+and Single Iteration Localization" \
      --only-tags \
         "emp_float_gn_time_vs_points_dataobl" \
         "emp_float_lm_time_vs_points_dataobl" \
@@ -27,8 +27,8 @@ One Shot Localization Runtime" \
      --custom-legend-labels \
         "GN DO" \
         "LM DO" \
-        "GN OSL" \
-        "LM OSL" \
+        "GN SIL" \
+        "LM SIL" \
      --xlabel "Number of Points" \
      --ylabel "Runtime (s)" \
      --fig-w 4 \
