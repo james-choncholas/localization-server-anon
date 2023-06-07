@@ -218,5 +218,6 @@ int main(int argc, char** argv) {
 
     finalize_semi_honest();
   }
+  delete io;
   return 0;
 }
