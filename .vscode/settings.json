@@ -3,4 +3,7 @@
   "cmake.generator": "Unix Makefiles",
   "cmake.parallelJobs": 1, // only needed because tests must run sequentially
   "C_Cpp.formatting": "clangFormat",
+  "files.associations": {
+    "thread": "cpp"
+  },
 }

@@ -10,6 +10,9 @@ SHOW=""
 #   emp_float_benchmark_run.sh
 #   emp_float_benchmark_dataobl_run.sh
 
+sed -i 's/grouped_bar,main,emp_/xy,main,emp_/g' $scriptpath/../results/gn_emp_float_server_benchmark_short.log
+sed -i 's/grouped_bar,main,emp_/xy,main,emp_/g' $scriptpath/../results/lm_emp_float_server_benchmark_short.log
+
 python3 $scriptpath/../scripts/plotter.py \
      --csvlog \
         "$logdir/gn_emp_float_server_benchmark_short.log" \

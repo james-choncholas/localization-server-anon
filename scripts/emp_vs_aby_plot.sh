@@ -10,14 +10,17 @@ SHOW=""
 #   aby_float_benchmark_run.sh
 #   emp_float_benchmark_run.sh
 
+sed -i 's/xy,main,emp_/grouped_bar,main,emp_/g' $scriptpath/../results/gn_emp_float_server_benchmark_short.log
+sed -i 's/xy,main,emp_/grouped_bar,main,emp_/g' $scriptpath/../results/lm_emp_float_server_benchmark_short.log
+
 # may need to change plot tags from xy to grouped_bar
 # comment out twelve points :%s/\(.*\),12,/#\1,12,/g
 python3 $scriptpath/../scripts/plotter.py \
      --csvlog \
-        "$logdir/gn_aby_float_server_benchmark_short_2.log" \
-        "$logdir/lm_aby_float_server_benchmark_short_2.log" \
-        "$logdir/gn_emp_float_server_benchmark_short_2.log" \
-        "$logdir/lm_emp_float_server_benchmark_short_2.log" \
+        "$logdir/gn_aby_float_server_benchmark_short.log" \
+        "$logdir/lm_aby_float_server_benchmark_short.log" \
+        "$logdir/gn_emp_float_server_benchmark_short.log" \
+        "$logdir/lm_emp_float_server_benchmark_short.log" \
      --graphpath "$plotdir/emp_vs_aby.pdf" \
      --title "ABY and EMP Runtime" \
      --only-tags \

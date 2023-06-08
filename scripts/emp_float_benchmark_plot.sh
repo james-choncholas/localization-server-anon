@@ -18,10 +18,10 @@ python3 $scriptpath/../scripts/insetplotter.py \
      --graphpath "$plotdir/emp_float_runtime_long.pdf" \
      --title "Runtime per Iteration" \
      --only-tags \
-        "emp_float_gn_time_vs_points_normalized" \
-        "emp_float_lm_time_vs_points_normalized" \
-        "emp_float_gn_time_vs_points_normalized_latency" \
-        "emp_float_lm_time_vs_points_normalized_latency" \
+        "emp_float_gn_time_vs_points_per_loc_itr" \
+        "emp_float_lm_time_vs_points_per_loc_itr" \
+        "emp_float_gn_time_vs_points_per_loc_itr_latency" \
+        "emp_float_lm_time_vs_points_per_loc_itr_latency" \
      --custom-legend-labels \
         "GN (0 ms)" \
         "LM (0 ms)" \

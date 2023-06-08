@@ -76,3 +76,28 @@ This means if control flow requires some secret data, circuit must be broken and
 intermediate ciphertext stored as secret share.
 [Developer Guide](https://www.informatik.tu-darmstadt.de/media/encrypto/encrypto_code/abydevguide.pdf)
 [Reusing Computation](https://github.com/encryptogroup/ABY/issues/167)
+
+
+## Regenerate plots
+```bash
+# setup privacy_conf.h for ETH3D
+scripts/network_setup.sh # outside container
+scripts/emp_float_benchmark_run.sh
+
+# TODO:
+# Fix test/aby-float/benchmark.cpp to work more like emp-float/benchmark.cpp
+#   maybe it can also use sisl instead of requiring loop leak
+# maybe need to adjust privacy_conf.h?
+scripts/aby_float_benchmark_run.sh
+
+# set latency in scripts/network_setup.sh
+scripts/network_setup.sh # outside container
+scripts/emp_float_benchmark_run_latency.sh
+
+scripts/emp_vs_aby_plot.sh
+scripts/loopleak_vs_dataobl_plot.sh
+scripts/emp_float_benchmark_plot.sh
+scripts/netio_plot.sh
+scripts/num_arith_ops_plot.sh
+scripts/mult_add_fixed_float_time_plot.sh
+```

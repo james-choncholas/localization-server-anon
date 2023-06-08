@@ -222,5 +222,5 @@ std::pair<bool, int> BuildGaussNewton(Float threeDPts[], Float y0[], int numPts,
 
   if (_verbosity & DBG_FLOW)
     cout << "Did " << i << " GN iterations\n";
-  return {i < LM_MAX_ITR, i + 1};
+  return {i < GN_MAX_ITR, i + 1};
 }

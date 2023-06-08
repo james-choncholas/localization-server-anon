@@ -33,7 +33,7 @@
 
 using namespace std;
 
-#define NUM_TRIALS 3
+#define NUM_TRIALS 5
 #define SEED 0x666
 
 const std::string address = "127.0.0.1";
@@ -204,8 +204,8 @@ int main(int argc, char** argv) {
   std::string bindir(datadir);
   std::string base_path = bindir + "/../../data-eth3d/";
 
-  // for (int l=0; l<eth3d_locations.size(); l++) {
-  for (int l = 0; l < 1; l++) {
+  //for (int l = 0; l < 1; l++) {
+  for (int l = 0; l < eth3d_locations.size(); l++) {
     auto feats = ETH3DFeatures<float>(base_path, eth3d_locations[l]);
 
     int test_num_frames = MIN(feats.numberOfFrames(), num_frames);
