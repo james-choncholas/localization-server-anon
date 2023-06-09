@@ -126,6 +126,7 @@ int eth3d_localize(NetIO* io, int party, int num_frames, int num_trials,
             objectPointsSubset.push_back(objectPoints[r]);
           }
 
+          std::vector<float> opencvRes(6);
           {
             if (!silent) {
               cout << "\ntesting opencv\n";
@@ -148,12 +149,14 @@ int eth3d_localize(NetIO* io, int party, int num_frames, int num_trials,
             for (int i = 0; i < 3; ++i) {
               good &= withinRel(rvec.at<float>(i), gtpose[i]);
               good &= withinRel(tvec.at<float>(i), gtpose[i + 3]);
+              opencvRes[i] = rvec.at<float>(i);
+              opencvRes[i + 3] = tvec.at<float>(i);
             }
             if (good) {
               cout << "converged!\n";
               ++cv_successes;
             } else {
-              cout << "opencv did not converge. retry this iteration\n";
+              cout << "opencv did not converge.\n";
             }
           }
 
@@ -172,11 +175,16 @@ int eth3d_localize(NetIO* io, int party, int num_frames, int num_trials,
             }
             bool good = true;
             for (int i = 0; i < 6; ++i) {
-              good &= withinRel(initialGuessCopy[i], gtpose[i]);
+              good &= withinRel(initialGuessCopy[i], opencvRes[i]);
             }
             if (good) {
               cout << "converged!\n";
               ++cleartext_successes;
+            } else {
+              MSG("cleartext did not converge to same value as opencv. skip "
+                  "and retry with new points.\n");
+              num_trials = MIN(num_trials + 1, max_num_trials);
+              continue;
             }
           }
 
@@ -230,7 +238,7 @@ int eth3d_localize(NetIO* io, int party, int num_frames, int num_trials,
 
             bool good = true;
             for (int i = 0; i < 6; ++i) {
-              good &= withinRel(sres[i], gtpose[i]);
+              good &= withinRel(sres[i], opencvRes[i]);
             }
 
             if (!silent) {
@@ -272,10 +280,7 @@ int eth3d_localize(NetIO* io, int party, int num_frames, int num_trials,
                 MSG("SeNtInAl,xy,%s,%s%s,%d,%lu\n", __FUNCTION__,
                     log_str.c_str(), "_bytes_rx", num_pts, io->size_rx);
               } else {
-                MSG("Not printing timing - not converged. Retry with new "
-                    "points.\n");
-                num_trials = MIN(num_trials + 1, max_num_trials);
-                continue;
+                MSG("Not printing timing - not converged.\n");
               }
               printVector("secure result:\n", &sres[0], 6);
             }

@@ -14,8 +14,8 @@
 // on the raspberry pi snail.
 #define PPL_FLOW_POWER_TESTING 5
 
-#define PPL_FLOW PPL_FLOW_LOOP_LEAK
-//#define PPL_FLOW PPL_FLOW_SiSL
+//#define PPL_FLOW PPL_FLOW_LOOP_LEAK
+#define PPL_FLOW PPL_FLOW_SiSL
 
 const float GT_MIN_ER =
     1;  // (pose - ground truth) L2 norm less than this considered correct
