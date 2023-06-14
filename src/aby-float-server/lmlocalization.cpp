@@ -24,10 +24,6 @@
 
 using namespace std;
 
-const float LAMBDA_INIT = 0.001;
-const float LAMBDA_MAX = 100000;
-const float LAMBDA_MIN = 0.00001;
-
 const uint32_t bitlen = 32;
 
 // returns error norm (not if lower than min), and this lambda
@@ -379,10 +375,10 @@ std::pair<share*, share*> BuildLMIteration(share* threeDPts[], share* y0[],
   float min_er = MIN_ER;
   share* min_er_gate = c->PutCONSGate((uint32_t*)&min_er, bitlen);
 
-  float lambda_max = LAMBDA_MAX;
+  float lambda_max = LM_LAMBDA_MAX;
   share* lambda_max_gate = c->PutCONSGate((uint32_t*)&lambda_max, bitlen);
 
-  float lambda_min = LAMBDA_MIN;
+  float lambda_min = LM_LAMBDA_MIN;
   share* lambda_min_gate = c->PutCONSGate((uint32_t*)&lambda_min, bitlen);
 
   float ten = 10;
@@ -660,7 +656,7 @@ void BuildAndRunLMLoopLeak(share* s_threeDPts[], share* s_twoDPts[], int numPts,
   // initialize state required between iterations
   float prevErrNorm_init = std::numeric_limits<float>::max();
   share* s_prevErrNorm = bc->PutCONSGate((uint32_t*)&prevErrNorm_init, bitlen);
-  float lambda_init = LAMBDA_INIT;
+  float lambda_init = LM_LAMBDA_INIT;
   share* s_lambda = bc->PutCONSGate((uint32_t*)&lambda_init, bitlen);
 
   // First transform input shares
@@ -781,7 +777,6 @@ void BuildAndRunLMLoopLeak(share* s_threeDPts[], share* s_twoDPts[], int numPts,
   party->Reset();
   // arrays now contain secret shared values of plaintext from each party
 
-  // Run the svd on the secret shared data
   CLOCK(LM);
   TIC(LM);
   RunLMCircuit(threeDPts, y0, numPts, f, cx, cy, x, &prevErrNorm, &lambda, c,
@@ -834,7 +829,7 @@ void BuildAndRunLMDO(share* s_threeDPts[], share* s_twoDPts[], int numPts,
   }
 
   // LM Iteration
-  float lambda = LAMBDA_INIT;
+  float lambda = LM_LAMBDA_INIT;
   share* lambda_gate = c->PutCONSGate((uint32_t*)&lambda, bitlen);
 
   float f_max = std::numeric_limits<float>::max();

@@ -135,7 +135,7 @@ share* BuildGaussNewtonIteration(share* threeDPts[], share* y0[], int numPts,
     jacobI[p] = new share*[numPts * 2];
   }
 
-#if PPL_FLOW == PPL_FLOW_DO
+#if PPL_FLOW == PPL_FLOW_DO || PPL_FLOW == PPL_FLOW_SiSL
   BuildInvertCircuit(jacob, 2 * numPts, 6, jacobI, c, party, role, nullptr,
                      nullptr);
 
@@ -545,7 +545,6 @@ void BuildAndRunGaussNewtonLoopLeak(share* s_threeDPts[], share* s_twoDPts[],
   party->Reset();
   // arrays now contain secret shared values of plaintext from each party
 
-  // Run the svd on the secret shared data
   CLOCK(GaussNewtonGD);
   TIC(GaussNewtonGD);
   RunGaussNewtonCircuit(threeDPts, y0, numPts, f, cx, cy, x, c, party, role);
@@ -616,7 +615,7 @@ void BuildAndRunGaussNewton(share* s_threeDPts[], share* s_twoDPts[],
 #if PPL_FLOW == PPL_FLOW_DO
   BuildAndRunGaussNewtonDO(s_threeDPts, s_twoDPts, numPts, s_f, s_cx, s_cy, s_x,
                            c, party, role);
-#elif PPL_FLOW == PPL_FLOW_LOOP_LEAK
+#elif PPL_FLOW == PPL_FLOW_LOOP_LEAK || PPL_FLOW == PPL_FLOW_SiSL
   BuildAndRunGaussNewtonLoopLeak(s_threeDPts, s_twoDPts, numPts, s_f, s_cx,
                                  s_cy, s_x, c, party, role);
 #endif

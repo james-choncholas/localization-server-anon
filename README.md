@@ -1,12 +1,12 @@
 # Secure Localization Prototype
 Contains opencv, plain c, and MPC (ABY/EMP).
 
-# Run the snail (with containerized serverside)
+# Run the snail (with container serverside)
 To run turbo the snail, first `docker/build.sh` the container.
 Then run `docker/alice.sh` and `docker/bob.sh` it two terminals.
 And on the snail, run `sudo ./build/bin/visp_snail --secure`.
 
-# Run the snail (with containerized serverside)
+# Run the snail (with container serverside)
 To run turbo the snail, first `docker/build.sh` the container.
 Then run `docker/alice.sh` and `docker/bob.sh` it two terminals.
 And on the snail, run `sudo ./build/bin/visp_snail --secure`.
@@ -27,22 +27,7 @@ make
 ctest
 ```
 
-
 # Benchmarking
-Requires the [eth3d dataset](https://www.eth3d.net/datasets#high-res-multi-view)
-Use the high-res multi-view undistorted jpg images and ground truth scan evaluation
-and extract to data-eth3d directory with the following:
-```
-sudo apt-get install p7zip-full
-mkdir ./data-eth3d
-curl https://www.eth3d.net/data/multi_view_training_dslr_undistorted.7z -o im.7z
-7z x im.7z -o./data-eth3d/
-rm im.7z
-curl https://www.eth3d.net/data/multi_view_training_dslr_scan_eval.7z -o gt.7z
-7z x gt.7z -o./data-eth3d/
-rm gt.7z
-```
-
 
 ## Run client server test
 Uses eth3d dataset. Using three separate terminals run:
@@ -71,6 +56,9 @@ cd build/bin
 ```
 
 # ABY Notes
+ABY testing requires -DCMAKE_BUILD_TYPE=Release, tests fail when the sanitizers
+are turned on because there appear to be mem leaks in the ABY library.
+
 Note - circuits cannot be built on the fly. must be fully specified then executed.
 This means if control flow requires some secret data, circuit must be broken and
 intermediate ciphertext stored as secret share.
@@ -78,22 +66,49 @@ intermediate ciphertext stored as secret share.
 [Reusing Computation](https://github.com/encryptogroup/ABY/issues/167)
 
 
-## Regenerate plots
+# Experimental Evaluation
+Requires the [eth3d dataset](https://www.eth3d.net/datasets#high-res-multi-view)
+Use the high-res multi-view undistorted jpg images and ground truth scan evaluation
+and extract to data-eth3d directory with the following:
 ```bash
-# setup privacy_conf.h for ETH3D
+sudo apt-get install p7zip-full
+mkdir ./data-eth3d
+curl https://www.eth3d.net/data/multi_view_training_dslr_undistorted.7z -o im.7z
+7z x im.7z -o./data-eth3d/
+rm im.7z
+curl https://www.eth3d.net/data/multi_view_training_dslr_scan_eval.7z -o gt.7z
+7z x gt.7z -o./data-eth3d/
+rm gt.7z
+```
+
+Run the experiments.
+```bash
+cmake -B ./build -S ./ -DCMAKE_BUILD_TYPE=Release
+
+# setup privacy_conf.h for ETH3D, and SiSL
+# set latency to 0 in scripts/network_setup.sh
 scripts/network_setup.sh # outside container
 scripts/emp_float_benchmark_run.sh
 
-# TODO:
-# Fix test/aby-float/benchmark.cpp to work more like emp-float/benchmark.cpp
-#   maybe it can also use sisl instead of requiring loop leak
-# maybe need to adjust privacy_conf.h?
+# setup privacy_conf.h for ETH3D, and SiSL
+# set latency to 0 in scripts/network_setup.sh
+scripts/network_setup.sh # outside container
 scripts/aby_float_benchmark_run.sh
 
-# set latency in scripts/network_setup.sh
+# turn on data oblivious in privacy_conf.h and recompile
+scripts/network_setup.sh # outside container
+scripts/emp_float_benchmark_dataobl_run.sh
+
+# setup privacy_conf.h for ETH3D, and back to SiSL
+# set latency to 5 in scripts/network_setup.sh
 scripts/network_setup.sh # outside container
 scripts/emp_float_benchmark_run_latency.sh
 
+scripts/network_teardown.sh # outside container
+```
+
+Plot the data.
+```bash
 scripts/emp_vs_aby_plot.sh
 scripts/loopleak_vs_dataobl_plot.sh
 scripts/emp_float_benchmark_plot.sh

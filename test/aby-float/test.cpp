@@ -45,6 +45,8 @@
 #include <abycore/circuit/circuit.h>
 #include <abycore/sharing/sharing.h>
 
+#include <localize_wrapper.hpp>
+
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -54,34 +56,6 @@ using Catch::Matchers::WithinRel;
 using std::cout;
 using std::map;
 using std::vector;
-
-const std::string address = "127.0.0.1";
-constexpr const int port = 7766;
-constexpr const uint32_t nthreads = 1;
-constexpr const e_mt_gen_alg mt_alg = MT_OT;
-const seclvl slvl = LT;  // get_sec_lvl(secparam);
-const vector<e_sharing> ctypes = {/*S_ARITH,*/ S_BOOL,
-                                  S_YAO};  // no floats with arith
-const map<int, string> cnames = {
-    {S_ARITH, "arith"},
-    {S_BOOL, "bool"},
-    {S_YAO, "yao"},
-};
-constexpr const uint32_t reservegates = 65536;
-constexpr const uint32_t bitlen = 32;
-static std::string get_circuit_dir() {
-  char result[PATH_MAX];
-  ssize_t count = readlink("/proc/self/exe", result, PATH_MAX);
-  const char* path;
-  if (count != -1) {
-    path = dirname(result);
-  } else {
-    std::cerr << "cant find circuit path\n";
-    assert(false);
-  }
-  std::string base_path = string(path) + "/../../extern/ABY/bin/circ";
-  return base_path;
-}
 
 enum class TRIG_FUNC : uint8_t {
   SIN,
@@ -117,6 +91,7 @@ void aby_trig(e_role role, e_sharing sharing, float angle, TRIG_FUNC tf) {
   res = circ->PutOUTGate(s_res, ALL);
   party->ExecCircuit();
   assert(res != NULL);
+
   uint32_t* output;
   uint32_t out_bitlen, out_nvals;
   res->get_clear_value_vec(&output, &out_bitlen, &out_nvals);
@@ -125,6 +100,9 @@ void aby_trig(e_role role, e_sharing sharing, float angle, TRIG_FUNC tf) {
   REQUIRE(out_nvals == 1);
   REQUIRE_THAT(*(float*)output, WithinAbs(cleartext_res, float_test_epsilon));
 
+  delete s_in;
+  delete s_res;
+  delete res;
   delete party;
 }
 
@@ -936,118 +914,23 @@ void aby_localize(e_role role, e_sharing sharing, cv::Mat rvec, cv::Mat tvec,
                      WithinAbs(rt[i + 3], localization_tol_abs));
   }
 
-  ABYParty* party = new ABYParty(role, address, port, slvl, bitlen, nthreads,
-                                 mt_alg, reservegates, get_circuit_dir());
-  std::vector<Sharing*>& sharings = party->GetSharings();
-  Circuit* circ = sharings[sharing]->GetCircuitBuildRoutine();
-
-#if PPL_FLOW == PPL_FLOW_LOOP_LEAK || PPL_FLOW == PPL_FLOW_SiSL
-  //  always use boolean shares (not yao) so BuildAndRunLM can get raw shares.
-  //  this is because you cant use Y2B shares on Yao input gates.
-  Circuit* bc = sharings[S_BOOL]->GetCircuitBuildRoutine();
-#else
-  Circuit* bc = circ;
-#endif
-
-  assert(objectPoints.size() == imagePoints.size());
-  int numPts = objectPoints.size();
-
-  // Allocate space for shares
-  share** s_objectPoints = new share*[4 * numPts];
-  share** s_imagePoints = new share*[3 * numPts];
-  share* s_f;
-  share* s_cx;
-  share* s_cy;
-  share** s_x = new share*[6];
-
-  // Prepare inputs
-  if (role == SERVER) {
-    // float one=1.0;
-    for (int p = 0; p < numPts; p++) {
-      s_objectPoints[p] =
-          bc->PutINGate((uint32_t*)&objectPoints[p].x, bitlen, role);
-    }
-    for (int p = 0; p < numPts; p++) {
-      s_objectPoints[numPts + p] =
-          bc->PutINGate((uint32_t*)&objectPoints[p].y, bitlen, role);
-    }
-    for (int p = 0; p < numPts; p++) {
-      s_objectPoints[(2 * numPts) + p] =
-          bc->PutINGate((uint32_t*)&objectPoints[p].z, bitlen, role);
-    }
-    // for(int p=0; p<numPts; p++) {
-    //     s_objectPoints[3*numPts+p] = bc->PutINGate((uint32_t*) &one, bitlen,
-    //     role);
-    // }
-    for (int p = 0; p < numPts; p++) {
-      s_imagePoints[p] =
-          bc->PutINGate((uint32_t*)&imagePoints[p].x, bitlen, role);
-    }
-    for (int p = 0; p < numPts; p++) {
-      s_imagePoints[numPts + p] =
-          bc->PutINGate((uint32_t*)&imagePoints[p].y, bitlen, role);
-    }
-    // for(int p=0; p<numPts; p++) {
-    //     s_imagePoints[2*numPts+p] = bc->PutINGate((uint32_t*) &one, bitlen,
-    //     role);
-    // }
-    s_f = bc->PutINGate((uint32_t*)&f, bitlen, role);
-    s_cx = bc->PutINGate((uint32_t*)&cx, bitlen, role);
-    s_cy = bc->PutINGate((uint32_t*)&cy, bitlen, role);
-    float zero = 0.0f;
-    for (int p = 0; p < 3; p++) {
-      s_x[p] = bc->PutINGate((uint32_t*)&rvec.at<float>(p), bitlen, role);
-    }
-    for (int p = 0; p < 3; p++) {
-      s_x[p + 3] = bc->PutINGate((uint32_t*)&tvec.at<float>(p), bitlen, role);
-    }
-  } else {
-    for (int p = 0; p < 3 * numPts; p++) {  // ignore constant 1s
-      s_objectPoints[p] = bc->PutDummyINGate(bitlen);
-    }
-    for (int p = 0; p < 2 * numPts; p++) {  // ignore constant 1s
-      s_imagePoints[p] = bc->PutDummyINGate(bitlen);
-    }
-    s_f = bc->PutDummyINGate(bitlen);
-    s_cx = bc->PutDummyINGate(bitlen);
-    s_cy = bc->PutDummyINGate(bitlen);
-    for (int p = 0; p < 6; p++) {
-      s_x[p] = bc->PutDummyINGate(bitlen);
-    }
-  }
-
-  secure_localize_func(s_objectPoints, s_imagePoints, numPts, s_f, s_cx, s_cy,
-                       s_x, (BooleanCircuit*)circ, party, role);
-
-  for (int i = 0; i < 6; i++) {
-    share* temp = s_x[i];
-    s_x[i] = bc->PutOUTGate(s_x[i], ALL);
-    delete temp;
-  }
-
-  party->ExecCircuit();
+  vector<float> res(6, 0);
+  aby_localize_wrapper(role, sharing, rvec, tvec, cameraMatrix, distCoeffs,
+                       objectPoints, imagePoints, res, secure_localize_func);
 
   if (role == SERVER) {
     cout << "secure result: ";
+    for (auto const& f : res)
+      cout << f << " ";
+    cout << '\n';
   }
   for (int i = 0; i < 6; i++) {
-    uint32_t* output;
-    uint32_t out_bitlen, out_nvals;
-    s_x[i]->get_clear_value_vec(&output, &out_bitlen, &out_nvals);
-
-    REQUIRE(out_bitlen == 32);
-    REQUIRE(out_nvals == 1);
-    if (role == SERVER) {
-      cout << *(float*)output << " ";
-    }
-    REQUIRE_THAT(*(float*)output, WithinRel(rt[i], localization_tol_rel) ||
-                                      WithinAbs(rt[i], localization_tol_abs));
+    REQUIRE_THAT(res[i], WithinRel(rt[i], localization_tol_rel) ||
+                             WithinAbs(rt[i], localization_tol_abs));
   }
-
-  delete party;
 }
 
-#if PPL_FLOW != PPL_FLOW_SiSL
+//#if PPL_FLOW != PPL_FLOW_SiSL
 TEST_CASE("ABY Gauss Newton pose estimation is computed", "[aby_gn]") {
   float f = 715;
   float cx = 354;
@@ -1057,6 +940,7 @@ TEST_CASE("ABY Gauss Newton pose estimation is computed", "[aby_gn]") {
   cv::Mat distCoeffs = cv::Mat::zeros(4, 1, cv::DataType<float>::type);
   cv::Mat rvec = cv::Mat::zeros(3, 1, cv::DataType<float>::type);
   cv::Mat tvec = cv::Mat::zeros(3, 1, cv::DataType<float>::type);
+  tvec.at<float>(2) = 1;  // cleartext has bug where it fails if z=0
   vector<cv::Point2f> imagePoints;
   vector<cv::Point3f> objectPoints;
   Hoffs2DPoints(imagePoints);
@@ -1077,7 +961,7 @@ TEST_CASE("ABY Gauss Newton pose estimation is computed", "[aby_gn]") {
   }
   bob.join();
 }
-#endif
+//#endif
 
 // Note this test can take around an hour
 TEST_CASE("ABY Levenburg Marquardt pose estimation is computed", "[aby_lm]") {
@@ -1089,6 +973,7 @@ TEST_CASE("ABY Levenburg Marquardt pose estimation is computed", "[aby_lm]") {
   cv::Mat distCoeffs = cv::Mat::zeros(4, 1, cv::DataType<float>::type);
   cv::Mat rvec = cv::Mat::zeros(3, 1, cv::DataType<float>::type);
   cv::Mat tvec = cv::Mat::zeros(3, 1, cv::DataType<float>::type);
+  tvec.at<float>(2) = 1;  // cleartext has bug where it fails if z=0
   vector<cv::Point2f> imagePoints;
   vector<cv::Point3f> objectPoints;
   Hoffs2DPoints(imagePoints);

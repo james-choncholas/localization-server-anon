@@ -1,8 +1,8 @@
-//#include <opencv2/opencv.hpp>
 #include <opencv2/calib3d/calib3d.hpp>
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/opencv.hpp>
 
 #include <jlog.h>
 #include <math.h>
@@ -11,6 +11,7 @@
 #include <iostream>
 #include <random>
 #include <string>
+#include <thread>
 
 #include <libgen.h>        // dirname
 #include <linux/limits.h>  // PATH_MAX
@@ -23,12 +24,12 @@
 #include <cleartext-ref/gaussnewtonlocalization.hpp>
 #include <cleartext-ref/lmlocalization.hpp>
 #include <eth3d_features.hpp>
+
 #include <localize_wrapper.hpp>
 
 using std::cout;
 using std::vector;
 
-constexpr const int port = 8080;
 constexpr const int seed = 0x666;
 const static constexpr float localization_tol_abs = 0.05f;
 const static constexpr float localization_tol_rel = 0.05f;
@@ -38,11 +39,9 @@ bool withinRel(float v, float t) {
                                  fabs(localization_tol_rel * std::max(v, t)));
 }
 
-int eth3d_localize(NetIO* io, int party, int num_frames, int num_trials,
-                   int max_num_pts, auto cleartext_localize_func,
-                   auto secure_localize_func, bool silent,
-                   std::string log_str) {
-  setup_semi_honest(io, party);
+int eth3d_localize(e_role role, int num_frames, int num_trials, int max_num_pts,
+                   auto cleartext_localize_func, auto secure_localize_func,
+                   bool silent, std::string log_str) {
   uint32_t cv_successes = 0;
   uint32_t cleartext_successes = 0;
   uint32_t secure_successes = 0;
@@ -67,7 +66,7 @@ int eth3d_localize(NetIO* io, int party, int num_frames, int num_trials,
   if (count != -1) {
     path = dirname(result);
   } else {
-    error("cant find path\n");
+    std::cerr << "cant find path\n";
     return 1;
   }
   std::string base_path = string(path) + "/../../data-eth3d/";
@@ -84,7 +83,7 @@ int eth3d_localize(NetIO* io, int party, int num_frames, int num_trials,
       feats.imageFeatures(imagePoints);
       feats.worldFeatures(objectPoints);
       auto gtpose = feats.getGroundTruthPose();
-      vector<float> initialGuess = {0, 0, 0, 0, 0, 0};
+      vector<float> initialGuess = {0, 0, 0, 0, 0, 1};
       // vector<float> initialGuess = {res.first[0], res.first[1], res.first[2],
       //         res.second[0], res.second[1], res.second[2]};
       // uint32_t numPts = imagePoints.size();
@@ -135,6 +134,7 @@ int eth3d_localize(NetIO* io, int party, int num_frames, int num_trials,
             distCoeffs = cv::Mat::zeros(4, 1, cv::DataType<float>::type);
             rvec = cv::Mat::zeros(3, 1, cv::DataType<float>::type);
             tvec = cv::Mat::zeros(3, 1, cv::DataType<float>::type);
+            tvec.at<float>(2) = 1;  // cleartext has bug where it fails if z=0
             CLOCK(opencv);
             TIC(opencv);
             // OpenCV PnP method
@@ -189,23 +189,20 @@ int eth3d_localize(NetIO* io, int party, int num_frames, int num_trials,
             }
           }
 
-          {
+          for (auto& share_type : ctypes) {
             if (!silent) {
-              cout << "testing secure\n";
+              cout << "testing secure " << cnames[share_type] << '\n';
             }
-
-            rvec = cv::Mat::zeros(3, 1, cv::DataType<float>::type);
-            tvec = cv::Mat::zeros(3, 1, cv::DataType<float>::type);
-            tvec.at<float>(2) =
-                1.0f;  // cleartext has bug where it fails if z=0
-            vector<float> res(6);
-
             time_point<high_resolution_clock> tic =
                 high_resolution_clock::now();
 
-            auto [converged, num_loc_iterations] = emp_localize_wrapper(
-                party, rvec, tvec, cameraMatrix, distCoeffs, objectPointsSubset,
-                imagePointsSubset, res, secure_localize_func);
+            vector<float> res(6, 0);
+            rvec = cv::Mat::zeros(3, 1, cv::DataType<float>::type);
+            tvec = cv::Mat::zeros(3, 1, cv::DataType<float>::type);
+            tvec.at<float>(2) = 1;  // cleartext has bug where it fails if z=0
+            aby_localize_wrapper(role, share_type, rvec, tvec, cameraMatrix,
+                                 distCoeffs, objectPointsSubset,
+                                 imagePointsSubset, res, secure_localize_func);
 
             bool good = true;
             for (int i = 0; i < 6; ++i) {
@@ -215,8 +212,9 @@ int eth3d_localize(NetIO* io, int party, int num_frames, int num_trials,
             if (!silent) {
               if (good) {
                 cout << "converged!\n";
-                std::string timer_name =
-                    "emp_float_" + log_str + "_time_vs_points";
+                std::string timer_name = "aby_" + cnames[share_type] +
+                                         "_float_" + log_str +
+                                         "_time_vs_points";
 #if PPL_FLOW == PPL_FLOW_DO
                 timer_name += "_dataobl";
 #endif
@@ -228,46 +226,24 @@ int eth3d_localize(NetIO* io, int party, int num_frames, int num_trials,
                                                                           tic)
                             .count() /
                         1000000.0);
-                MSG("SeNtInAl,xy,%s,%s,%d,%g\n", __FUNCTION__,
-                    (timer_name + "_per_loc_itr").c_str(), num_pts,
-                    std::chrono::duration_cast<std::chrono::microseconds>(toc -
-                                                                          tic)
-                            .count() /
-                        (1000000.0 * num_loc_iterations));
+                // MSG("SeNtInAl,xy,%s,%s,%d,%g\n", __FUNCTION__,
+                //     (timer_name + "_per_loc_itr").c_str(), num_pts,
+                //     std::chrono::duration_cast<std::chrono::microseconds>(toc -
+                //                                                           tic)
+                //             .count() /
+                //         (1000000.0 * num_loc_iterations));
 
                 ++secure_successes;
-                MSG("SeNtInAl,grouped_bar,%s,%s%s,%d,%d\n", __FUNCTION__,
-                    log_str.c_str(), "_additions", num_pts, num_additions);
-                MSG("SeNtInAl,grouped_bar,%s,%s%s,%d,%d\n", __FUNCTION__,
-                    log_str.c_str(), "_subtractions", num_pts,
-                    num_subtractions);
-                MSG("SeNtInAl,grouped_bar,%s,%s%s,%d,%d\n", __FUNCTION__,
-                    log_str.c_str(), "_multiplications", num_pts,
-                    num_multiplications);
-                MSG("SeNtInAl,grouped_bar,%s,%s%s,%d,%d\n", __FUNCTION__,
-                    log_str.c_str(), "_divisions", num_pts, num_divisions);
-                MSG("SeNtInAl,xy,%s,%s%s,%d,%lu\n", __FUNCTION__,
-                    log_str.c_str(), "_bytes_tx", num_pts, io->size_tx);
-                MSG("SeNtInAl,xy,%s,%s%s,%d,%lu\n", __FUNCTION__,
-                    log_str.c_str(), "_bytes_rx", num_pts, io->size_rx);
               } else {
                 MSG("Not printing timing - not converged.\n");
               }
-              cout << "secure result ";
+              cout << "secure result: ";
               for (auto const& f : res)
                 cout << f << ' ';
               cout << '\n';
             }
           }
-          // reset stats
-          num_additions = 0;
-          num_subtractions = 0;
-          num_multiplications = 0;
-          num_divisions = 0;
-          io->num_tx = 0;
-          io->num_rx = 0;
-          io->size_tx = 0;
-          io->size_rx = 0;
+
           if (!silent) {
             cout << "\n\n";
           }
@@ -286,7 +262,6 @@ int eth3d_localize(NetIO* io, int party, int num_frames, int num_trials,
         secure_successes);
     MSG("SeNtInAl,xy,%s,%s,%d,%u\n", __FUNCTION__, "total_runs", 0, total_runs);
   }
-  finalize_semi_honest();
   return 0;
 }
 
@@ -302,19 +277,15 @@ int main(int argc, char** argv) {
 
   std::string lm_str("lm");
   auto clear_func = lm_str == argv[1] ? lm<float> : gaussNewton<float>;
-  auto secure_func = lm_str == argv[1] ? BuildLM : BuildGaussNewton;
+  auto secure_func = lm_str == argv[1] ? BuildAndRunLM : BuildAndRunGaussNewton;
   auto log_str = lm_str == argv[1] ? "lm" : "gn";
 
   std::thread bob([&]() {
-    NetIO* io = new NetIO("127.0.0.1", port);
-    eth3d_localize(io, BOB, num_frames, num_trials, max_num_pts, clear_func,
+    eth3d_localize(CLIENT, num_frames, num_trials, max_num_pts, clear_func,
                    secure_func, true, log_str);
-    delete io;
   });
 
-  NetIO* io = new NetIO(nullptr, port);
-  eth3d_localize(io, ALICE, num_frames, num_trials, max_num_pts, clear_func,
+  eth3d_localize(SERVER, num_frames, num_trials, max_num_pts, clear_func,
                  secure_func, false, log_str);
   bob.join();
-  delete io;
 }

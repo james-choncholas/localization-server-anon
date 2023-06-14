@@ -250,7 +250,9 @@ bool gaussNewton(vector<cv::Point3_<T>> threeDPts,
       printVector("dx", dx, 6);
 
     // break if error under threshold
-    if (twonormsq(dy, 2 * n) < min_er)
+    // if (twonormsq(dy, 2 * n) < min_er)
+    // break;
+    if (twonormsq(dx, 6) < min_er)
       break;
 
     // update pose

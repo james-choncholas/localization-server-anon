@@ -14,27 +14,25 @@
 // on the raspberry pi snail.
 #define PPL_FLOW_POWER_TESTING 5
 
-//#define PPL_FLOW PPL_FLOW_LOOP_LEAK
 #define PPL_FLOW PPL_FLOW_SiSL
 
 const float GT_MIN_ER =
     1;  // (pose - ground truth) L2 norm less than this considered correct
 
 // Works for snail and hoffs test points for Loop Leak and SiSL
-//const float JACOB_EPSILON = 0x0.0000bfp0;
-//const float MIN_ER = 1e-2;
+const float JACOB_EPSILON = 0x0.0000bfp0;
+const float MIN_ER = 1e-2;
 
 // ETH3D dataset
-const float JACOB_EPSILON = 0x0.000050p0;
-const float MIN_ER = 5e-2;
+// const float JACOB_EPSILON = 0x0.000050p0;
+// const float MIN_ER = 5e-2;
 
 // const float JACOB_EPSILON=0x0.000007p0; // charuco cnail
-// const float JACOB_EPSILON=1e-5; // Hoff's origional parameters
+// const float JACOB_EPSILON = 1e-5;  // Hoff's origional parameters
 
 // maximum number of iterations
-// calibration.cpp - cvFindExtrinsicCameraParams2() = 20
+// from opencv calibration.cpp - cvFindExtrinsicCameraParams2() = 20
 const int GN_MAX_ITR = 30;
-
 const int LM_MAX_ITR = 30;
 const float LM_LAMBDA_INIT = 1e-3;
 const float LM_LAMBDA_MAX = 1e5;  // opencv default, works with hoff and ETH3D

@@ -588,7 +588,7 @@ def plot(csvFilePaths, options, tags):
 
     mysubax.set_xlim(6, 20)
     if options.title == "Runtime per Iteration":
-      mysubax.set_ylim(0, 8)
+      mysubax.set_ylim(0, 4)
     elif options.title == "Network IO per Iteration":
       mysubax.set_ylim(0, 3)
     plt.xticks(visible=False)

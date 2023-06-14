@@ -6,10 +6,5 @@ cd $scriptpath/../build/bin
 echo aby tests require loop leak, not sisl in privacy conf
 sleep 1
 
-killall gn_aby_float_server_benchmark
-killall lm_aby_float_server_benchmark
-./gn_aby_float_server_benchmark 0 3 12 > $scriptpath/../results/gn_aby_float_server_benchmark_short.log &
-./gn_aby_float_server_benchmark 1 3 12 
-
-./lm_aby_float_server_benchmark 0 3 12 > $scriptpath/../results/lm_aby_float_server_benchmark_short.log &
-./lm_aby_float_server_benchmark 1 3 12 
+$scriptpath/../build/bin/aby_float_server_convergence gn 3 2 12 | tee $scriptpath/../results/gn_aby_float_server_benchmark_short.log
+$scriptpath/../build/bin/aby_float_server_convergence lm 3 2 12 | tee $scriptpath/../results/lm_aby_float_server_benchmark_short.log

@@ -16,6 +16,7 @@
 
 #include <jlog.h>
 #include <test_params.h>
+#include <localize_wrapper.hpp>
 
 #include <gaussnewtonlocalization.h>
 #include <invert.h>
@@ -443,41 +444,6 @@ void emp_localize(NetIO* io, int party, cv::Mat rvec, cv::Mat tvec,
     cout << "cleartext\n";
     printVector("rt", rt, 6);
   }
-
-  int numPts = objectPoints.size();
-  Float* sobjectPoints =
-      static_cast<Float*>(operator new[](4 * numPts * sizeof(Float)));
-  Float* simagePoints =
-      static_cast<Float*>(operator new[](3 * numPts * sizeof(Float)));
-  for (int i = 0; i < numPts; i++) {
-    // [x1, x2... ; y1, y2... ; z1, z2...]
-    sobjectPoints[i] = Float(objectPoints[i].x, ALICE);
-    sobjectPoints[numPts + i] = Float(objectPoints[i].y, ALICE);
-    sobjectPoints[2 * numPts + i] = Float(objectPoints[i].z, ALICE);
-    // sobjectPoints[3*numPts + i] = Float(1.0, PUBLIC);
-
-    // [x1, y1; x2, y2; ...]
-    simagePoints[2 * i] = Float(imagePoints[i].x, ALICE);
-    simagePoints[2 * i + 1] = Float(imagePoints[i].y, ALICE);
-    // simagePoints[2*numPts + i] = Float(1.0, PUBLIC);
-  }
-
-  Float sf = Float(f, ALICE);
-  Float scx = Float(cx, ALICE);
-  Float scy = Float(cy, ALICE);
-
-  Float* sx = static_cast<Float*>(operator new[](6 * sizeof(Float)));
-  for (int i = 0; i < 3; i++) {
-    sx[i] = Float(rvec.at<float>(i), ALICE);
-    sx[i + 3] = Float(tvec.at<float>(i), ALICE);
-  }
-
-  auto sres = secure_localize_func(sobjectPoints, simagePoints, numPts, sf, scx,
-                                   scy, sx);
-  cout << "secure\n";
-  printFloatVector(sx, 6, party == BOB);
-
-  REQUIRE(sres.first);
   // check cleartext vs opencv
   for (int i = 0; i < 3; i++) {
     REQUIRE_THAT(cvrvec.at<float>(i),
@@ -487,16 +453,22 @@ void emp_localize(NetIO* io, int party, cv::Mat rvec, cv::Mat tvec,
                  WithinRel(rt[i + 3], localization_tol_rel) ||
                      WithinAbs(rt[i + 3], localization_tol_abs));
   }
+
+  vector<float> res(6);
+  emp_localize_wrapper(party, rvec, tvec, cameraMatrix, distCoeffs,
+                       objectPoints, imagePoints, res, secure_localize_func);
+
   // check opencv vs secure
   for (int i = 0; i < 6; i++) {
-    REQUIRE_THAT(sx[i].reveal<double>(),
-                 WithinRel(rt[i], localization_tol_rel) ||
-                     WithinAbs(rt[i], localization_tol_abs));
+    if (party == BOB) {
+      cout << "secure result: ";
+      for (auto const& f : res)
+        cout << f << ' ';
+      cout << '\n';
+    }
+    REQUIRE_THAT(res[i], WithinRel(rt[i], localization_tol_rel) ||
+                             WithinAbs(rt[i], localization_tol_abs));
   }
-
-  delete[] sx;
-  delete[] sobjectPoints;
-  delete[] simagePoints;
 
   finalize_semi_honest();
 }

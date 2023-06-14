@@ -268,7 +268,7 @@ TEST_CASE("EMP two norm is computed", "[emp_twonorm]") {
 }
 
 // SiSL is lm only
-#if PPL_FLOW != PPL_FLOW_SiSL
+//#if PPL_FLOW != PPL_FLOW_SiSL
 TEST_CASE("EMP Gauss Newton pose estimation is computed", "[emp_gn]") {
   float f = 715;
   float cx = 354;
@@ -296,7 +296,7 @@ TEST_CASE("EMP Gauss Newton pose estimation is computed", "[emp_gn]") {
   bob.join();
   delete io;
 }
-#endif
+//#endif
 
 TEST_CASE("EMP Levenburg Marquardt pose estimation is computed on Hoff points",
           "[emp_lm]") {
@@ -338,7 +338,7 @@ TEST_CASE(
   cv::Mat distCoeffs = cv::Mat::zeros(4, 1, cv::DataType<float>::type);
   cv::Mat rvec = cv::Mat::zeros(3, 1, cv::DataType<float>::type);
   cv::Mat tvec = cv::Mat::zeros(3, 1, cv::DataType<float>::type);
-  tvec.at<float>(2) = 1.0f;
+  tvec.at<float>(2) = 1.0f;  // cleartext has bug where it fails if z=0
   vector<cv::Point2f> imagePoints;
   vector<cv::Point3f> objectPoints;
   AprilSnail3DPoints(objectPoints);
