@@ -8,13 +8,18 @@
 
 using std::vector;
 
+// TODO(jc): should be pair<bool, int>
+typedef std::pair<bool, int> (*emp_localizer)(Float threeDPts[], Float y0[],
+                                              int numPts, Float f, Float cx,
+                                              Float cy, Float x[]);
+
 std::pair<bool, int> emp_localize_wrapper(int party, cv::Mat rvec, cv::Mat tvec,
                                           cv::Mat cameraMatrix,
                                           cv::Mat distCoeffs,
                                           vector<cv::Point3f> objectPoints,
                                           vector<cv::Point2f> imagePoints,
                                           vector<float>& res,
-                                          auto secure_localize_func) {
+                                          emp_localizer secure_localize_func) {
 
   float f = cameraMatrix.at<float>(0, 0);
   float cx = cameraMatrix.at<float>(0, 2);

@@ -1,8 +1,4 @@
-//#include <opencv2/opencv.hpp>
-#include <opencv2/calib3d/calib3d.hpp>
-#include <opencv2/core/core.hpp>
-#include <opencv2/highgui/highgui.hpp>
-#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/opencv.hpp>
 
 #include <abycore/aby/abyparty.h>
 #include <abycore/circuit/arithmeticcircuits.h>
@@ -26,6 +22,13 @@ std::map<e_sharing, std::string> cnames = {
 };
 constexpr const uint32_t reservegates = 65536;
 constexpr const uint32_t bitlen = 32;
+
+// TODO(jc): should be pair<bool, int>
+typedef void (*aby_localizer)(share* s_threeDPts[], share* s_twoDPts[],
+                              int numPts, share* s_f, share* s_cx, share* s_cy,
+                              share* s_x[], BooleanCircuit* c, ABYParty* party,
+                              e_role role);
+
 static std::string get_circuit_dir() {
   char result[PATH_MAX];
   ssize_t count = readlink("/proc/self/exe", result, PATH_MAX);
@@ -42,12 +45,10 @@ static std::string get_circuit_dir() {
 
 void aby_localize_wrapper(e_role role, e_sharing sharing, cv::Mat rvec,
                           cv::Mat tvec, cv::Mat cameraMatrix,
-                          cv::Mat distCoeffs, vector<cv::Point3f> objectPoints,
+                          cv::Mat distCoeffs [[maybe_unused]],
+                          vector<cv::Point3f> objectPoints,
                           vector<cv::Point2f> imagePoints, vector<float>& res,
                           auto secure_localize_func) {
-
-  float rt[6] = {rvec.at<float>(0), rvec.at<float>(1), rvec.at<float>(2),
-                 tvec.at<float>(0), tvec.at<float>(1), tvec.at<float>(2)};
   float f = cameraMatrix.at<float>(0, 0);
   float cx = cameraMatrix.at<float>(0, 2);
   float cy = cameraMatrix.at<float>(1, 2);
@@ -110,7 +111,6 @@ void aby_localize_wrapper(e_role role, e_sharing sharing, cv::Mat rvec,
     s_f = bc->PutINGate((uint32_t*)&f, bitlen, role);
     s_cx = bc->PutINGate((uint32_t*)&cx, bitlen, role);
     s_cy = bc->PutINGate((uint32_t*)&cy, bitlen, role);
-    float zero = 0.0f;
     for (int p = 0; p < 3; p++) {
       s_x[p] = bc->PutINGate((uint32_t*)&rvec.at<float>(p), bitlen, role);
     }

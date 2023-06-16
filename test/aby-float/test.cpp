@@ -1,25 +1,27 @@
-//#include <opencv2/opencv.hpp>
-#include <opencv2/calib3d/calib3d.hpp>
-#include <opencv2/core/core.hpp>
-#include <opencv2/highgui/highgui.hpp>
-#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/opencv.hpp>
 
+#include <abycore/aby/abyparty.h>
+#include <abycore/circuit/arithmeticcircuits.h>
+#include <abycore/circuit/booleancircuits.h>
+#include <abycore/circuit/circuit.h>
+#include <abycore/sharing/sharing.h>
 #include <catch2/catch_test_macros.hpp>
 #include <catch2/matchers/catch_matchers_floating_point.hpp>
 
-#include <jlog.h>
 #include <libgen.h>        // dirname
 #include <linux/limits.h>  // PATH_MAX
+#include <math.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <test_params.h>
 #include <unistd.h>  // readlink
-#include <hoff_features.hpp>
 #include <iostream>
 #include <string>
 #include <thread>
 
 #include <gaussnewtonlocalization.h>
 #include <invert.h>
+#include <jlog.h>
 #include <lmlocalization.h>
 #include <matmult.h>
 #include <projectpoints.h>
@@ -28,7 +30,6 @@
 #include <trigfuncs.h>
 #include <twonormsq.h>
 #include <util.h>
-
 #include <cleartext-ref/gaussnewtonlocalization.hpp>
 #include <cleartext-ref/invert.hpp>
 #include <cleartext-ref/lmlocalization.hpp>
@@ -38,18 +39,8 @@
 #include <cleartext-ref/svd.hpp>
 #include <cleartext-ref/trigfuncs.hpp>
 #include <cleartext-ref/twonormsq.hpp>
-
-#include <abycore/aby/abyparty.h>
-#include <abycore/circuit/arithmeticcircuits.h>
-#include <abycore/circuit/booleancircuits.h>
-#include <abycore/circuit/circuit.h>
-#include <abycore/sharing/sharing.h>
-
+#include <hoff_features.hpp>
 #include <localize_wrapper.hpp>
-
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
 
 using Catch::Matchers::WithinAbs;
 using Catch::Matchers::WithinRel;

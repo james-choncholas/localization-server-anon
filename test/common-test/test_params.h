@@ -1,3 +1,5 @@
+#pragma once
+
 constexpr const float float_test_epsilon = 1e-5;
 // reprojection error can be more than epsilon
 const constexpr float reprojection_tol = 5.f;

@@ -283,8 +283,13 @@ std::pair<bool, int> BuildLM(Float threeDPts[], Float y0[], int numPts, Float f,
     errNorm = LMIteration(threeDPts, y0, numPts, f, cx, cy, lambda, x);
 
 #if PPL_FLOW == PPL_FLOW_SiSL
-    cout << "WARNING: BuildLM() when compiling with SiSL is for testing only\n";
-    cout << "WARNING: Do not use in prod\n";
+    static bool warning_printed = false;
+    if (!warning_printed) {
+      cout << "WARNING: BuildLM() when compiling with SiSL is for testing "
+              "only\n";
+      cout << "WARNING: Do not use in prod\n";
+      warning_printed = true;
+    }
 #endif
 #if PPL_FLOW == PPL_FLOW_LOOP_LEAK || PPL_FLOW == PPL_FLOW_SiSL
     Float biggerLambda = lambda * Float(10, PUBLIC);
