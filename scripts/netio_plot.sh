@@ -13,8 +13,8 @@ SHOW=""
 
 python3 $scriptpath/../scripts/insetplotter.py \
      --csvlog \
-        "$logdir/gn_emp_float_server_benchmark_long.log" \
-        "$logdir/lm_emp_float_server_benchmark_long.log" \
+        "$logdir/gn_emp_float_eth3d_bench_long.log" \
+        "$logdir/lm_emp_float_eth3d_bench_long.log" \
      --graphpath "$plotdir/netio.pdf" \
      --title "Network IO per Iteration" \
      --only-tags \

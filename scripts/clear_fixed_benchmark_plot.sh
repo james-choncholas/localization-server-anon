@@ -9,8 +9,8 @@ SHOW=""
 
 # Plot error
 python3 $scriptpath/../scripts/plotter.py \
-     --csvlog "$logdir/gn_fixed_server_benchmark_short.log" \
-     --graphpath "$plotdir/gn_fixed_server_benchmark_error.pdf" \
+     --csvlog "$logdir/gn_fixed_eth3d_bench_short.log" \
+     --graphpath "$plotdir/gn_fixed_eth3d_bench_error.pdf" \
      --title "GN Error vs Ground Truth (plaintext)" \
      --only-tags "opencv_error_vs_numpts" \
         "gn_float_error_vs_numpts" \
@@ -27,8 +27,8 @@ python3 $scriptpath/../scripts/plotter.py \
 
 # Plot number of iterations until convergence
 python3 $scriptpath/../scripts/plotter.py \
-     --csvlog "$logdir/gn_fixed_server_benchmark_short.log" \
-     --graphpath "$plotdir/gn_fixed_server_benchmark_iterations.pdf" \
+     --csvlog "$logdir/gn_fixed_eth3d_bench_short.log" \
+     --graphpath "$plotdir/gn_fixed_eth3d_bench_iterations.pdf" \
      --title "GN Iterations (plaintext)" \
      --only-tags \
         "gn_float_iterations_vs_numpts" \

@@ -21,14 +21,14 @@ target_link_options(emp_float_server_tester PRIVATE -fsanitize=address)
 target_link_libraries(emp_float_server_tester ${EMP-SH2PC_LIBRARIES} ${OpenCV_LIBS} EmpFloatLocalization Catch2::Catch2WithMain)
 catch_discover_tests(emp_float_server_tester)
 
-add_executable(emp_float_server_convergence
-  "${CMAKE_CURRENT_SOURCE_DIR}/convergence.cpp"
+add_executable(emp_float_eth3d_bench
+  "${CMAKE_CURRENT_SOURCE_DIR}/eth3d_bench.cpp"
   ${common_test})
-target_include_directories(emp_float_server_convergence PUBLIC
+target_include_directories(emp_float_eth3d_bench PUBLIC
   "${CMAKE_CURRENT_SOURCE_DIR}"
   ${common_test_dir})
-target_compile_options(emp_float_server_convergence PRIVATE "-Wall" "-Wextra")
-target_link_libraries(emp_float_server_convergence ${EMP-SH2PC_LIBRARIES} ${OpenCV_LIBS} EmpFloatLocalization)
+target_compile_options(emp_float_eth3d_bench PRIVATE "-Wall" "-Wextra")
+target_link_libraries(emp_float_eth3d_bench ${EMP-SH2PC_LIBRARIES} ${OpenCV_LIBS} EmpFloatLocalization)
 
 add_executable(emp_float_client "${CMAKE_CURRENT_SOURCE_DIR}/client.cpp" ${common_test})
 target_include_directories(emp_float_client PUBLIC ${common_test_dir})
