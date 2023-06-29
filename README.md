@@ -87,16 +87,16 @@ cmake -B ./build -S ./ -DCMAKE_BUILD_TYPE=Release
 
 # setup privacy_conf.h for ETH3D, and SiSL
 # set latency to 0 in scripts/network_setup.sh
-scripts/network_setup.sh # outside container
+source scripts/network_setup.sh # outside container
 scripts/emp_float_benchmark_run.sh
 
 # setup privacy_conf.h for ETH3D, and SiSL
 # set latency to 0 in scripts/network_setup.sh
-scripts/network_setup.sh # outside container
+source scripts/network_setup.sh # outside container
 scripts/aby_float_benchmark_run.sh
 
 # turn on data oblivious in privacy_conf.h and recompile
-scripts/network_setup.sh # outside container
+source scripts/network_setup.sh # outside container
 scripts/emp_float_benchmark_dataobl_run.sh
 
 # setup privacy_conf.h for ETH3D, and back to SiSL
