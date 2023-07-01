@@ -19,14 +19,10 @@ python3 $scriptpath/../scripts/insetplotter.py \
      --title "Network IO per Iteration" \
      --only-tags \
         "gn_bytes_tx_normalized" \
-        `#"gn_bytes_rx"` \
         "lm_bytes_tx_normalized" \
-        `#"lm_bytes_rx"` \
      --custom-legend-labels \
         "GN tx" \
-        `#"GN rx"` \
         "LM tx" \
-        `#"LM rx"` \
      --xlabel "Number of Input Points" \
      --ylabel "GB per Iteration" \
      --fig-w 4 \

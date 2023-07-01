@@ -147,6 +147,9 @@ int main(int argc, char** argv) {
           cout << "converged!\n";
 
           std::string timer_name = "emp_float_" + log_str + "_time_vs_points";
+#if PPL_FLOW == PPL_FLOW_DO
+          timer_name += "_dataobl";
+#endif
           MSG("SeNtInAl,xy,%s,%s,%d,%g\n", __FUNCTION__, timer_name.c_str(),
               num_pts,
               std::chrono::duration_cast<std::chrono::microseconds>(toc - tic)
@@ -170,7 +173,11 @@ int main(int argc, char** argv) {
           MSG("SeNtInAl,xy,%s,%s%s,%d,%lu\n", __FUNCTION__, log_str.c_str(),
               "_bytes_tx", num_pts, io->size_tx);
           MSG("SeNtInAl,xy,%s,%s%s,%d,%lu\n", __FUNCTION__, log_str.c_str(),
+              "_bytes_tx_normalized", num_pts, io->size_tx / num_pts);
+          MSG("SeNtInAl,xy,%s,%s%s,%d,%lu\n", __FUNCTION__, log_str.c_str(),
               "_bytes_rx", num_pts, io->size_rx);
+          MSG("SeNtInAl,xy,%s,%s%s,%d,%lu\n", __FUNCTION__, log_str.c_str(),
+              "_bytes_rx_normalized", num_pts, io->size_rx / num_pts);
           delete io;
         }
 

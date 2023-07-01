@@ -10,8 +10,10 @@ SHOW=""
 #   emp_float_benchmark_run.sh
 #   emp_float_benchmark_dataobl_run.sh
 
-sed -i 's/grouped_bar,main,emp_/xy,main,emp_/g' $scriptpath/../results/gn_emp_float_eth3d_bench_short.log
-sed -i 's/grouped_bar,main,emp_/xy,main,emp_/g' $scriptpath/../results/lm_emp_float_eth3d_bench_short.log
+sed -i 's/grouped_bar,operator(),emp_float_gn_time_vs_point/xy,operator(),emp_float_gn_time_vs_point/g' $scriptpath/../results/gn_emp_float_eth3d_bench_short.log
+sed -i 's/grouped_bar,operator(),emp_float_lm_time_vs_point/xy,operator(),emp_float_lm_time_vs_point/g' $scriptpath/../results/lm_emp_float_eth3d_bench_short.log
+sed -i 's/grouped_bar,operator(),emp_float_gn_time_vs_point_dataobl/xy,operator(),emp_float_gn_time_vs_point_dataobl/g' $scriptpath/../results/gn_emp_float_eth3d_bench_dataobl_short.log
+sed -i 's/grouped_bar,operator(),emp_float_lm_time_vs_point_dataobl/xy,operator(),emp_float_lm_time_vs_point_dataobl/g' $scriptpath/../results/lm_emp_float_eth3d_bench_dataobl_short.log
 
 python3 $scriptpath/../scripts/plotter.py \
      --csvlog \

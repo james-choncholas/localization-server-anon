@@ -10,8 +10,12 @@ SHOW=""
 #   aby_float_benchmark_run.sh
 #   emp_float_benchmark_run.sh
 
-sed -i 's/xy,main,emp_/grouped_bar,main,emp_/g' $scriptpath/../results/gn_emp_float_eth3d_bench_short.log
-sed -i 's/xy,main,emp_/grouped_bar,main,emp_/g' $scriptpath/../results/lm_emp_float_eth3d_bench_short.log
+sed -i 's/xy,operator(),emp_float_gn_time_vs_point/grouped_bar,operator(),emp_float_gn_time_vs_point/g' $scriptpath/../results/gn_emp_float_eth3d_bench_short.log
+sed -i 's/xy,operator(),emp_float_lm_time_vs_point/grouped_bar,operator(),emp_float_lm_time_vs_point/g' $scriptpath/../results/lm_emp_float_eth3d_bench_short.log
+sed -i 's/xy,operator(),aby_bool_float_gn_time_vs_point/grouped_bar,operator(),aby_bool_float_gn_time_vs_point/g' $scriptpath/../results/gn_aby_float_eth3d_bench_short.log
+sed -i 's/xy,operator(),aby_yao_float_gn_time_vs_point/grouped_bar,operator(),aby_yao_float_gn_time_vs_point/g' $scriptpath/../results/gn_aby_float_eth3d_bench_short.log
+sed -i 's/xy,operator(),aby_bool_float_lm_time_vs_point/grouped_bar,operator(),aby_bool_float_lm_time_vs_point/g' $scriptpath/../results/lm_aby_float_eth3d_bench_short.log
+sed -i 's/xy,operator(),aby_yao_float_lm_time_vs_point/grouped_bar,operator(),aby_yao_float_lm_time_vs_point/g' $scriptpath/../results/lm_aby_float_eth3d_bench_short.log
 
 # may need to change plot tags from xy to grouped_bar
 # comment out twelve points :%s/\(.*\),12,/#\1,12,/g
@@ -24,10 +28,10 @@ python3 $scriptpath/../scripts/plotter.py \
      --graphpath "$plotdir/emp_vs_aby.pdf" \
      --title "ABY and EMP Runtime" \
      --only-tags \
-        "aby_yao_float_gn" \
-        "aby_bool_float_gn" \
-        "aby_yao_float_lm" \
-        "aby_bool_float_lm" \
+        "aby_yao_float_gn_time_vs_points" \
+        "aby_bool_float_gn_time_vs_points" \
+        "aby_yao_float_lm_time_vs_points" \
+        "aby_bool_float_lm_time_vs_points" \
         "emp_float_gn_time_vs_points" \
         "emp_float_lm_time_vs_points" \
      --custom-legend-labels \

@@ -8,13 +8,17 @@ SHOW=""
 
 # relies on:
 #   emp_float_benchmark_run.sh
+#   emp_float_benchmark_run_latency.sh
+
+sed -i 's/,emp_float_gn_time_vs_points_per_loc_itr,/,emp_float_gn_time_vs_points_per_loc_itr_latency,/g' $scriptpath/../results/gn_emp_float_eth3d_bench_long_latency.log
+sed -i 's/,emp_float_lm_time_vs_points_per_loc_itr,/,emp_float_lm_time_vs_points_per_loc_itr_latency,/g' $scriptpath/../results/lm_emp_float_eth3d_bench_long_latency.log
 
 python3 $scriptpath/../scripts/insetplotter.py \
      --csvlog \
-        "$logdir/gn_emp_float_server_benchmark_long.log" \
-        "$logdir/lm_emp_float_server_benchmark_long.log" \
-        "$logdir/gn_emp_float_server_benchmark_long_latency.log" \
-        "$logdir/lm_emp_float_server_benchmark_long_latency.log" \
+        "$logdir/gn_emp_float_eth3d_bench_long.log" \
+        "$logdir/lm_emp_float_eth3d_bench_long.log" \
+        "$logdir/gn_emp_float_eth3d_bench_long_latency.log" \
+        "$logdir/lm_emp_float_eth3d_bench_long_latency.log" \
      --graphpath "$plotdir/emp_float_runtime_long.pdf" \
      --title "Runtime per Iteration" \
      --only-tags \
