@@ -19,7 +19,8 @@ target_include_directories(emp_float_server_tester PUBLIC
 target_compile_options(emp_float_server_tester PRIVATE "-Wall" "-Wextra" "-DPPL_GN" "-fsanitize=address")
 target_link_options(emp_float_server_tester PRIVATE -fsanitize=address)
 target_link_libraries(emp_float_server_tester ${EMP-SH2PC_LIBRARIES} ${OpenCV_LIBS} EmpFloatLocalization Catch2::Catch2WithMain)
-catch_discover_tests(emp_float_server_tester)
+# data obliv needs higher timeout
+catch_discover_tests(emp_float_server_tester PROPERTIES TIMEOUT 2000)
 
 add_executable(emp_float_eth3d_bench
   "${CMAKE_CURRENT_SOURCE_DIR}/eth3d_bench.cpp"
