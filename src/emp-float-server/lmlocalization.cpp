@@ -218,7 +218,7 @@ Float LMIteration(Float threeDPts[], Float y0[], int numPts, Float& f,
     cout << "errNorm\n" << errNorm.reveal<double>() << endl;
 
 #if PPL_FLOW == PPL_FLOW_DO  // error threshold
-  Bit er_flag = errNorm.less_than(Float(MIN_ER, PUBLIC));
+  Bit er_flag = Float(MIN_ER, PUBLIC).less_than(errNorm);
 #endif
 
   // update pose
@@ -282,16 +282,6 @@ std::pair<bool, int> BuildLM(Float threeDPts[], Float y0[], int numPts, Float f,
     Float prevErrNorm = errNorm;
     errNorm = LMIteration(threeDPts, y0, numPts, f, cx, cy, lambda, x);
 
-#if PPL_FLOW == PPL_FLOW_SiSL
-    static bool warning_printed = false;
-    if (!warning_printed) {
-      cout << "WARNING: BuildLM() when compiling with SiSL is for testing "
-              "only\n";
-      cout << "WARNING: Do not use in prod\n";
-      warning_printed = true;
-    }
-#endif
-#if PPL_FLOW == PPL_FLOW_LOOP_LEAK || PPL_FLOW == PPL_FLOW_SiSL
     Float biggerLambda = lambda * Float(10, PUBLIC);
     Float smallerLambda = lambda / Float(10, PUBLIC);
 
@@ -303,12 +293,23 @@ std::pair<bool, int> BuildLM(Float threeDPts[], Float y0[], int numPts, Float f,
     Bit lambdaTooSmall = lambda.less_than(lambdaBoundBottom);
     lambda = lambda.If(lambdaTooSmall, lambdaBoundBottom);
 
-    if (_verbosity & DBG_LAMBDA)
+    if (_verbosity & DBG_LAMBDA) {
       cout << "lambda " << lambda.reveal<double>() << endl;
+    }
 
+#if PPL_FLOW == PPL_FLOW_SiSL || PPL_FLOW == PPL_FLOW_LOOP_LEAK
     // okay to reveal how many iterations it took.
     // If loop leak, this is done server side.
-    // If SiSL, this would be done client side (not revealed).
+    // If SiSL, this would be done client side (not revealed to servers)
+    // but for benchmarking purposes do it here.
+#if PPL_FLOW == PPL_FLOW_SiSL
+    static bool warning_printed = false;
+    if (!warning_printed) {
+      cout << "WARNING: BuildLM() when compiling with SiSL is for testing "
+              "only. Do not use in prod.\n";
+      warning_printed = true;
+    }
+#endif
     Bit er_flag = prevErrNorm.less_than(Float(MIN_ER, PUBLIC));
     if (er_flag.reveal<bool>()) {
       if (_verbosity & DBG_ER) {

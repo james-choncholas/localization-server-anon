@@ -86,12 +86,10 @@ Run the experiments.
 cmake -B ./build -S ./ -DCMAKE_BUILD_TYPE=Release
 
 # setup privacy_conf.h for ETH3D, and SiSL
-# set latency to 0 in scripts/network_setup.sh
 LAT=0msec source scripts/network_setup.sh # outside container
 scripts/emp_float_benchmark_run.sh
 
 # setup privacy_conf.h for ETH3D, and SiSL
-# set latency to 0 in scripts/network_setup.sh
 LAT=0msec source scripts/network_setup.sh # outside container
 scripts/aby_float_benchmark_run.sh
 
