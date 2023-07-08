@@ -8,7 +8,6 @@
 
 using std::vector;
 
-// TODO(jc): should be pair<bool, int>
 typedef std::pair<bool, int> (*emp_localizer)(Float threeDPts[], Float y0[],
                                               int numPts, Float f, Float cx,
                                               Float cy, Float x[]);

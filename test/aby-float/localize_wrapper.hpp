@@ -23,7 +23,7 @@ std::map<e_sharing, std::string> cnames = {
 constexpr const uint32_t reservegates = 65536;
 constexpr const uint32_t bitlen = 32;
 
-// TODO(jc): should be pair<bool, int>
+// TODO(jc): should return pair<bool, int>
 typedef void (*aby_localizer)(share* s_threeDPts[], share* s_twoDPts[],
                               int numPts, share* s_f, share* s_cx, share* s_cy,
                               share* s_x[], BooleanCircuit* c, ABYParty* party,
