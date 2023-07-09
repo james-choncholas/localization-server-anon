@@ -6,7 +6,7 @@
 	url = https://github.com/opencv/opencv_contrib
 [submodule "ABY"]
 	path = extern/ABY
-	url = ../server-ABY
+	url = ../server-aby
 [submodule "extern/emp-tool"]
 	path = extern/emp-tool
 	url = ../server-emp-tool
