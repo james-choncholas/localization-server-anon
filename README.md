@@ -1,17 +1,16 @@
-# Secure Localization Prototype
-Contains opencv, plain c, and MPC (ABY/EMP).
+# Secure Localization Server
+[![tests](https://github.com/secret-snail/localization-server/actions/workflows/cmake.yml/badge.svg)](https://github.com/secret-snail/localization-server/actions/workflows/cmake.yml)
+[![container](https://github.com/secret-snail/localization-server/actions/workflows/docker-image.yml/badge.svg)](https://github.com/secret-snail/localization-server/actions/workflows/docker-image.yml)
 
-# Run the snail (with container serverside)
+Privacy preserving localization based on secure multiparty computation (MPC).
+
+## Run the SNaIL
 To run turbo the snail, first `docker/build.sh` the container.
-Then run `docker/alice.sh` and `docker/bob.sh` it two terminals.
-And on the snail, run `sudo ./build/bin/visp_snail --secure`.
+Then run `docker/alice.sh` and `docker/bob.sh` in two terminals.
+And on the [snail](https://github.com/secret-snail/snail),
+run `sudo ./build/bin/visp_snail --secure`.
 
-# Run the snail (with container serverside)
-To run turbo the snail, first `docker/build.sh` the container.
-Then run `docker/alice.sh` and `docker/bob.sh` it two terminals.
-And on the snail, run `sudo ./build/bin/visp_snail --secure`.
-
-# Build From Source
+## Build From Source
 ABY Dependencies:
 sudo apt install g++ make cmake libgmp-dev libssl-dev libboost-all-dev
 
@@ -27,37 +26,8 @@ make
 ctest
 ```
 
-# Benchmarking
-
-## Run client server test
-Uses eth3d dataset. Using three separate terminals run:
-```
-cd build/bin
-./emp_float_client
-```
-
-```
-cd build/bin
-./lm_emp_float_server 0
-```
-
-```
-cd build/bin
-./lm_emp_float_server 1
-```
-
-
-## Run server-side only benchmarking
-To run a benchmark using eth3d data run the follwoing in two separate terminals:
-```
-cd build/bin
-./emp_float_server_benchmark lm 100 1 6
-./aby_float_server_benchmark lm 100 1 6
-```
-
-# ABY Notes
 ABY testing requires -DCMAKE_BUILD_TYPE=Release, tests fail when the sanitizers
-are turned on because there appear to be mem leaks in the ABY library.
+are turned on because there appears to be memory leaks in the ABY library.
 
 Note - circuits cannot be built on the fly. must be fully specified then executed.
 This means if control flow requires some secret data, circuit must be broken and
@@ -66,7 +36,7 @@ intermediate ciphertext stored as secret share.
 [Reusing Computation](https://github.com/encryptogroup/ABY/issues/167)
 
 
-# Experimental Evaluation
+## Experimental Evaluation
 Requires the [eth3d dataset](https://www.eth3d.net/datasets#high-res-multi-view)
 Use the high-res multi-view undistorted jpg images and ground truth scan evaluation
 and extract to data-eth3d directory with the following:
@@ -112,4 +82,21 @@ scripts/emp_float_benchmark_plot.sh
 scripts/netio_plot.sh
 scripts/num_arith_ops_plot.sh
 scripts/mult_add_fixed_float_time_plot.sh
+```
+
+### Run Client and Server on Separate Machines
+Uses ETH3D dataset. Using three separate terminals run:
+```
+cd build/bin
+./emp_float_client
+```
+
+```
+cd build/bin
+./lm_emp_float_server 0
+```
+
+```
+cd build/bin
+./lm_emp_float_server 1
 ```
