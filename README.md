@@ -56,22 +56,23 @@ Run the experiments.
 cmake -B ./build -S ./ -DCMAKE_BUILD_TYPE=Release
 
 # setup privacy_conf.h for ETH3D, and SiSL
+cmake --build ./build
 LAT=0msec source scripts/network_setup.sh # outside container
 scripts/emp_float_benchmark_run.sh
-
-# setup privacy_conf.h for ETH3D, and SiSL
-LAT=0msec source scripts/network_setup.sh # outside container
 scripts/aby_float_benchmark_run.sh
+scripts/mult_add_fixed_float_time_run.sh
 
 # turn on data oblivious in privacy_conf.h and recompile
+cmake --build ./build
 LAT=0msec source scripts/network_setup.sh # outside container
 scripts/emp_float_benchmark_dataobl_run.sh
 
 # setup privacy_conf.h for ETH3D, and back to SiSL
+cmake --build ./build
 LAT=5msec source scripts/network_setup.sh # outside container
 scripts/emp_float_benchmark_run_latency.sh
 
-scripts/network_teardown.sh # outside container
+source scripts/network_teardown.sh # outside container
 ```
 
 Plot the data.

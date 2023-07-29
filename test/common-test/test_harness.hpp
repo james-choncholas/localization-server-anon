@@ -66,8 +66,10 @@ int eth3d_test_harness(int num_frames, int num_trials, int max_num_pts,
   }
   std::string base_path = string(path) + "/../../data-eth3d/";
 
-  //for (int l = 0; l < 1; l++) {
-  for (uint32_t l = 0; l < eth3d_locations.size(); l++) {
+  // Multiple locations affects the convergence properties of the various gd
+  // algorithms Single location is better for comparison.
+  // for (uint32_t l = 0; l < eth3d_locations.size(); l++) {
+  for (int l = 0; l < 1; l++) {
     auto feats = ETH3DFeatures<float>(base_path, eth3d_locations[l]);
 
     int test_num_frames = MIN(feats.numberOfFrames(), num_frames);
@@ -150,10 +152,19 @@ int eth3d_test_harness(int num_frames, int num_trials, int max_num_pts,
               opencvRes[i + 3] = tvec.at<float>(i);
             }
             if (good) {
-              cout << "converged!\n";
+              cout << "opencv converged!\n";
               ++cv_successes;
             } else {
               cout << "opencv did not converge.\n";
+            }
+
+            // If opencv does not converge to ground truth but does converge to
+            // some reasonable value, we can proceed. Inf is not a reasonable
+            // value and we should retry.
+            if (std::any_of(opencvRes.begin(), opencvRes.end(), [](float x) {
+                  return x == std::numeric_limits<float>::max();
+                })) {
+              continue;
             }
           }
 
@@ -179,13 +190,12 @@ int eth3d_test_harness(int num_frames, int num_trials, int max_num_pts,
               good &= withinRel(res[i], opencvRes[i]);
             }
             if (good) {
-              cout << "converged!\n";
+              cout << "cleartext converged!\n";
               ++cleartext_successes;
             } else {
-              MSG("cleartext did not converge to same value as opencv. skip "
-                  "and retry with new points.\n");
-              num_trials = MIN(num_trials + 1, max_num_trials);
-              continue;
+              MSG("cleartext did not converge to same value as opencv.\n");
+              // num_trials = MIN(num_trials + 1, max_num_trials);
+              // continue;
             }
           }
 

@@ -74,6 +74,7 @@ int main(int argc, char** argv) {
   auto clear_func = lm_str == argv[1] ? lm<float> : gaussNewton<float>;
   auto secure_func = lm_str == argv[1] ? BuildLM : BuildGaussNewton;
   std::string log_str = lm_str == argv[1] ? "lm" : "gn";
+  bool silent = false;
 
   eth3d_test_harness(
       num_frames, num_trials, max_num_pts,
@@ -103,7 +104,9 @@ int main(int argc, char** argv) {
           const vector<float>& groundTruthRes) {
         int num_pts = objectPointsSubset.size();
 
-        std::cout << "testing secure\n";
+        if (!silent) {
+          std::cout << "testing secure\n";
+        }
 
         std::thread bob([&]() {
           NetIO* io = new NetIO("127.0.0.1", port);
@@ -134,17 +137,21 @@ int main(int argc, char** argv) {
 
         time_point<high_resolution_clock> toc = high_resolution_clock::now();
 
-        cout << "secure result ";
-        for (auto const& f : res)
-          cout << f << ' ';
-
-        bool good = true;
-        for (int i = 0; i < 6; ++i) {
-          good &= withinRel(res[i], groundTruthRes[i]);
+        if (!silent) {
+          cout << "secure result ";
+          for (auto const& f : res)
+            cout << f << ' ';
         }
 
-        if (good) {
-          cout << "converged!\n";
+        bool result_matches = true;
+        for (int i = 0; i < 6; ++i) {
+          result_matches &= withinRel(res[i], groundTruthRes[i]);
+        }
+
+        if (result_matches) {
+          if (!silent) {
+            cout << "emp converged!\n";
+          }
 
           std::string timer_name = "emp_float_" + log_str + "_time_vs_points";
 #if PPL_FLOW == PPL_FLOW_DO
@@ -179,6 +186,10 @@ int main(int argc, char** argv) {
           MSG("SeNtInAl,xy,%s,%s%s,%d,%lu\n", __FUNCTION__, log_str.c_str(),
               "_bytes_rx_normalized", num_pts, io->size_rx / num_pts);
           delete io;
+        } else {
+          if (!silent) {
+            MSG("Not printing timing - not converged.\n");
+          }
         }
 
         // reset stats
@@ -187,7 +198,7 @@ int main(int argc, char** argv) {
         num_multiplications = 0;
         num_divisions = 0;
 
-        return good;
+        return result_matches;
       },
-      true);
+      silent);
 }

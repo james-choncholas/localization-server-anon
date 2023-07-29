@@ -1,5 +1,5 @@
 export DEV="lo"
-export SPEED="1Gbit"
+export SPEED="10Gbit"
 export BURST="100000"
 LAT="${LAT:="0msec"}"
 

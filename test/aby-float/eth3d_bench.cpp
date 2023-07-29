@@ -66,6 +66,7 @@ int main(int argc, char** argv) {
   aby_localizer secure_func =
       lm_str == argv[1] ? BuildAndRunLM : BuildAndRunGaussNewton;
   std::string log_str = lm_str == argv[1] ? "lm" : "gn";
+  bool silent = false;
 
   eth3d_test_harness(
       num_frames, num_trials, max_num_pts,
@@ -93,11 +94,13 @@ int main(int argc, char** argv) {
           vector<cv::Point3f> objectPointsSubset,
           vector<cv::Point2f> imagePointsSubset, vector<float>& res,
           const vector<float>& groundTruthRes) {
-        bool good = true;
+        bool result_matches = true;
         int num_pts = objectPointsSubset.size();
 
         for (auto& share_type : ctypes) {
-          std::cout << "testing secure " << cnames[share_type] << '\n';
+          if (!silent) {
+            std::cout << "testing secure " << cnames[share_type] << '\n';
+          }
 
           std::thread bob([&]() {
             vector<float> res(6, 0);
@@ -121,19 +124,27 @@ int main(int argc, char** argv) {
                                imagePointsSubset, res, secure_func);
           bob.join();
 
-          for (int i = 0; i < 6; ++i) {
-            good &= withinRel(res[i], groundTruthRes[i]);
+          time_point<high_resolution_clock> toc = high_resolution_clock::now();
+
+          if (!silent) {
+            cout << "secure result: ";
+            for (auto const& f : res)
+              cout << f << ' ';
           }
 
-          if (good) {
-            cout << "converged!\n";
+          for (int i = 0; i < 6; ++i) {
+            result_matches &= withinRel(res[i], groundTruthRes[i]);
+          }
+
+          if (result_matches) {
+            if (!silent) {
+              cout << "aby converged!\n";
+            }
             std::string timer_name = "aby_" + cnames[share_type] + "_float_" +
                                      log_str + "_time_vs_points";
 #if PPL_FLOW == PPL_FLOW_DO
             timer_name += "_dataobl";
 #endif
-            time_point<high_resolution_clock> toc =
-                high_resolution_clock::now();
             MSG("SeNtInAl,xy,%s,%s,%d,%g\n", __FUNCTION__, timer_name.c_str(),
                 num_pts,
                 std::chrono::duration_cast<std::chrono::microseconds>(toc - tic)
@@ -147,14 +158,12 @@ int main(int argc, char** argv) {
             //         (1000000.0 * num_loc_iterations));
 
           } else {
-            MSG("Not printing timing - not converged.\n");
+            if (!silent) {
+              MSG("Not printing timing - not converged.\n");
+            }
           }
-          cout << "secure result: ";
-          for (auto const& f : res)
-            cout << f << ' ';
-          cout << '\n';
         }
-        return good;
+        return result_matches;
       },
-      true);
+      silent);
 }
