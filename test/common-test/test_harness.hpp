@@ -23,8 +23,14 @@ using std::vector;
 constexpr const int seed = 0x666;
 
 bool withinRel(float v, float t) {
-  return fabs(v - t) <= std::max(localization_tol_rel,
+  bool res = true;
+  res &= fabs(v - t) <= std::max(localization_tol_rel,
                                  fabs(localization_tol_rel * std::max(v, t)));
+  res &= v != std::numeric_limits<float>::max();
+  res &= v != std::numeric_limits<float>::min();
+  res &= v != std::numeric_limits<float>::infinity();
+  res &= v != std::numeric_limits<float>::quiet_NaN();
+  return res;
 }
 
 typedef std::function<bool(
@@ -41,8 +47,6 @@ int eth3d_test_harness(int num_frames, int num_trials, int max_num_pts,
   uint32_t cleartext_successes = 0;
   uint32_t secure_successes = 0;
   uint32_t total_runs = 0;
-
-  uint32_t max_num_trials = num_trials * 4;
 
   float f = 3408.57;
   float cx = 3114.7;
@@ -194,8 +198,7 @@ int eth3d_test_harness(int num_frames, int num_trials, int max_num_pts,
               ++cleartext_successes;
             } else {
               MSG("cleartext did not converge to same value as opencv.\n");
-              // num_trials = MIN(num_trials + 1, max_num_trials);
-              // continue;
+              continue;
             }
           }
 
@@ -230,12 +233,15 @@ int eth3d_test_harness(int num_frames, int num_trials, int max_num_pts,
     MSG("SeNtInAl,xy,%s,%s,%d,%u\n", __FUNCTION__, "secure_successes", 0,
         secure_successes);
     MSG("SeNtInAl,xy,%s,%s,%d,%u\n", __FUNCTION__, "total_runs", 0, total_runs);
-    MSG("OpenCV converged to the ground truth pose %d / %d (%f\%)",
-        cv_successes, total_runs, cv_successes / total_runs);
-    MSG("cleartext converged to the opencv pose %d / %d (%f\%)",
-        cleartext_successes, total_runs, cleartext_successes / total_runs);
-    MSG("secure localization converged to the opencv pose %d / %d (%f\%)",
-        secure_successes, total_runs, secure_successes / total_runs);
+    MSG("OpenCV converged to the ground truth pose %d / %d (%f\%)\n",
+        cv_successes, total_runs,
+        static_cast<float>(cv_successes) / total_runs);
+    MSG("cleartext converged to the opencv pose %d / %d (%f\%)\n",
+        cleartext_successes, total_runs,
+        static_cast<float>(cleartext_successes) / total_runs);
+    MSG("secure localization converged to the opencv pose %d / %d (%f\%)\n",
+        secure_successes, total_runs,
+        static_cast<float>(secure_successes) / total_runs);
   }
   return 0;
 }

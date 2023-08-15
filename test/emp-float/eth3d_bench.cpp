@@ -55,11 +55,6 @@ static_assert(std::is_same_v<decltype(&lm<float>), cleartext_localizer>,
               "cleartext LM localizer function sig does not match what "
               "this test expects.");
 
-// bool withinRel(float v, float t) {
-//   return fabs(v - t) <= std::max(localization_tol_rel,
-//                                  fabs(localization_tol_rel * std::max(v, t)));
-// }
-
 int main(int argc, char** argv) {
   if (argc != 5) {
     MSG("Usage: %s <lm or gn> <num frames> <num trials> <max num pts>\n",
@@ -118,6 +113,11 @@ int main(int argc, char** argv) {
           auto [converged, num_loc_iterations] = emp_localize_wrapper(
               ALICE, rvec, tvec, cameraMatrix, distCoeffs, objectPointsSubset,
               imagePointsSubset, res, secure_func);
+          if (!silent) {
+            MSG("EMP reported %s after %d iterations",
+                converged ? "convergence" : "failure to converge",
+                num_loc_iterations);
+          }
           delete io;
         });
 

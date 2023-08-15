@@ -155,6 +155,9 @@ void aby_localize_wrapper(e_role role, e_sharing sharing, cv::Mat rvec,
     }
     res[i] = *(float*)output;
   }
+  if (role == SERVER) {
+    cout << '\n';
+  }
 
   delete party;
 }

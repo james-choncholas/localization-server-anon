@@ -54,6 +54,7 @@ rm gt.7z
 Run the experiments.
 ```bash
 cmake -B ./build -S ./ -DCMAKE_BUILD_TYPE=Release
+mkdir -p results
 
 # setup privacy_conf.h for ETH3D, and SiSL
 cmake --build ./build
