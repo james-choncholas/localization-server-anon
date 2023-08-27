@@ -15,15 +15,15 @@ sed -i 's/grouped_bar,operator(),emp_float_lm_time_vs_point/xy,operator(),emp_fl
 sed -i 's/grouped_bar,operator(),emp_float_gn_time_vs_point_dataobl/xy,operator(),emp_float_gn_time_vs_point_dataobl/g' $scriptpath/../results/gn_emp_float_eth3d_bench_dataobl_short.log
 sed -i 's/grouped_bar,operator(),emp_float_lm_time_vs_point_dataobl/xy,operator(),emp_float_lm_time_vs_point_dataobl/g' $scriptpath/../results/lm_emp_float_eth3d_bench_dataobl_short.log
 
-python3 $scriptpath/../scripts/plotter.py \
+python3 $scriptpath/../scripts/plotter-do-vs-sil.py \
      --csvlog \
         "$logdir/gn_emp_float_eth3d_bench_short.log" \
         "$logdir/lm_emp_float_eth3d_bench_short.log" \
         "$logdir/gn_emp_float_eth3d_bench_dataobl_short.log" \
         "$logdir/lm_emp_float_eth3d_bench_dataobl_short.log" \
      --graphpath "$plotdir/loopleak_vs_dataobl.pdf" \
-     --title "Runtime of Data Oblivious
-and Single Iteration Localization" \
+     --title "Comparing Data Oblivious and
+Single Iteration Localization Runtime" \
      --only-tags \
         "emp_float_gn_time_vs_points_dataobl" \
         "emp_float_lm_time_vs_points_dataobl" \
@@ -34,10 +34,10 @@ and Single Iteration Localization" \
         "LM DO" \
         "GN SIL" \
         "LM SIL" \
-     --xlabel "Number of Points" \
+     --xlabel "Number of Features" \
      --ylabel "Runtime (s)" \
      --fig-w 4 \
      --fig-h 3 \
      --log-scale \
+     --color-theme "dracula" \
      $SHOW
-     #--color-theme "dracula" \

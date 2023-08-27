@@ -72,7 +72,10 @@ class dracula():
    FOUR = '#5F1333'
    FIVE = '#426615'
    SIX = '#AD5B4A'
-   COLORS = [ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, ZERO, ONE, TWO, THREE, FOUR]
+   #COLORS = [ZERO, ONE, TWO, THREE, FOUR, FIVE, SIX, ZERO, ONE, TWO, THREE, FOUR]
+   COLORS = [plt.cm.Pastel1(i) for i in range(9)]
+
+
 
 #cmap1 = matplotlib.colors.LinearSegmentedColormap.from_list("", [dracula.PINK, dracula.PURPLE])
 #cmap2 = matplotlib.colors.LinearSegmentedColormap.from_list("", [dracula.CYAN, dracula.ORANGE])
@@ -225,7 +228,7 @@ def plot(csvFilePaths, options, tags):
             dataByLabel = [] # vector of all y values, indexed by label
             offsetDataByLabel = [] # dataByLable, stacked
             whys = [] # average y value indexed by label
-            width = 0.5  # width of a group of bars for grouped bar graph
+            width = 0.7  # width of a group of bars for grouped bar graph
 
             # collect labels for all tags
             for row in data:
@@ -261,6 +264,8 @@ def plot(csvFilePaths, options, tags):
                 # no label on box plots
                 plt.boxplot(dataByLabel, positions=range(len(labels)))#, showmeans=True)
 
+            edgecolor = matplotlib.colors.colorConverter.to_rgba('black', alpha=0.1)
+
             if t.tagType == TAG_TYPE.BAR:
                 if options.horizontal:
                     plt.barh(range(len(whys)), whys, bottom=lastPlotBottom,
@@ -280,19 +285,12 @@ def plot(csvFilePaths, options, tags):
                     rects = plt.barh(np.arange(len(whys)) - offset + (width*tagIndex/len(tags)), whys, width/len(tags),
                         label=(options.custom_legend_labels[tagIndex] if options.custom_legend_labels != None else t.name),
                         color=(dracula.COLORS[tagIndex+options.color_offset] if options.color_theme == "dracula" else None),
-                        edgecolor='black', linewidth=1, hatch=options.hatching)
+                        edgecolor=edgecolor, linewidth=1, hatch=options.hatching)
                 else:
-                    # special case for snail paper
-                    if t.name == "EMP_MUL":
-                        rects = plt.bar(np.arange(len(whys)) - offset + (width*tagIndex/len(tags)), whys, width/len(tags),
-                            label=(options.custom_legend_labels[tagIndex] if options.custom_legend_labels != None else t.name),
-                            color="#2ca02c",
-                            edgecolor='black', linewidth=1, hatch=options.hatching)
-                    else:
-                        rects = plt.bar(np.arange(len(whys)) - offset + (width*tagIndex/len(tags)), whys, width/len(tags),
-                            label=(options.custom_legend_labels[tagIndex] if options.custom_legend_labels != None else t.name),
-                            color=(dracula.COLORS[tagIndex+options.color_offset] if options.color_theme == "dracula" else None),
-                            edgecolor='black', linewidth=1, hatch=options.hatching)
+                    rects = plt.bar(np.arange(len(whys)) - offset + (width*tagIndex/len(tags)), whys, width/len(tags),
+                        label=(options.custom_legend_labels[tagIndex] if options.custom_legend_labels != None else t.name),
+                        color=(dracula.COLORS[tagIndex+options.color_offset] if options.color_theme == "dracula" else None),
+                        edgecolor=edgecolor, linewidth=1, hatch=options.hatching)
                 if len(tags) > 1 and not skipLegend:
                     plt.legend() # bar always gets legend, must be after plotting
                 lastPlotBottom = list( map(add, lastPlotBottom, whys) )# for stacking using average
@@ -307,7 +305,7 @@ def plot(csvFilePaths, options, tags):
                         height = rect.get_height()
                         plt.text(rect.get_x() + rect.get_width()/2., 1.05*height, options.bar_label_dict[t.name][rectnum],
                                 ha='center', va='bottom',
-                                bbox=dict(facecolor='white', edgecolor='black', boxstyle='round,pad=0.2'))
+                                bbox=dict(facecolor='white', edgecolor=edgecolor, boxstyle='round,pad=0.2'))
                         rectnum=rectnum+1
 
 
@@ -547,6 +545,12 @@ def plot(csvFilePaths, options, tags):
         plt.ylabel(options.ylabel)
     plt.title(options.title)
     plt.tight_layout()
+
+    # hack for snail
+    if "EMP_MUL" in tagLabels:
+        plt.subplots_adjust(left=0.18)
+
+
     if options.show:
         plt.show()
     if options.log_scale:

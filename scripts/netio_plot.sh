@@ -11,20 +11,22 @@ SHOW=""
 
 # NOTE: For GB you need to modify plotter script
 
-python3 $scriptpath/../scripts/insetplotter.py \
+python3 $scriptpath/../scripts/plotter.py \
      --csvlog \
         "$logdir/gn_emp_float_eth3d_bench_long.log" \
         "$logdir/lm_emp_float_eth3d_bench_long.log" \
      --graphpath "$plotdir/netio.pdf" \
-     --title "Network IO per Iteration" \
+     --title "Network IO per
+Localization Iteration" \
      --only-tags \
-        "gn_bytes_tx_normalized" \
-        "lm_bytes_tx_normalized" \
+        "gn_bytes_rx_normalized" \
+        "lm_bytes_rx_normalized" \
      --custom-legend-labels \
-        "GN tx" \
-        "LM tx" \
-     --xlabel "Number of Input Points" \
-     --ylabel "GB per Iteration" \
+        "GN" \
+        "LM" \
+     --xlabel "Number of Features" \
+     --ylabel "Bytes per Iteration" \
      --fig-w 4 \
      --fig-h 3 \
+     --color-theme 'dracula' \
      $SHOW

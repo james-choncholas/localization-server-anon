@@ -11,7 +11,7 @@ python3 $scriptpath/../scripts/plotter.py \
        `#"$logdir/gn_emp_float_eth3d_bench_short.log"` \
        "$logdir/lm_emp_float_eth3d_bench_short.log" \
     --graphpath "$plotdir/emp_arith_ops.pdf" \
-    --title "Arithmetic Operations Count" \
+    --title "Counting Arithmetic Operations" \
     --only-tags \
         `#"gn_additions"` \
         `#"gn_subtractions"` \
@@ -26,13 +26,13 @@ python3 $scriptpath/../scripts/plotter.py \
         "Subract" \
         "Multiply" \
         "Divide" \
-    --xlabel "Number of Input Points" \
+    --xlabel "Number of Features" \
     --ylabel "Number of Operations" \
     --fig-w 4 \
     --fig-h 4 \
     --horizontal \
+    --color-theme "dracula" \
     $SHOW
-    #--color-theme "dracula" \
     #--only-tags "opencv_error_vs_numpts" \
     #--custom-legend-labels "opencv (float)" \
     #   "float" \

@@ -1,0 +1,2273 @@
+Ground Truth Pose [rotation; translation]: 
+0.525125 0.461442 -0.715063 5.64051 7.38378 14.2108 
+
+Trial 0 with 6 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000247 s[0m
+opencv result:
+[0.97698057;
+ 0.85712409;
+ -1.324466]
+[5.6561942;
+ 7.3491058;
+ 14.208172]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,6,7
+[34meth3d_test_harness[0m - [32mTimer cleartext: 6.6e-05 s[0m
+cleartext result:
+
+0.978 0.858082 -1.32369 5.65543 7.35682 14.219 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+WARNING: BuildLM() when compiling with SiSL is for testing only. Do not use in prod.
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+secure result 0.976281 0.857115 -1.32522 5.65301 7.34614 14.2032 emp converged!
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points,6,9.89553
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points_per_loc_itr,6,1.0995
+SeNtInAl,grouped_bar,operator(),lm_additions,6,55924
+SeNtInAl,grouped_bar,operator(),lm_subtractions,6,10692
+SeNtInAl,grouped_bar,operator(),lm_multiplications,6,82586
+SeNtInAl,grouped_bar,operator(),lm_divisions,6,8116
+SeNtInAl,xy,operator(),lm_bytes_tx,6,266510
+SeNtInAl,xy,operator(),lm_bytes_tx_normalized,6,44418
+SeNtInAl,xy,operator(),lm_bytes_rx,6,6477213769
+SeNtInAl,xy,operator(),lm_bytes_rx_normalized,6,1079535628
+
+
+Trial 1 with 6 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000108 s[0m
+opencv result:
+[0.97590059;
+ 0.86125225;
+ -1.3281224]
+[5.6413407;
+ 7.3541603;
+ 14.227972]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,6,7
+[34meth3d_test_harness[0m - [32mTimer cleartext: 7.2e-05 s[0m
+cleartext result:
+
+0.974132 0.858763 -1.32744 5.63341 7.34115 14.203 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+secure result 0.97617 0.861282 -1.32807 5.64321 7.35555 14.2304 emp converged!
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points,6,8.79211
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points_per_loc_itr,6,1.09901
+SeNtInAl,grouped_bar,operator(),lm_additions,6,49711
+SeNtInAl,grouped_bar,operator(),lm_subtractions,6,9504
+SeNtInAl,grouped_bar,operator(),lm_multiplications,6,73409
+SeNtInAl,grouped_bar,operator(),lm_divisions,6,7216
+SeNtInAl,xy,operator(),lm_bytes_tx,6,266509
+SeNtInAl,xy,operator(),lm_bytes_tx_normalized,6,44418
+SeNtInAl,xy,operator(),lm_bytes_rx,6,5757524360
+SeNtInAl,xy,operator(),lm_bytes_rx_normalized,6,959587393
+
+
+Trial 0 with 56 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000129 s[0m
+opencv result:
+[0.97491115;
+ 0.85670513;
+ -1.3261451]
+[5.6518421;
+ 7.3439288;
+ 14.200068]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,56,7
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000135 s[0m
+cleartext result:
+
+0.974808 0.856721 -1.32623 5.6511 7.34339 14.1992 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+secure result 0.974873 0.856809 -1.32622 5.651 7.34415 14.2004 emp converged!
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points,56,27.8414
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points_per_loc_itr,56,3.97735
+SeNtInAl,grouped_bar,operator(),lm_additions,56,211487
+SeNtInAl,grouped_bar,operator(),lm_subtractions,56,18116
+SeNtInAl,grouped_bar,operator(),lm_multiplications,56,232207
+SeNtInAl,grouped_bar,operator(),lm_divisions,56,24510
+SeNtInAl,xy,operator(),lm_bytes_tx,56,266508
+SeNtInAl,xy,operator(),lm_bytes_tx_normalized,56,4759
+SeNtInAl,xy,operator(),lm_bytes_rx,56,18550836551
+SeNtInAl,xy,operator(),lm_bytes_rx_normalized,56,331264938
+
+
+Trial 1 with 56 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000128 s[0m
+opencv result:
+[0.97495288;
+ 0.85653055;
+ -1.3262893]
+[5.652802;
+ 7.34202;
+ 14.200031]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,56,7
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000134 s[0m
+cleartext result:
+
+0.974591 0.856333 -1.32651 5.65316 7.33792 14.195 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+secure result 0.974967 0.856508 -1.32627 5.65299 7.34198 14.2001 emp converged!
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points,56,31.7551
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points_per_loc_itr,56,3.96938
+SeNtInAl,grouped_bar,operator(),lm_additions,56,241704
+SeNtInAl,grouped_bar,operator(),lm_subtractions,56,20704
+SeNtInAl,grouped_bar,operator(),lm_multiplications,56,265375
+SeNtInAl,grouped_bar,operator(),lm_divisions,56,28009
+SeNtInAl,xy,operator(),lm_bytes_tx,56,266509
+SeNtInAl,xy,operator(),lm_bytes_tx_normalized,56,4759
+SeNtInAl,xy,operator(),lm_bytes_rx,56,21200954760
+SeNtInAl,xy,operator(),lm_bytes_rx_normalized,56,378588477
+
+
+Trial 0 with 106 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000155 s[0m
+opencv result:
+[0.97469324;
+ 0.85676378;
+ -1.3265668]
+[5.6501698;
+ 7.3423653;
+ 14.198628]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,106,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000196 s[0m
+cleartext result:
+
+0.974235 0.856222 -1.32661 5.65091 7.33897 14.1916 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+secure result 0.974788 0.856791 -1.32653 5.64975 7.34282 14.1991 emp converged!
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points,106,47.9249
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points_per_loc_itr,106,6.84642
+SeNtInAl,grouped_bar,operator(),lm_additions,106,379465
+SeNtInAl,grouped_bar,operator(),lm_subtractions,106,27913
+SeNtInAl,grouped_bar,operator(),lm_multiplications,106,400094
+SeNtInAl,grouped_bar,operator(),lm_divisions,106,42710
+SeNtInAl,xy,operator(),lm_bytes_tx,106,266508
+SeNtInAl,xy,operator(),lm_bytes_tx_normalized,106,2514
+SeNtInAl,xy,operator(),lm_bytes_rx,106,32063838151
+SeNtInAl,xy,operator(),lm_bytes_rx_normalized,106,302489039
+
+
+Trial 1 with 106 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000158 s[0m
+opencv result:
+[0.97499526;
+ 0.85715985;
+ -1.3263485]
+[5.6499114;
+ 7.3446388;
+ 14.202065]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,106,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.0002 s[0m
+cleartext result:
+
+0.974453 0.856979 -1.3267 5.64726 7.34149 14.1957 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+secure result 0.975027 0.857163 -1.32633 5.65027 7.34474 14.2024 emp converged!
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points,106,54.3383
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points_per_loc_itr,106,6.79229
+SeNtInAl,grouped_bar,operator(),lm_additions,106,433699
+SeNtInAl,grouped_bar,operator(),lm_subtractions,106,31903
+SeNtInAl,grouped_bar,operator(),lm_multiplications,106,457355
+SeNtInAl,grouped_bar,operator(),lm_divisions,106,48809
+SeNtInAl,xy,operator(),lm_bytes_tx,106,266509
+SeNtInAl,xy,operator(),lm_bytes_tx_normalized,106,2514
+SeNtInAl,xy,operator(),lm_bytes_rx,106,36644385160
+SeNtInAl,xy,operator(),lm_bytes_rx_normalized,106,345701746
+
+
+Trial 0 with 156 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000189 s[0m
+opencv result:
+[0.9749679;
+ 0.85677856;
+ -1.3261579]
+[5.6511502;
+ 7.3441186;
+ 14.200583]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,156,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000314 s[0m
+cleartext result:
+
+0.974622 0.856455 -1.32629 5.6508 7.34177 14.1955 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+secure result 0.975005 0.856782 -1.32613 5.6512 7.34422 14.2009 emp converged!
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points,156,68.2233
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points_per_loc_itr,156,9.74618
+SeNtInAl,grouped_bar,operator(),lm_additions,156,547490
+SeNtInAl,grouped_bar,operator(),lm_subtractions,156,37716
+SeNtInAl,grouped_bar,operator(),lm_multiplications,156,568160
+SeNtInAl,grouped_bar,operator(),lm_divisions,156,60909
+SeNtInAl,xy,operator(),lm_bytes_tx,156,266508
+SeNtInAl,xy,operator(),lm_bytes_tx_normalized,156,1708
+SeNtInAl,xy,operator(),lm_bytes_rx,156,45576839751
+SeNtInAl,xy,operator(),lm_bytes_rx_normalized,156,292159229
+
+
+Trial 1 with 156 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000186 s[0m
+opencv result:
+[0.97513753;
+ 0.85689068;
+ -1.3260233]
+[5.6511788;
+ 7.3442202;
+ 14.200357]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,156,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000325 s[0m
+cleartext result:
+
+0.974705 0.856622 -1.32626 5.65019 7.34143 14.1943 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+secure result 0.9752 0.856925 -1.32599 5.65134 7.34455 14.2011 emp converged!
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points,156,67.8285
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points_per_loc_itr,156,9.68979
+SeNtInAl,grouped_bar,operator(),lm_additions,156,547470
+SeNtInAl,grouped_bar,operator(),lm_subtractions,156,37713
+SeNtInAl,grouped_bar,operator(),lm_multiplications,156,568145
+SeNtInAl,grouped_bar,operator(),lm_divisions,156,60904
+SeNtInAl,xy,operator(),lm_bytes_tx,156,266508
+SeNtInAl,xy,operator(),lm_bytes_tx_normalized,156,1708
+SeNtInAl,xy,operator(),lm_bytes_rx,156,45576839751
+SeNtInAl,xy,operator(),lm_bytes_rx_normalized,156,292159229
+
+
+Trial 0 with 206 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000216 s[0m
+opencv result:
+[0.97519034;
+ 0.85747492;
+ -1.3264574]
+[5.6500988;
+ 7.346405;
+ 14.205]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,206,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.00035 s[0m
+cleartext result:
+
+0.974961 0.857008 -1.32652 5.65135 7.34474 14.2011 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+secure result 0.975315 0.857526 -1.3264 5.65101 7.34768 14.2073 emp converged!
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points,206,88.4162
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points_per_loc_itr,206,12.6309
+SeNtInAl,grouped_bar,operator(),lm_additions,206,715468
+SeNtInAl,grouped_bar,operator(),lm_subtractions,206,47512
+SeNtInAl,grouped_bar,operator(),lm_multiplications,206,736126
+SeNtInAl,grouped_bar,operator(),lm_divisions,206,79104
+SeNtInAl,xy,operator(),lm_bytes_tx,206,266508
+SeNtInAl,xy,operator(),lm_bytes_tx_normalized,206,1293
+SeNtInAl,xy,operator(),lm_bytes_rx,206,59089841351
+SeNtInAl,xy,operator(),lm_bytes_rx_normalized,206,286843890
+
+
+Trial 1 with 206 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000214 s[0m
+opencv result:
+[0.97487932;
+ 0.85726631;
+ -1.3265015]
+[5.6483054;
+ 7.3457394;
+ 14.203903]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,206,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000326 s[0m
+cleartext result:
+
+0.974846 0.857229 -1.32655 5.64841 7.34544 14.2035 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+secure result 0.974847 0.85723 -1.32652 5.64832 7.34552 14.2035 emp converged!
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points,206,100.472
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points_per_loc_itr,206,12.559
+SeNtInAl,grouped_bar,operator(),lm_additions,206,817661
+SeNtInAl,grouped_bar,operator(),lm_subtractions,206,54301
+SeNtInAl,grouped_bar,operator(),lm_multiplications,206,841219
+SeNtInAl,grouped_bar,operator(),lm_divisions,206,90404
+SeNtInAl,xy,operator(),lm_bytes_tx,206,266509
+SeNtInAl,xy,operator(),lm_bytes_tx_normalized,206,1293
+SeNtInAl,xy,operator(),lm_bytes_rx,206,67531245960
+SeNtInAl,xy,operator(),lm_bytes_rx_normalized,206,327821582
+
+
+Trial 0 with 256 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000252 s[0m
+opencv result:
+[0.9752143;
+ 0.85790235;
+ -1.3265386]
+[5.6471553;
+ 7.3486385;
+ 14.208114]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,256,9
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000511 s[0m
+cleartext result:
+
+0.975303 0.857937 -1.32646 5.64747 7.34906 14.2101 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+secure result 0.975365 0.857964 -1.32639 5.64807 7.35029 14.2135 emp converged!
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points,256,138.274
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points_per_loc_itr,256,15.3638
+SeNtInAl,grouped_bar,operator(),lm_additions,256,1135853
+SeNtInAl,grouped_bar,operator(),lm_subtractions,256,73690
+SeNtInAl,grouped_bar,operator(),lm_multiplications,256,1162373
+SeNtInAl,grouped_bar,operator(),lm_divisions,256,125105
+SeNtInAl,xy,operator(),lm_bytes_tx,256,266510
+SeNtInAl,xy,operator(),lm_bytes_tx_normalized,256,1041
+SeNtInAl,xy,operator(),lm_bytes_rx,256,93346509769
+SeNtInAl,xy,operator(),lm_bytes_rx_normalized,256,364634803
+
+
+Trial 1 with 256 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000242 s[0m
+opencv result:
+[0.97513902;
+ 0.85708964;
+ -1.3262416]
+[5.6512513;
+ 7.3446507;
+ 14.202176]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,256,7
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000455 s[0m
+cleartext result:
+
+0.975196 0.857038 -1.32617 5.65101 7.34385 14.2026 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+secure result inf inf inf inf inf inf Not printing timing - not converged.
+
+
+Ground Truth Pose [rotation; translation]: 
+0.985341 0.0827748 -0.149168 -13.1805 5.09226 7.87779 
+
+Trial 0 with 6 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000109 s[0m
+opencv result:
+[1.2075964;
+ 0.10061607;
+ -0.18161373]
+[-13.166178;
+ 5.0548267;
+ 7.8574705]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,6,30
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000316 s[0m
+cleartext result:
+
+nan nan nan nan nan nan 
+
+cleartext did not converge to same value as opencv.
+Trial 1 with 6 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000144 s[0m
+opencv result:
+[1.2080076;
+ 0.10217138;
+ -0.18361914]
+[-13.185761;
+ 5.0652852;
+ 7.8779702]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,6,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 6.5e-05 s[0m
+cleartext result:
+
+1.20922 0.100472 -0.182107 -13.1647 5.07009 7.86249 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+secure result 1.20801 0.102086 -0.183541 -13.1846 5.06499 7.87691 emp converged!
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points,6,10.7985
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points_per_loc_itr,6,1.07985
+SeNtInAl,grouped_bar,operator(),lm_additions,6,62134
+SeNtInAl,grouped_bar,operator(),lm_subtractions,6,11880
+SeNtInAl,grouped_bar,operator(),lm_multiplications,6,91774
+SeNtInAl,grouped_bar,operator(),lm_divisions,6,9020
+SeNtInAl,xy,operator(),lm_bytes_tx,6,266511
+SeNtInAl,xy,operator(),lm_bytes_tx_normalized,6,44418
+SeNtInAl,xy,operator(),lm_bytes_rx,6,7196903178
+SeNtInAl,xy,operator(),lm_bytes_rx_normalized,6,1199483863
+
+
+Trial 0 with 56 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000177 s[0m
+opencv result:
+[1.2086993;
+ 0.10176756;
+ -0.18284848]
+[-13.180717;
+ 5.0672746;
+ 7.8747411]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,56,15
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000257 s[0m
+cleartext result:
+
+1.20852 0.10179 -0.18289 -13.1807 5.0661 7.87392 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+secure result 1.20852 0.101835 -0.182873 -13.1815 5.0653 7.87444 emp converged!
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points,56,35.4196
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points_per_loc_itr,56,3.93551
+SeNtInAl,grouped_bar,operator(),lm_additions,56,271915
+SeNtInAl,grouped_bar,operator(),lm_subtractions,56,23292
+SeNtInAl,grouped_bar,operator(),lm_multiplications,56,298534
+SeNtInAl,grouped_bar,operator(),lm_divisions,56,31514
+SeNtInAl,xy,operator(),lm_bytes_tx,56,266510
+SeNtInAl,xy,operator(),lm_bytes_tx_normalized,56,4759
+SeNtInAl,xy,operator(),lm_bytes_rx,56,23851072969
+SeNtInAl,xy,operator(),lm_bytes_rx_normalized,56,425912017
+
+
+Trial 1 with 56 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000146 s[0m
+opencv result:
+[1.2085606;
+ 0.10156405;
+ -0.18264696]
+[-13.17872;
+ 5.0653453;
+ 7.8703065]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,56,7
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000186 s[0m
+cleartext result:
+
+1.20856 0.101522 -0.18256 -13.1783 5.06491 7.87032 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+secure result 1.20834 0.101649 -0.182652 -13.1794 5.06306 7.86942 emp converged!
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points,56,31.8125
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points_per_loc_itr,56,3.97656
+SeNtInAl,grouped_bar,operator(),lm_additions,56,241698
+SeNtInAl,grouped_bar,operator(),lm_subtractions,56,20703
+SeNtInAl,grouped_bar,operator(),lm_multiplications,56,265377
+SeNtInAl,grouped_bar,operator(),lm_divisions,56,28013
+SeNtInAl,xy,operator(),lm_bytes_tx,56,266509
+SeNtInAl,xy,operator(),lm_bytes_tx_normalized,56,4759
+SeNtInAl,xy,operator(),lm_bytes_rx,56,21200954760
+SeNtInAl,xy,operator(),lm_bytes_rx_normalized,56,378588477
+
+
+Trial 0 with 106 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000156 s[0m
+opencv result:
+[1.208829;
+ 0.10171307;
+ -0.18281659]
+[-13.179605;
+ 5.0690889;
+ 7.8745189]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,106,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000245 s[0m
+cleartext result:
+
+1.20798 0.101981 -0.182915 -13.1838 5.0611 7.87419 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+secure result 1.2089 0.101708 -0.182818 -13.1794 5.0698 7.87478 emp converged!
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points,106,54.274
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points_per_loc_itr,106,6.78425
+SeNtInAl,grouped_bar,operator(),lm_additions,106,433687
+SeNtInAl,grouped_bar,operator(),lm_subtractions,106,31901
+SeNtInAl,grouped_bar,operator(),lm_multiplications,106,457257
+SeNtInAl,grouped_bar,operator(),lm_divisions,106,48809
+SeNtInAl,xy,operator(),lm_bytes_tx,106,266509
+SeNtInAl,xy,operator(),lm_bytes_tx_normalized,106,2514
+SeNtInAl,xy,operator(),lm_bytes_rx,106,36644385160
+SeNtInAl,xy,operator(),lm_bytes_rx_normalized,106,345701746
+
+
+Trial 1 with 106 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000157 s[0m
+opencv result:
+[1.2094159;
+ 0.10179479;
+ -0.18287055]
+[-13.180683;
+ 5.0741601;
+ 7.8798628]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,106,8
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000252 s[0m
+cleartext result:
+
+1.20876 0.102186 -0.182904 -13.1861 5.0639 7.87968 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+secure result 1.20936 0.101813 -0.182877 -13.1809 5.07352 7.87958 emp converged!
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points,106,61.1398
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points_per_loc_itr,106,6.79331
+SeNtInAl,grouped_bar,operator(),lm_additions,106,487902
+SeNtInAl,grouped_bar,operator(),lm_subtractions,106,35890
+SeNtInAl,grouped_bar,operator(),lm_multiplications,106,514530
+SeNtInAl,grouped_bar,operator(),lm_divisions,106,54911
+SeNtInAl,xy,operator(),lm_bytes_tx,106,266510
+SeNtInAl,xy,operator(),lm_bytes_tx_normalized,106,2514
+SeNtInAl,xy,operator(),lm_bytes_rx,106,41224932169
+SeNtInAl,xy,operator(),lm_bytes_rx_normalized,106,388914454
+
+
+Trial 0 with 156 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000187 s[0m
+opencv result:
+[1.2089282;
+ 0.10173154;
+ -0.18279122]
+[-13.180101;
+ 5.0701766;
+ 7.8753314]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,156,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000262 s[0m
+cleartext result:
+
+1.20881 0.101466 -0.182526 -13.1798 5.06904 7.87335 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+secure result 1.20896 0.101731 -0.182794 -13.1801 5.07047 7.87551 emp converged!
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points,156,77.2098
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points_per_loc_itr,156,9.65122
+SeNtInAl,grouped_bar,operator(),lm_additions,156,625684
+SeNtInAl,grouped_bar,operator(),lm_subtractions,156,43101
+SeNtInAl,grouped_bar,operator(),lm_multiplications,156,649292
+SeNtInAl,grouped_bar,operator(),lm_divisions,156,69612
+SeNtInAl,xy,operator(),lm_bytes_tx,156,266509
+SeNtInAl,xy,operator(),lm_bytes_tx_normalized,156,1708
+SeNtInAl,xy,operator(),lm_bytes_rx,156,52087815560
+SeNtInAl,xy,operator(),lm_bytes_rx_normalized,156,333896253
+
+
+Trial 1 with 156 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000184 s[0m
+opencv result:
+[1.2087814;
+ 0.10170627;
+ -0.18270968]
+[-13.179701;
+ 5.0679946;
+ 7.8749981]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,156,7
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000293 s[0m
+cleartext result:
+
+1.20862 0.101695 -0.182706 -13.179 5.06653 7.87359 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+secure result 1.20876 0.101684 -0.182685 -13.1794 5.06766 7.87472 emp converged!
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points,156,77.2957
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points_per_loc_itr,156,9.66196
+SeNtInAl,grouped_bar,operator(),lm_additions,156,625681
+SeNtInAl,grouped_bar,operator(),lm_subtractions,156,43101
+SeNtInAl,grouped_bar,operator(),lm_multiplications,156,649284
+SeNtInAl,grouped_bar,operator(),lm_divisions,156,69607
+SeNtInAl,xy,operator(),lm_bytes_tx,156,266509
+SeNtInAl,xy,operator(),lm_bytes_tx_normalized,156,1708
+SeNtInAl,xy,operator(),lm_bytes_rx,156,52087815560
+SeNtInAl,xy,operator(),lm_bytes_rx_normalized,156,333896253
+
+
+Trial 0 with 206 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000214 s[0m
+opencv result:
+[1.2091097;
+ 0.1017419;
+ -0.18282548]
+[-13.180156;
+ 5.0712228;
+ 7.8762341]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,206,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000348 s[0m
+cleartext result:
+
+1.20816 0.102168 -0.182939 -13.1849 5.06004 7.87425 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+secure result 1.20909 0.101757 -0.182836 -13.1803 5.07105 7.87629 emp converged!
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points,206,99.8655
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points_per_loc_itr,206,12.4832
+SeNtInAl,grouped_bar,operator(),lm_additions,206,817649
+SeNtInAl,grouped_bar,operator(),lm_subtractions,206,54302
+SeNtInAl,grouped_bar,operator(),lm_multiplications,206,841177
+SeNtInAl,grouped_bar,operator(),lm_divisions,206,90402
+SeNtInAl,xy,operator(),lm_bytes_tx,206,266509
+SeNtInAl,xy,operator(),lm_bytes_tx_normalized,206,1293
+SeNtInAl,xy,operator(),lm_bytes_rx,206,67531245960
+SeNtInAl,xy,operator(),lm_bytes_rx_normalized,206,327821582
+
+
+Trial 1 with 206 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000217 s[0m
+opencv result:
+[1.2092785;
+ 0.101861;
+ -0.18293566]
+[-13.181708;
+ 5.0735545;
+ 7.8777962]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,206,30
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.001309 s[0m
+cleartext result:
+
+-7.88413 3.71709 -5.18388 1.2353 10.5454 -10.5672 
+
+cleartext did not converge to same value as opencv.
+Trial 0 with 256 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000213 s[0m
+opencv result:
+[1.2092248;
+ 0.10187773;
+ -0.18295409]
+[-13.181938;
+ 5.0730338;
+ 7.8779693]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,256,7
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.00038 s[0m
+cleartext result:
+
+1.2086 0.102092 -0.183005 -13.1828 5.06595 7.87415 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+secure result 1.20922 0.101888 -0.182966 -13.1821 5.07301 7.87804 emp converged!
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points,256,122.744
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points_per_loc_itr,256,15.343
+SeNtInAl,grouped_bar,operator(),lm_additions,256,1009653
+SeNtInAl,grouped_bar,operator(),lm_subtractions,256,65497
+SeNtInAl,grouped_bar,operator(),lm_multiplications,256,1033152
+SeNtInAl,grouped_bar,operator(),lm_divisions,256,111206
+SeNtInAl,xy,operator(),lm_bytes_tx,256,266509
+SeNtInAl,xy,operator(),lm_bytes_tx_normalized,256,1041
+SeNtInAl,xy,operator(),lm_bytes_rx,256,82974676360
+SeNtInAl,xy,operator(),lm_bytes_rx_normalized,256,324119829
+
+
+Trial 1 with 256 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000242 s[0m
+opencv result:
+[1.2092162;
+ 0.10175578;
+ -0.18285568]
+[-13.180202;
+ 5.0728798;
+ 7.8767667]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,256,30
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.001755 s[0m
+cleartext result:
+
+0.162783 -0.859943 0.463431 0.928541 -5.01402 4.45696 
+
+cleartext did not converge to same value as opencv.
+Ground Truth Pose [rotation; translation]: 
+0.99603 0.0372788 -0.0808338 -11.6438 4.70088 6.90092 
+
+Trial 0 with 6 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000139 s[0m
+opencv result:
+[1.2087443;
+ 0.043563113;
+ -0.095526405]
+[-11.612573;
+ 4.6836662;
+ 6.878387]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,6,7
+[34meth3d_test_harness[0m - [32mTimer cleartext: 7.8e-05 s[0m
+cleartext result:
+
+1.211 0.042443 -0.0941913 -11.5964 4.70346 6.87946 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+secure result 1.20906 0.0437304 -0.0956926 -11.6147 4.68699 6.88065 emp converged!
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points,6,8.63139
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points_per_loc_itr,6,1.07892
+SeNtInAl,grouped_bar,operator(),lm_additions,6,49710
+SeNtInAl,grouped_bar,operator(),lm_subtractions,6,9504
+SeNtInAl,grouped_bar,operator(),lm_multiplications,6,73410
+SeNtInAl,grouped_bar,operator(),lm_divisions,6,7216
+SeNtInAl,xy,operator(),lm_bytes_tx,6,266509
+SeNtInAl,xy,operator(),lm_bytes_tx_normalized,6,44418
+SeNtInAl,xy,operator(),lm_bytes_rx,6,5757524360
+SeNtInAl,xy,operator(),lm_bytes_rx_normalized,6,959587393
+
+
+Trial 1 with 6 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000157 s[0m
+opencv result:
+[1.2066069;
+ 0.044367988;
+ -0.097029366]
+[-11.627261;
+ 4.6705866;
+ 6.8839397]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,6,8
+[34meth3d_test_harness[0m - [32mTimer cleartext: 8.2e-05 s[0m
+cleartext result:
+
+1.20619 0.0452451 -0.0979472 -11.6423 4.66906 6.89479 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+secure result inf inf inf inf inf inf Not printing timing - not converged.
+
+
+Trial 0 with 56 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000135 s[0m
+opencv result:
+[1.2075287;
+ 0.045336645;
+ -0.097859189]
+[-11.642168;
+ 4.6786594;
+ 6.8984847]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,56,30
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000597 s[0m
+cleartext result:
+
+-1.35422 0.937392 -0.750701 -3.50815 -4.23348 6.73801 
+
+cleartext did not converge to same value as opencv.
+Trial 1 with 56 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.0001 s[0m
+opencv result:
+[1.2074565;
+ 0.045443263;
+ -0.098122619]
+[-11.64477;
+ 4.6794143;
+ 6.8989692]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,56,7
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000137 s[0m
+cleartext result:
+
+1.20788 0.0456496 -0.0983125 -11.6483 4.68389 6.90408 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+secure result 1.20735 0.0454874 -0.098152 -11.6455 4.67818 6.89885 emp converged!
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points,56,35.4709
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points_per_loc_itr,56,3.94121
+SeNtInAl,grouped_bar,operator(),lm_additions,56,271911
+SeNtInAl,grouped_bar,operator(),lm_subtractions,56,23292
+SeNtInAl,grouped_bar,operator(),lm_multiplications,56,298543
+SeNtInAl,grouped_bar,operator(),lm_divisions,56,31514
+SeNtInAl,xy,operator(),lm_bytes_tx,56,266510
+SeNtInAl,xy,operator(),lm_bytes_tx_normalized,56,4759
+SeNtInAl,xy,operator(),lm_bytes_rx,56,23851072969
+SeNtInAl,xy,operator(),lm_bytes_rx_normalized,56,425912017
+
+
+Trial 0 with 106 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000182 s[0m
+opencv result:
+[1.2075168;
+ 0.045383766;
+ -0.097974055]
+[-11.643175;
+ 4.6795907;
+ 6.8995738]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,106,7
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000234 s[0m
+cleartext result:
+
+1.2075 0.0453686 -0.0979453 -11.6431 4.6793 6.89969 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+secure result 1.20748 0.0453501 -0.0979407 -11.6427 4.67914 6.89869 emp converged!
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points,106,61.3509
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points_per_loc_itr,106,6.81677
+SeNtInAl,grouped_bar,operator(),lm_additions,106,487906
+SeNtInAl,grouped_bar,operator(),lm_subtractions,106,35890
+SeNtInAl,grouped_bar,operator(),lm_multiplications,106,514511
+SeNtInAl,grouped_bar,operator(),lm_divisions,106,54909
+SeNtInAl,xy,operator(),lm_bytes_tx,106,266510
+SeNtInAl,xy,operator(),lm_bytes_tx_normalized,106,2514
+SeNtInAl,xy,operator(),lm_bytes_rx,106,41224932169
+SeNtInAl,xy,operator(),lm_bytes_rx_normalized,106,388914454
+
+
+Trial 1 with 106 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000161 s[0m
+opencv result:
+[1.2078022;
+ 0.045432393;
+ -0.097964033]
+[-11.644651;
+ 4.6819186;
+ 6.9007597]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,106,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000223 s[0m
+cleartext result:
+
+1.20771 0.0451679 -0.0977602 -11.6432 4.68114 6.90071 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+secure result 1.20779 0.0454174 -0.0979533 -11.6445 4.6818 6.90059 emp converged!
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points,106,61.1125
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points_per_loc_itr,106,6.79028
+SeNtInAl,grouped_bar,operator(),lm_additions,106,487898
+SeNtInAl,grouped_bar,operator(),lm_subtractions,106,35891
+SeNtInAl,grouped_bar,operator(),lm_multiplications,106,514502
+SeNtInAl,grouped_bar,operator(),lm_divisions,106,54914
+SeNtInAl,xy,operator(),lm_bytes_tx,106,266510
+SeNtInAl,xy,operator(),lm_bytes_tx_normalized,106,2514
+SeNtInAl,xy,operator(),lm_bytes_rx,106,41224932169
+SeNtInAl,xy,operator(),lm_bytes_rx_normalized,106,388914454
+
+
+Trial 0 with 156 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000187 s[0m
+opencv result:
+[1.2078394;
+ 0.045446284;
+ -0.09811005]
+[-11.644256;
+ 4.6830955;
+ 6.9003634]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,156,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000289 s[0m
+cleartext result:
+
+1.20777 0.0453996 -0.0980738 -11.6432 4.68269 6.89916 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+secure result 1.20784 0.0454422 -0.0981026 -11.6441 4.68315 6.90036 emp converged!
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points,156,77.2736
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points_per_loc_itr,156,9.65919
+SeNtInAl,grouped_bar,operator(),lm_additions,156,625681
+SeNtInAl,grouped_bar,operator(),lm_subtractions,156,43103
+SeNtInAl,grouped_bar,operator(),lm_multiplications,156,649295
+SeNtInAl,grouped_bar,operator(),lm_divisions,156,69603
+SeNtInAl,xy,operator(),lm_bytes_tx,156,266509
+SeNtInAl,xy,operator(),lm_bytes_tx_normalized,156,1708
+SeNtInAl,xy,operator(),lm_bytes_rx,156,52087815560
+SeNtInAl,xy,operator(),lm_bytes_rx_normalized,156,333896253
+
+
+Trial 1 with 156 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000188 s[0m
+opencv result:
+[1.2077875;
+ 0.045560278;
+ -0.098182194]
+[-11.64586;
+ 4.6829629;
+ 6.9013696]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,156,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000263 s[0m
+cleartext result:
+
+1.2076 0.0450206 -0.0976613 -11.6392 4.6823 6.89844 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+secure result 1.20774 0.0455658 -0.0981803 -11.6459 4.68226 6.90119 emp converged!
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points,156,77.2846
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points_per_loc_itr,156,9.66057
+SeNtInAl,grouped_bar,operator(),lm_additions,156,625669
+SeNtInAl,grouped_bar,operator(),lm_subtractions,156,43101
+SeNtInAl,grouped_bar,operator(),lm_multiplications,156,649293
+SeNtInAl,grouped_bar,operator(),lm_divisions,156,69604
+SeNtInAl,xy,operator(),lm_bytes_tx,156,266509
+SeNtInAl,xy,operator(),lm_bytes_tx_normalized,156,1708
+SeNtInAl,xy,operator(),lm_bytes_rx,156,52087815560
+SeNtInAl,xy,operator(),lm_bytes_rx_normalized,156,333896253
+
+
+Trial 0 with 206 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000213 s[0m
+opencv result:
+[1.2083133;
+ 0.045530021;
+ -0.097997621]
+[-11.64491;
+ 4.6870584;
+ 6.9036407]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,206,7
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000427 s[0m
+cleartext result:
+
+1.20833 0.0455204 -0.0979956 -11.6448 4.68717 6.90363 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+secure result 1.20831 0.0455193 -0.097991 -11.6447 4.68686 6.90347 emp converged!
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points,206,124.856
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points_per_loc_itr,206,12.4856
+SeNtInAl,grouped_bar,operator(),lm_additions,206,1022087
+SeNtInAl,grouped_bar,operator(),lm_subtractions,206,67875
+SeNtInAl,grouped_bar,operator(),lm_multiplications,206,1051537
+SeNtInAl,grouped_bar,operator(),lm_divisions,206,113003
+SeNtInAl,xy,operator(),lm_bytes_tx,206,266511
+SeNtInAl,xy,operator(),lm_bytes_tx_normalized,206,1293
+SeNtInAl,xy,operator(),lm_bytes_rx,206,84414055178
+SeNtInAl,xy,operator(),lm_bytes_rx_normalized,206,409776966
+
+
+Trial 1 with 206 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000216 s[0m
+opencv result:
+[1.2076267;
+ 0.045469012;
+ -0.098046206]
+[-11.644433;
+ 4.6806555;
+ 6.9004989]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,206,30
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.001359 s[0m
+cleartext result:
+
+nan nan nan nan nan nan 
+
+cleartext did not converge to same value as opencv.
+Trial 0 with 256 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000216 s[0m
+opencv result:
+[1.207607;
+ 0.045416739;
+ -0.098005794]
+[-11.643997;
+ 4.6800776;
+ 6.8991561]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,256,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000382 s[0m
+cleartext result:
+
+1.20745 0.0453884 -0.0979599 -11.6447 4.67885 6.89899 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+secure result 1.20765 0.0453909 -0.0979836 -11.6439 4.68055 6.89936 emp converged!
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points,256,122.775
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points_per_loc_itr,256,15.3469
+SeNtInAl,grouped_bar,operator(),lm_additions,256,1009657
+SeNtInAl,grouped_bar,operator(),lm_subtractions,256,65499
+SeNtInAl,grouped_bar,operator(),lm_multiplications,256,1033197
+SeNtInAl,grouped_bar,operator(),lm_divisions,256,111203
+SeNtInAl,xy,operator(),lm_bytes_tx,256,266509
+SeNtInAl,xy,operator(),lm_bytes_tx_normalized,256,1041
+SeNtInAl,xy,operator(),lm_bytes_rx,256,82974676360
+SeNtInAl,xy,operator(),lm_bytes_rx_normalized,256,324119829
+
+
+Trial 1 with 256 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000241 s[0m
+opencv result:
+[1.207579;
+ 0.045375437;
+ -0.098018214]
+[-11.643377;
+ 4.6804438;
+ 6.8994637]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,lm,lm_clearlm_iterations_vs_numpts,256,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000391 s[0m
+cleartext result:
+
+1.20738 0.0451181 -0.0978226 -11.638 4.67878 6.89264 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+..........:.:.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+secure result 1.20751 0.0453161 -0.0979583 -11.6426 4.6796 6.89844 emp converged!
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points,256,138.572
+SeNtInAl,xy,operator(),emp_float_lm_time_vs_points_per_loc_itr,256,15.3968
+SeNtInAl,grouped_bar,operator(),lm_additions,256,1135860
+SeNtInAl,grouped_bar,operator(),lm_subtractions,256,73687
+SeNtInAl,grouped_bar,operator(),lm_multiplications,256,1162345
+SeNtInAl,grouped_bar,operator(),lm_divisions,256,125106
+SeNtInAl,xy,operator(),lm_bytes_tx,256,266510
+SeNtInAl,xy,operator(),lm_bytes_tx_normalized,256,1041
+SeNtInAl,xy,operator(),lm_bytes_rx,256,93346509769
+SeNtInAl,xy,operator(),lm_bytes_rx_normalized,256,364634803
+
+
+SeNtInAl,xy,eth3d_test_harness,cv_successes,0,0
+SeNtInAl,xy,eth3d_test_harness,cleartext_successes,0,31
+SeNtInAl,xy,eth3d_test_harness,secure_successes,0,29
+SeNtInAl,xy,eth3d_test_harness,total_runs,0,36
+OpenCV converged to the ground truth pose 0 / 36 (0.000000%)
+cleartext converged to the opencv pose 31 / 36 (0.861111%)
+secure localization converged to the opencv pose 29 / 36 (0.805556%)

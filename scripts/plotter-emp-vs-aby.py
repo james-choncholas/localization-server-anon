@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-import matplotlib.patheffects as pe
 from mpl_toolkits.mplot3d import Axes3D
 from matplotlib import cm
 import matplotlib.colors
@@ -11,10 +10,6 @@ import enum
 import sys
 import json
 import re
-
-from mpl_toolkits.axes_grid1.inset_locator import zoomed_inset_axes
-from mpl_toolkits.axes_grid1.inset_locator import mark_inset
-
 
 sentinalStr = "SeNtInAl"
 tmpFile = "plotlines.tmp"
@@ -196,14 +191,16 @@ def plot(csvFilePaths, options, tags):
     legendArtistProxyShapes=[]
     skipLegend = options.hide_legend
 
+    maxEmp = []
+    minAby = []
+
     for t in tags:
         tagLabels.append(t.name)
-
-    plt.figure(0, figsize=(options.fig_w, options.fig_h), dpi=800)
 
     for t in tags:
         print("plotting tag: " + t.name)
 
+        plt.figure(0, figsize=(options.fig_w, options.fig_h), dpi=800)
         if t.tagType == TAG_TYPE.XY:
             exes = []
             whys = []
@@ -219,23 +216,9 @@ def plot(csvFilePaths, options, tags):
             for i, x in enumerate(dedup_exes):
                 dedup_whys[i] = np.mean(whys[exes == x]) # / 1e9
 
-            if options.title == "Network IO per Iteration":
-              dedup_whys /= 1e9
-
-            if t.name == 'emp_float_lm_time_vs_points_per_loc_itr_latency':
-                edgecolor=dracula.COLORS[tagIndex+options.color_offset]
-                import colorsys
-                h, l, s = colorsys.rgb_to_hls(*matplotlib.colors.to_rgb(edgecolor))
-                edgehighlight = colorsys.hls_to_rgb(h, min(1, l * 0.5), s = s)
-
-                plt.plot(dedup_exes, dedup_whys,
-                    label=(options.custom_legend_labels[tagIndex] if options.custom_legend_labels != None else t.name),
-                    color=(dracula.COLORS[tagIndex+options.color_offset] if options.color_theme == "dracula" else None),
-                    linestyle = '--', lw=2, path_effects=[pe.Stroke(linewidth=3, foreground=edgehighlight), pe.Normal()])
-            else:
-                plt.plot(dedup_exes, dedup_whys,
-                    label=(options.custom_legend_labels[tagIndex] if options.custom_legend_labels != None else t.name),
-                    color=(dracula.COLORS[tagIndex+options.color_offset] if options.color_theme == "dracula" else None))
+            plt.plot(dedup_exes, dedup_whys,
+                label=(options.custom_legend_labels[tagIndex] if options.custom_legend_labels != None else t.name),
+                color=(dracula.COLORS[tagIndex+options.color_offset] if options.color_theme == "dracula"  else None))
 
         elif t.tagType == TAG_TYPE.HISTOGRAM:
             print("plotting histogram tag: " + t.name)
@@ -246,7 +229,7 @@ def plot(csvFilePaths, options, tags):
             dataByLabel = [] # vector of all y values, indexed by label
             offsetDataByLabel = [] # dataByLable, stacked
             whys = [] # average y value indexed by label
-            width = 0.5  # width of a group of bars for grouped bar graph
+            width = 0.8  # width of a group of bars for grouped bar graph
 
             # collect labels for all tags
             for row in data:
@@ -272,11 +255,30 @@ def plot(csvFilePaths, options, tags):
                         offsetDataByLabel[i].append(float(row[5]) + lastPlotBottom[i])
                     except:
                         continue
+
             for row in dataByLabel:
                 if len(row) != 0:
                     whys.append(np.average(row))
                 else:
                     whys.append(0)
+
+
+
+
+            for j in range(len(whys)):
+                if "emp" in t.name:
+                    if len(maxEmp) <= j:
+                        maxEmp.append(0)
+                    maxEmp[j] = max(maxEmp[j], whys[j])
+
+                elif "aby" in t.name:
+                    if len(minAby) <= j:
+                        minAby.append(float('inf'))
+                    minAby[j] = min(minAby[j], whys[j])
+
+
+
+
 
             if t.tagType == TAG_TYPE.BOX:
                 # no label on box plots
@@ -286,34 +288,29 @@ def plot(csvFilePaths, options, tags):
                 if options.horizontal:
                     plt.barh(range(len(whys)), whys, bottom=lastPlotBottom,
                         label=(options.custom_legend_labels[tagIndex] if options.custom_legend_labels != None else t.name),
-                        color=(dracula.COLORS[tagIndex+options.color_offset] if options.color_theme == "dracula" else None))
+                        color=(dracula.COLORS[tagIndex+options.color_offset] if options.color_theme == "dracula"  else None))
                 else:
                     plt.bar(range(len(whys)), whys, bottom=lastPlotBottom,
                         label=(options.custom_legend_labels[tagIndex] if options.custom_legend_labels != None else t.name),
-                        color=(dracula.COLORS[tagIndex+options.color_offset] if options.color_theme == "dracula" else None))
+                        color=(dracula.COLORS[tagIndex+options.color_offset] if options.color_theme == "dracula"  else None))
                 if len(tags) > 1 and not skipLegend:
                     plt.legend() # bar always gets legend, must be after plotting
                 lastPlotBottom = list( map(add, lastPlotBottom, whys) )# for stacking using average
 
             if t.tagType == TAG_TYPE.GROUPED_BAR:
-                offset=len(tags)/2*width/5
+                edgecolor = matplotlib.colors.colorConverter.to_rgba('black', alpha=0.1)
+
+                offset = width/2 - (width/len(tags)/2)
                 if options.horizontal:
                     rects = plt.barh(np.arange(len(whys)) - offset + (width*tagIndex/len(tags)), whys, width/len(tags),
                         label=(options.custom_legend_labels[tagIndex] if options.custom_legend_labels != None else t.name),
                         color=(dracula.COLORS[tagIndex+options.color_offset] if options.color_theme == "dracula" else None),
-                        edgecolor='black', linewidth=1, hatch=options.hatching)
+                        edgecolor=edgecolor, linewidth=1, hatch=options.hatching)
                 else:
-                    # special case for snail paper
-                    if t.name == "EMP_MUL":
-                        rects = plt.bar(np.arange(len(whys)) - offset + (width*tagIndex/len(tags)), whys, width/len(tags),
-                            label=(options.custom_legend_labels[tagIndex] if options.custom_legend_labels != None else t.name),
-                            color="#2ca02c",
-                            edgecolor='black', linewidth=1, hatch=options.hatching)
-                    else:
-                        rects = plt.bar(np.arange(len(whys)) - offset + (width*tagIndex/len(tags)), whys, width/len(tags),
-                            label=(options.custom_legend_labels[tagIndex] if options.custom_legend_labels != None else t.name),
-                            color=(dracula.COLORS[tagIndex+options.color_offset] if options.color_theme == "dracula" else None),
-                            edgecolor='black', linewidth=1, hatch=options.hatching)
+                    rects = plt.bar(np.arange(len(whys)) - offset + (width*tagIndex/len(tags)), whys, width/len(tags),
+                        label=(options.custom_legend_labels[tagIndex] if options.custom_legend_labels != None else t.name),
+                        color=(dracula.COLORS[tagIndex+options.color_offset] if options.color_theme == "dracula"  else None),
+                        edgecolor=edgecolor, linewidth=1, hatch=options.hatching)
                 if len(tags) > 1 and not skipLegend:
                     plt.legend() # bar always gets legend, must be after plotting
                 lastPlotBottom = list( map(add, lastPlotBottom, whys) )# for stacking using average
@@ -344,7 +341,7 @@ def plot(csvFilePaths, options, tags):
 
                 plt.bar(range(len(whysExcludingOutliers)), whysExcludingOutliers, width, bottom=lastPlotBottom,
                     label=(options.custom_legend_labels[tagIndex] if options.custom_legend_labels != None else t.name),
-                    color=(dracula.COLORS[tagIndex+options.color_offset] if options.color_theme == "dracula" else None),
+                    color=(dracula.COLORS[tagIndex+options.color_offset] if options.color_theme == "dracula"  else None),
                     edgecolor='black', linewidth=1, hatch=options.hatching)
                 lastPlotBottom = list( map(add, lastPlotBottom, whys) )# for stacking using average
                 if len(tags) > 1 and not skipLegend:
@@ -446,7 +443,7 @@ def plot(csvFilePaths, options, tags):
             if t.tagType == TAG_TYPE.THREEDBAR:
                 surf = ax.bar3d(filteredx, filteredy, filteredlpb, filtereddx, filtereddy, filtereddz,
                         label=(options.custom_legend_labels[tagIndex] if options.custom_legend_labels != None else t.name),
-                        color=(dracula.COLORS[tagIndex+options.color_offset] if options.color_theme == "dracula" else None))
+                        color=(dracula.COLORS[tagIndex+options.color_offset] if options.color_theme == "dracula"  else None))
                 #surf = ax.bar3d(x, y, lastPlotBottom, dx, dy, dz, label=t.name)
 
                 # Default legend looks terrible
@@ -492,12 +489,12 @@ def plot(csvFilePaths, options, tags):
                     # Plot a line
                     plt.plot([float(i) for i in xlabels], sliced,
                         label=options.custom_legend_labels[tagIndex] if options.custom_legend_labels != None else t.name,
-                        color=(dracula.COLORS[tagIndex+options.color_offset] if options.color_theme == "dracula" else None))
+                        color=(dracula.COLORS[tagIndex+options.color_offset] if options.color_theme == "dracula"  else None))
 
                     # Stacked Bars
                     #plt.bar([i for i in xlabels], sliced, bottom=slicedLPB,
                     #        label=(options.custom_legend_labels[tagIndex] if options.custom_legend_labels != None else t.name),
-                    #        color=(dracula.COLORS[tagIndex+options.color_offset] if options.color_theme == "dracula" else None))
+                    #        color=(dracula.COLORS[tagIndex+options.color_offset] if options.color_theme == "dracula"  else None))
 
                     plt.xticks([float(i) for i in xlabels], xlabels)#, rotation=45)
 
@@ -509,12 +506,12 @@ def plot(csvFilePaths, options, tags):
                     # Plot a line
                     plt.plot([float(i) for i in ylabels], zees[options.projection],
                         label=options.custom_legend_labels[tagIndex] if options.custom_legend_labels != None else t.name,
-                        color=(dracula.COLORS[tagIndex+options.color_offset] if options.color_theme == "dracula" else None))
+                        color=(dracula.COLORS[tagIndex+options.color_offset] if options.color_theme == "dracula"  else None))
 
                     # Stacked Bars
                     #plt.bar([i for i in xlabels], zees[options.projection], bottom=lastPlotBottom[options.projection*len(ylabels) : options.projection*len(ylabels)+len(ylabels)], # THIS MAY NOT BE RIGHT
                     #        label=(options.custom_legend_labels[tagIndex] if options.custom_legend_labels != None else t.name),
-                    #        color=(dracula.COLORS[tagIndex+options.color_offset] if options.color_theme == "dracula" else None))
+                    #        color=(dracula.COLORS[tagIndex+options.color_offset] if options.color_theme == "dracula"  else None))
 
                     plt.xticks([float(i) for i in ylabels], ylabels)#, rotation=45)
 
@@ -533,7 +530,7 @@ def plot(csvFilePaths, options, tags):
 
                 plt.bar(range(len(spacedDz)), spacedDz, bottom=spacedLPB,
                     label=(options.custom_legend_labels[tagIndex] if options.custom_legend_labels != None else t.name),
-                    color=(dracula.COLORS[tagIndex+options.color_offset] if options.color_theme == "dracula" else None))
+                    color=(dracula.COLORS[tagIndex+options.color_offset] if options.color_theme == "dracula"  else None))
                 if len(tags) > 1 and not skipLegend:
                     plt.legend() # bar always gets legend, must be after plotting
 
@@ -558,7 +555,7 @@ def plot(csvFilePaths, options, tags):
             handles, labels = plt.gca().get_legend_handles_labels()
             plt.legend(reversed(handles), reversed(labels))
         else:
-            plt.legend(loc = 'upper right')
+            plt.legend()
 
     if options.horizontal:
         plt.ylabel(options.xlabel)
@@ -566,74 +563,48 @@ def plot(csvFilePaths, options, tags):
     else:
         plt.xlabel(options.xlabel)
         plt.ylabel(options.ylabel)
+
+
+
+
+    print("# Calculating the trendline")
+    x = np.arange(len(maxEmp))
+
+    empCoefficients = np.polyfit(x, maxEmp, 2)
+    empTrendline = np.polyval(empCoefficients, x)
+
+    abyCoefficients = np.polyfit(x, minAby, 2)
+    abyTrendline = np.polyval(abyCoefficients, x)
+
+    plt.plot(empTrendline, x, color='grey', zorder=-1)
+    plt.plot(abyTrendline, x, color='black', zorder=-1)
+
+    plt.fill_betweenx(x, empTrendline, abyTrendline, color='lightgrey', alpha=0.5, zorder=-1)
+
+    # zorder = line.get_zorder()
+    # alpha = line.get_alpha()
+    # alpha = 1.0 if alpha is None else alpha
+
+    # z = np.empty((100, 1, 4), dtype=float)
+    # rgb = mcolors.colorConverter.to_rgb(fill_color)
+    # z[:,:,:3] = rgb
+    # z[:,:,-1] = np.linspace(0, alpha, 100)[:,None]
+
+    # xmin, xmax, ymin, ymax = x.min(), x.max(), y.min(), y.max()
+    # im = ax.imshow(z, aspect='auto', extent=[xmin, xmax, ymin, ymax],
+    #                origin='lower', zorder=zorder)
+
+    # xy = np.column_stack([x, y])
+    # xy = np.vstack([[xmin, ymin], xy, [xmax, ymin], [xmin, ymin]])
+    # clip_path = Polygon(xy, facecolor='none', edgecolor='none', closed=True)
+    # ax.add_patch(clip_path)
+    # im.set_clip_path(clip_path)
+
+
+
+
+
     plt.title(options.title)
-
-
-
-
-
-
-    myax = plt.gca()
-    #mysubax = zoomed_inset_axes(myax, 3, loc=2, bbox_to_anchor=(60,100,10,10), borderpad=2) # zoom = 6
-    mysubax = zoomed_inset_axes(myax, 12, bbox_to_anchor=(70,160), loc=2, borderpad=0) # zoom = 6
-    if options.title == "Network IO per Iteration":
-      mysubax = zoomed_inset_axes(myax, 12, bbox_to_anchor=(64,138), loc=2, borderpad=0) # zoom = 6
-
-    for tagIndex, t in enumerate(tags):
-        print("plotting tag: " + t.name)
-
-        if t.tagType == TAG_TYPE.XY:
-            exes = []
-            whys = []
-            for row in data:
-                if row[3] == t.name and (options.xfilter == None or row[4] in options.xfilter):
-                    exes.append(float(row[4]));
-                    whys.append(float(row[5]));
-            exes, whys = (np.array(t) for t in zip(*sorted(zip(exes, whys))))
-            dedup_exes = np.unique(exes)
-            dedup_whys = np.empty(dedup_exes.shape)
-            for i, x in enumerate(dedup_exes):
-                dedup_whys[i] = np.mean(whys[exes == x]) # / 1e9
-            if options.title == "Network IO per Iteration":
-              dedup_whys /= 1e9
-
-            if t.name == 'emp_float_lm_time_vs_points_per_loc_itr_latency':
-                edgecolor=dracula.COLORS[tagIndex+options.color_offset]
-                import colorsys
-                h, l, s = colorsys.rgb_to_hls(*matplotlib.colors.to_rgb(edgecolor))
-                edgehighlight = colorsys.hls_to_rgb(h, min(1, l * 0.5), s = s)
-
-                plt.plot(dedup_exes, dedup_whys,
-                    label=(options.custom_legend_labels[tagIndex] if options.custom_legend_labels != None else t.name),
-                    color=(dracula.COLORS[tagIndex+options.color_offset] if options.color_theme == "dracula" else None),
-                    linestyle = '--', lw=2, path_effects=[pe.Stroke(linewidth=3, foreground=edgehighlight), pe.Normal()])
-            else:
-                plt.plot(dedup_exes, dedup_whys,
-                    color=(dracula.COLORS[tagIndex+options.color_offset] if options.color_theme == "dracula" else None))
-
-    mysubax.set_xlim(6, 12)
-    mysubax.set_xticks([6, 9, 12])
-    plt.xticks(visible=True)
-    plt.yticks(visible=True)
-    if options.title == "Network IO per Iteration":
-        mysubax.set_ylim(0, .000003)
-        #mysubax.set_yticks([1, 2])
-    else:
-        mysubax.set_ylim(1, 2)
-        mysubax.set_yticks([1, 2])
-    #mark_inset(myax, mysubax, loc1=2, loc2=3, fc="none", ec="0.5")
-    mark_inset(myax, mysubax, loc1=2, loc2=3, fc="none", ec="0.7")
-
-    from matplotlib.ticker import StrMethodFormatter
-    plt.gca().yaxis.set_major_formatter(StrMethodFormatter('{x:,.0f}')) # No decimal places
-
-
-
-
-
-
-
-
     plt.tight_layout()
     if options.show:
         plt.show()

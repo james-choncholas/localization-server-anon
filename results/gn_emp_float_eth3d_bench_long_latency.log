@@ -1,0 +1,2120 @@
+Ground Truth Pose [rotation; translation]: 
+0.525125 0.461442 -0.715063 5.64051 7.38378 14.2108 
+
+Trial 0 with 6 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000413 s[0m
+opencv result:
+[0.97698057;
+ 0.85712409;
+ -1.324466]
+[5.6561942;
+ 7.3491058;
+ 14.208172]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,6,7
+[34meth3d_test_harness[0m - [32mTimer cleartext: 9.4e-05 s[0m
+cleartext result:
+
+0.982415 0.860211 -1.31912 5.6555 7.37589 14.2566 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 7 iterationssecure result 0.973166 0.854903 -1.32801 5.65278 7.32552 14.1768 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,6,9.22658
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,6,1.31808
+SeNtInAl,grouped_bar,operator(),gn_additions,6,45430
+SeNtInAl,grouped_bar,operator(),gn_subtractions,6,10836
+SeNtInAl,grouped_bar,operator(),gn_multiplications,6,73709
+SeNtInAl,grouped_bar,operator(),gn_divisions,6,7308
+SeNtInAl,xy,operator(),gn_bytes_tx,6,266508
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,6,44418
+SeNtInAl,xy,operator(),gn_bytes_rx,6,5729509095
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,6,954918182
+
+
+Trial 1 with 6 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000106 s[0m
+opencv result:
+[0.97590059;
+ 0.86125225;
+ -1.3281224]
+[5.6413407;
+ 7.3541603;
+ 14.227972]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,6,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 8.6e-05 s[0m
+cleartext result:
+
+0.974283 0.85875 -1.32837 5.64108 7.33782 14.2011 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 7 iterationssecure result 0.974422 0.860595 -1.32829 5.62986 7.34684 14.2144 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,6,9.15579
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,6,1.30797
+SeNtInAl,grouped_bar,operator(),gn_additions,6,45426
+SeNtInAl,grouped_bar,operator(),gn_subtractions,6,10836
+SeNtInAl,grouped_bar,operator(),gn_multiplications,6,73704
+SeNtInAl,grouped_bar,operator(),gn_divisions,6,7307
+SeNtInAl,xy,operator(),gn_bytes_tx,6,266508
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,6,44418
+SeNtInAl,xy,operator(),gn_bytes_rx,6,5729509095
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,6,954918182
+
+
+Trial 0 with 56 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000129 s[0m
+opencv result:
+[0.97491115;
+ 0.85670513;
+ -1.3261451]
+[5.6518421;
+ 7.3439288;
+ 14.200068]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,56,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000198 s[0m
+cleartext result:
+
+0.976604 0.857565 -1.32534 5.6545 7.35131 14.2221 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 7 iterationssecure result 0.975332 0.856726 -1.32586 5.65462 7.34554 14.2049 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,56,60.9475
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,56,8.70679
+SeNtInAl,grouped_bar,operator(),gn_additions,56,347812
+SeNtInAl,grouped_bar,operator(),gn_subtractions,56,62636
+SeNtInAl,grouped_bar,operator(),gn_multiplications,56,501960
+SeNtInAl,grouped_bar,operator(),gn_divisions,56,42301
+SeNtInAl,xy,operator(),gn_bytes_tx,56,266508
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,56,4759
+SeNtInAl,xy,operator(),gn_bytes_rx,56,38252315495
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,56,683077062
+
+
+Trial 1 with 56 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000125 s[0m
+opencv result:
+[0.97495288;
+ 0.85653055;
+ -1.3262893]
+[5.652802;
+ 7.34202;
+ 14.200031]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,56,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.00021 s[0m
+cleartext result:
+
+0.977495 0.85864 -1.32423 5.64752 7.35762 14.2326 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 7 iterationssecure result 0.975107 0.8567 -1.32623 5.65281 7.3425 14.2009 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,56,60.499
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,56,8.64271
+SeNtInAl,grouped_bar,operator(),gn_additions,56,347814
+SeNtInAl,grouped_bar,operator(),gn_subtractions,56,62636
+SeNtInAl,grouped_bar,operator(),gn_multiplications,56,501988
+SeNtInAl,grouped_bar,operator(),gn_divisions,56,42301
+SeNtInAl,xy,operator(),gn_bytes_tx,56,266508
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,56,4759
+SeNtInAl,xy,operator(),gn_bytes_rx,56,38252315495
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,56,683077062
+
+
+Trial 0 with 106 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000158 s[0m
+opencv result:
+[0.97469324;
+ 0.85676378;
+ -1.3265668]
+[5.6501698;
+ 7.3423653;
+ 14.198628]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,106,5
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000307 s[0m
+cleartext result:
+
+0.967359 0.864108 -1.33394 5.59619 7.3475 14.2304 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 6 iterationssecure result 0.97516 0.856877 -1.32619 5.64751 7.34353 14.2026 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,106,97.2179
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,106,16.203
+SeNtInAl,grouped_bar,operator(),gn_additions,106,557314
+SeNtInAl,grouped_bar,operator(),gn_subtractions,106,98084
+SeNtInAl,grouped_bar,operator(),gn_multiplications,106,797359
+SeNtInAl,grouped_bar,operator(),gn_divisions,106,66255
+SeNtInAl,xy,operator(),gn_bytes_tx,106,266507
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,106,2514
+SeNtInAl,xy,operator(),gn_bytes_rx,106,60664391494
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,106,572305580
+
+
+Trial 1 with 106 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000161 s[0m
+opencv result:
+[0.97499526;
+ 0.85715985;
+ -1.3263485]
+[5.6499114;
+ 7.3446388;
+ 14.202065]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,106,5
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000382 s[0m
+cleartext result:
+
+0.97354 0.857132 -1.32231 5.58599 7.31762 14.2694 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 7 iterationssecure result 0.975275 0.8572 -1.32619 5.65249 7.34586 14.2048 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,106,112.27
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,106,16.0385
+SeNtInAl,grouped_bar,operator(),gn_additions,106,650200
+SeNtInAl,grouped_bar,operator(),gn_subtractions,106,114435
+SeNtInAl,grouped_bar,operator(),gn_multiplications,106,930278
+SeNtInAl,grouped_bar,operator(),gn_divisions,106,77301
+SeNtInAl,xy,operator(),gn_bytes_tx,106,266508
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,106,2514
+SeNtInAl,xy,operator(),gn_bytes_rx,106,70775121895
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,106,667689829
+
+
+Trial 0 with 156 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000208 s[0m
+opencv result:
+[0.9749679;
+ 0.85677856;
+ -1.3261579]
+[5.6511502;
+ 7.3441186;
+ 14.200583]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,156,5
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000436 s[0m
+cleartext result:
+
+0.974315 0.857525 -1.32646 5.64831 7.34582 14.2146 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 6 iterationssecure result 0.975089 0.856887 -1.32615 5.64805 7.34461 14.2021 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,156,135.172
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,156,22.5286
+SeNtInAl,grouped_bar,operator(),gn_additions,156,816488
+SeNtInAl,grouped_bar,operator(),gn_subtractions,156,142487
+SeNtInAl,grouped_bar,operator(),gn_multiplications,156,1164316
+SeNtInAl,grouped_bar,operator(),gn_divisions,156,96259
+SeNtInAl,xy,operator(),gn_bytes_tx,156,266507
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,156,1708
+SeNtInAl,xy,operator(),gn_bytes_rx,156,88541082694
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,156,567571042
+
+
+Trial 1 with 156 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000187 s[0m
+opencv result:
+[0.97513753;
+ 0.85689068;
+ -1.3260233]
+[5.6511788;
+ 7.3442202;
+ 14.200357]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,156,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000581 s[0m
+cleartext result:
+
+0.975786 0.85722 -1.32587 5.66277 7.34617 14.2091 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 7 iterationssecure result 0.975195 0.856862 -1.32597 5.65164 7.34439 14.201 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,156,151.927
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,156,21.7038
+SeNtInAl,grouped_bar,operator(),gn_additions,156,952595
+SeNtInAl,grouped_bar,operator(),gn_subtractions,156,166231
+SeNtInAl,grouped_bar,operator(),gn_multiplications,156,1358641
+SeNtInAl,grouped_bar,operator(),gn_divisions,156,112295
+SeNtInAl,xy,operator(),gn_bytes_tx,156,266508
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,156,1708
+SeNtInAl,xy,operator(),gn_bytes_rx,156,103297928295
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,156,662166207
+
+
+Trial 0 with 206 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000216 s[0m
+opencv result:
+[0.97519034;
+ 0.85747492;
+ -1.3264574]
+[5.6500988;
+ 7.346405;
+ 14.205]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,206,5
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000576 s[0m
+cleartext result:
+
+0.976964 0.86028 -1.32528 5.65151 7.36021 14.2666 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 6 iterationssecure result 0.97523 0.857593 -1.32645 5.64847 7.34711 14.206 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,206,170.851
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,206,28.4751
+SeNtInAl,grouped_bar,operator(),gn_additions,206,1075695
+SeNtInAl,grouped_bar,operator(),gn_subtractions,206,186881
+SeNtInAl,grouped_bar,operator(),gn_multiplications,206,1531594
+SeNtInAl,grouped_bar,operator(),gn_divisions,206,126241
+SeNtInAl,xy,operator(),gn_bytes_tx,206,266507
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,206,1293
+SeNtInAl,xy,operator(),gn_bytes_rx,206,116417773894
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,206,565134824
+
+
+Trial 1 with 206 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000215 s[0m
+opencv result:
+[0.97487932;
+ 0.85726631;
+ -1.3265015]
+[5.6483054;
+ 7.3457394;
+ 14.203903]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,206,5
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000613 s[0m
+cleartext result:
+
+0.976555 0.857257 -1.31932 5.58588 7.32026 14.258 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 7 iterationssecure result 0.974884 0.857248 -1.32649 5.64839 7.34574 14.204 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,206,199.658
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,206,28.5226
+SeNtInAl,grouped_bar,operator(),gn_additions,206,1254951
+SeNtInAl,grouped_bar,operator(),gn_subtractions,206,218033
+SeNtInAl,grouped_bar,operator(),gn_multiplications,206,1786905
+SeNtInAl,grouped_bar,operator(),gn_divisions,206,147290
+SeNtInAl,xy,operator(),gn_bytes_tx,206,266508
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,206,1293
+SeNtInAl,xy,operator(),gn_bytes_rx,206,135820734695
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,206,659323954
+
+
+Trial 0 with 256 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000242 s[0m
+opencv result:
+[0.9752143;
+ 0.85790235;
+ -1.3265386]
+[5.6471553;
+ 7.3486385;
+ 14.208114]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,256,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000777 s[0m
+cleartext result:
+
+0.976534 0.85861 -1.32595 5.64519 7.35272 14.2125 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 7 iterationssecure result 0.97517 0.857898 -1.32656 5.64686 7.34823 14.2065 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,256,246.629
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,256,35.2327
+SeNtInAl,grouped_bar,operator(),gn_additions,256,1557354
+SeNtInAl,grouped_bar,operator(),gn_subtractions,256,269831
+SeNtInAl,grouped_bar,operator(),gn_multiplications,256,2215177
+SeNtInAl,grouped_bar,operator(),gn_divisions,256,182279
+SeNtInAl,xy,operator(),gn_bytes_tx,256,266508
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,256,1041
+SeNtInAl,xy,operator(),gn_bytes_rx,256,168343541095
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,256,657591957
+
+
+Trial 1 with 256 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000242 s[0m
+opencv result:
+[0.97513902;
+ 0.85708964;
+ -1.3262416]
+[5.6512513;
+ 7.3446507;
+ 14.202176]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,256,7
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.001088 s[0m
+cleartext result:
+
+0.969966 0.863779 -1.34069 5.63036 7.33822 14.2337 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 8 iterationssecure result 0.975323 0.857187 -1.32639 5.65211 7.34513 14.2033 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,256,282.08
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,256,35.2601
+SeNtInAl,grouped_bar,operator(),gn_additions,256,1779861
+SeNtInAl,grouped_bar,operator(),gn_subtractions,256,308381
+SeNtInAl,grouped_bar,operator(),gn_multiplications,256,2531709
+SeNtInAl,grouped_bar,operator(),gn_divisions,256,208334
+SeNtInAl,xy,operator(),gn_bytes_tx,256,266509
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,256,1041
+SeNtInAl,xy,operator(),gn_bytes_rx,256,192392617096
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,256,751533660
+
+
+Ground Truth Pose [rotation; translation]: 
+0.985341 0.0827748 -0.149168 -13.1805 5.09226 7.87779 
+
+Trial 0 with 6 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000112 s[0m
+opencv result:
+[1.2075964;
+ 0.10061607;
+ -0.18161373]
+[-13.166178;
+ 5.0548267;
+ 7.8574705]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,6,7
+[34meth3d_test_harness[0m - [32mTimer cleartext: 8.1e-05 s[0m
+cleartext result:
+
+1.20996 0.100217 -0.181534 -13.14 5.08502 7.87757 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 7 iterationssecure result 1.20506 0.10009 -0.180598 -13.1606 5.02486 7.83627 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,6,8.53693
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,6,1.21956
+SeNtInAl,grouped_bar,operator(),gn_additions,6,45430
+SeNtInAl,grouped_bar,operator(),gn_subtractions,6,10836
+SeNtInAl,grouped_bar,operator(),gn_multiplications,6,73696
+SeNtInAl,grouped_bar,operator(),gn_divisions,6,7308
+SeNtInAl,xy,operator(),gn_bytes_tx,6,266508
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,6,44418
+SeNtInAl,xy,operator(),gn_bytes_rx,6,5729509095
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,6,954918182
+
+
+Trial 1 with 6 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000181 s[0m
+opencv result:
+[1.2080076;
+ 0.10217138;
+ -0.18361914]
+[-13.185761;
+ 5.0652852;
+ 7.8779702]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,6,8
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000104 s[0m
+cleartext result:
+
+1.20837 0.102295 -0.183771 -13.1919 5.06954 7.88428 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 8 iterationssecure result 1.20786 0.102035 -0.183384 -13.1818 5.06251 7.87332 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,6,9.76381
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,6,1.22048
+SeNtInAl,grouped_bar,operator(),gn_additions,6,51918
+SeNtInAl,grouped_bar,operator(),gn_subtractions,6,12384
+SeNtInAl,grouped_bar,operator(),gn_multiplications,6,84242
+SeNtInAl,grouped_bar,operator(),gn_divisions,6,8351
+SeNtInAl,xy,operator(),gn_bytes_tx,6,266509
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,6,44418
+SeNtInAl,xy,operator(),gn_bytes_rx,6,6548009096
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,6,1091334849
+
+
+Trial 0 with 56 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000177 s[0m
+opencv result:
+[1.2086993;
+ 0.10176756;
+ -0.18284848]
+[-13.180717;
+ 5.0672746;
+ 7.8747411]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,56,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000214 s[0m
+cleartext result:
+
+1.20169 0.104038 -0.181991 -13.223 4.98612 7.83189 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 7 iterationssecure result 1.20795 0.101594 -0.18278 -13.1756 5.06171 7.86553 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,56,55.9679
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,56,7.99541
+SeNtInAl,grouped_bar,operator(),gn_additions,56,347821
+SeNtInAl,grouped_bar,operator(),gn_subtractions,56,62634
+SeNtInAl,grouped_bar,operator(),gn_multiplications,56,501996
+SeNtInAl,grouped_bar,operator(),gn_divisions,56,42294
+SeNtInAl,xy,operator(),gn_bytes_tx,56,266508
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,56,4759
+SeNtInAl,xy,operator(),gn_bytes_rx,56,38252315495
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,56,683077062
+
+
+Trial 1 with 56 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000149 s[0m
+opencv result:
+[1.2085606;
+ 0.10156405;
+ -0.18264696]
+[-13.17872;
+ 5.0653453;
+ 7.8703065]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,56,7
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000242 s[0m
+cleartext result:
+
+1.20807 0.100912 -0.181897 -13.1727 5.05934 7.86616 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 7 iterationssecure result 1.20845 0.101556 -0.182661 -13.179 5.06446 7.86929 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,56,56.2037
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,56,8.0291
+SeNtInAl,grouped_bar,operator(),gn_additions,56,347816
+SeNtInAl,grouped_bar,operator(),gn_subtractions,56,62634
+SeNtInAl,grouped_bar,operator(),gn_multiplications,56,502028
+SeNtInAl,grouped_bar,operator(),gn_divisions,56,42299
+SeNtInAl,xy,operator(),gn_bytes_tx,56,266508
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,56,4759
+SeNtInAl,xy,operator(),gn_bytes_rx,56,38252315495
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,56,683077062
+
+
+Trial 0 with 106 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000158 s[0m
+opencv result:
+[1.208829;
+ 0.10171307;
+ -0.18281659]
+[-13.179605;
+ 5.0690889;
+ 7.8745189]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,106,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000409 s[0m
+cleartext result:
+
+1.20308 0.104001 -0.183234 -13.2107 5.01084 7.86441 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 8 iterationssecure result 1.20873 0.101702 -0.182807 -13.1793 5.06831 7.87388 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,106,118.288
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,106,14.7861
+SeNtInAl,grouped_bar,operator(),gn_additions,106,743078
+SeNtInAl,grouped_bar,operator(),gn_subtractions,106,130777
+SeNtInAl,grouped_bar,operator(),gn_multiplications,106,1063255
+SeNtInAl,grouped_bar,operator(),gn_divisions,106,88335
+SeNtInAl,xy,operator(),gn_bytes_tx,106,266509
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,106,2514
+SeNtInAl,xy,operator(),gn_bytes_rx,106,80885852296
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,106,763074078
+
+
+Trial 1 with 106 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000164 s[0m
+opencv result:
+[1.2094159;
+ 0.10179479;
+ -0.18287055]
+[-13.180683;
+ 5.0741601;
+ 7.8798628]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,106,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000421 s[0m
+cleartext result:
+
+1.20886 0.101639 -0.182796 -13.1886 5.07146 7.87785 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 7 iterationssecure result 1.20943 0.10179 -0.182875 -13.181 5.07432 7.8801 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,106,103.867
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,106,14.8381
+SeNtInAl,grouped_bar,operator(),gn_additions,106,650202
+SeNtInAl,grouped_bar,operator(),gn_subtractions,106,114435
+SeNtInAl,grouped_bar,operator(),gn_multiplications,106,930280
+SeNtInAl,grouped_bar,operator(),gn_divisions,106,77301
+SeNtInAl,xy,operator(),gn_bytes_tx,106,266508
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,106,2514
+SeNtInAl,xy,operator(),gn_bytes_rx,106,70775121895
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,106,667689829
+
+
+Trial 0 with 156 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000184 s[0m
+opencv result:
+[1.2089282;
+ 0.10173154;
+ -0.18279122]
+[-13.180101;
+ 5.0701766;
+ 7.8753314]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,156,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.0005 s[0m
+cleartext result:
+
+1.20701 0.100455 -0.181464 -13.1875 5.04004 7.86001 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 7 iterationssecure result 1.20879 0.101662 -0.182725 -13.1798 5.06891 7.87486 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,156,151.316
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,156,21.6165
+SeNtInAl,grouped_bar,operator(),gn_additions,156,952584
+SeNtInAl,grouped_bar,operator(),gn_subtractions,156,166230
+SeNtInAl,grouped_bar,operator(),gn_multiplications,156,1358468
+SeNtInAl,grouped_bar,operator(),gn_divisions,156,112292
+SeNtInAl,xy,operator(),gn_bytes_tx,156,266508
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,156,1708
+SeNtInAl,xy,operator(),gn_bytes_rx,156,103297928295
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,156,662166207
+
+
+Trial 1 with 156 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000186 s[0m
+opencv result:
+[1.2087814;
+ 0.10170627;
+ -0.18270968]
+[-13.179701;
+ 5.0679946;
+ 7.8749981]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,156,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000521 s[0m
+cleartext result:
+
+1.2055 0.100013 -0.181069 -13.1582 5.01767 7.832 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 7 iterationssecure result 1.20814 0.101923 -0.18276 -13.1826 5.06097 7.87321 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,156,151.598
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,156,21.6569
+SeNtInAl,grouped_bar,operator(),gn_additions,156,952579
+SeNtInAl,grouped_bar,operator(),gn_subtractions,156,166232
+SeNtInAl,grouped_bar,operator(),gn_multiplications,156,1358396
+SeNtInAl,grouped_bar,operator(),gn_divisions,156,112298
+SeNtInAl,xy,operator(),gn_bytes_tx,156,266508
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,156,1708
+SeNtInAl,xy,operator(),gn_bytes_rx,156,103297928295
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,156,662166207
+
+
+Trial 0 with 206 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000216 s[0m
+opencv result:
+[1.2091097;
+ 0.1017419;
+ -0.18282548]
+[-13.180156;
+ 5.0712228;
+ 7.8762341]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,206,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000773 s[0m
+cleartext result:
+
+1.20779 0.10138 -0.182636 -13.1651 5.05969 7.85139 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 7 iterationssecure result 1.20905 0.101718 -0.182799 -13.1798 5.07003 7.87508 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,206,198.634
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,206,28.3762
+SeNtInAl,grouped_bar,operator(),gn_additions,206,1254947
+SeNtInAl,grouped_bar,operator(),gn_subtractions,206,218033
+SeNtInAl,grouped_bar,operator(),gn_multiplications,206,1786624
+SeNtInAl,grouped_bar,operator(),gn_divisions,206,147292
+SeNtInAl,xy,operator(),gn_bytes_tx,206,266508
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,206,1293
+SeNtInAl,xy,operator(),gn_bytes_rx,206,135820734695
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,206,659323954
+
+
+Trial 1 with 206 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000217 s[0m
+opencv result:
+[1.2092785;
+ 0.101861;
+ -0.18293566]
+[-13.181708;
+ 5.0735545;
+ 7.8777962]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,206,30
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.002985 s[0m
+cleartext result:
+
+0.238199 -0.675728 0.307793 -1.31828 -4.62575 3.79626 
+
+cleartext did not converge to same value as opencv.
+Trial 0 with 256 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000224 s[0m
+opencv result:
+[1.2092248;
+ 0.10187773;
+ -0.18295409]
+[-13.181938;
+ 5.0730338;
+ 7.8779693]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,256,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.00079 s[0m
+cleartext result:
+
+1.20792 0.101044 -0.182196 -13.19 5.05057 7.86635 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 7 iterationssecure result 1.20916 0.101837 -0.182901 -13.182 5.07238 7.87805 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,256,247.454
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,256,35.3505
+SeNtInAl,grouped_bar,operator(),gn_additions,256,1557372
+SeNtInAl,grouped_bar,operator(),gn_subtractions,256,269831
+SeNtInAl,grouped_bar,operator(),gn_multiplications,256,2215179
+SeNtInAl,grouped_bar,operator(),gn_divisions,256,182284
+SeNtInAl,xy,operator(),gn_bytes_tx,256,266508
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,256,1041
+SeNtInAl,xy,operator(),gn_bytes_rx,256,168343541095
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,256,657591957
+
+
+Trial 1 with 256 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000243 s[0m
+opencv result:
+[1.2092162;
+ 0.10175578;
+ -0.18285568]
+[-13.180202;
+ 5.0728798;
+ 7.8767667]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,256,30
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.003524 s[0m
+cleartext result:
+
+0.139854 -0.859136 0.444662 0.525793 -5.16339 4.97216 
+
+cleartext did not converge to same value as opencv.
+Ground Truth Pose [rotation; translation]: 
+0.99603 0.0372788 -0.0808338 -11.6438 4.70088 6.90092 
+
+Trial 0 with 6 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000142 s[0m
+opencv result:
+[1.2087443;
+ 0.043563113;
+ -0.095526405]
+[-11.612573;
+ 4.6836662;
+ 6.878387]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,6,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 7.2e-05 s[0m
+cleartext result:
+
+1.21106 0.0432466 -0.0959712 -11.6168 4.70013 6.87804 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 7 iterationssecure result 1.20893 0.0431616 -0.0950021 -11.6105 4.68497 6.87857 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,6,8.50823
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,6,1.21546
+SeNtInAl,grouped_bar,operator(),gn_additions,6,45430
+SeNtInAl,grouped_bar,operator(),gn_subtractions,6,10836
+SeNtInAl,grouped_bar,operator(),gn_multiplications,6,73706
+SeNtInAl,grouped_bar,operator(),gn_divisions,6,7308
+SeNtInAl,xy,operator(),gn_bytes_tx,6,266508
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,6,44418
+SeNtInAl,xy,operator(),gn_bytes_rx,6,5729509095
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,6,954918182
+
+
+Trial 1 with 6 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.00016 s[0m
+opencv result:
+[1.2066069;
+ 0.044367988;
+ -0.097029366]
+[-11.627261;
+ 4.6705866;
+ 6.8839397]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,6,30
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000319 s[0m
+cleartext result:
+
+nan nan nan nan nan nan 
+
+cleartext did not converge to same value as opencv.
+Trial 0 with 56 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000122 s[0m
+opencv result:
+[1.2075287;
+ 0.045336645;
+ -0.097859189]
+[-11.642168;
+ 4.6786594;
+ 6.8984847]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,56,7
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000215 s[0m
+cleartext result:
+
+1.20676 0.0451168 -0.0974802 -11.6343 4.6704 6.88847 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 8 iterationssecure result 1.20748 0.0453775 -0.0978685 -11.6434 4.67813 6.89851 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,56,64.4623
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,56,8.05778
+SeNtInAl,grouped_bar,operator(),gn_additions,56,397501
+SeNtInAl,grouped_bar,operator(),gn_subtractions,56,71579
+SeNtInAl,grouped_bar,operator(),gn_multiplications,56,573756
+SeNtInAl,grouped_bar,operator(),gn_divisions,56,48342
+SeNtInAl,xy,operator(),gn_bytes_tx,56,266509
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,56,4759
+SeNtInAl,xy,operator(),gn_bytes_rx,56,43716930696
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,56,780659476
+
+
+Trial 1 with 56 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000136 s[0m
+opencv result:
+[1.2074565;
+ 0.045443263;
+ -0.098122619]
+[-11.64477;
+ 4.6794143;
+ 6.8989692]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,56,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000243 s[0m
+cleartext result:
+
+1.20027 0.0468229 -0.0983781 -11.6645 4.60935 6.87488 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 7 iterationssecure result 1.20743 0.0453225 -0.0980406 -11.6428 4.68004 6.8979 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,56,56.0334
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,56,8.00477
+SeNtInAl,grouped_bar,operator(),gn_additions,56,347816
+SeNtInAl,grouped_bar,operator(),gn_subtractions,56,62635
+SeNtInAl,grouped_bar,operator(),gn_multiplications,56,502013
+SeNtInAl,grouped_bar,operator(),gn_divisions,56,42304
+SeNtInAl,xy,operator(),gn_bytes_tx,56,266508
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,56,4759
+SeNtInAl,xy,operator(),gn_bytes_rx,56,38252315495
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,56,683077062
+
+
+Trial 0 with 106 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000195 s[0m
+opencv result:
+[1.2075168;
+ 0.045383766;
+ -0.097974055]
+[-11.643175;
+ 4.6795907;
+ 6.8995738]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,106,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000441 s[0m
+cleartext result:
+
+1.20302 0.0453393 -0.0982622 -11.6332 4.64003 6.86637 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 7 iterationssecure result 1.20728 0.045343 -0.0978746 -11.6425 4.67481 6.89701 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,106,104.165
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,106,14.8807
+SeNtInAl,grouped_bar,operator(),gn_additions,106,650204
+SeNtInAl,grouped_bar,operator(),gn_subtractions,106,114436
+SeNtInAl,grouped_bar,operator(),gn_multiplications,106,930313
+SeNtInAl,grouped_bar,operator(),gn_divisions,106,77298
+SeNtInAl,xy,operator(),gn_bytes_tx,106,266508
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,106,2514
+SeNtInAl,xy,operator(),gn_bytes_rx,106,70775121895
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,106,667689829
+
+
+Trial 1 with 106 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000155 s[0m
+opencv result:
+[1.2078022;
+ 0.045432393;
+ -0.097964033]
+[-11.644651;
+ 4.6819186;
+ 6.9007597]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,106,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000434 s[0m
+cleartext result:
+
+1.20593 0.0443213 -0.0975102 -11.6333 4.66792 6.88463 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 7 iterationssecure result 1.2077 0.0453557 -0.0978928 -11.6435 4.68077 6.8997 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,106,103.473
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,106,14.7818
+SeNtInAl,grouped_bar,operator(),gn_additions,106,650190
+SeNtInAl,grouped_bar,operator(),gn_subtractions,106,114436
+SeNtInAl,grouped_bar,operator(),gn_multiplications,106,930295
+SeNtInAl,grouped_bar,operator(),gn_divisions,106,77290
+SeNtInAl,xy,operator(),gn_bytes_tx,106,266508
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,106,2514
+SeNtInAl,xy,operator(),gn_bytes_rx,106,70775121895
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,106,667689829
+
+
+Trial 0 with 156 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000186 s[0m
+opencv result:
+[1.2078394;
+ 0.045446284;
+ -0.09811005]
+[-11.644256;
+ 4.6830955;
+ 6.9003634]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,156,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000573 s[0m
+cleartext result:
+
+1.20317 0.0463075 -0.0980936 -11.6397 4.61834 6.85303 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 7 iterationssecure result 1.20773 0.045439 -0.098097 -11.6438 4.68186 6.89928 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,156,151.46
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,156,21.6371
+SeNtInAl,grouped_bar,operator(),gn_additions,156,952577
+SeNtInAl,grouped_bar,operator(),gn_subtractions,156,166232
+SeNtInAl,grouped_bar,operator(),gn_multiplications,156,1358492
+SeNtInAl,grouped_bar,operator(),gn_divisions,156,112300
+SeNtInAl,xy,operator(),gn_bytes_tx,156,266508
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,156,1708
+SeNtInAl,xy,operator(),gn_bytes_rx,156,103297928295
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,156,662166207
+
+
+Trial 1 with 156 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000186 s[0m
+opencv result:
+[1.2077875;
+ 0.045560278;
+ -0.098182194]
+[-11.64586;
+ 4.6829629;
+ 6.9013696]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,156,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000598 s[0m
+cleartext result:
+
+1.20289 0.0429256 -0.0955514 -11.6545 4.64354 6.86308 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 7 iterationssecure result 1.20748 0.0455097 -0.0980289 -11.6458 4.67998 6.90074 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,156,151.072
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,156,21.5817
+SeNtInAl,grouped_bar,operator(),gn_additions,156,952582
+SeNtInAl,grouped_bar,operator(),gn_subtractions,156,166234
+SeNtInAl,grouped_bar,operator(),gn_multiplications,156,1358466
+SeNtInAl,grouped_bar,operator(),gn_divisions,156,112289
+SeNtInAl,xy,operator(),gn_bytes_tx,156,266508
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,156,1708
+SeNtInAl,xy,operator(),gn_bytes_rx,156,103297928295
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,156,662166207
+
+
+Trial 0 with 206 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000215 s[0m
+opencv result:
+[1.2083133;
+ 0.045530021;
+ -0.097997621]
+[-11.64491;
+ 4.6870584;
+ 6.9036407]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,206,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000791 s[0m
+cleartext result:
+
+1.21397 0.0456695 -0.0978796 -11.6442 4.76301 6.89162 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 7 iterationssecure result 1.20826 0.0455704 -0.0980098 -11.6457 4.68653 6.90397 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,206,199.194
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,206,28.4563
+SeNtInAl,grouped_bar,operator(),gn_additions,206,1254969
+SeNtInAl,grouped_bar,operator(),gn_subtractions,206,218032
+SeNtInAl,grouped_bar,operator(),gn_multiplications,206,1786754
+SeNtInAl,grouped_bar,operator(),gn_divisions,206,147291
+SeNtInAl,xy,operator(),gn_bytes_tx,206,266508
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,206,1293
+SeNtInAl,xy,operator(),gn_bytes_rx,206,135820734695
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,206,659323954
+
+
+Trial 1 with 206 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000214 s[0m
+opencv result:
+[1.2076267;
+ 0.045469012;
+ -0.098046206]
+[-11.644433;
+ 4.6806555;
+ 6.9004989]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,206,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000797 s[0m
+cleartext result:
+
+1.20067 0.0413057 -0.0922524 -11.6361 4.61123 6.85678 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 7 iterationssecure result 1.20729 0.0452949 -0.0978657 -11.6456 4.67802 6.89895 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,206,198.598
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,206,28.3711
+SeNtInAl,grouped_bar,operator(),gn_additions,206,1254962
+SeNtInAl,grouped_bar,operator(),gn_subtractions,206,218033
+SeNtInAl,grouped_bar,operator(),gn_multiplications,206,1786737
+SeNtInAl,grouped_bar,operator(),gn_divisions,206,147293
+SeNtInAl,xy,operator(),gn_bytes_tx,206,266508
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,206,1293
+SeNtInAl,xy,operator(),gn_bytes_rx,206,135820734695
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,206,659323954
+
+
+Trial 0 with 256 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000279 s[0m
+opencv result:
+[1.207607;
+ 0.045416739;
+ -0.098005794]
+[-11.643997;
+ 4.6800776;
+ 6.8991561]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,256,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000916 s[0m
+cleartext result:
+
+1.20164 0.045558 -0.0985804 -11.6302 4.62353 6.84611 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 7 iterationssecure result 1.20733 0.0453862 -0.0979694 -11.6448 4.67824 6.89817 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,256,247.067
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,256,35.2953
+SeNtInAl,grouped_bar,operator(),gn_additions,256,1557343
+SeNtInAl,grouped_bar,operator(),gn_subtractions,256,269832
+SeNtInAl,grouped_bar,operator(),gn_multiplications,256,2215097
+SeNtInAl,grouped_bar,operator(),gn_divisions,256,182290
+SeNtInAl,xy,operator(),gn_bytes_tx,256,266508
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,256,1041
+SeNtInAl,xy,operator(),gn_bytes_rx,256,168343541095
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,256,657591957
+
+
+Trial 1 with 256 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000244 s[0m
+opencv result:
+[1.207579;
+ 0.045375437;
+ -0.098018214]
+[-11.643377;
+ 4.6804438;
+ 6.8994637]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,256,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000891 s[0m
+cleartext result:
+
+1.20302 0.0448167 -0.0970806 -11.6606 4.63854 6.87527 
+
+cleartext converged!
+testing secure
+testing secure
+connected
+connected
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0/
+/0/
+EMP reported convergence after 7 iterationssecure result 1.20686 0.0453682 -0.0979819 -11.6436 4.67363 6.89557 emp converged!
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points,256,246.871
+SeNtInAl,xy,operator(),emp_float_gn_time_vs_points_per_loc_itr_latency,256,35.2673
+SeNtInAl,grouped_bar,operator(),gn_additions,256,1557346
+SeNtInAl,grouped_bar,operator(),gn_subtractions,256,269832
+SeNtInAl,grouped_bar,operator(),gn_multiplications,256,2214834
+SeNtInAl,grouped_bar,operator(),gn_divisions,256,182294
+SeNtInAl,xy,operator(),gn_bytes_tx,256,266508
+SeNtInAl,xy,operator(),gn_bytes_tx_normalized,256,1041
+SeNtInAl,xy,operator(),gn_bytes_rx,256,168343541095
+SeNtInAl,xy,operator(),gn_bytes_rx_normalized,256,657591957
+
+
+SeNtInAl,xy,eth3d_test_harness,cv_successes,0,0
+SeNtInAl,xy,eth3d_test_harness,cleartext_successes,0,33
+SeNtInAl,xy,eth3d_test_harness,secure_successes,0,33
+SeNtInAl,xy,eth3d_test_harness,total_runs,0,36
+OpenCV converged to the ground truth pose 0 / 36 (0.000000%)
+cleartext converged to the opencv pose 33 / 36 (0.916667%)
+secure localization converged to the opencv pose 33 / 36 (0.916667%)

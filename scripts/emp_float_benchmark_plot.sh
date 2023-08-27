@@ -20,7 +20,8 @@ python3 $scriptpath/../scripts/insetplotter.py \
         "$logdir/gn_emp_float_eth3d_bench_long_latency.log" \
         "$logdir/lm_emp_float_eth3d_bench_long_latency.log" \
      --graphpath "$plotdir/emp_float_runtime_long.pdf" \
-     --title "Runtime per Iteration" \
+     --title "Comparing Optimization
+Algorithms at Large Input Sizes" \
      --only-tags \
         "emp_float_gn_time_vs_points_per_loc_itr" \
         "emp_float_lm_time_vs_points_per_loc_itr" \
@@ -31,8 +32,9 @@ python3 $scriptpath/../scripts/insetplotter.py \
         "LM (0 ms)" \
         "GN (5 ms)" \
         "LM (5 ms)" \
-     --xlabel "Number of Points" \
-     --ylabel "Runtime per Iteration(s)" \
+     --xlabel "Number of Features" \
+     --ylabel "Runtime per Iteration (s)" \
      --fig-w 4 \
      --fig-h 3 \
+     --color-theme "dracula" \
      $SHOW

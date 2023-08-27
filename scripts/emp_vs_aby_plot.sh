@@ -19,14 +19,14 @@ sed -i 's/xy,operator(),aby_yao_float_lm_time_vs_point/grouped_bar,operator(),ab
 
 # may need to change plot tags from xy to grouped_bar
 # comment out twelve points :%s/\(.*\),12,/#\1,12,/g
-python3 $scriptpath/../scripts/plotter.py \
+python3 $scriptpath/../scripts/plotter-emp-vs-aby.py \
      --csvlog \
         "$logdir/gn_aby_float_eth3d_bench_short.log" \
         "$logdir/lm_aby_float_eth3d_bench_short.log" \
         "$logdir/gn_emp_float_eth3d_bench_short.log" \
         "$logdir/lm_emp_float_eth3d_bench_short.log" \
      --graphpath "$plotdir/emp_vs_aby.pdf" \
-     --title "ABY and EMP Runtime" \
+     --title "ABY and EMP Localization Runtime" \
      --only-tags \
         "aby_yao_float_gn_time_vs_points" \
         "aby_bool_float_gn_time_vs_points" \
@@ -41,11 +41,11 @@ python3 $scriptpath/../scripts/plotter.py \
         "ABY Bool LM" \
         "EMP GN" \
         "EMP LM" \
-     --xlabel "Number of Points" \
+     --xlabel "Number of Features" \
      --ylabel "Runtime (s)" \
      --fig-w 4 \
      --fig-h 5 \
      --log-scale \
      --horizontal \
+     --color-theme "dracula" \
      $SHOW
-     #--color-theme "dracula" \

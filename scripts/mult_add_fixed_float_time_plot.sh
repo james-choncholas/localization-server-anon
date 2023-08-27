@@ -8,13 +8,13 @@ SHOW=""
 
 
 # To plot the add multiply together
-python3 $scriptpath/../scripts/plotter.py \
+python3 $scriptpath/../scripts/plotter-mult-add.py \
     --csvlog \
        "$logdir/emp_float_vs_fixed_benchmark_add.log" \
        "$logdir/emp_float_vs_fixed_benchmark_mul.log" \
     --graphpath "$plotdir/emp_float_vs_fixed_benchmark_add_mul.pdf" \
-    --title "Time to perform 10k Operations
-on Various Data Representations" \
+    --title "Comparing Arithmetic Operations
+Across Data Representations" \
     --only-tags \
         "EMP_ADD" \
         "EMP_MUL" \
@@ -22,13 +22,13 @@ on Various Data Representations" \
         "Add" \
         "Multiply" \
     --xlabel "" \
-    --ylabel "Time (s)" \
+    --ylabel "" \
     --fig-w 4 \
     --fig-h 3 \
     --rotate_x_labels \
-    --log-scale \
+    --color-theme "dracula" \
     $SHOW
-    #--color-theme "dracula" \
+    #--log-scale \
     #--only-tags "opencv_error_vs_numpts" \
     #--custom-legend-labels "opencv (float)" \
     #   "float" \

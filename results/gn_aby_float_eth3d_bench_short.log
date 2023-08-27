@@ -1,0 +1,1906 @@
+Ground Truth Pose [rotation; translation]: 
+0.525125 0.461442 -0.715063 5.64051 7.38378 14.2108 
+
+Trial 0 with 6 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.000249 s[0m
+opencv result:
+[0.97698057;
+ 0.85712409;
+ -1.324466]
+[5.6561942;
+ 7.3491058;
+ 14.208172]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,6,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.00013 s[0m
+cleartext result:
+
+0.985309 0.86751 -1.31709 5.60231 7.39604 14.2841 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.343203 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.343286 s[0m
+..........::.:.::::::::||:|||||||||5|555/4/444/3/333/2/222/1/111/0//0/..........::.:.::::::::||:|||||||||5|555/4/444/3/333/2/222/1/111/0//0/..........::.:.::::::::||:|||||||||5|555/4/444/3/333/2/222/1/111/0//0/..........:::.:.:::::::||:|||||||||5|555/4/444/3/333/2/222/1/111/0//0/..........:::.:.:::::::||:|||||||||5|555/4/444/3/333/2/222/11/1/0/1/0/..........::.:.::::::::||:|||||||||5|555/4/444/3/333/2/222/1/111/0//0/..........:::.:.:::::::||:|||||||||5|555/4/444/3/333/2/222/11/1/0/1/0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 440.254 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 440.26 s[0m
+secure result: 0.973166 0.854903 -1.32801 5.65278 7.32552 14.1768 secure result: 0.973166 0.854903 -1.32801 5.65278 7.32552 14.1768 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,6,205.906
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.352826 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.352851 s[0m
+..........::.:.::::::::||:|||||||||5|555/4/444/3/333/2/222/1/111/0//0/..........::::..::::::|:||:||||||||5|555/4/444/3/333/2/222/11/1/0/1/0/..........::::..::::::|:|:|||||||||5|555/4/444/3/333/2/222/11/1/0/1/0/..........::::..::::::|:||:||||||||5|555/4/444/3/333/2/222/11/1/0/1/0/..........::.:.::::::::||:|||||||||5|555/4/444/3/333/2/222/1/111/0//0/..........::::..::::::|:||:||||||||5|555/4/444/3/333/2/222/11/1/0/1/0/..........::::.:.:::::|:||:||||||||5|555/4/444/3/333/2/222/11/1/0/1/0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 351.817 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 351.847 s[0m
+secure result: 0.973166 0.854903 -1.32801 5.65278 7.32552 14.1768 secure result: 0.973166 0.854903 -1.32801 5.65278 7.32552 14.1768 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,6,205.774
+
+
+Trial 1 with 6 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.002784 s[0m
+opencv result:
+[0.97590059;
+ 0.86125225;
+ -1.3281224]
+[5.6413407;
+ 7.3541603;
+ 14.227972]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,6,5
+[34meth3d_test_harness[0m - [32mTimer cleartext: 6.7e-05 s[0m
+cleartext result:
+
+0.978011 0.861353 -1.32532 5.64149 7.38287 14.283 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.349918 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.349995 s[0m
+..........:::.:.:::::::||:|||||||||5|555/4/444/3/333/2/222/11/1/0/1/0/..........:::.:.:::::::||:|||||||||5|555/4/444/3/333/2/222/1/111/0//0/..........:::.:.:::::::||:|||||||||5|555/4/444/3/333/2/222/1/111/0//0/..........:::.:.:::::::||:|||||||||5|555/4/444/3/333/2/222/1/111/0//0/..........:::.:.:::::::||:|||||||||5|555/4/444/3/333/2/222/11/1/0/1/0/..........::.:.::::::::||:|||||||||5|555/4/444/3/333/2/222/11/1/0/1/0/..........:::.:.:::::::||:|||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 469.598 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 469.603 s[0m
+secure result: 0.974422 0.860595 -1.32829 5.62986 7.34684 14.2144 secure result: 0.974422 0.860595 -1.32829 5.62986 7.34684 14.2144 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,6,221.031
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.347139 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.347169 s[0m
+..........::::..::::::|:||:||||||||5|555/4/444/3/333/2/222/11/1/0/1/0/..........:::.:.:::::::||:|||||||||5|555/4/444/3/333/2/222/11/1/0/1/0/..........::::..::::::|:||:||||||||5|555/4/444/3/333/2/222/11/1/0/1/0/..........::::..::::::|:||:||||||||5|555/4/444/3/333/2/222/11/1/0/1/0/..........:::.:.:::::::||:|||||||||5|555/4/444/3/333/2/222/1/111/0//0/..........:::.:.:::::::||:|||||||||5|555/4/444/3/333/2/222/1/111/0//0/..........::::..::::::|:||:||||||||5|555/4/444/3/333/2/222/11/1/0/1/0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 386.726 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 386.752 s[0m
+secure result: 0.974422 0.860595 -1.32829 5.62986 7.34684 14.2144 secure result: 0.974422 0.860595 -1.32829 5.62986 7.34684 14.2144 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,6,222.815
+
+
+Trial 0 with 7 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.003914 s[0m
+opencv result:
+[0.97532612;
+ 0.85727477;
+ -1.3257629]
+[5.6523757;
+ 7.3467617;
+ 14.202191]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,7,8
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000121 s[0m
+cleartext result:
+
+0.977019 0.870508 -1.3283 5.61144 7.37278 14.1689 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.348408 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.348513 s[0m
+...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/..........::.:.::::::::||:|||||||||5|555/4/444/3/333/2/222/1/111/0//0/..........:.::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/..........:::.:.:::::::||:|||||||||5|555/4/444/3/333/2/222/1/111/0//0/..........::.:.::::::::||:|||||||||5|555/4/444/3/333/2/222/1/111/0//0/..........::.::.:::::::||:|||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 570.805 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 570.811 s[0m
+secure result: 0.975057 0.857155 -1.32593 5.65202 7.34501 14.1984 secure result: 0.975057 0.857155 -1.32593 5.65202 7.34501 14.1984 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,7,269.773
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.347075 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.347127 s[0m
+...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 469.375 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 469.418 s[0m
+secure result: 0.975057 0.857155 -1.32593 5.65202 7.34501 14.1984 secure result: 0.975057 0.857155 -1.32593 5.65202 7.34501 14.1984 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,7,266.527
+
+
+Trial 1 with 7 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.003057 s[0m
+opencv result:
+[0.97501963;
+ 0.8581422;
+ -1.3269348]
+[5.6458068;
+ 7.3477812;
+ 14.207788]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,7,8
+[34meth3d_test_harness[0m - [32mTimer cleartext: 9.6e-05 s[0m
+cleartext result:
+
+0.973932 0.857679 -1.3251 5.68546 7.33886 14.2904 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.3521 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.35213 s[0m
+...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 760.043 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 760.044 s[0m
+secure result: 0.976621 0.858064 -1.32574 5.65151 7.35254 14.2202 secure result: 0.976621 0.858064 -1.32574 5.65151 7.35254 14.2202 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,7,359.574
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.333969 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.334073 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 548.809 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 548.831 s[0m
+secure result: 0.976621 0.858064 -1.32574 5.65151 7.35254 14.2202 secure result: 0.976621 0.858064 -1.32574 5.65151 7.35254 14.2202 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,7,311.515
+
+
+Trial 0 with 8 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.013183 s[0m
+opencv result:
+[0.97383869;
+ 0.85377246;
+ -1.3261801]
+[5.6619639;
+ 7.3294373;
+ 14.182655]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,8,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 7e-05 s[0m
+cleartext result:
+
+0.973736 0.852596 -1.32742 5.67415 7.33027 14.1758 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.330623 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.330731 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/..........:.::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 593.169 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 593.174 s[0m
+secure result: 0.973823 0.853821 -1.32609 5.6607 7.32964 14.183 secure result: 0.973823 0.853821 -1.32609 5.6607 7.32964 14.183 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,8,281.118
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.358292 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.358379 s[0m
+...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/..........::.::.:::::::||:|||||||||5|555/4/444/3/333/2/222/1/111/0//0/..........::.:.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/..........::.::.:::::::||:|||||||||5|555/4/444/3/333/2/222/1/111/0//0/..........::.::.:::::::||:|||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 470.488 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 470.515 s[0m
+secure result: 0.973823 0.853821 -1.32609 5.6607 7.32964 14.183 secure result: 0.973823 0.853821 -1.32609 5.6607 7.32964 14.183 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,8,267.332
+
+
+Trial 1 with 8 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.002981 s[0m
+opencv result:
+[0.97577715;
+ 0.85618782;
+ -1.3250911]
+[5.6603889;
+ 7.3466902;
+ 14.202621]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,8,5
+[34meth3d_test_harness[0m - [32mTimer cleartext: 6.4e-05 s[0m
+cleartext result:
+
+0.982046 0.858525 -1.32278 5.67603 7.39574 14.2222 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.363889 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.364009 s[0m
+...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 509.337 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 509.346 s[0m
+secure result: 0.975357 0.855436 -1.32512 5.66068 7.34129 14.1885 secure result: 0.975357 0.855436 -1.32512 5.66068 7.34129 14.1885 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,8,241.733
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.325222 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.325318 s[0m
+...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/..........:::.:.:::::::||:|||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 405.633 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 405.661 s[0m
+secure result: 0.975357 0.855436 -1.32512 5.66068 7.34129 14.1885 secure result: 0.975357 0.855436 -1.32512 5.66068 7.34129 14.1885 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,8,230.597
+
+
+Trial 0 with 9 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.005551 s[0m
+opencv result:
+[0.97498703;
+ 0.85736448;
+ -1.3264904]
+[5.6495538;
+ 7.3458829;
+ 14.202114]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,9,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 7.5e-05 s[0m
+cleartext result:
+
+0.97574 0.860845 -1.3309 5.62965 7.35008 14.2738 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.323894 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.324008 s[0m
+...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 655.086 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 655.097 s[0m
+secure result: 0.974001 0.856892 -1.32697 5.64933 7.34118 14.1954 secure result: 0.974001 0.856892 -1.32697 5.64933 7.34118 14.1954 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,9,311.518
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.322136 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.322255 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/..........:.::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/..........::.::.:::::::||:|||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 520.764 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 520.814 s[0m
+secure result: 0.974001 0.856892 -1.32697 5.64933 7.34118 14.1954 secure result: 0.974001 0.856892 -1.32697 5.64933 7.34118 14.1954 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,9,295.808
+
+
+Trial 1 with 9 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.003193 s[0m
+opencv result:
+[0.97496539;
+ 0.85699427;
+ -1.3259745]
+[5.6492229;
+ 7.3472271;
+ 14.199783]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,9,5
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.015145 s[0m
+cleartext result:
+
+0.973913 0.859451 -1.32785 5.6326 7.34338 14.1861 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.32222 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.322351 s[0m
+...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 566.914 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 566.923 s[0m
+secure result: 0.974966 0.857221 -1.32602 5.64478 7.34772 14.2006 secure result: 0.974966 0.857221 -1.32602 5.64478 7.34772 14.2006 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,9,269.97
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.323125 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.323238 s[0m
+...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/..........:.::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 450.855 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 450.906 s[0m
+secure result: 0.974966 0.857221 -1.32602 5.64478 7.34772 14.2006 secure result: 0.974966 0.857221 -1.32602 5.64478 7.34772 14.2006 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,9,255.601
+
+
+Trial 0 with 10 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.003913 s[0m
+opencv result:
+[0.97452885;
+ 0.85624355;
+ -1.3261621]
+[5.652997;
+ 7.34271;
+ 14.197741]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,10,5
+[34meth3d_test_harness[0m - [32mTimer cleartext: 7.1e-05 s[0m
+cleartext result:
+
+0.977036 0.862722 -1.32625 5.64239 7.36766 14.2165 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.324064 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.324185 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 617.213 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 617.225 s[0m
+secure result: 0.975261 0.857039 -1.32619 5.64851 7.34698 14.2093 secure result: 0.975261 0.857039 -1.32619 5.64851 7.34698 14.2093 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,10,294.517
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.321288 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.321385 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 488.459 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 488.511 s[0m
+secure result: 0.975261 0.857039 -1.32619 5.64851 7.34698 14.2093 secure result: 0.975261 0.857039 -1.32619 5.64851 7.34698 14.2093 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,10,276.8
+
+
+Trial 1 with 10 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.010632 s[0m
+opencv result:
+[0.97509378;
+ 0.85713494;
+ -1.3265761]
+[5.6504431;
+ 7.3406472;
+ 14.196454]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,10,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 9.2e-05 s[0m
+cleartext result:
+
+0.978176 0.859288 -1.32584 5.64289 7.35334 14.2415 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.322582 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.322715 s[0m
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 721.935 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 721.947 s[0m
+secure result: 0.975006 0.857495 -1.32682 5.64853 7.34071 14.1952 secure result: 0.975006 0.857495 -1.32682 5.64853 7.34071 14.1952 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,10,344.792
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.322973 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.323001 s[0m
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 569.65 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 569.702 s[0m
+secure result: 0.975006 0.857495 -1.32682 5.64853 7.34071 14.1952 secure result: 0.975006 0.857495 -1.32682 5.64853 7.34071 14.1952 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,10,322.531
+
+
+Trial 0 with 11 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.006723 s[0m
+opencv result:
+[0.974774;
+ 0.85663253;
+ -1.3266778]
+[5.6516981;
+ 7.3394628;
+ 14.193723]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,11,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.006017 s[0m
+cleartext result:
+
+0.978222 0.855972 -1.32425 5.68128 7.36792 14.2289 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.392707 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.392846 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 783.209 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 783.222 s[0m
+secure result: 0.9749 0.857098 -1.32648 5.64484 7.34294 14.1976 secure result: 0.9749 0.857098 -1.32648 5.64484 7.34294 14.1976 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,11,374.044
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.359855 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.359886 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 614.563 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 614.618 s[0m
+secure result: 0.9749 0.857098 -1.32648 5.64484 7.34294 14.1976 secure result: 0.9749 0.857098 -1.32648 5.64484 7.34294 14.1976 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,11,347.904
+
+
+Trial 1 with 11 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.006726 s[0m
+opencv result:
+[0.97550678;
+ 0.85809666;
+ -1.326569]
+[5.6442304;
+ 7.3463168;
+ 14.208699]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,11,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 8.4e-05 s[0m
+cleartext result:
+
+0.975827 0.858455 -1.32609 5.6433 7.34349 14.2124 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.32318 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.32329 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 787.741 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 787.745 s[0m
+secure result: 0.975248 0.859199 -1.32718 5.63557 7.34898 14.2094 secure result: 0.975248 0.859199 -1.32718 5.63557 7.34898 14.2094 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,11,376.831
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.326749 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.326861 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 618.054 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 618.102 s[0m
+secure result: 0.975248 0.859199 -1.32718 5.63557 7.34898 14.2094 secure result: 0.975248 0.859199 -1.32718 5.63557 7.34898 14.2094 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,11,350.006
+
+
+Trial 0 with 12 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.004321 s[0m
+opencv result:
+[0.9755407;
+ 0.85681456;
+ -1.3256941]
+[5.6519499;
+ 7.3486199;
+ 14.214857]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,12,8
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000107 s[0m
+cleartext result:
+
+0.970359 0.850983 -1.32863 5.69274 7.31299 14.1214 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.325849 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.325878 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 970.327 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 970.346 s[0m
+secure result: 0.975281 0.856828 -1.32577 5.64722 7.34826 14.2128 secure result: 0.975281 0.856828 -1.32577 5.64722 7.34826 14.2128 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,12,464.596
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.351762 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.351793 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::::.:::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 757.557 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 757.604 s[0m
+secure result: 0.975281 0.856828 -1.32577 5.64722 7.34826 14.2128 secure result: 0.975281 0.856828 -1.32577 5.64722 7.34826 14.2128 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,12,428.498
+
+
+Trial 1 with 12 randomly selected points on frame 0 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.004231 s[0m
+opencv result:
+[0.97468352;
+ 0.8561523;
+ -1.3263278]
+[5.6535749;
+ 7.34231;
+ 14.203555]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,12,5
+[34meth3d_test_harness[0m - [32mTimer cleartext: 8.1e-05 s[0m
+cleartext result:
+
+0.974891 0.856912 -1.32604 5.66206 7.35014 14.2004 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.329791 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.329834 s[0m
+...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 732.336 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 732.353 s[0m
+secure result: 0.975251 0.856097 -1.32606 5.65439 7.34446 14.208 secure result: 0.975251 0.856097 -1.32606 5.65439 7.34446 14.208 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,12,351.238
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.323233 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.323258 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 573.94 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 573.989 s[0m
+secure result: 0.975251 0.856097 -1.32606 5.65439 7.34446 14.208 secure result: 0.975251 0.856097 -1.32606 5.65439 7.34446 14.208 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,12,324.763
+
+
+Ground Truth Pose [rotation; translation]: 
+0.985341 0.0827748 -0.149168 -13.1805 5.09226 7.87779 
+
+Trial 0 with 6 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.006213 s[0m
+opencv result:
+[1.2075964;
+ 0.10061607;
+ -0.18161373]
+[-13.166178;
+ 5.0548267;
+ 7.8574705]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,6,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 6.8e-05 s[0m
+cleartext result:
+
+1.20746 0.101123 -0.182768 -13.2143 5.06076 7.84763 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.330534 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.330625 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 504.892 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 504.899 s[0m
+secure result: 1.20506 0.10009 -0.180598 -13.1606 5.02486 7.83627 secure result: 1.20506 0.10009 -0.180598 -13.1606 5.02486 7.83627 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,6,241.271
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.323287 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.323402 s[0m
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/..........:.::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/..........:.::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 397.098 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 397.133 s[0m
+secure result: 1.20506 0.10009 -0.180598 -13.1606 5.02486 7.83627 secure result: 1.20506 0.10009 -0.180598 -13.1606 5.02486 7.83627 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,6,225.088
+
+
+Trial 1 with 6 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.004542 s[0m
+opencv result:
+[1.2080076;
+ 0.10217138;
+ -0.18361914]
+[-13.185761;
+ 5.0652852;
+ 7.8779702]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,6,7
+[34meth3d_test_harness[0m - [32mTimer cleartext: 7.4e-05 s[0m
+cleartext result:
+
+1.21044 0.100378 -0.181974 -13.1661 5.0803 7.86908 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.322513 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.322595 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 577.25 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 577.258 s[0m
+secure result: 1.20786 0.102035 -0.183384 -13.1818 5.06251 7.87332 secure result: 1.20786 0.102035 -0.183384 -13.1818 5.06251 7.87332 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,6,275.937
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.323601 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.323672 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 453.386 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 453.423 s[0m
+secure result: 1.20786 0.102035 -0.183384 -13.1818 5.06251 7.87332 secure result: 1.20786 0.102035 -0.183384 -13.1818 5.06251 7.87332 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,6,256.435
+
+
+Trial 0 with 7 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.006321 s[0m
+opencv result:
+[1.2070626;
+ 0.10174986;
+ -0.18334816]
+[-13.18031;
+ 5.0560713;
+ 7.8695879]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,7,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 7e-05 s[0m
+cleartext result:
+
+1.20674 0.10227 -0.183629 -13.1825 5.05301 7.86947 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.323566 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.323692 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 484.014 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 484.019 s[0m
+secure result: 1.20524 0.10165 -0.183815 -13.1815 5.03026 7.86775 secure result: 1.20524 0.10165 -0.183815 -13.1815 5.03026 7.86775 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,7,231.966
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.321943 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.322042 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 379.318 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 379.351 s[0m
+secure result: 1.20524 0.10165 -0.183815 -13.1815 5.03026 7.86775 secure result: 1.20524 0.10165 -0.183815 -13.1815 5.03026 7.86775 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,7,214.843
+
+
+Trial 1 with 7 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.003454 s[0m
+opencv result:
+[1.2090683;
+ 0.10312632;
+ -0.1842853]
+[-13.191434;
+ 5.0737753;
+ 7.8766494]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,7,11
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000121 s[0m
+cleartext result:
+
+1.21252 0.0996886 -0.180779 -13.1901 5.04799 7.85549 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.324755 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.324844 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 1123.39 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 1123.39 s[0m
+secure result: 1.20921 0.103113 -0.184252 -13.1917 5.07513 7.87775 secure result: 1.20921 0.103113 -0.184252 -13.1917 5.07513 7.87775 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,7,538.093
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.321406 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.321498 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 878.341 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 878.368 s[0m
+secure result: 1.20921 0.103113 -0.184252 -13.1917 5.07513 7.87775 secure result: 1.20921 0.103113 -0.184252 -13.1917 5.07513 7.87775 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,7,497.061
+
+
+Trial 0 with 8 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.003489 s[0m
+opencv result:
+[1.2096404;
+ 0.10210637;
+ -0.18296154]
+[-13.182811;
+ 5.0736961;
+ 7.8821459]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,8,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 8.3e-05 s[0m
+cleartext result:
+
+1.20786 0.101274 -0.179623 -13.1563 5.04086 7.84166 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.323348 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.323477 s[0m
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 627.416 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 627.415 s[0m
+secure result: 1.20954 0.102037 -0.18288 -13.1818 5.07242 7.88027 secure result: 1.20954 0.102037 -0.18288 -13.1818 5.07242 7.88027 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,8,302.719
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.324922 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.325019 s[0m
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 487.885 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 487.911 s[0m
+secure result: 1.20954 0.102037 -0.18288 -13.1818 5.07242 7.88027 secure result: 1.20954 0.102037 -0.18288 -13.1818 5.07242 7.88027 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,8,275.964
+
+
+Trial 1 with 8 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.006369 s[0m
+opencv result:
+[1.2118434;
+ 0.10180738;
+ -0.1827236]
+[-13.178586;
+ 5.0930243;
+ 7.8862615]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,8,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 7.2e-05 s[0m
+cleartext result:
+
+1.20454 0.101407 -0.182229 -13.1754 5.02377 7.84042 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.323777 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.323935 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 540.7 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 540.715 s[0m
+secure result: 1.20954 0.101678 -0.182707 -13.1758 5.07404 7.86985 secure result: 1.20954 0.101678 -0.182707 -13.1758 5.07404 7.86985 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,8,262.085
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.319346 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.319425 s[0m
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 419.553 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 419.585 s[0m
+secure result: 1.20954 0.101678 -0.182707 -13.1758 5.07404 7.86985 secure result: 1.20954 0.101678 -0.182707 -13.1758 5.07404 7.86985 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,8,237.22
+
+
+Trial 0 with 9 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.005474 s[0m
+opencv result:
+[1.2091614;
+ 0.10113122;
+ -0.18204591]
+[-13.172423;
+ 5.0666428;
+ 7.86553]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,9,8
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.008718 s[0m
+cleartext result:
+
+1.21131 0.097703 -0.178949 -13.1292 5.07574 7.81431 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.326067 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.326235 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 689.946 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 689.955 s[0m
+secure result: 1.2096 0.10065 -0.181579 -13.1692 5.07047 7.8604 secure result: 1.2096 0.10065 -0.181579 -13.1692 5.07047 7.8604 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,9,332.917
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.332536 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.332697 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 538.06 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 538.103 s[0m
+secure result: 1.2096 0.10065 -0.181579 -13.1692 5.07047 7.8604 secure result: 1.2096 0.10065 -0.181579 -13.1692 5.07047 7.8604 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,9,304.268
+
+
+Trial 1 with 9 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.003574 s[0m
+opencv result:
+[1.2083905;
+ 0.10184131;
+ -0.18292764]
+[-13.182117;
+ 5.0658875;
+ 7.8728633]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,9,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 7.7e-05 s[0m
+cleartext result:
+
+1.21069 0.10186 -0.18307 -13.2044 5.09893 7.91116 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.327454 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.327567 s[0m
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 693.334 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 693.343 s[0m
+secure result: 1.20833 0.101843 -0.182946 -13.1818 5.06519 7.87194 secure result: 1.20833 0.101843 -0.182946 -13.1818 5.06519 7.87194 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,9,334.229
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.321514 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.321627 s[0m
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 538.762 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 538.808 s[0m
+secure result: 1.20833 0.101843 -0.182946 -13.1818 5.06519 7.87194 secure result: 1.20833 0.101843 -0.182946 -13.1818 5.06519 7.87194 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,9,304.521
+
+
+Trial 0 with 10 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.007672 s[0m
+opencv result:
+[1.2079419;
+ 0.10218016;
+ -0.18322219]
+[-13.187173;
+ 5.0594134;
+ 7.8698502]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,10,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000101 s[0m
+cleartext result:
+
+1.20686 0.101217 -0.182925 -13.185 5.05468 7.86301 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.325483 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.325512 s[0m
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 754.064 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 754.07 s[0m
+secure result: 1.20797 0.102163 -0.183208 -13.1864 5.05994 7.87024 secure result: 1.20797 0.102163 -0.183208 -13.1864 5.05994 7.87024 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,10,364.378
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.375148 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.375285 s[0m
+...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 584.867 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 584.916 s[0m
+secure result: 1.20797 0.102163 -0.183208 -13.1864 5.05994 7.87024 secure result: 1.20797 0.102163 -0.183208 -13.1864 5.05994 7.87024 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,10,330.676
+
+
+Trial 1 with 10 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.004554 s[0m
+opencv result:
+[1.208883;
+ 0.10197431;
+ -0.18298887]
+[-13.182285;
+ 5.0677614;
+ 7.8787632]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,10,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 8.1e-05 s[0m
+cleartext result:
+
+1.20785 0.101985 -0.183561 -13.1927 5.06791 7.87784 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.321176 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.321219 s[0m
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 754.91 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 754.925 s[0m
+secure result: 1.20893 0.101965 -0.182994 -13.1818 5.06799 7.87884 secure result: 1.20893 0.101965 -0.182994 -13.1818 5.06799 7.87884 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,10,364.417
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.322653 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.322674 s[0m
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 587.329 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 587.373 s[0m
+secure result: 1.20893 0.101965 -0.182994 -13.1818 5.06799 7.87884 secure result: 1.20893 0.101965 -0.182994 -13.1818 5.06799 7.87884 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,10,331.747
+
+
+Trial 0 with 11 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.004637 s[0m
+opencv result:
+[1.2086022;
+ 0.1012494;
+ -0.1827457]
+[-13.176082;
+ 5.0701585;
+ 7.8705235]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,11,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 8.3e-05 s[0m
+cleartext result:
+
+1.20552 0.0966725 -0.177474 -13.1431 5.02904 7.84505 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.322779 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.322808 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 819.524 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 819.527 s[0m
+secure result: 1.20813 0.100387 -0.181397 -13.1705 5.06454 7.87109 secure result: 1.20813 0.100387 -0.181397 -13.1705 5.06454 7.87109 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,11,397.497
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.324905 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.32506 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::::.:::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 632.27 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 632.318 s[0m
+secure result: 1.20813 0.100387 -0.181397 -13.1705 5.06454 7.87109 secure result: 1.20813 0.100387 -0.181397 -13.1705 5.06454 7.87109 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,11,357.391
+
+
+Trial 1 with 11 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.012349 s[0m
+opencv result:
+[1.2091527;
+ 0.10151625;
+ -0.18252186]
+[-13.178009;
+ 5.0695772;
+ 7.8722534]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,11,5
+[34meth3d_test_harness[0m - [32mTimer cleartext: 7.5e-05 s[0m
+cleartext result:
+
+1.208 0.0952683 -0.17577 -13.1795 5.06678 7.77835 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.32416 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.324299 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 835.802 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 835.816 s[0m
+secure result: 1.2093 0.101635 -0.182631 -13.1794 5.07126 7.87404 secure result: 1.2093 0.101635 -0.182631 -13.1794 5.07126 7.87404 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,11,411.695
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.324091 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.324226 s[0m
+...........:.::::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/..........:.:::.:::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 635.962 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 636.009 s[0m
+secure result: 1.2093 0.101635 -0.182631 -13.1794 5.07126 7.87404 secure result: 1.2093 0.101635 -0.182631 -13.1794 5.07126 7.87404 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,11,359.711
+
+
+Trial 0 with 12 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.004965 s[0m
+opencv result:
+[1.2078609;
+ 0.1014526;
+ -0.18211746]
+[-13.177502;
+ 5.0539403;
+ 7.8634253]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,12,7
+[34meth3d_test_harness[0m - [32mTimer cleartext: 9.9e-05 s[0m
+cleartext result:
+
+1.20214 0.0977331 -0.176829 -13.1435 4.98156 7.78779 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.325171 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.325203 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 1022.44 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 1022.46 s[0m
+secure result: 1.20708 0.101091 -0.18165 -13.174 5.04476 7.85269 secure result: 1.20708 0.101091 -0.18165 -13.174 5.04476 7.85269 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,12,500.918
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.326249 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.326291 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 776.301 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 776.353 s[0m
+secure result: 1.20708 0.101091 -0.18165 -13.174 5.04476 7.85269 secure result: 1.20708 0.101091 -0.18165 -13.174 5.04476 7.85269 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,12,438.069
+
+
+Trial 1 with 12 randomly selected points on frame 1 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.004652 s[0m
+opencv result:
+[1.2081105;
+ 0.10120674;
+ -0.18220715]
+[-13.175608;
+ 5.0592389;
+ 7.8594108]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,12,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.025983 s[0m
+cleartext result:
+
+1.20721 0.0993392 -0.180139 -13.1733 5.05415 7.83225 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.33034 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.330371 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 901.008 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 901.022 s[0m
+secure result: 1.20743 0.101299 -0.18215 -13.1771 5.05207 7.85769 secure result: 1.20743 0.101299 -0.18215 -13.1771 5.05207 7.85769 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,12,443.639
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.322385 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.322555 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 684.069 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 684.113 s[0m
+secure result: 1.20743 0.101299 -0.18215 -13.1771 5.05207 7.85769 secure result: 1.20743 0.101299 -0.18215 -13.1771 5.05207 7.85769 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,12,386.33
+
+
+Ground Truth Pose [rotation; translation]: 
+0.99603 0.0372788 -0.0808338 -11.6438 4.70088 6.90092 
+
+Trial 0 with 6 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.01046 s[0m
+opencv result:
+[1.2087443;
+ 0.043563113;
+ -0.095526405]
+[-11.612573;
+ 4.6836662;
+ 6.878387]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,6,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 6.7e-05 s[0m
+cleartext result:
+
+1.20843 0.0437763 -0.0961635 -11.6096 4.68239 6.85857 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.324202 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.324298 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 521.435 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 521.439 s[0m
+secure result: 1.20893 0.0431616 -0.0950021 -11.6105 4.68497 6.87857 secure result: 1.20893 0.0431616 -0.0950021 -11.6105 4.68497 6.87857 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,6,251.57
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.323377 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.32347 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 407.885 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 407.916 s[0m
+secure result: 1.20893 0.0431616 -0.0950021 -11.6105 4.68497 6.87857 secure result: 1.20893 0.0431616 -0.0950021 -11.6105 4.68497 6.87857 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,6,230.273
+
+
+Trial 1 with 6 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.006909 s[0m
+opencv result:
+[1.2066069;
+ 0.044367988;
+ -0.097029366]
+[-11.627261;
+ 4.6705866;
+ 6.8839397]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,6,13
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.000142 s[0m
+cleartext result:
+
+0.606987 -0.696054 0.414811 2.09794 -3.03698 -0.81209 
+
+cleartext did not converge to same value as opencv.
+Trial 0 with 7 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.002928 s[0m
+opencv result:
+[1.2087518;
+ 0.046177864;
+ -0.099096321]
+[-11.658805;
+ 4.6947274;
+ 6.912612]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,7,5
+[34meth3d_test_harness[0m - [32mTimer cleartext: 5.7e-05 s[0m
+cleartext result:
+
+1.20828 0.0448271 -0.0921297 -11.6361 4.6509 6.84487 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.326113 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.326129 s[0m
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 579.732 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 579.738 s[0m
+secure result: 1.2088 0.0462773 -0.0991922 -11.6606 4.69565 6.91421 secure result: 1.2088 0.0462773 -0.0991922 -11.6606 4.69565 6.91421 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,7,280.054
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.319796 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.319904 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 451.967 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 451.998 s[0m
+secure result: 1.2088 0.0462773 -0.0991922 -11.6606 4.69565 6.91421 secure result: 1.2088 0.0462773 -0.0991922 -11.6606 4.69565 6.91421 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,7,255.218
+
+
+Trial 1 with 7 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.003696 s[0m
+opencv result:
+[1.2067505;
+ 0.045076121;
+ -0.097524665]
+[-11.63835;
+ 4.6681609;
+ 6.8913641]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,7,5
+[34meth3d_test_harness[0m - [32mTimer cleartext: 7.4e-05 s[0m
+cleartext result:
+
+1.2027 0.0457067 -0.102671 -11.5961 4.65033 6.83681 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.321806 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.321906 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 499.343 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 499.35 s[0m
+secure result: 1.2067 0.0448486 -0.0974151 -11.6365 4.66892 6.89155 secure result: 1.2067 0.0448486 -0.0974151 -11.6365 4.66892 6.89155 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,7,241.286
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.324439 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.324516 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 388.918 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 388.95 s[0m
+secure result: 1.2067 0.0448486 -0.0974151 -11.6365 4.66892 6.89155 secure result: 1.2067 0.0448486 -0.0974151 -11.6365 4.66892 6.89155 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,7,219.583
+
+
+Trial 0 with 8 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.003701 s[0m
+opencv result:
+[1.2066439;
+ 0.044742361;
+ -0.097238943]
+[-11.634151;
+ 4.6697078;
+ 6.8902111]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,8,7
+[34meth3d_test_harness[0m - [32mTimer cleartext: 8.6e-05 s[0m
+cleartext result:
+
+1.20359 0.0447667 -0.0978149 -11.6318 4.64936 6.8313 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.32271 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.322812 s[0m
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 756.174 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 756.182 s[0m
+secure result: 1.20462 0.045007 -0.0972698 -11.6385 4.6437 6.87252 secure result: 1.20462 0.045007 -0.0972698 -11.6385 4.6437 6.87252 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,8,374.969
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.323232 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.323335 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 570.891 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 570.92 s[0m
+secure result: 1.20462 0.045007 -0.0972698 -11.6385 4.6437 6.87252 secure result: 1.20462 0.045007 -0.0972698 -11.6385 4.6437 6.87252 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,8,322.166
+
+
+Trial 1 with 8 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.003755 s[0m
+opencv result:
+[1.2082824;
+ 0.045603957;
+ -0.098152176]
+[-11.64563;
+ 4.686728;
+ 6.90484]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,8,7
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.02807 s[0m
+cleartext result:
+
+1.19922 0.0445645 -0.0970677 -11.6409 4.59945 6.85369 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.323045 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.323174 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 754.732 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 754.75 s[0m
+secure result: 1.20171 0.0443417 -0.0973202 -11.6337 4.62534 6.86179 secure result: 1.20171 0.0443417 -0.0973202 -11.6337 4.62534 6.86179 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,8,373.511
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.324729 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.324823 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 570.617 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 570.647 s[0m
+secure result: 1.20171 0.0443417 -0.0973202 -11.6337 4.62534 6.86179 secure result: 1.20171 0.0443417 -0.0973202 -11.6337 4.62534 6.86179 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,8,322.042
+
+
+Trial 0 with 9 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.003879 s[0m
+opencv result:
+[1.2067053;
+ 0.045394026;
+ -0.098213248]
+[-11.642048;
+ 4.6712947;
+ 6.8921113]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,9,7
+[34meth3d_test_harness[0m - [32mTimer cleartext: 9.6e-05 s[0m
+cleartext result:
+
+1.20452 0.0449865 -0.0975184 -11.6283 4.65791 6.86154 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.324279 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.324386 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 730.492 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 730.495 s[0m
+secure result: 1.20687 0.0453829 -0.0982058 -11.6415 4.6729 6.89274 secure result: 1.20687 0.0453829 -0.0982058 -11.6415 4.6729 6.89274 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,9,363.673
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.323036 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.323143 s[0m
+...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 551.007 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 551.055 s[0m
+secure result: 1.20687 0.0453829 -0.0982058 -11.6415 4.6729 6.89274 secure result: 1.20687 0.0453829 -0.0982058 -11.6415 4.6729 6.89274 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,9,310.891
+
+
+Trial 1 with 9 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.003694 s[0m
+opencv result:
+[1.2079085;
+ 0.045356348;
+ -0.097862028]
+[-11.642011;
+ 4.681953;
+ 6.8989873]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,9,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.027039 s[0m
+cleartext result:
+
+1.20298 0.0425684 -0.0941354 -11.6117 4.62982 6.8856 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.368467 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.368496 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 731.146 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 731.149 s[0m
+secure result: 1.20759 0.0452843 -0.0977947 -11.6405 4.67916 6.89622 secure result: 1.20759 0.0452843 -0.0977947 -11.6405 4.67916 6.89622 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,9,363.951
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.3244 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.324549 s[0m
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 553.066 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 553.115 s[0m
+secure result: 1.20759 0.0452843 -0.0977947 -11.6405 4.67916 6.89622 secure result: 1.20759 0.0452843 -0.0977947 -11.6405 4.67916 6.89622 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,9,312.172
+
+
+Trial 0 with 10 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.004854 s[0m
+opencv result:
+[1.2076625;
+ 0.044983204;
+ -0.097428977]
+[-11.639474;
+ 4.679914;
+ 6.8989172]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,10,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 7.8e-05 s[0m
+cleartext result:
+
+1.20702 0.0446113 -0.0971482 -11.6323 4.67476 6.88498 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.322146 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.322254 s[0m
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 684.046 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 684.05 s[0m
+secure result: 1.20764 0.0449997 -0.0974968 -11.6408 4.68033 6.89843 secure result: 1.20764 0.0449997 -0.0974968 -11.6408 4.68033 6.89843 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,10,340.73
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.328144 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.328287 s[0m
+...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 514.946 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 514.992 s[0m
+secure result: 1.20764 0.0449997 -0.0974968 -11.6408 4.68033 6.89843 secure result: 1.20764 0.0449997 -0.0974968 -11.6408 4.68033 6.89843 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,10,290.521
+
+
+Trial 1 with 10 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.010903 s[0m
+opencv result:
+[1.2074617;
+ 0.045309439;
+ -0.09758883]
+[-11.641412;
+ 4.6757064;
+ 6.8955197]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,10,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 8.4e-05 s[0m
+cleartext result:
+
+1.21232 0.04398 -0.0936904 -11.6194 4.72201 6.90901 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.323371 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.323398 s[0m
+...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 683.608 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 683.619 s[0m
+secure result: 1.20751 0.0452863 -0.0975749 -11.6405 4.67469 6.89362 secure result: 1.20751 0.0452863 -0.0975749 -11.6405 4.67469 6.89362 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,10,340.32
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.322043 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.322073 s[0m
+...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::::.:::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 514.295 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 514.337 s[0m
+secure result: 1.20751 0.0452863 -0.0975749 -11.6405 4.67469 6.89362 secure result: 1.20751 0.0452863 -0.0975749 -11.6405 4.67469 6.89362 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,10,290.297
+
+
+Trial 0 with 11 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.004856 s[0m
+opencv result:
+[1.2068371;
+ 0.045206696;
+ -0.09780053]
+[-11.642093;
+ 4.6739926;
+ 6.8971925]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,11,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 8.8e-05 s[0m
+cleartext result:
+
+1.20312 0.0428114 -0.0950458 -11.618 4.62735 6.87457 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.325329 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.325444 s[0m
+...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 868.129 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 868.132 s[0m
+secure result: 1.20649 0.0450264 -0.0977469 -11.6402 4.66898 6.89384 secure result: 1.20649 0.0450264 -0.0977469 -11.6402 4.66898 6.89384 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,11,435.071
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.320068 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.320207 s[0m
+...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::::.:::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::::.:::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 645.354 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 645.398 s[0m
+secure result: 1.20649 0.0450264 -0.0977469 -11.6402 4.66898 6.89384 secure result: 1.20649 0.0450264 -0.0977469 -11.6402 4.66898 6.89384 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,11,364.601
+
+
+Trial 1 with 11 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.004802 s[0m
+opencv result:
+[1.2072048;
+ 0.045241669;
+ -0.097980224]
+[-11.641611;
+ 4.6762152;
+ 6.895956]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,11,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 8.4e-05 s[0m
+cleartext result:
+
+1.20846 0.0464107 -0.0985138 -11.6591 4.68452 6.90689 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.32531 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.32534 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 865.877 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 865.882 s[0m
+secure result: 1.20763 0.0452478 -0.0981612 -11.6422 4.68141 6.89869 secure result: 1.20763 0.0452478 -0.0981612 -11.6422 4.68141 6.89869 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,11,432.659
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.332422 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.33256 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 645.88 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 645.925 s[0m
+secure result: 1.20763 0.0452478 -0.0981612 -11.6422 4.68141 6.89869 secure result: 1.20763 0.0452478 -0.0981612 -11.6422 4.68141 6.89869 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,11,364.483
+
+
+Trial 0 with 12 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.017105 s[0m
+opencv result:
+[1.2078443;
+ 0.045474466;
+ -0.098448247]
+[-11.647141;
+ 4.6869464;
+ 6.9024434]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,12,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 0.003811 s[0m
+cleartext result:
+
+1.20619 0.0459151 -0.0986049 -11.6509 4.66881 6.89375 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.323549 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.323563 s[0m
+...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 932.403 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 932.404 s[0m
+secure result: 1.20795 0.045563 -0.0985097 -11.6483 4.6885 6.90404 secure result: 1.20795 0.045563 -0.0985097 -11.6483 4.6885 6.90404 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,12,465.857
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.323671 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.323798 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/..........:.:::.:::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 692.652 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 692.696 s[0m
+secure result: 1.20795 0.045563 -0.0985097 -11.6483 4.6885 6.90404 secure result: 1.20795 0.045563 -0.0985097 -11.6483 4.6885 6.90404 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,12,390.636
+
+
+Trial 1 with 12 randomly selected points on frame 2 from location 0
+
+testing opencv
+[34meth3d_test_harness[0m - [32mTimer opencv: 0.004727 s[0m
+opencv result:
+[1.2075057;
+ 0.04526256;
+ -0.097466148]
+[-11.639759;
+ 4.6755657;
+ 6.8925714]
+
+opencv did not converge.
+testing cleartext
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+......::::::||||||55/44/33/22/11/0/
+SeNtInAl,xy,gaussNewton,gn_clearlm_iterations_vs_numpts,12,6
+[34meth3d_test_harness[0m - [32mTimer cleartext: 8.7e-05 s[0m
+cleartext result:
+
+1.19761 0.0465299 -0.101092 -11.6473 4.60463 6.82315 
+
+cleartext converged!
+testing secure
+testing secure bool
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.355376 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.355418 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::::.:::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 1066.44 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 1066.45 s[0m
+secure result: 1.20739 0.0452522 -0.0973835 -11.6403 4.67317 6.89441 secure result: 1.20739 0.0452522 -0.0973835 -11.6403 4.67317 6.89441 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_bool_float_gn_time_vs_points,12,532.896
+testing secure yao
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.32848 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer ShareInputs: 0.328511 s[0m
+...........::.:::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:::.::::::::|:||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........:.:::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/...........::.::::::::::|||||||||||5|555/4/444/3/333/2/222/1/111/0//0/[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 792.803 s[0m
+[34mBuildAndRunGaussNewtonLoopLeak[0m - [32mTimer GaussNewtonGD: 792.848 s[0m
+secure result: 1.20739 0.0452522 -0.0973835 -11.6403 4.67317 6.89441 secure result: 1.20739 0.0452522 -0.0973835 -11.6403 4.67317 6.89441 aby converged!
+SeNtInAl,grouped_bar,operator(),aby_yao_float_gn_time_vs_points,12,446.958
+
+
+SeNtInAl,xy,eth3d_test_harness,cv_successes,0,0
+SeNtInAl,xy,eth3d_test_harness,cleartext_successes,0,41
+SeNtInAl,xy,eth3d_test_harness,secure_successes,0,41
+SeNtInAl,xy,eth3d_test_harness,total_runs,0,42
+OpenCV converged to the ground truth pose 0 / 42 (0.000000%)
+cleartext converged to the opencv pose 41 / 42 (0.976190%)
+secure localization converged to the opencv pose 41 / 42 (0.976190%)
