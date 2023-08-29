@@ -11,19 +11,23 @@ SHOW=""
 
 # NOTE: For GB you need to modify plotter script
 
-python3 $scriptpath/../scripts/plotter.py \
+python3 $scriptpath/../scripts/plotter-netio.py \
      --csvlog \
         "$logdir/gn_emp_float_eth3d_bench_long.log" \
         "$logdir/lm_emp_float_eth3d_bench_long.log" \
      --graphpath "$plotdir/netio.pdf" \
-     --title "Network IO per
-Localization Iteration" \
+     --title "Comparing Network IO
+at Large Input Sizes" \
      --only-tags \
-        "gn_bytes_rx_normalized" \
-        "lm_bytes_rx_normalized" \
+        "gn_bytes_rx_per_itr" \
+        "lm_bytes_rx_per_itr" \
+        "gn_bytes_rx_per_itr_per_feat" \
+        "lm_bytes_rx_per_itr_per_feat" \
      --custom-legend-labels \
         "GN" \
         "LM" \
+        "GN per Feature" \
+        "LM per Feature" \
      --xlabel "Number of Features" \
      --ylabel "Bytes per Iteration" \
      --fig-w 4 \

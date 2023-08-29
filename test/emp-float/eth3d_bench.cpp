@@ -177,15 +177,23 @@ int main(int argc, char** argv) {
               num_multiplications);
           MSG("SeNtInAl,grouped_bar,%s,%s%s,%d,%d\n", __FUNCTION__,
               log_str.c_str(), "_divisions", num_pts, num_divisions);
+
           MSG("SeNtInAl,xy,%s,%s%s,%d,%lu\n", __FUNCTION__, log_str.c_str(),
               "_bytes_tx", num_pts, io->size_tx);
           MSG("SeNtInAl,xy,%s,%s%s,%d,%lu\n", __FUNCTION__, log_str.c_str(),
-              "_bytes_tx_normalized", num_pts, io->size_tx / num_pts);
+              "_bytes_tx_per_itr", num_pts, io->size_tx / num_loc_iterations);
+          MSG("SeNtInAl,xy,%s,%s%s,%d,%lu\n", __FUNCTION__, log_str.c_str(),
+              "_bytes_tx_per_itr_per_feat", num_pts,
+              io->size_tx / num_loc_iterations / num_pts);
+
           MSG("SeNtInAl,xy,%s,%s%s,%d,%lu\n", __FUNCTION__, log_str.c_str(),
               "_bytes_rx", num_pts, io->size_rx);
           MSG("SeNtInAl,xy,%s,%s%s,%d,%lu\n", __FUNCTION__, log_str.c_str(),
-              "_bytes_rx_normalized", num_pts, io->size_rx / num_pts);
-          delete io;
+              "_bytes_rx_per_itr", num_pts, io->size_rx / num_loc_iterations);
+          MSG("SeNtInAl,xy,%s,%s%s,%d,%lu\n", __FUNCTION__, log_str.c_str(),
+              "_bytes_rx_per_itr_per_feat", num_pts,
+              io->size_rx / num_loc_iterations / num_pts);
+
         } else {
           if (!silent) {
             MSG("Not printing timing - not converged.\n");
@@ -197,6 +205,7 @@ int main(int argc, char** argv) {
         num_subtractions = 0;
         num_multiplications = 0;
         num_divisions = 0;
+        delete io;
 
         return result_matches;
       },
